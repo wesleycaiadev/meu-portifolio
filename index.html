@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wesley Caiã | Front-End Developer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Preloader -->
+    <div class="loader-wrapper">
+        <div class="loader-content">
+            <div class="loader-logo">Wesley<span class="logo-dot">.dev</span></div>
+            <div class="loader-mask"><div class="loader-text">Loading Experience</div></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Wesley<span class="logo-dot">.dev</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="magnetic-text">Home</a></li>
+            <li><a href="#about" class="magnetic-text">Sobre</a></li>
+            <li><a href="#projects" class="magnetic-text">Trabalhos</a></li>
+            <li><a href="#contact" class="btn-primary magnetic">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section hero-section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-title-wrapper">
+                    <h1 class="hero-title">Front-End</h1>
+                </div>
+                <div class="hero-title-wrapper">
+                    <h1 class="hero-title italic-accent">Developer</h1>
+                </div>
+                <p class="hero-subtitle">
+                    Transformando ideias em experiências digitais escaláveis, performáticas e pixel-perfect.
+                </p>
+                <div class="hero-actions reveal-up">
+                    <a href="#projects" class="btn-primary magnetic">Ver Projetos</a>
+                    <a href="https://github.com/wesleycaiadev" target="_blank" class="btn-icon magnetic"><i class="ph ph-github-logo"></i></a>
+                    <a href="#" target="_blank" class="btn-icon magnetic"><i class="ph ph-linkedin-logo"></i></a>
+                </div>
+            </div>
+
+            <!-- Avatar Integration -->
+            <div class="hero-image-wrapper reveal-up">
+                <div class="image-frame magnetic">
+                    <img src="assets/avatar_cartoon.jpg" alt="Wesley Caiã Cartoon Avatar" class="hero-img" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop'">
+                </div>
+                <div class="hero-badge magnetic">
+                    <i class="ph ph-code"></i> Clean Code
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <h2 class="section-title">Sobre Mim</h2>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-text-card reveal-up">
+                    <div class="about-text-content">
+                        <p>
+                            Olá! Sou o Wesley Caiã, formado em <strong>Engenharia Eletroeletrónica</strong>. Atualmente atuo na Samsung lidando com análises complexas, mas direcionei a minha paixão para o <strong>Desenvolvimento Front-end e UI/UX</strong>.
+                        </p>
+                        <p>
+                            Gosto de pensar na jornada do utilizador de ponta a ponta. Construo projetos práticos envolvendo a criação de interfaces responsivas, <strong>design systems</strong> e integração com APIs.
+                        </p>
+                    </div>
+                    
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Projetos Focados</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">+500</span>
+                            <span class="stat-label">Horas de Prática</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-card reveal-up">
+                    <h3>Tech Stack</h3>
+                    <div class="tech-category">
+                        <h4>Linguagens & Frameworks</h4>
+                        <div class="tech-grid">
+                            <div class="tech-item magnetic-text"><i class="ph ph-file-html"></i> HTML5</div>
+                            <div class="tech-item magnetic-text"><i class="ph ph-file-css"></i> CSS3</div>
+                            <div class="tech-item magnetic-text"><i class="ph ph-file-js"></i> JavaScript</div>
+                            <div class="tech-item magnetic-text"><i class="ph ph-atom"></i> React</div>
+                            <div class="tech-item magnetic-text"><i class="ph ph-paint-brush"></i> Tailwind</div>
+                            <div class="tech-item magnetic-text"><i class="ph ph-magic-wand"></i> GSAP</div>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h4>Ferramentas</h4>
+                        <div class="tech-grid">
+                            <div class="tech-item magnetic-text"><i class="ph ph-git-branch"></i> Git</div>
+                            <div class="tech-item magnetic-text"><i class="ph ph-figma-logo"></i> Figma</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <h2 class="section-title">Trabalhos</h2>
+            </div>
+            
+            <div class="projects-wrapper">
+                <!-- Project 1 -->
+                <article class="project-card" style="top: 15vh;">
+                    <div class="project-content">
+                        <span class="project-number">01</span>
+                        <h3>Fokus</h3>
+                        <p>Aplicação de foco e produtividade baseada na técnica Pomodoro, com timer customizável e gestão inteligente de tarefas.</p>
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>Produtividade</span>
+                            <span>UI Design</span>
+                        </div>
+                        <a href="https://github.com/wesleycaiadev/fokus-projeto" target="_blank" class="btn-project magnetic-text">
+                            Ver Projeto <i class="ph ph-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="project-visual">
+                        <img src="assets/fokus.png" alt="Fokus Project Image" onerror="this.src='https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1200&auto=format&fit=crop'">
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card" style="top: 18vh;">
+                    <div class="project-content">
+                        <span class="project-number">02</span>
+                        <h3>SpaSmooth</h3>
+                        <p>Landing page focada em design responsivo e conversão para um Spa, usando CSS Grid avançado e animações fluidas.</p>
+                        <div class="project-tags">
+                            <span>CSS Grid</span>
+                            <span>Landing Page</span>
+                            <span>Animações</span>
+                        </div>
+                        <a href="https://github.com/wesleycaiadev/spasmooth-landing" target="_blank" class="btn-project magnetic-text">
+                            Ver Projeto <i class="ph ph-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="project-visual">
+                        <img src="assets/spasmooth.png" alt="SpaSmooth Image" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1200&auto=format&fit=crop'">
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section reveal-up">
+        <div class="container contact-container">
+            <h2 class="contact-title">Vamos criar algo<br><span class="italic-accent">incrível?</span></h2>
+            
+            <div class="contact-grid">
+                <!-- Formulário -->
+                <div class="contact-form-wrapper">
+                    <form id="whatsapp-form" class="contact-form">
+                        <div class="input-group">
+                            <input type="text" id="name" name="name" required placeholder=" " />
+                            <label for="name">Qual o seu nome?</label>
+                            <span class="input-line"></span>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                            <label for="message">Conte-me sobre o seu projeto...</label>
+                            <span class="input-line"></span>
+                        </div>
+                        <button type="submit" class="btn-primary btn-submit magnetic">
+                            <span>Enviar via WhatsApp</span> <i class="ph ph-whatsapp-logo"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Info -->
+                <div class="contact-info">
+                    <p class="info-desc">Estou sempre aberto a discutir desenvolvimento, novas ideias de produtos ou oportunidades de parcerias.</p>
+                    <a href="mailto:wesleycaia.dev@gmail.com" class="contact-link magnetic-text">wesleycaia.dev@gmail.com</a>
+                    
+                    <div class="social-links-footer">
+                        <a href="https://www.linkedin.com/in/wesley-caia-souza-santos/" target="_blank" class="btn-icon magnetic"><i class="ph ph-linkedin-logo"></i></a>
+                        <a href="https://github.com/wesleycaiadev" target="_blank" class="btn-icon magnetic"><i class="ph ph-github-logo"></i></a>
+                        <a href="https://wa.me/5579998356598" target="_blank" class="btn-icon magnetic"><i class="ph ph-whatsapp-logo"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="copyright">
+        <p>&copy; 2026 Wesley Caiã. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
