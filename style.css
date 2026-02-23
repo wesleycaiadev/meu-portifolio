@@ -100,6 +100,9 @@ body {
 .nav-links a:hover { color: var(--accent); }
 .nav-links a.btn-primary { color: black !important; } /* Fix para o botão de contato */
 
+.menu-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; z-index: 1001; }
+.menu-toggle .bar { width: 30px; height: 2px; background: white; transition: 0.3s; }
+
 /* =========================================
    HERO
    ========================================= */
@@ -329,7 +332,23 @@ body {
 
 @media (max-width: 768px) {
     .navbar { padding: 0 2rem; }
-    .nav-links { display: none; } /* Podes adicionar um menu hambúrguer depois */
+    
+    .menu-toggle { display: flex; }
+    
+    .nav-links { 
+        position: fixed; top: 0; left: 100%; width: 100%; height: 100vh;
+        background: rgba(5, 5, 5, 0.98); backdrop-filter: blur(15px);
+        flex-direction: column; justify-content: center; align-items: center;
+        transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        padding: 0; margin: 0; gap: 3rem;
+    }
+    .nav-links.active { left: 0; }
+    .nav-links a { font-size: 1.5rem; }
+    
+    .menu-toggle.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
     .cursor-dot, .cursor-outline { display: none; } /* Remove custom cursor no mobile */
     * { cursor: auto; }
     

@@ -130,10 +130,41 @@ if (whatsappForm) {
         const encodedText = encodeURIComponent(textToEnv);
 
         // Redireciona para o WhatsApp
-        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;
-        window.open(whatsappUrl, '_blank');
+        // const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+        // window.open(whatsappUrl, '_blank');
+        alert("Mensagem recebida com sucesso! (Funcionalidade offline no momento)");
 
         // Limpa o formulário
         whatsappForm.reset();
+    });
+}
+
+// 8. Mobile Menu Toggle
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+const navItems = document.querySelectorAll('.nav-links li a');
+
+if (mobileMenu) {
+    mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        navLinks.classList.toggle('active');
+
+        // Bloqueia scroll do background se lenis definido
+        if (typeof lenis !== 'undefined') {
+            if (navLinks.classList.contains('active')) {
+                lenis.stop();
+            } else {
+                lenis.start();
+            }
+        }
+    });
+
+    // Close menu when a link is clicked
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            navLinks.classList.remove('active');
+            if (typeof lenis !== 'undefined') lenis.start();
+        });
     });
 }
