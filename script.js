@@ -130,9 +130,8 @@ if (whatsappForm) {
         const encodedText = encodeURIComponent(textToEnv);
 
         // Redireciona para o WhatsApp
-        // const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;
-        // window.open(whatsappUrl, '_blank');
-        alert("Mensagem recebida com sucesso! (Funcionalidade offline no momento)");
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+        window.open(whatsappUrl, '_blank');
 
         // Limpa o formulário
         whatsappForm.reset();
