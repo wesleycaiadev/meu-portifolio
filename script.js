@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// 1. Setup Lenis Smooth Scroll
+// Scroll suave com Lenis
 const lenis = new Lenis({
     duration: 1.2,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -11,7 +11,7 @@ lenis.on('scroll', ScrollTrigger.update);
 gsap.ticker.add((time) => { lenis.raf(time * 1000); });
 gsap.ticker.lagSmoothing(0);
 
-// 3. Magnetic Effect
+// Cursor magnetic effect
 const magneticElements = document.querySelectorAll(".magnetic");
 magneticElements.forEach(el => {
     el.addEventListener("mousemove", (e) => {
@@ -30,9 +30,7 @@ if (document.querySelector(".availability-pill .dot")) {
     gsap.to(".availability-pill .dot", { opacity: 0.2, duration: 0.8, repeat: -1, yoyo: true, ease: "sine.inOut" });
 }
 
-// 4. Preloader & Hero Entrance
-
-// Helper de divisão de caracteres
+// Hero Entrance Animations
 function splitTextToSpans(selector) {
     document.querySelectorAll(selector).forEach(el => {
         const text = el.innerText;
@@ -143,25 +141,25 @@ staggerGroups.forEach(group => {
     );
 });
 
-// 6. Sticky Cards Parallax Effect (Dimming background cards)
+// Efeito de parallax e dimming nos cards de projeto
 const cards = gsap.utils.toArray('.project-card');
 cards.forEach((card, i) => {
     if (i !== cards.length - 1) { // Apply to all except the last card
         gsap.to(card, {
             scale: 0.95,
-            filter: "brightness(0.4)",
+            filter: "brightness(0.5)", // Fica um pouco mais claro do que 0.4 na sua versão mais escura
             ease: "none",
             scrollTrigger: {
                 trigger: cards[i + 1], // Trigger when the NEXT card comes up
-                start: "top bottom",
-                end: "top top",
+                start: "top 75%", // Só começa a escurecer quando o próximo card subir consideravelmente
+                end: "top 20%",
                 scrub: true,
             }
         });
     }
 });
 
-// 7. Formulário de Contato WhatsApp
+// Envio via WhatsApp
 const whatsappForm = document.getElementById("whatsapp-form");
 if (whatsappForm) {
     whatsappForm.addEventListener("submit", (e) => {

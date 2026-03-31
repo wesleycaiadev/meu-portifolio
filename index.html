@@ -7,28 +7,12 @@
     <title>Wesley Caiã | Front-End Developer</title>
     <meta name="description" content="Especialista em criar interfaces responsivas, otimizadas e animadas. Experiência em React, Next.js, Tailwind e GSAP.">
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wesleycaiadev.vercel.app/">
-    <meta property="og:title" content="Wesley Caiã | Front-End Developer">
-    <meta property="og:description" content="Interfaces que funcionam e impressionam. Foco em estética, performance e precisão técnica.">
-    <meta property="og:image" content="https://wesleycaiadev.vercel.app/assets/og-image.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://wesleycaiadev.vercel.app/">
-    <meta property="twitter:title" content="Wesley Caiã | Front-End Developer">
-    <meta property="twitter:description" content="Interfaces que funcionam e impressionam. Foco em estética, performance e precisão técnica.">
-    <meta property="twitter:image" content="https://wesleycaiadev.vercel.app/assets/og-image.jpg">
-
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
 
-    <!-- Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org/",
@@ -59,16 +43,13 @@
 </head>
 
 <body>
-    <!-- Grain SVG Filter Overlay -->
     <svg class="grain-overlay" viewBox="0 0 100 100" preserveAspectRatio="none">
         <filter id="noiseFilter">
             <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
         </filter>
         <rect width="100%" height="100%" filter="url(#noiseFilter)" opacity="0.06"/>
     </svg>
-    <!-- Cursor native only -->
 
-    <!-- Premium Loader -->
     <div id="premium-loader">
         <div class="loader-content">
             <span class="loader-brand">WESLEY.<span class="logo-dot">DEV</span></span>
@@ -129,7 +110,7 @@
 
             <!-- Avatar Integration -->
             <div class="hero-image-wrapper reveal-up">
-                <div class="image-frame hero-photo magnetic">
+                <div class="image-frame hero-photo">
                     <img src="assets/profile.png" alt="Wesley Caiã" class="hero-img"
                         onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop'">
                 </div>
@@ -138,7 +119,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="section about-section">
         <div class="container">
             <div class="section-header reveal-up">
@@ -149,10 +129,10 @@
                 <div class="about-text-card reveal-up">
                     <div class="about-text-content">
                         <p>
-                            Olá! Sou o Wesley Caiã, front-end developer com base em <strong>Engenharia Eletroeletrônica</strong>, focado em construir interfaces que unem estética, performance e atenção a cada detalhe.
+                            Olá! Sou o Wesley Caiã, Desenvolvedor Front-end focado em construir interfaces que unem estética refinada, alta performance e atenção obsessiva a cada detalhe.
                         </p>
                         <p>
-                            Gosto de pensar na experiência do usuário de ponta a ponta — da estrutura do layout ao timing de cada animação. Trabalho com um stack moderno e versátil, do desenvolvimento de landing pages e sistemas em React/Next.js até interfaces animadas com GSAP, sempre com código limpo e entrega no prazo.
+                            Penso na experiência do usuário de ponta a ponta — da arquitetura do layout ao timing perfeito de cada animação. Domino um stack moderno para entregar desde landing pages imersivas até sistemas complexos com React e Next.js, elevando o nível visual com animações fluidas em GSAP. Meu compromisso é com código limpo, escalável e entregas precisas.
                         </p>
                         <p>
                             Projetos reais. Clientes ativos. Código no ar.
@@ -196,48 +176,58 @@
 
         <div class="projects-wrapper">
                 <!-- Project 1 -->
-                <article class="project-card" style="top: 15vh;">
+                <article class="project-card" style="top: 15vh;" id="project-fokus">
                     <div class="project-content">
                         <span class="project-number">01</span>
                         <h3>Fokus</h3>
+                        <p class="project-summary">O Fokus é muito mais do que um cronômetro convencional: é um ambiente imersivo projetado cientificamente para desenvolvedores manterem estado de <em>flow</em>. Maximiza o rendimento isolando distrações e controlando os ciclos.</p>
                         <div class="project-tags">
-                            <span>JavaScript</span>
-                            <span>Produtividade</span>
-                            <span>UI Design</span>
+                            <span>Vanilla JS</span>
+                            <span>CSS3</span>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://wesleycaiadev.github.io/fokus-projeto/" target="_blank" class="btn-primary magnetic">Visitar Site <i class="ph ph-arrow-up-right"></i></a>
+                            <button class="btn-outline magnetic cursor-clickable" onclick="openProjectModal(document.getElementById('visual-fokus'))">Detalhes <i class="ph ph-info"></i></button>
                         </div>
                     </div>
                     <div class="project-visual cursor-clickable" 
+                         id="visual-fokus"
                          data-title="Fokus"
-                         data-desc="Um Pomodoro Timer inteligente construído completamente com Vanilla JS, CSS puro e manipulação nativa de DOM com foco absoluto em alta performance (Zero Repaints desnecessários), visando ajudar desenvolvedores a otimizarem seus ciclos de tempo."
+                         data-desc="Um Pomodoro Timer inteligente construído completamente com Vanilla JS e CSS puro, focado em ajudar desenvolvedores a otimizarem seus ciclos de tempo.<br><br><b>Construção & Arquitetura:</b> A aplicação simula um ambiente de sistema nativo utilizando <b>LocalStorage</b> de forma avançada para persistência de dados. Toda a manipulação do DOM e a reatividade do timer foram projetadas zero amarras a frameworks, garantindo performance bruta e evitando repaints desnecessários no motor do navegador.<br><br>A interface utiliza variáveis de CSS e regras de cálculo nativas para animações fluidas, pronto para ser evoluído até uma comunicação com banco de dados remoto no futuro."
                          data-code="https://github.com/wesleycaiadev/fokus-projeto"
-                         data-live="#"
+                         data-live="https://wesleycaiadev.github.io/fokus-projeto/"
                          onclick="openProjectModal(this)">
                         <img src="assets/fokus.png" alt="Fokus Project Image"
                             onerror="this.src='https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1200&auto=format&fit=crop'">
-                        <div class="click-hint">Clique para expandir</div>
                     </div>
                 </article>
 
                 <!-- Project 2 -->
-                <article class="project-card" style="top: 18vh;">
+                <article class="project-card" style="top: 18vh;" id="project-spasmooth">
                     <div class="project-content">
                         <span class="project-number">02</span>
                         <h3>SpaSmooth</h3>
+                        <p class="project-summary">Uma experiência digital premium projetada para o nicho Wellness. Atua como um funil ágil de conversão e agenda, pavimentando arquiteturalmente a evolução para um SaaS.</p>
                         <div class="project-tags">
+                            <span>HTML5</span>
                             <span>CSS Grid</span>
-                            <span>Landing Page</span>
-                            <span>Animações</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://spasmooth.com.br" target="_blank" class="btn-primary magnetic">Visitar Site <i class="ph ph-arrow-up-right"></i></a>
+                            <button class="btn-outline magnetic cursor-clickable" onclick="openProjectModal(document.getElementById('visual-spasmooth'))">Detalhes <i class="ph ph-info"></i></button>
                         </div>
                     </div>
                     <div class="project-visual cursor-clickable"
+                         id="visual-spasmooth"
                          data-title="SpaSmooth"
-                         data-desc="Landing page promocional de altíssima conversão focado em bem-estar. Estruturada sobre os mais modernos fundamentos de CSS Grid fluido, Core Web Vitals cravado em 100/100 e micro-interações requintadas para reforçar o brand luxury do Spa."
+                         data-desc="Landing page promocional de altíssima conversão focada no nicho wellness e luxo.<br><br><b>Estrutura e Tecnologias:</b> Guiada sobre os mais modernos fundamentos de CSS Grid fluido e layouts assimétricos, a página alcança pontuações altíssimas de aprovação de acessibilidade e Core Web Vitals (cravado perto do 100).<br><br>As micro-interações do usuário com JavaScript otimizado visam nutrir a relação com o cliente. O esqueleto modular da plataforma foi desenhado visualizando uma evolução posterior (SaaS), pronta para integrar um sistema Back-end de agendamentos reais em Node/Python e banco de dados isolado com controle de acesso de funcionários e métricas do Spa."
                          data-code="https://github.com/wesleycaiadev/spasmooth-landing"
-                         data-live="#"
+                         data-live="https://spasmooth.com.br"
                          onclick="openProjectModal(this)">
                         <img src="assets/spasmooth.png" alt="SpaSmooth Image"
                             onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1200&auto=format&fit=crop'">
-                        <div class="click-hint">Clique para expandir</div>
                     </div>
                 </article>
             </div>
@@ -250,7 +240,6 @@
             <h2 class="contact-title">Vamos criar algo<br><span class="italic-accent">incrível?</span></h2>
 
             <div class="contact-grid">
-                <!-- Formulário -->
                 <div class="contact-form-wrapper">
                     <form id="whatsapp-form" class="contact-form">
                         <div class="input-group">
