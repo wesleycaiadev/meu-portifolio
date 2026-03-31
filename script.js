@@ -216,21 +216,15 @@ if (mobileMenu) {
     });
 }
 
-// ==========================================
-// 8. PROJECT MODAL (NOVO MODAL DE PROJECTOS)
-// ==========================================
 window.openProjectModal = function(element) {
-    // 1. Coleta os dados embutidos na tag
     const title = element.getAttribute('data-title');
     const desc = element.getAttribute('data-desc');
     const liveLink = element.getAttribute('data-live');
     const codeLink = element.getAttribute('data-code');
 
-    // 2. Acopla os dados na DOM
     document.getElementById('modalTitle').textContent = title;
-    document.getElementById('modalDesc').textContent = desc;
+    document.getElementById('modalDesc').innerHTML = desc;
     
-    // Configura botões dinamicamente
     const liveBtn = document.getElementById('modalLiveBtn');
     const codeBtn = document.getElementById('modalCodeBtn');
     
