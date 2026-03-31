@@ -1,0 +1,24 @@
+{
+    "name": "Wesley Caiã | Front-End Developer",
+    "short_name": "Wesley Caiã",
+    "icons": [
+        {
+            "src": "assets/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#EF9F27",
+    "background_color": "#0e0c09",
+    "display": "standalone"
+}
