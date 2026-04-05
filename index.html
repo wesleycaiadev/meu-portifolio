@@ -230,6 +230,62 @@
                             onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1200&auto=format&fit=crop'">
                     </div>
                 </article>
+
+                <!-- Project 3 -->
+                <article class="project-card" style="top: 21vh;" id="project-opencell">
+                    <div class="project-content">
+                        <span class="project-number">03</span>
+                        <h3>Vistoriador OpenCell</h3>
+                        <p class="project-summary">PWA técnico desenvolvido para o Samsung Smart Center. Automatiza o fluxo de vistorias de painéis de TV com suporte offline e dashboard de diagnóstico.</p>
+                        <div class="project-tags">
+                            <span>PWA</span>
+                            <span>JavaScript</span>
+                            <span>Mobile First</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://vistoriador-opencell.vercel.app/" target="_blank" class="btn-primary magnetic">Visitar App <i class="ph ph-arrow-up-right"></i></a>
+                            <button class="btn-outline magnetic cursor-clickable" onclick="openProjectModal(document.getElementById('visual-opencell'))">Detalhes <i class="ph ph-info"></i></button>
+                        </div>
+                    </div>
+                    <div class="project-visual cursor-clickable"
+                         id="visual-opencell"
+                         data-title="Vistoriador OpenCell"
+                         data-desc="O Vistoriador OpenCell é um PWA (Progressive Web App) desenvolvido exclusivamente para o ecossistema técnico do Samsung Smart Center. Ele automatiza o fluxo de inspeção de painéis de TV, substituindo formulários manuais por uma interface ágil e à prova de falhas.<br><br><b>Engenharia e Recursos:</b> A aplicação utiliza <b>Local Storage</b> e <b>Service Workers</b> para garantir operação 100% offline dentro de fábricas e centros logísticos. O sistema conta com um dashboard integrativo que processa diagnósticos técnicos em tempo real, permitindo a classificação imediata de aprovação ou defeito das peças. A arquitetura foi construída para ser extremamente leve, focando no desempenho mobile sob condições de rede instáveis, mantendo um design premium e industrial."
+                         data-code="https://github.com/wesleycaiadev/vistoriador-opencell"
+                         data-live="https://vistoriador-opencell.vercel.app/"
+                         onclick="openProjectModal(this)">
+                        <img src="assets/opencell.png" alt="Vistoriador OpenCell Image"
+                            onerror="this.src='https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop'">
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card" style="top: 24vh;" id="project-vgtech">
+                    <div class="project-content">
+                        <span class="project-number">04</span>
+                        <h3>VgTech</h3>
+                        <p class="project-summary">Landing page moderna e imersiva para assistência técnica especializada. Design focado em conversão e estética premium para dispositivos Apple e Android.</p>
+                        <div class="project-tags">
+                            <span>UI/UX</span>
+                            <span>HTML5</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://vg-tech.vercel.app/" target="_blank" class="btn-primary magnetic">Visitar Site <i class="ph ph-arrow-up-right"></i></a>
+                            <button class="btn-outline magnetic cursor-clickable" onclick="openProjectModal(document.getElementById('visual-vgtech'))">Detalhes <i class="ph ph-info"></i></button>
+                        </div>
+                    </div>
+                    <div class="project-visual cursor-clickable"
+                         id="visual-vgtech"
+                         data-title="VgTech"
+                         data-desc="Desenvolvimento de uma interface digital de alta performance para o laboratório avançado VgTech. O foco do projeto foi traduzir a expertise técnica da marca em reparos de dispositivos para o ambiente web.<br><br><b>Design & Conversão:</b> A estética imersiva com highlights em azul ciano foi estruturada deliberadamente para direcionar a atenção do usuário à ação primária: o atendimento humanizado via WhatsApp. O layout responsivo em grid segue princípios modernos de design conversion-driven (focado em conversão), simplificando a jornada do cliente e passando autoridade logo na primeira rolagem."
+                         data-code="https://github.com/wesleycaiadev/VG-TECH"
+                         data-live="https://vg-tech.vercel.app/"
+                         onclick="openProjectModal(this)">
+                        <img src="assets/vgtech.png" alt="VgTech Image"
+                            onerror="this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200&auto=format&fit=crop'">
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -281,7 +337,7 @@
 
     <!-- Project Glassmorphism Modal -->
     <div class="project-modal-overlay" id="projectModal" onclick="closeProjectModal(event)">
-        <div class="project-modal-content">
+        <div class="project-modal-content" data-lenis-prevent>
             <button class="close-modal" onclick="closeProjectModal(event, true)"><i class="ph ph-x"></i></button>
             <div class="modal-body">
                 <span class="modal-label">PROJECT DETAILS</span>
