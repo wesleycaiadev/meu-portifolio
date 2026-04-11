@@ -5,7 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wesley Caiã | Front-End Developer</title>
-    <meta name="description" content="Especialista em criar interfaces responsivas, otimizadas e animadas. Experiência em React, Next.js, Tailwind e GSAP.">
+    <meta name="description" content="Wesley Caiã — Desenvolvedor Front-End especializado em React, Next.js e GSAP. Interfaces responsivas, animadas e pixel-perfect.">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Wesley Caiã | Front-End Developer" />
+    <meta property="og:description" content="Construo interfaces responsivas, animadas e pixel-perfect — do conceito ao deploy. React, Next.js, GSAP, Tailwind." />
+    <meta property="og:image" content="https://wesleycaiadev.vercel.app/assets/profile.png" />
+    <meta property="og:url" content="https://wesleycaiadev.vercel.app" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
@@ -38,6 +46,10 @@
 
     <!-- Lenis Smooth Scroll -->
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+
+    <!-- Prefetch project pages -->
+    <link rel="prefetch" href="https://wesleycaiadev.github.io/fokus-projeto/">
+    <link rel="prefetch" href="https://spasmooth.com.br">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -73,7 +85,7 @@
             <li><a href="#hero" class="magnetic-text">Home</a></li>
             <li><a href="#about" class="magnetic-text">Sobre</a></li>
             <li><a href="#projects" class="magnetic-text">Trabalhos</a></li>
-            <li id="cv-link-item"><a href="assets/curriculo-dev-wesley-v2.pdf" download class="magnetic-text">Currículo</a></li>
+            <li id="cv-link-item"><a href="assets/curriculo-dev-wesley-v2.pdf" download class="magnetic-text" aria-label="Baixar currículo em PDF" title="Baixar PDF">Currículo <i class="ph ph-download-simple"></i></a></li>
             <li><a href="#contact" class="btn-primary magnetic">Contato</a></li>
         </ul>
     </nav>
@@ -99,23 +111,17 @@
                 </p>
                 <div class="hero-actions reveal-up">
                     <a href="#projects" class="btn-primary magnetic">Ver Projetos</a>
-                    
                     <div class="social-divider"></div>
-
-                    <a href="https://github.com/wesleycaiadev" target="_blank" class="btn-icon magnetic"><i
-                            class="ph ph-github-logo"></i></a>
-                    <a href="https://www.linkedin.com/in/wesley-caia-souza-santos/" target="_blank"
-                        class="btn-icon magnetic"><i class="ph ph-linkedin-logo"></i></a>
+                    <a href="https://github.com/wesleycaiadev" target="_blank" rel="noopener noreferrer" class="btn-icon magnetic" aria-label="GitHub de Wesley Caiã"><i class="ph ph-github-logo"></i></a>
+                    <a href="https://www.linkedin.com/in/wesley-caia-souza-santos/" target="_blank" rel="noopener noreferrer" class="btn-icon magnetic" aria-label="LinkedIn de Wesley Caiã"><i class="ph ph-linkedin-logo"></i></a>
                 </div>
             </div>
 
-            <!-- Avatar Integration -->
             <div class="hero-image-wrapper reveal-up">
                 <div class="image-frame hero-photo">
-                    <img src="assets/profile.png" alt="Wesley Caiã" class="hero-img"
+                    <img src="assets/profile.png" alt="Foto de Wesley Caiã, desenvolvedor front-end" class="hero-img"
                         onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop'">
                 </div>
-
             </div>
         </div>
     </section>
@@ -188,18 +194,12 @@
                             <span>HTML5</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://wesleycaiadev.github.io/fokus-projeto/" target="_blank" class="btn-primary magnetic">Visitar Site <i class="ph ph-arrow-up-right"></i></a>
-                            <button class="btn-outline magnetic cursor-clickable" onclick="openProjectModal(document.getElementById('visual-fokus'))">Detalhes <i class="ph ph-info"></i></button>
+                            <a href="https://wesleycaiadev.github.io/fokus-projeto/" target="_blank" class="btn-primary magnetic" aria-label="Visitar o site Fokus">Visitar Site <i class="ph ph-arrow-up-right"></i></a>
+                            <button class="btn-outline magnetic cursor-clickable" onclick="openProjectModal('fokus')" aria-label="Ver detalhes do projeto Fokus">Detalhes <i class="ph ph-info"></i></button>
                         </div>
                     </div>
-                    <div class="project-visual cursor-clickable" 
-                         id="visual-fokus"
-                         data-title="Fokus"
-                         data-desc="Um Pomodoro Timer inteligente construído completamente com Vanilla JS e CSS puro, focado em ajudar desenvolvedores a otimizarem seus ciclos de tempo.<br><br><b>Construção & Arquitetura:</b> A aplicação simula um ambiente de sistema nativo utilizando <b>LocalStorage</b> de forma avançada para persistência de dados. Toda a manipulação do DOM e a reatividade do timer foram projetadas zero amarras a frameworks, garantindo performance bruta e evitando repaints desnecessários no motor do navegador.<br><br>A interface utiliza variáveis de CSS e regras de cálculo nativas para animações fluidas, pronto para ser evoluído até uma comunicação com banco de dados remoto no futuro."
-                         data-code="https://github.com/wesleycaiadev/fokus-projeto"
-                         data-live="https://wesleycaiadev.github.io/fokus-projeto/"
-                         onclick="openProjectModal(this)">
-                        <img src="assets/fokus.png" alt="Fokus Project Image"
+                    <div class="project-visual cursor-clickable" onclick="openProjectModal('fokus')">
+                        <img src="assets/fokus.png" alt="Interface do Fokus, um pomodoro timer imersivo para desenvolvedores" loading="lazy"
                             onerror="this.src='https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1200&auto=format&fit=crop'">
                     </div>
                 </article>
@@ -208,7 +208,7 @@
                 <article class="project-card" style="top: 140px;" id="project-spasmooth">
                     <div class="project-content">
                         <span class="project-number">02</span>
-                        <h3>SpaSmooth</h3>
+                        <h3>SpaSmooth <span class="badge-real-client" aria-label="Projeto em produção para cliente real">Em produção</span></h3>
                         <p class="project-summary">Uma experiência digital premium projetada para o nicho Wellness. Atua como um funil ágil de conversão e agenda, pavimentando arquiteturalmente a evolução para um SaaS.</p>
                         <div class="project-tags">
                             <span>HTML5</span>
@@ -216,18 +216,12 @@
                             <span>JavaScript</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://spasmooth.com.br" target="_blank" class="btn-primary magnetic">Visitar Site <i class="ph ph-arrow-up-right"></i></a>
-                            <button class="btn-outline magnetic cursor-clickable" onclick="openProjectModal(document.getElementById('visual-spasmooth'))">Detalhes <i class="ph ph-info"></i></button>
+                            <a href="https://spasmooth.com.br" target="_blank" class="btn-primary magnetic" aria-label="Visitar o site SpaSmooth">Visitar Site <i class="ph ph-arrow-up-right"></i></a>
+                            <button class="btn-outline magnetic cursor-clickable" onclick="openProjectModal('spasmooth')" aria-label="Ver detalhes do SpaSmooth">Detalhes <i class="ph ph-info"></i></button>
                         </div>
                     </div>
-                    <div class="project-visual cursor-clickable"
-                         id="visual-spasmooth"
-                         data-title="SpaSmooth"
-                         data-desc="Landing page promocional de altíssima conversão focada no nicho wellness e luxo.<br><br><b>Estrutura e Tecnologias:</b> Guiada sobre os mais modernos fundamentos de CSS Grid fluido e layouts assimétricos, a página alcança pontuações altíssimas de aprovação de acessibilidade e Core Web Vitals (cravado perto do 100).<br><br>As micro-interações do usuário com JavaScript otimizado visam nutrir a relação com o cliente. O esqueleto modular da plataforma foi desenhado visualizando uma evolução posterior (SaaS), pronta para integrar um sistema Back-end de agendamentos reais em Node/Python e banco de dados isolado com controle de acesso de funcionários e métricas do Spa."
-                         data-code="https://github.com/wesleycaiadev/spasmooth-landing"
-                         data-live="https://spasmooth.com.br"
-                         onclick="openProjectModal(this)">
-                        <img src="assets/spasmooth.png" alt="SpaSmooth Image"
+                    <div class="project-visual cursor-clickable" onclick="openProjectModal('spasmooth')">
+                        <img src="assets/spasmooth.png" alt="Interface da landing page SpaSmooth, projeto premium para clínica de estética" loading="lazy"
                             onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1200&auto=format&fit=crop'">
                     </div>
                 </article>
@@ -237,25 +231,21 @@
                     <div class="project-content">
                         <span class="project-number">03</span>
                         <h3>Vistoriador OpenCell</h3>
-                        <p class="project-summary">PWA técnico desenvolvido para o Samsung Smart Center. Automatiza o fluxo de vistorias de painéis de TV com suporte offline e dashboard de diagnóstico.</p>
+                        <p class="project-summary">PWA técnico desenvolvido para o Samsung Smart Center de Aracaju. Automatiza o fluxo completo de vistorias de painéis de TV com suporte offline via Service Workers, dashboard de diagnóstico e interface Mobile First. Substituiu um processo manual em papel, reduzindo erros e acelerando o atendimento técnico.</p>
                         <div class="project-tags">
                             <span>PWA</span>
+                            <span>Service Workers</span>
+                            <span>Offline First</span>
                             <span>JavaScript</span>
                             <span>Mobile First</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://vistoriador-opencell.vercel.app/" target="_blank" class="btn-primary magnetic">Visitar App <i class="ph ph-arrow-up-right"></i></a>
-                            <button class="btn-outline magnetic cursor-clickable" onclick="openProjectModal(document.getElementById('visual-opencell'))">Detalhes <i class="ph ph-info"></i></button>
+                            <a href="https://vistoriador-opencell.vercel.app/" target="_blank" class="btn-primary magnetic" aria-label="Visitar o app Vistoriador OpenCell">Visitar App <i class="ph ph-arrow-up-right"></i></a>
+                            <button class="btn-outline magnetic cursor-clickable" onclick="openProjectModal('opencell')" aria-label="Ver detalhes do Vistoriador OpenCell">Detalhes <i class="ph ph-info"></i></button>
                         </div>
                     </div>
-                    <div class="project-visual cursor-clickable"
-                         id="visual-opencell"
-                         data-title="Vistoriador OpenCell"
-                         data-desc="O Vistoriador OpenCell é um PWA (Progressive Web App) desenvolvido exclusivamente para o ecossistema técnico do Samsung Smart Center. Ele automatiza o fluxo de inspeção de painéis de TV, substituindo formulários manuais por uma interface ágil e à prova de falhas.<br><br><b>Engenharia e Recursos:</b> A aplicação utiliza <b>Local Storage</b> e <b>Service Workers</b> para garantir operação 100% offline dentro de fábricas e centros logísticos. O sistema conta com um dashboard integrativo que processa diagnósticos técnicos em tempo real, permitindo a classificação imediata de aprovação ou defeito das peças. A arquitetura foi construída para ser extremamente leve, focando no desempenho mobile sob condições de rede instáveis, mantendo um design premium e industrial."
-                         data-code="https://github.com/wesleycaiadev/vistoriador-opencell"
-                         data-live="https://vistoriador-opencell.vercel.app/"
-                         onclick="openProjectModal(this)">
-                        <img src="assets/opencell.png" alt="Vistoriador OpenCell Image"
+                    <div class="project-visual cursor-clickable" onclick="openProjectModal('opencell')">
+                        <img src="assets/opencell.png" alt="Dashboard do Vistoriador OpenCell, PWA para o Samsung Smart Center de Aracaju" loading="lazy"
                             onerror="this.src='https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop'">
                     </div>
                 </article>
@@ -264,7 +254,7 @@
                 <article class="project-card" style="top: 220px;" id="project-vgtech">
                     <div class="project-content">
                         <span class="project-number">04</span>
-                        <h3>VgTech</h3>
+                        <h3>VgTech <span class="badge-real-client" aria-label="Projeto em produção para cliente real">Cliente real</span></h3>
                         <p class="project-summary">Landing page moderna e imersiva para assistência técnica especializada. Design focado em conversão e estética premium para dispositivos Apple e Android.</p>
                         <div class="project-tags">
                             <span>UI/UX</span>
@@ -272,18 +262,12 @@
                             <span>JavaScript</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://vg-tech.vercel.app/" target="_blank" class="btn-primary magnetic">Visitar Site <i class="ph ph-arrow-up-right"></i></a>
-                            <button class="btn-outline magnetic cursor-clickable" onclick="openProjectModal(document.getElementById('visual-vgtech'))">Detalhes <i class="ph ph-info"></i></button>
+                            <a href="https://vg-tech.vercel.app/" target="_blank" class="btn-primary magnetic" aria-label="Visitar o site VgTech">Visitar Site <i class="ph ph-arrow-up-right"></i></a>
+                            <button class="btn-outline magnetic cursor-clickable" onclick="openProjectModal('vgtech')" aria-label="Ver detalhes do VgTech">Detalhes <i class="ph ph-info"></i></button>
                         </div>
                     </div>
-                    <div class="project-visual cursor-clickable"
-                         id="visual-vgtech"
-                         data-title="VgTech"
-                         data-desc="Desenvolvimento de uma interface digital de alta performance para o laboratório avançado VgTech. O foco do projeto foi traduzir a expertise técnica da marca em reparos de dispositivos para o ambiente web.<br><br><b>Design & Conversão:</b> A estética imersiva com highlights em azul ciano foi estruturada deliberadamente para direcionar a atenção do usuário à ação primária: o atendimento humanizado via WhatsApp. O layout responsivo em grid segue princípios modernos de design conversion-driven (focado em conversão), simplificando a jornada do cliente e passando autoridade logo na primeira rolagem."
-                         data-code="https://github.com/wesleycaiadev/VG-TECH"
-                         data-live="https://vg-tech.vercel.app/"
-                         onclick="openProjectModal(this)">
-                        <img src="assets/vgtech.png" alt="VgTech Image"
+                    <div class="project-visual cursor-clickable" onclick="openProjectModal('vgtech')">
+                        <img src="assets/vgtech.png" alt="Interface da landing page VgTech, assistência técnica especializada em dispositivos Apple e Android" loading="lazy"
                             onerror="this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200&auto=format&fit=crop'">
                     </div>
                 </article>
@@ -300,31 +284,30 @@
                 <div class="contact-form-wrapper">
                     <form id="whatsapp-form" class="contact-form">
                         <div class="input-group">
-                            <input type="text" id="name" name="name" required placeholder="Qual o seu nome?" />
+                            <input type="text" id="name" name="name" required placeholder="Qual o seu nome?" aria-label="Seu nome" />
                         </div>
                         <div class="input-group">
-                            <textarea id="message" name="message" rows="4" required placeholder="Conte-me sobre o seu projeto..."></textarea>
+                            <textarea id="message" name="message" rows="4" required placeholder="Conte-me sobre o seu projeto..." aria-label="Sua mensagem"></textarea>
                         </div>
-                        <button type="submit" class="btn-primary btn-submit magnetic">
+                        <button type="submit" class="btn-primary btn-submit magnetic" aria-label="Enviar mensagem via WhatsApp">
                             <span>Enviar via WhatsApp</span> <i class="ph ph-whatsapp-logo"></i>
                         </button>
                     </form>
                 </div>
 
-                <!-- Info -->
                 <div class="contact-info">
                     <p class="info-desc">Estou sempre aberto a discutir desenvolvimento, novas ideias de produtos ou
                         oportunidades de parcerias.</p>
                     <a href="mailto:wesleycaia.dev@gmail.com"
-                        class="contact-link magnetic-text">wesleycaia.dev@gmail.com</a>
+                        class="contact-link magnetic-text" aria-label="Enviar e-mail para wesleycaia.dev@gmail.com">wesleycaia.dev@gmail.com</a>
 
                     <div class="social-links-footer">
-                        <a href="https://www.linkedin.com/in/wesley-caia-souza-santos/" target="_blank"
-                            class="btn-icon magnetic"><i class="ph ph-linkedin-logo"></i></a>
-                        <a href="https://github.com/wesleycaiadev" target="_blank" class="btn-icon magnetic"><i
-                                class="ph ph-github-logo"></i></a>
-                        <a href="https://wa.me/5579998356598" target="_blank" class="btn-icon magnetic"><i
-                                class="ph ph-whatsapp-logo"></i></a>
+                        <a href="https://www.linkedin.com/in/wesley-caia-souza-santos/" target="_blank" rel="noopener noreferrer"
+                            class="btn-icon magnetic" aria-label="Perfil do LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+                        <a href="https://github.com/wesleycaiadev" target="_blank" rel="noopener noreferrer"
+                            class="btn-icon magnetic" aria-label="Perfil do GitHub"><i class="ph ph-github-logo"></i></a>
+                        <a href="https://wa.me/5579998356598" target="_blank" rel="noopener noreferrer"
+                            class="btn-icon magnetic" aria-label="Contato pelo WhatsApp"><i class="ph ph-whatsapp-logo"></i></a>
                     </div>
                 </div>
             </div>
@@ -339,11 +322,11 @@
     <!-- Project Glassmorphism Modal -->
     <div class="project-modal-overlay" id="projectModal" onclick="closeProjectModal(event)">
         <div class="project-modal-content" data-lenis-prevent>
-            <button class="close-modal" onclick="closeProjectModal(event, true)"><i class="ph ph-x"></i></button>
+            <button class="close-modal" onclick="closeProjectModal(event, true)" aria-label="Fechar modal"><i class="ph ph-x"></i></button>
             <div class="modal-body">
                 <span class="modal-label">PROJECT DETAILS</span>
-                <h3 id="modalTitle">Project Title</h3>
-                <p id="modalDesc">Project description goes here...</p>
+                <h3 id="modalTitle"></h3>
+                <p id="modalDesc"></p>
                 <div class="modal-actions">
                     <a href="#" id="modalLiveBtn" target="_blank" class="btn-primary modal-btn">Ver ao Vivo <i class="ph ph-arrow-up-right"></i></a>
                     <a href="#" id="modalCodeBtn" target="_blank" class="btn-primary modal-btn modal-btn-outline">Ver Código <i class="ph ph-github-logo"></i></a>
