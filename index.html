@@ -11,6 +11,9 @@
     <meta property="og:title" content="Wesley Caiã | Front-End Developer" />
     <meta property="og:description" content="Construo interfaces responsivas, animadas e pixel-perfect — do conceito ao deploy. React, Next.js, GSAP, Tailwind." />
     <meta property="og:image" content="https://wesleycaiadev.vercel.app/assets/profile.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:image" content="https://wesleycaiadev.vercel.app/assets/profile.png" />
     <meta property="og:url" content="https://wesleycaiadev.vercel.app" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -85,7 +88,7 @@
             <li><a href="#hero" class="magnetic-text">Home</a></li>
             <li><a href="#about" class="magnetic-text">Sobre</a></li>
             <li><a href="#projects" class="magnetic-text">Trabalhos</a></li>
-            <li id="cv-link-item"><a href="assets/curriculo-dev-wesley-v2.pdf" download class="magnetic-text" aria-label="Baixar currículo em PDF" title="Baixar PDF">Currículo <i class="ph ph-download-simple"></i></a></li>
+            <li id="cv-link-item"><a href="assets/curriculo-dev-wesley-v2.pdf" download class="magnetic-text" id="cv-download-link" aria-label="Baixar currículo em PDF" title="Baixar PDF">Currículo <i class="ph ph-download-simple"></i></a></li>
             <li><a href="#contact" class="btn-primary magnetic">Contato</a></li>
         </ul>
     </nav>
@@ -107,13 +110,13 @@
                     <h1 class="hero-title h1-line italic-accent">impressionam.</h1>
                 </div>
                 <p class="hero-subtitle">
-                    Construo experiências digitais responsivas, animadas e pixel-perfect — do conceito ao deploy.
+                    Especialista em React, Next.js e GSAP. Entrego interfaces <strong>pixel-perfect</strong>, animadas e de alta conversão — do conceito ao deploy em produção.
                 </p>
                 <div class="hero-actions reveal-up">
                     <a href="#projects" class="btn-primary magnetic">Ver Projetos</a>
                     <div class="social-divider"></div>
-                    <a href="https://github.com/wesleycaiadev" target="_blank" rel="noopener noreferrer" class="btn-icon magnetic" aria-label="GitHub de Wesley Caiã"><i class="ph ph-github-logo"></i></a>
-                    <a href="https://www.linkedin.com/in/wesley-caia-souza-santos/" target="_blank" rel="noopener noreferrer" class="btn-icon magnetic" aria-label="LinkedIn de Wesley Caiã"><i class="ph ph-linkedin-logo"></i></a>
+                    <a href="https://github.com/wesleycaiadev" target="_blank" rel="noopener noreferrer" class="btn-icon btn-icon--featured magnetic" aria-label="GitHub de Wesley Caiã"><i class="ph ph-github-logo"></i></a>
+                    <a href="https://www.linkedin.com/in/wesley-caia-souza-santos/" target="_blank" rel="noopener noreferrer" class="btn-icon btn-icon--featured magnetic" aria-label="LinkedIn de Wesley Caiã"><i class="ph ph-linkedin-logo"></i></a>
                 </div>
             </div>
 
@@ -140,6 +143,9 @@
                         </p>
                         <p>
                             Penso na experiência do usuário de ponta a ponta — da arquitetura do layout ao timing perfeito de cada animação. Domino um stack moderno para entregar desde landing pages imersivas até sistemas complexos com React e Next.js, elevando o nível visual com animações fluidas em GSAP. Meu compromisso é com código limpo, escalável e entregas precisas.
+                        </p>
+                        <p>
+                            Meu background em diagnósticos avançados de hardware me deu uma capacidade analítica afiada para debugar código complexo e arquitetar software resiliente — identifico a causa raiz onde outros tentam contornar.
                         </p>
                         <p>
                             Projetos reais. Clientes ativos. Código no ar.
@@ -183,7 +189,7 @@
 
         <div class="projects-wrapper">
                 <!-- Project 1 -->
-                <article class="project-card" style="top: 100px;" id="project-fokus">
+                <article class="project-card" id="project-fokus">
                     <div class="project-content">
                         <span class="project-number">01</span>
                         <h3>Fokus</h3>
@@ -205,15 +211,15 @@
                 </article>
 
                 <!-- Project 2 -->
-                <article class="project-card" style="top: 140px;" id="project-spasmooth">
+                <article class="project-card" id="project-spasmooth">
                     <div class="project-content">
                         <span class="project-number">02</span>
                         <h3>SpaSmooth <span class="badge-real-client" aria-label="Projeto em produção para cliente real">Em produção</span></h3>
                         <p class="project-summary">Uma experiência digital premium projetada para o nicho Wellness. Atua como um funil ágil de conversão e agenda, pavimentando arquiteturalmente a evolução para um SaaS.</p>
                         <div class="project-tags">
-                            <span>HTML5</span>
-                            <span>CSS Grid</span>
-                            <span>JavaScript</span>
+                            <span>React</span>
+                            <span>Next.js</span>
+                            <span>Supabase</span>
                         </div>
                         <div class="project-actions">
                             <a href="https://spasmooth.com.br" target="_blank" class="btn-primary magnetic" aria-label="Visitar o site SpaSmooth">Visitar Site <i class="ph ph-arrow-up-right"></i></a>
@@ -227,7 +233,7 @@
                 </article>
 
                 <!-- Project 3 -->
-                <article class="project-card" style="top: 180px;" id="project-opencell">
+                <article class="project-card" id="project-opencell">
                     <div class="project-content">
                         <span class="project-number">03</span>
                         <h3>Vistoriador OpenCell</h3>
@@ -251,7 +257,7 @@
                 </article>
 
                 <!-- Project 4 -->
-                <article class="project-card" style="top: 220px;" id="project-vgtech">
+                <article class="project-card" id="project-vgtech">
                     <div class="project-content">
                         <span class="project-number">04</span>
                         <h3>VgTech <span class="badge-real-client" aria-label="Projeto em produção para cliente real">Cliente real</span></h3>
@@ -303,9 +309,9 @@
 
                     <div class="social-links-footer">
                         <a href="https://www.linkedin.com/in/wesley-caia-souza-santos/" target="_blank" rel="noopener noreferrer"
-                            class="btn-icon magnetic" aria-label="Perfil do LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+                            class="btn-icon btn-icon--featured magnetic" aria-label="Perfil do LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
                         <a href="https://github.com/wesleycaiadev" target="_blank" rel="noopener noreferrer"
-                            class="btn-icon magnetic" aria-label="Perfil do GitHub"><i class="ph ph-github-logo"></i></a>
+                            class="btn-icon btn-icon--featured magnetic" aria-label="Perfil do GitHub"><i class="ph ph-github-logo"></i></a>
                         <a href="https://wa.me/5579998356598" target="_blank" rel="noopener noreferrer"
                             class="btn-icon magnetic" aria-label="Contato pelo WhatsApp"><i class="ph ph-whatsapp-logo"></i></a>
                     </div>
@@ -315,9 +321,22 @@
     </section>
 
     <!-- Footer -->
-    <footer class="copyright">
-        <p>&copy; 2026 Wesley Caiã. Todos os direitos reservados.</p>
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <span class="logo">Wesley.<span class="logo-dot">dev</span></span>
+            <span class="footer-location"><i class="ph ph-map-pin"></i> Aracaju — SE &nbsp;·&nbsp; Remoto</span>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/wesley-caia-souza-santos/" target="_blank" rel="noopener noreferrer" class="btn-icon btn-icon--featured magnetic" aria-label="LinkedIn de Wesley Caiã"><i class="ph ph-linkedin-logo"></i></a>
+                <a href="https://github.com/wesleycaiadev" target="_blank" rel="noopener noreferrer" class="btn-icon btn-icon--featured magnetic" aria-label="GitHub de Wesley Caiã"><i class="ph ph-github-logo"></i></a>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2026 Wesley Caiã. Todos os direitos reservados.</p>
     </footer>
+
+    <!-- Toast CV Download -->
+    <div id="cv-toast" role="status" aria-live="polite">
+        <i class="ph ph-check-circle"></i> Currículo baixado com sucesso!
+    </div>
 
     <!-- Project Glassmorphism Modal -->
     <div class="project-modal-overlay" id="projectModal" onclick="closeProjectModal(event)">
@@ -325,6 +344,7 @@
             <button class="close-modal" onclick="closeProjectModal(event, true)" aria-label="Fechar modal"><i class="ph ph-x"></i></button>
             <div class="modal-body">
                 <span class="modal-label">PROJECT DETAILS</span>
+                <img id="modalThumb" src="" alt="" class="modal-thumb" />
                 <h3 id="modalTitle"></h3>
                 <p id="modalDesc"></p>
                 <div class="modal-actions">

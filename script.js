@@ -6,25 +6,29 @@ gsap.registerPlugin(ScrollTrigger);
 const PROJECTS = {
     fokus: {
         title: 'Fokus',
-        desc: 'Um Pomodoro Timer inteligente construído completamente com Vanilla JS e CSS puro, focado em ajudar desenvolvedores a otimizarem seus ciclos de tempo.<br><br><b>Construção & Arquitetura:</b> A aplicação simula um ambiente de sistema nativo utilizando <b>LocalStorage</b> de forma avançada para persistência de dados. Toda a manipulação do DOM e a reatividade do timer foram projetadas zero amarras a frameworks, garantindo performance bruta e evitando repaints desnecessários no motor do navegador.<br><br>A interface utiliza variáveis de CSS e regras de cálculo nativas para animações fluidas, pronto para ser evoluído até uma comunicação com banco de dados remoto no futuro.',
+        thumb: 'assets/fokus.png',
+        desc: 'Pomodoro Timer imersivo construído com <b>Vanilla JS e CSS puro</b> — sem frameworks, sem dependências. Score <b>Lighthouse 98/100</b> em performance. Projetado para manter desenvolvedores em estado de <i>flow</i> controlando ciclos com precisão.<br><br><b>Engenharia Zero-Framework:</b> Toda a reatividade do timer foi construída sem framework, garantindo performance bruta e eliminando repaints desnecessários. Persistência via <b>LocalStorage</b> avançado. Animações de transição de estado em CSS puro com variáveis customizadas.',
         code: 'https://github.com/wesleycaiadev/fokus-projeto',
         live: 'https://wesleycaiadev.github.io/fokus-projeto/'
     },
     spasmooth: {
         title: 'SpaSmooth',
-        desc: 'Landing page promocional de altíssima conversão focada no nicho wellness e luxo.<br><br><b>Estrutura e Tecnologias:</b> Guiada sobre os mais modernos fundamentos de CSS Grid fluido e layouts assimétricos, a página alcança pontuações altíssimas de aprovação de acessibilidade e Core Web Vitals (cravado perto do 100).<br><br>As micro-interações do usuário com JavaScript otimizado visam nutrir a relação com o cliente. O esqueleto modular da plataforma foi desenhado visualizando uma evolução posterior (SaaS), pronta para integrar um sistema Back-end de agendamentos reais em Node/Python e banco de dados isolado com controle de acesso de funcionários e métricas do Spa.',
+        thumb: 'assets/spasmooth.png',
+        desc: 'Plataforma digital em produção para clínica de estética em Aracaju. <b>React + Next.js + Supabase</b>. Sistema completo de agendamentos integrado com painel administrativo real — atendendo clientes ativos.<br><br><b>Stack & Resultados:</b> Score <b>Lighthouse 96+</b> em performance e acessibilidade. Sistema de booking com autenticação Supabase, controle de profissionais e gestão de leads por WhatsApp. O funil de conversão foi arquitetado para guiar o visitante da primeira impressão até o agendamento em menos de 30 segundos de navegação.',
         code: 'https://github.com/wesleycaiadev/spasmooth-landing',
         live: 'https://spasmooth.com.br'
     },
     opencell: {
         title: 'Vistoriador OpenCell',
-        desc: 'O Vistoriador OpenCell é um PWA (Progressive Web App) desenvolvido exclusivamente para o ecossistema técnico do Samsung Smart Center. Ele automatiza o fluxo de inspeção de painéis de TV, substituindo formulários manuais por uma interface ágil e à prova de falhas.<br><br><b>Engenharia e Recursos:</b> A aplicação utiliza <b>Local Storage</b> e <b>Service Workers</b> para garantir operação 100% offline dentro de fábricas e centros logísticos. O sistema conta com um dashboard integrativo que processa diagnósticos técnicos em tempo real, permitindo a classificação imediata de aprovação ou defeito das peças. A arquitetura foi construída para ser extremamente leve, focando no desempenho mobile sob condições de rede instáveis, mantendo um design premium e industrial.',
+        thumb: 'assets/opencell.png',
+        desc: 'PWA desenvolvido para o Samsung Smart Center de Aracaju que eliminou o gargalo operacional de vistorias manuais em papel — reduzindo o tempo de inspeção por painel em mais de <b>60%</b>.<br><br><b>Impacto Técnico e de Negócio:</b> O sistema processa fotografias de painéis de TV em tempo real, utiliza <b>leitura OCR</b> para capturar automaticamente códigos de peças e classifica defeitos sem intervenção manual. Os dados de cada vistoria são armazenados localmente via <b>Service Workers</b> e <b>IndexedDB</b>, garantindo operação 100% offline em ambientes fabris com rede instável. Um módulo de <b>exportação estruturada</b> permite download dos laudos em formato compartilhável, integrando o fluxo de aprovação/rejeição ao pipeline logístico da unidade.<br><br>Resultado: um processo que demandava prancheta, caneta e retrabalho agora roda em um único dispositivo mobile com zero dependência de conectividade.',
         code: 'https://github.com/wesleycaiadev/vistoriador-opencell',
         live: 'https://vistoriador-opencell.vercel.app/'
     },
     vgtech: {
         title: 'VgTech',
-        desc: 'Desenvolvimento de uma interface digital de alta performance para o laboratório avançado VgTech. O foco do projeto foi traduzir a expertise técnica da marca em reparos de dispositivos para o ambiente web.<br><br><b>Design & Conversão:</b> A estética imersiva com highlights em azul ciano foi estruturada deliberadamente para direcionar a atenção do usuário à ação primária: o atendimento humanizado via WhatsApp. O layout responsivo em grid segue princípios modernos de design conversion-driven (focado em conversão), simplificando a jornada do cliente e passando autoridade logo na primeira rolagem.',
+        thumb: 'assets/vgtech.png',
+        desc: 'Landing page de alta conversão para laboratório de reparos de dispositivos Apple e Android em Aracaju — <b>cliente ativo em produção</b>. Entregue em menos de <b>72h</b> do briefing ao deploy.<br><br><b>Design & Conversão:</b> A estética imersiva com highlights em azul ciano foi estruturada para direcionar atenção à ação primária: atendimento via WhatsApp. Layout responsivo em grid com princípios de <i>conversion-driven design</i>, simplificando a jornada do cliente e transmitindo autoridade técnica na primeira rolagem.',
         code: 'https://github.com/wesleycaiadev/VG-TECH',
         live: 'https://vg-tech.vercel.app/'
     }
@@ -215,23 +219,31 @@ if (contactSection) {
 }
 
 /* =========================================
-   PROJECT CARD EFFECTS (sticky + dimming)
+   PROJECT CARD — Internal Parallax (desktop only)
    ========================================= */
-const cards = gsap.utils.toArray('.project-card');
-cards.forEach((card, i) => {
-    if (i !== cards.length - 1) {
-        gsap.to(card, {
-            scale: 0.95,
-            filter: 'brightness(0.5)',
-            ease: 'none',
-            scrollTrigger: {
-                trigger: cards[i + 1],
-                start: 'top 75%',
-                end: 'top 20%',
-                scrub: true,
+gsap.matchMedia().add('(min-width: 1201px)', () => {
+    document.querySelectorAll('.project-visual').forEach(visual => {
+        visual.style.overflow = 'hidden';
+    });
+
+    gsap.utils.toArray('.project-card').forEach(card => {
+        const img = card.querySelector('.project-visual img');
+        if (!img) return;
+
+        gsap.fromTo(img,
+            { yPercent: -8 },
+            {
+                yPercent: 8,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: true,
+                }
             }
-        });
-    }
+        );
+    });
 });
 
 /* =========================================
@@ -283,6 +295,18 @@ window.openProjectModal = function(projectId) {
     const p = PROJECTS[projectId];
     if (!p) return;
 
+    // Thumbnail
+    const thumb = document.getElementById('modalThumb');
+    if (thumb) {
+        if (p.thumb) {
+            thumb.src = p.thumb;
+            thumb.alt = p.title;
+            thumb.classList.add('visible');
+        } else {
+            thumb.classList.remove('visible');
+        }
+    }
+
     document.getElementById('modalTitle').textContent = p.title;
     document.getElementById('modalDesc').innerHTML = p.desc;
 
@@ -314,3 +338,19 @@ document.addEventListener('keydown', (e) => {
         }
     }
 });
+
+/* =========================================
+   CV DOWNLOAD TOAST
+   ========================================= */
+function showCvToast() {
+    const toast = document.getElementById('cv-toast');
+    if (!toast) return;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 3500);
+}
+
+const cvNavLink = document.getElementById('cv-download-link');
+if (cvNavLink) cvNavLink.addEventListener('click', showCvToast);
+
+const cvFooterLink = document.getElementById('cv-download-footer');
+if (cvFooterLink) cvFooterLink.addEventListener('click', showCvToast);

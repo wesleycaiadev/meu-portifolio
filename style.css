@@ -293,8 +293,8 @@ body {
     font-family: var(--font-display); font-size: 1.2rem;
     color: var(--color-accent); font-weight: 600; margin-bottom: 1.5rem;
 }
-.project-content h3 { font-size: 3.5rem; margin-bottom: 0.5rem; line-height: 1; }
-.project-summary { font-size: 1.15rem; color: var(--color-text); opacity: 0.85; font-weight: 400; margin-bottom: 1.5rem; line-height: 1.6; }
+.project-content h3 { font-size: 3.5rem; margin-bottom: 0.5rem; line-height: 1; font-weight: 800; }
+.project-summary { font-size: 1.15rem; color: var(--color-text); opacity: 0.85; font-weight: 300; margin-bottom: 1.5rem; line-height: 1.6; }
 
 .project-tags { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; }
 .project-tags span {
@@ -331,7 +331,7 @@ body {
     border-radius: 0 30px 30px 0;
 }
 .project-visual img {
-    width: 100%; aspect-ratio: 16 / 7; object-fit: cover; object-position: center;
+    width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: center;
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 4px 30px rgba(0,0,0,0.6);
@@ -348,6 +348,23 @@ body {
 }
 .cursor-clickable { cursor: pointer; position: relative; }
 
+/* Social icons — featured (Hero + Footer) */
+.btn-icon--featured {
+    width: 56px;
+    height: 56px;
+    font-size: 1.6rem;
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    transition: all 0.3s ease;
+}
+.btn-icon--featured:hover {
+    background: var(--color-accent);
+    color: var(--color-bg);
+    border-color: var(--color-accent);
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(239, 159, 39, 0.35);
+}
+
 /* =========================================
    PROJECT MODAL
    ========================================= */
@@ -362,7 +379,7 @@ body {
     background: rgba(26, 22, 16, 0.95); width: 92%; max-width: 650px;
     max-height: 90vh; overflow-y: auto; overflow-x: hidden;
     border-radius: 24px; border: 1px solid var(--color-border);
-    padding: 3.5rem; position: relative;
+    padding: 4rem 3.5rem; position: relative;
     transform: translateY(30px) scale(0.92);
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s;
     box-shadow: 0 40px 100px rgba(0,0,0,0.8);
@@ -383,6 +400,14 @@ body {
 .close-modal:hover { background: var(--color-accent); color: #0e0c09; transform: rotate(90deg); }
 
 .modal-label { font-size: 0.8rem; color: var(--color-accent); letter-spacing: 2px; text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 10px; }
+.modal-thumb {
+    width: 100%; aspect-ratio: 16/9; object-fit: cover; object-position: center top;
+    border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    display: none;
+}
+.modal-thumb.visible { display: block; }
 .modal-body h3 { font-family: var(--font-display); font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1; color: white; }
 .modal-body p { font-size: 1.15rem; color: #d1c8ba; line-height: 1.8; margin-bottom: 3rem; }
 
@@ -450,13 +475,53 @@ body {
 
 .social-links-footer { display: flex; gap: 1rem; margin-top: 2rem; }
 
-/* Footer */
-.copyright { text-align: center; padding: 2rem; color: var(--color-muted); font-size: 0.9rem; border-top: 1px solid var(--color-border); }
+/* =========================================
+   FOOTER
+   ========================================= */
+.site-footer {
+    border-top: 1px solid var(--color-border);
+    padding: 4rem 0 2rem;
+}
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.footer-container .logo { font-size: 2rem; }
+.footer-location {
+    font-size: 0.85rem; color: var(--color-muted);
+    display: inline-flex; align-items: center; gap: 6px;
+}
+.footer-location i { font-size: 1rem; color: var(--color-accent); }
+.footer-socials { display: flex; gap: 1rem; }
+.footer-copy {
+    text-align: center; color: var(--color-muted);
+    font-size: 0.8rem; margin-top: 2.5rem;
+    padding-top: 1.5rem; border-top: 1px solid var(--color-border);
+}
+
+/* =========================================
+   TOAST — CV Download
+   ========================================= */
+#cv-toast {
+    position: fixed; bottom: 2rem; right: 2rem; z-index: 99998;
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--color-surface2); border: 1px solid rgba(74, 222, 128, 0.3);
+    color: var(--color-text); font-size: 0.95rem; font-weight: 500;
+    padding: 14px 24px; border-radius: 100px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    transform: translateY(20px); opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s;
+    pointer-events: none;
+}
+#cv-toast i { font-size: 1.3rem; color: #4ade80; }
+#cv-toast.show { transform: translateY(0); opacity: 1; pointer-events: auto; }
 
 /* =========================================
    RESPONSIVE
    ========================================= */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .hero-container, .about-grid { grid-template-columns: 1fr; }
     .hero-image-wrapper { order: -1; margin-bottom: 2rem; }
     .hero-title { font-size: 5rem; text-align: center; }
@@ -470,6 +535,13 @@ body {
 
     .contact-grid { grid-template-columns: 1fr; gap: 4rem; }
     .contact-title { text-align: center; }
+}
+
+@media (max-height: 800px) and (min-width: 1201px) {
+    .project-card { min-height: 400px; }
+    .project-content { padding: 2rem; }
+    .project-content h3 { font-size: 2.8rem; }
+    .project-visual { padding: 1.5rem; }
 }
 
 @media (max-width: 768px) {
