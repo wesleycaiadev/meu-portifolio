@@ -20,19 +20,24 @@
 
 ::selection { background-color: var(--color-accent); color: var(--color-bg); }
 
-html { scroll-behavior: auto; }
+html {
+    scroll-behavior: auto;
+    overflow-x: hidden;
+    width: 100%;
+}
 
 body {
     background-color: var(--color-bg);
     color: var(--color-text);
     font-family: var(--font-body);
     overflow-x: hidden;
+    width: 100%;
     -webkit-font-smoothing: antialiased;
     line-height: 1.6;
 }
 
 .grain-overlay {
-    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    position: fixed; inset: 0; width: 100%; height: 100%;
     pointer-events: none; z-index: 9999; opacity: 0.8; mix-blend-mode: overlay;
 }
 
@@ -576,7 +581,7 @@ body {
     .section { padding: 5rem 0; min-height: auto; }
     .hero-section { min-height: 100vh !important; height: auto; }
 
-    .hero-container { grid-template-columns: 1fr; padding-top: 100px; text-align: center; gap: 2rem; }
+    .hero-container { grid-template-columns: 1fr; padding-top: 130px; text-align: center; gap: 2rem; }
     .hero-image-wrapper { order: -1; margin-bottom: 2rem; }
     .hero-title { font-size: 3.5rem; }
     .hero-subtitle { margin: 1.5rem auto; text-align: center; }
@@ -622,7 +627,7 @@ body {
     }
 
     .container { padding: 0 1.25rem; }
-    .hero-title { font-size: 2.8rem; }
+    .hero-title { font-size: clamp(2rem, 11vw, 2.7rem); }
     .section-title { font-size: 2.5rem; margin-bottom: 2rem; }
 
     .about-text-card, .skills-card { padding: 1.5rem; }
