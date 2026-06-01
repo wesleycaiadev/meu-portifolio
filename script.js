@@ -163,13 +163,13 @@ if (skillsCard) {
     );
 }
 
-// Tech pills: bounce-in stagger
+// Tech list items: stagger reveal
 if (skillsCard) {
-    const techItems = skillsCard.querySelectorAll('.tech-master, .tech-tool');
+    const techItems = skillsCard.querySelectorAll('.tech-grid .tech-item');
     if (techItems.length > 0) {
         gsap.fromTo(techItems,
-            { y: 20, opacity: 0, scale: 0.9 },
-            { y: 0, opacity: 1, scale: 1, duration: 0.5, stagger: 0.06, ease: 'back.out(1.7)',
+            { y: 15, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.4, stagger: 0.05, ease: 'power3.out',
               scrollTrigger: { trigger: skillsCard, start: 'top 80%', toggleActions: 'play none none reverse' }
             }
         );
@@ -187,14 +187,52 @@ if (aboutContent) {
     );
 }
 
-// Project cards: stagger entrance
-const projectCards = document.querySelectorAll('.project-card');
-gsap.fromTo(projectCards,
-    { y: 40, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'power3.out',
-      scrollTrigger: { trigger: '.projects-wrapper', start: 'top 85%', toggleActions: 'play none none reverse' }
+// Project cards: clip-path entrance
+gsap.fromTo('.project-card',
+    { clipPath: 'inset(100% 0 0 0)' },
+    { clipPath: 'inset(0% 0 0 0)', duration: 0.9, ease: 'power4.out', stagger: 0.15,
+      scrollTrigger: { trigger: '.projects-section', start: 'top 75%' }
     }
 );
+
+// Progress line
+gsap.fromTo('.progress-line',
+    { height: 0 },
+    { height: '100%', ease: 'none',
+      scrollTrigger: { trigger: '.projects-wrapper', start: 'top 60%', end: 'bottom 60%', scrub: true }
+    }
+);
+
+// Projects internal texts & number & parallax
+const projectCards = document.querySelectorAll('.project-card');
+projectCards.forEach((card, index) => {
+    // Reveal text
+    gsap.fromTo(card.querySelectorAll('h3, .project-summary, .project-tags, .project-actions'),
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.7, stagger: 0.08, delay: 0.4 + (index * 0.15),
+          scrollTrigger: { trigger: '.projects-section', start: 'top 75%' }
+        }
+    );
+    
+    // Project number GSAP proxy counter
+    const numEl = card.querySelector('.project-number');
+    if (numEl) {
+        const targetNum = index + 1;
+        const proxy = { val: 0 };
+        gsap.to(proxy, {
+            val: targetNum, duration: 1, ease: 'power3.out', delay: 0.4 + (index * 0.15),
+            scrollTrigger: { trigger: '.projects-section', start: 'top 75%' },
+            onUpdate: () => { numEl.textContent = proxy.val < 10 ? '0' + Math.round(proxy.val) : Math.round(proxy.val); }
+        });
+    }
+
+    // Parallax on hover
+    const img = card.querySelector('.project-visual img');
+    if (img) {
+        card.addEventListener('mouseenter', () => gsap.to(img, { y: -10, scale: 1.04, duration: 0.6, ease: 'power2.out' }));
+        card.addEventListener('mouseleave', () => gsap.to(img, { y: 0, scale: 1, duration: 0.6, ease: 'power2.out' }));
+    }
+});
 
 // Contact form elements: stagger
 const contactFormWrapper = document.querySelector('.contact-form-wrapper');
@@ -219,33 +257,54 @@ if (contactSection) {
 }
 
 /* =========================================
-   PROJECT CARD — Internal Parallax (desktop only)
+   PROJECT CARD — Hover Parallax Logic (moved above)
    ========================================= */
-gsap.matchMedia().add('(min-width: 1201px)', () => {
-    document.querySelectorAll('.project-visual').forEach(visual => {
-        visual.style.overflow = 'hidden';
-    });
 
-    gsap.utils.toArray('.project-card').forEach(card => {
-        const img = card.querySelector('.project-visual img');
-        if (!img) return;
-
-        gsap.fromTo(img,
-            { yPercent: -8 },
-            {
-                yPercent: 8,
-                ease: 'none',
-                scrollTrigger: {
-                    trigger: card,
-                    start: 'top bottom',
-                    end: 'bottom top',
-                    scrub: true,
-                }
+/* =========================================
+   HERO SCRUB — heading fades out on scroll
+   ========================================= */
+gsap.matchMedia().add('(min-width: 769px)', () => {
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+        gsap.to(heroContent, {
+            scale: 0.94,
+            opacity: 0,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '#hero',
+                start: 'top top',
+                end: '60% top',
+                scrub: true,
             }
-        );
-    });
+        });
+    }
 });
 
+/* =========================================
+   CUSTOM CURSOR — lag physics
+   ========================================= */
+(function initCursor() {
+    const dot = document.getElementById('cursor');
+    if (!dot || 'ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        if (dot) dot.style.display = 'none';
+        return;
+    }
+
+    const xTo = gsap.quickTo(dot, 'x', { duration: 0.4, ease: 'power3' });
+    const yTo = gsap.quickTo(dot, 'y', { duration: 0.4, ease: 'power3' });
+
+    window.addEventListener('mousemove', (e) => {
+        xTo(e.clientX);
+        yTo(e.clientY);
+    });
+
+    // Scale up on interactive elements
+    const hoverTargets = document.querySelectorAll('a, button, .cursor-clickable, .magnetic, .magnetic-text');
+    hoverTargets.forEach(el => {
+        el.addEventListener('mouseenter', () => dot.classList.add('cursor-hover'));
+        el.addEventListener('mouseleave', () => dot.classList.remove('cursor-hover'));
+    });
+})();
 /* =========================================
    WHATSAPP FORM
    ========================================= */

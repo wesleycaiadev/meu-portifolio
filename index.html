@@ -42,10 +42,11 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Fraunces:ital,opsz,wght@1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v13.0.0/font/simple-icons.min.css">
 
     <!-- Lenis Smooth Scroll -->
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
@@ -58,6 +59,7 @@
 </head>
 
 <body>
+    <div id="cursor"></div>
     <svg class="grain-overlay" viewBox="0 0 100 100" preserveAspectRatio="none">
         <filter id="noiseFilter">
             <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
@@ -98,7 +100,7 @@
         <div class="container hero-container">
             <div class="hero-content">
                 <div class="hero-label-wrapper">
-                    <span class="hero-label">FRONT-END DEVELOPER</span>
+                    <span class="hero-tag">Front-end developer</span>
                 </div>
                 <div class="hero-title-wrapper">
                     <h1 class="hero-title h1-line">Interfaces que</h1>
@@ -110,9 +112,9 @@
                     <h1 class="hero-title h1-line italic-accent">impressionam.</h1>
                 </div>
                 <p class="hero-subtitle">
-                    Especialista em React, Next.js e GSAP. Entrego interfaces <strong>pixel-perfect</strong>, animadas e de alta conversão — do conceito ao deploy em produção.
+                    Desenvolvo interfaces com React, Next.js e GSAP. Meu background em hardware me deu olho clínico pra detalhe — levo isso pro código.
                 </p>
-                <div class="hero-actions reveal-up">
+                <div class="hero-actions">
                     <a href="#projects" class="btn-primary magnetic">Ver Projetos</a>
                     <div class="social-divider"></div>
                     <a href="https://github.com/wesleycaiadev" target="_blank" rel="noopener noreferrer" class="btn-icon btn-icon--featured magnetic" aria-label="GitHub de Wesley Caiã"><i class="ph ph-github-logo"></i></a>
@@ -120,10 +122,11 @@
                 </div>
             </div>
 
-            <div class="hero-image-wrapper reveal-up">
-                <div class="image-frame hero-photo">
+            <div class="hero-image-wrapper">
+                <div class="image-frame-editorial hero-photo">
                     <img src="assets/profile.png" alt="Foto de Wesley Caiã, desenvolvedor front-end" class="hero-img"
                         onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop'">
+                    <div class="photo-overlay"></div>
                 </div>
             </div>
         </div>
@@ -132,48 +135,37 @@
     <section id="about" class="section about-section">
         <div class="container">
             <div class="section-header reveal-up">
-                <h2 class="section-title">Sobre Mim</h2>
+                <h2 class="section-title">Sobre mim</h2>
             </div>
 
             <div class="about-grid">
                 <div class="about-text-card reveal-up">
                     <div class="about-text-content">
                         <p>
-                            Olá! Sou o Wesley Caiã, Desenvolvedor Front-end focado em construir interfaces que unem estética refinada, alta performance e atenção obsessiva a cada detalhe.
+                            ME CHAMO WESLEY CAIÃ, Tenho 23 anos e, antes de escrever código, minha base era o hardware. Lidar com a máquina fisicamente me ensinou uma regra inegociável: não existem atalhos. Se um bug aparece, eu investigo a causa raiz em vez de aplicar soluções paliativas.
                         </p>
                         <p>
-                            Penso na experiência do usuário de ponta a ponta — da arquitetura do layout ao timing perfeito de cada animação. Domino um stack moderno para entregar desde landing pages imersivas até sistemas complexos com React e Next.js, elevando o nível visual com animações fluidas em GSAP. Meu compromisso é com código limpo, escalável e entregas precisas.
+                            Hoje, como Desenvolvedor Front-end, levo essa mesma precisão para a web. Construo interfaces robustas com React e Next.js, e dou vida aos projetos com interações imersivas em GSAP. Meu foco não é apenas criar código que roda no ambiente local ou demos intocáveis no Figma, mas sim entregar aplicações consistentes, escaláveis e prontas para produção.
                         </p>
                         <p>
-                            Meu background em diagnósticos avançados de hardware me deu uma capacidade analítica afiada para debugar código complexo e arquitetar software resiliente — identifico a causa raiz onde outros tentam contornar.
-                        </p>
-                        <p>
-                            Projetos reais. Clientes ativos. Código no ar.
+                            Seja integrando um time de tecnologia para escalar um produto ou assumindo a frente técnica de um projeto do zero, meu objetivo é o mesmo: entregar código limpo, performance e impacto real.
                         </p>
                     </div>
                 </div>
 
                 <div class="skills-card reveal-up">
-                    <h3>Tech Stack</h3>
-                    <div class="tech-category">
-                        <h4>Domino bem</h4>
-                        <div class="tech-grid">
-                            <div class="tech-master magnetic-text"><i class="ph ph-file-html"></i> HTML5</div>
-                            <div class="tech-master magnetic-text"><i class="ph ph-file-css"></i> CSS3</div>
-                            <div class="tech-master magnetic-text"><i class="ph ph-file-js"></i> JavaScript</div>
-                            <div class="tech-master magnetic-text"><i class="ph ph-atom"></i> React</div>
-                            <div class="tech-master magnetic-text"><i class="ph ph-frame-corners"></i> Next.js</div>
-                            <div class="tech-master magnetic-text"><i class="ph ph-paint-brush"></i> Tailwind</div>
-                            <div class="tech-master magnetic-text"><i class="ph ph-magic-wand"></i> GSAP</div>
-                        </div>
-                    </div>
-                    <div class="tech-category">
-                        <h4>Ferramentas</h4>
-                        <div class="tech-grid">
-                            <div class="tech-tool magnetic-text"><i class="ph ph-git-branch"></i> Git</div>
-                            <div class="tech-tool magnetic-text"><i class="ph ph-figma-logo"></i> Figma</div>
-                            <div class="tech-tool magnetic-text"><i class="ph ph-triangle"></i> Vercel</div>
-                        </div>
+                    <h3 class="skills-title">Stack</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item"><i class="si si-react"></i><span>React</span></div>
+                        <div class="tech-item"><i class="si si-nextdotjs"></i><span>Next.js</span></div>
+                        <div class="tech-item"><i class="si si-javascript"></i><span>JavaScript</span></div>
+                        <div class="tech-item"><i class="si si-html5"></i><span>HTML5</span></div>
+                        <div class="tech-item"><i class="si si-css3"></i><span>CSS3</span></div>
+                        <div class="tech-item"><i class="si si-tailwindcss"></i><span>Tailwind</span></div>
+                        <div class="tech-item"><i class="si si-greensock"></i><span>GSAP</span></div>
+                        <div class="tech-item"><i class="si si-git"></i><span>Git</span></div>
+                        <div class="tech-item"><i class="si si-figma"></i><span>Figma</span></div>
+                        <div class="tech-item"><i class="si si-vercel"></i><span>Vercel</span></div>
                     </div>
                 </div>
             </div>
@@ -188,12 +180,14 @@
             </div>
 
         <div class="projects-wrapper">
+                <div class="progress-line"></div>
+
                 <!-- Project 1 -->
                 <article class="project-card" id="project-fokus">
                     <div class="project-content">
-                        <span class="project-number">01</span>
+                        <span class="project-number">00</span>
                         <h3>Fokus</h3>
-                        <p class="project-summary">O Fokus é muito mais do que um cronômetro convencional: é um ambiente imersivo projetado cientificamente para desenvolvedores manterem estado de <em>flow</em>. Maximiza o rendimento isolando distrações e controlando os ciclos.</p>
+                        <p class="project-summary">Timer Pomodoro com foco imersivo. Feito em Vanilla JS puro — sem framework, sem dependência, zero build tool.</p>
                         <div class="project-tags">
                             <span>Vanilla JS</span>
                             <span>CSS3</span>
@@ -213,9 +207,9 @@
                 <!-- Project 2 -->
                 <article class="project-card" id="project-spasmooth">
                     <div class="project-content">
-                        <span class="project-number">02</span>
+                        <span class="project-number">00</span>
                         <h3>SpaSmooth <span class="badge-real-client" aria-label="Projeto em produção para cliente real">Em produção</span></h3>
-                        <p class="project-summary">Uma experiência digital premium projetada para o nicho Wellness. Atua como um funil ágil de conversão e agenda, pavimentando arquiteturalmente a evolução para um SaaS.</p>
+                        <p class="project-summary">Plataforma digital para clínica de estética com agendamento integrado. React + Next.js + Supabase. Clientes ativos, em produção.</p>
                         <div class="project-tags">
                             <span>React</span>
                             <span>Next.js</span>
@@ -235,9 +229,9 @@
                 <!-- Project 3 -->
                 <article class="project-card" id="project-opencell">
                     <div class="project-content">
-                        <span class="project-number">03</span>
+                        <span class="project-number">00</span>
                         <h3>Vistoriador OpenCell</h3>
-                        <p class="project-summary">PWA técnico desenvolvido para o Samsung Smart Center de Aracaju. Automatiza o fluxo completo de vistorias de painéis de TV com suporte offline via Service Workers, dashboard de diagnóstico e interface Mobile First. Substituiu um processo manual em papel, reduzindo erros e acelerando o atendimento técnico.</p>
+                        <p class="project-summary">PWA para o Samsung Smart Center de Aracaju. Eliminou vistorias manuais em papel — opera 100% offline com Service Workers e IndexedDB.</p>
                         <div class="project-tags">
                             <span>PWA</span>
                             <span>Service Workers</span>
@@ -259,9 +253,9 @@
                 <!-- Project 4 -->
                 <article class="project-card" id="project-vgtech">
                     <div class="project-content">
-                        <span class="project-number">04</span>
+                        <span class="project-number">00</span>
                         <h3>VgTech <span class="badge-real-client" aria-label="Projeto em produção para cliente real">Cliente real</span></h3>
-                        <p class="project-summary">Landing page moderna e imersiva para assistência técnica especializada. Design focado em conversão e estética premium para dispositivos Apple e Android.</p>
+                        <p class="project-summary">Landing page para assistência técnica em dispositivos Apple e Android. Cliente real, em produção.</p>
                         <div class="project-tags">
                             <span>UI/UX</span>
                             <span>HTML5</span>
@@ -295,15 +289,14 @@
                         <div class="input-group">
                             <textarea id="message" name="message" rows="4" required placeholder="Conte-me sobre o seu projeto..." aria-label="Sua mensagem"></textarea>
                         </div>
-                        <button type="submit" class="btn-primary btn-submit magnetic" aria-label="Enviar mensagem via WhatsApp">
+                        <button type="submit" class="btn-submit magnetic" aria-label="Enviar mensagem via WhatsApp">
                             <span>Enviar via WhatsApp</span> <i class="ph ph-whatsapp-logo"></i>
                         </button>
                     </form>
                 </div>
 
                 <div class="contact-info">
-                    <p class="info-desc">Estou sempre aberto a discutir desenvolvimento, novas ideias de produtos ou
-                        oportunidades de parcerias.</p>
+                    <p class="info-desc">Tem um projeto que precisa sair do papel?<br>Me conta. Respondo no mesmo dia — sem formulário de triagem, sem espera.</p>
                     <a href="mailto:wesleycaia.dev@gmail.com"
                         class="contact-link magnetic-text" aria-label="Enviar e-mail para wesleycaia.dev@gmail.com">wesleycaia.dev@gmail.com</a>
 
