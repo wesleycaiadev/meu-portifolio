@@ -11,7 +11,9 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+html.lenis { scroll-behavior: auto; }
 body { margin: 0; background: var(--background); color: var(--text); font-family: Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
+main, .site-header, .site-footer { position: relative; z-index: 1; }
 button, input, textarea { font: inherit; }
 button { cursor: pointer; }
 a { color: inherit; text-decoration: none; }
@@ -34,8 +36,11 @@ svg { display: block; width: 1em; height: 1em; }
 .header-cta span { font-size: 1rem; }
 
 .hero { scroll-margin-top: 24px; }
-.hero__inner { min-height: clamp(690px, 67vw, 950px); display: grid; grid-template-columns: minmax(0, 1.22fr) minmax(0, .84fr); align-items: center; gap: clamp(46px, 5.5vw, 96px); padding-block: 90px 116px; }
-.hero__content { max-width: 820px; }
+.hero__inner { position: relative; isolation: isolate; min-height: clamp(690px, 67vw, 950px); display: grid; grid-template-columns: minmax(0, 1.22fr) minmax(0, .84fr); align-items: center; gap: clamp(46px, 5.5vw, 96px); padding-block: 90px 116px; }
+.hero__aura { position: absolute; z-index: 0; top: 11%; right: 0; width: 62%; height: 78%; pointer-events: none; }
+.hero__aura-core { position: absolute; inset: 0; background: radial-gradient(ellipse at 61% 48%, rgba(134, 160, 143, .16), rgba(112, 139, 125, .055) 42%, transparent 72%); opacity: .78; }
+.hero__aura-core::after { content: ""; position: absolute; top: 54%; left: 3%; width: 84%; height: 1px; transform: rotate(-11deg); transform-origin: left center; background: linear-gradient(90deg, transparent, rgba(151, 174, 158, .36), transparent); opacity: .4; }
+.hero__content { position: relative; z-index: 1; max-width: 820px; }
 h1, h2, h3, p { margin-top: 0; }
 .hero h1 { margin-bottom: 28px; font-size: clamp(3.2rem, 4.6vw, 5.3rem); line-height: 1.045; letter-spacing: -.07em; font-weight: 750; }
 .hero__content > p { max-width: 650px; margin-bottom: 38px; color: var(--muted); font-size: clamp(1.04rem, 1.15vw, 1.19rem); line-height: 1.65; }
@@ -50,7 +55,8 @@ h1, h2, h3, p { margin-top: 0; }
 .text-link { display: inline-flex; align-items: center; gap: 7px; margin-left: 7px; padding: 0; background: none; border: 0; border-bottom: 1px solid transparent; font-size: .9rem; line-height: 1.35; color: #dedfdb; }
 .text-link:not(.text-link--disabled):hover { border-color: currentColor; }
 .text-link--disabled { color: #a5a9a3; cursor: not-allowed; }
-.hero__portrait { position: relative; width: 100%; aspect-ratio: 0.82; max-height: 650px; border-radius: 16px; overflow: hidden; background: #4a4b50; }
+.hero__portrait { position: relative; z-index: 1; width: 100%; aspect-ratio: 0.82; max-height: 650px; border-radius: 16px; overflow: hidden; background: #4a4b50; }
+.hero__portrait-media { position: absolute; inset: 0; }
 .hero__portrait img { object-fit: cover; object-position: center 28%; }
 
 .section-heading { display: grid; grid-template-columns: 1.35fr .65fr; gap: 60px; align-items: end; padding-bottom: 32px; border-bottom: 1px solid var(--line); }
@@ -169,6 +175,8 @@ h1, h2, h3, p { margin-top: 0; }
   .hero h1 { font-size: clamp(2.8rem, 10.8vw, 4.5rem); max-width: 600px; margin-bottom: 25px; }
   .hero__content > p { font-size: 1.02rem; margin-bottom: 32px; }
   .hero__portrait { width: min(100%, 510px); align-self: center; aspect-ratio: .92; max-height: none; }
+  .hero__aura { top: auto; bottom: 48px; right: 0; width: 100%; height: 52%; }
+  .hero__aura-core { opacity: .54; }
   .hero__portrait img { object-position: center 26%; }
   .section-heading { grid-template-columns: 1fr; gap: 20px; padding-bottom: 28px; }
   .section-heading h2 { font-size: clamp(2.25rem, 8vw, 3.2rem); }
@@ -215,5 +223,10 @@ h1, h2, h3, p { margin-top: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+  html:not([data-motion-preview]) *,
+  html:not([data-motion-preview]) *::before,
+  html:not([data-motion-preview]) *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
 }

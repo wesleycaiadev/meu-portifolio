@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowIcon } from "@/components/ui/ArrowIcon";
+import { FadeReveal } from "@/components/motion/FadeReveal";
 import { projects } from "@/data/site";
 
 export function Projects() {
@@ -15,12 +15,13 @@ export function Projects() {
                 <h3>{project.name}</h3>
                 <p>{project.description}</p>
                 <ul className="project__stack" aria-label="Tecnologias e disciplinas">{project.technologies.map((technology) => <li key={technology}>{technology}</li>)}</ul>
-                <button className="project__link" type="button" disabled title="Estudo de caso em preparação">Explorar projeto <ArrowIcon /></button>
+                <button className="project__link" type="button" disabled title="Estudo de caso em preparação">Explorar projeto</button>
               </div>
             </article>
           ))}
         </div>
       </div>
+      <FadeReveal targetId="projects-title" triggerId="projetos" />
     </section>
   );
 }

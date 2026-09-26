@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import "lenis/dist/lenis.css";
 import "@/styles/globals.scss";
+import { TraceField } from "@/components/motion/TraceField";
+import { SmoothScroll } from "@/components/motion/SmoothScroll";
 
 export const metadata: Metadata = {
   title: "Wesley Caiã — Front-end Developer",
@@ -16,7 +19,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body>
+        <TraceField />
+        <SmoothScroll />
+        {children}
+      </body>
     </html>
   );
 }

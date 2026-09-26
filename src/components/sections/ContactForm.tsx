@@ -1,7 +1,6 @@
 "use client";
 
 import type { FormEvent } from "react";
-import { ArrowIcon } from "@/components/ui/ArrowIcon";
 import { contact } from "@/data/site";
 
 function buildMessage(data: FormData) {
@@ -36,8 +35,8 @@ export function ContactForm() {
       <label>Assunto<input name="subject" type="text" placeholder="Sobre o que vamos conversar?" required /></label>
       <label>Mensagem<textarea name="message" rows={5} placeholder="Fale um pouco sobre o projeto, expectativas e prazos..." required /></label>
       <div className="contact-form__actions">
-        <button className="button button--light" type="submit" value="whatsapp" disabled={!contact.whatsapp} title={!contact.whatsapp ? "WhatsApp ainda não configurado" : undefined}>Enviar pelo WhatsApp <ArrowIcon diagonal /></button>
-        <button className="button button--outline" type="submit" value="email" disabled={!contact.email} title={!contact.email ? "E-mail ainda não configurado" : undefined}>Enviar por e-mail <ArrowIcon diagonal /></button>
+        <button className="button button--light" type="submit" value="whatsapp" disabled={!contact.whatsapp} title={!contact.whatsapp ? "WhatsApp ainda não configurado" : undefined}>Enviar pelo WhatsApp</button>
+        <button className="button button--outline" type="submit" value="email" disabled={!contact.email} title={!contact.email ? "E-mail ainda não configurado" : undefined}>Enviar por e-mail</button>
       </div>
     </form>
   );

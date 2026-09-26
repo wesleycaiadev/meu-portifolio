@@ -8,7 +8,7 @@ export function Header() {
         <nav className="site-header__nav" aria-label="Navegação principal">
           {navigation.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}
         </nav>
-        <a className="header-cta" href="#contato">Vamos conversar <span aria-hidden="true">↗</span></a>
+        <a className="header-cta" href="#contato">Vamos conversar</a>
       </div>
     </header>
   );
