@@ -124,8 +124,9 @@ export function HeroMotion() {
     });
 
     media.add(motionQuery("(min-width: 701px)"), () => {
-      const light = document.querySelector<HTMLElement>("[data-trace-light]");
-      const flow = document.querySelector<HTMLElement>("[data-trace-flow]");
+      const light = hero.querySelector<HTMLElement>("[data-signal-light]");
+      const flow = hero.querySelector<HTMLElement>("[data-signal-flow]");
+      const grid = hero.querySelector<HTMLElement>("[data-signal-grid]");
 
       const context = gsap.context(() => {
         const timeline = gsap.timeline({
@@ -145,8 +146,9 @@ export function HeroMotion() {
           .to(portrait, { y: () => window.innerWidth >= 1100 ? 26 : 14 }, 0)
           .to(image, { y: () => window.innerWidth >= 1100 ? 14 : 8, scale: 1.025 }, 0)
           .to(aura, { x: -34, y: -18 }, 0);
-        if (light) timeline.to(light, { x: -52, y: -30 }, 0);
-        if (flow) timeline.to(flow, { x: -24, y: -16 }, 0);
+        if (light) timeline.to(light, { x: -52, y: -30, opacity: 0, duration: .34 }, 0);
+        if (flow) timeline.to(flow, { x: -24, y: -16, scaleY: 1.035, opacity: 0, duration: .34 }, 0);
+        if (grid) timeline.to(grid, { opacity: 0, duration: .34 }, 0);
       }, hero);
 
       return () => context.revert();

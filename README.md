@@ -38,7 +38,8 @@ Os links de e-mail, WhatsApp e LinkedIn usam os contatos informados. O formulár
 
 - A entrada do hero dura cerca de 2,35 segundos: luz discreta atrás da foto, header, headline por linhas com ritmo variável, parágrafo, CTAs e retrato expandido por máscara com leve profundidade.
 - A fotografia e a luz atrás dela reagem de forma mínima ao ponteiro no desktop. Um ScrollTrigger sem pinning desloca headline, foto e atmosfera em velocidades diferentes ao chegar a Projetos; o título da seção entra por máscara.
-- O Trace Field combina textura SVG fixa, grid estático e três curvas contínuas com gradiente e movimento lento. No mobile ele fica quase estático. O grid e as linhas deixaram de usar pequenos fragmentos móveis.
+- Signal / Path (Tarefa 02.2): o TraceField mantém apenas grain global. Dez paths SVG locais ao Hero oscilam por CSS, com ciclos alternados de 32 a 56,3 segundos e opacidade constante. Máscaras protegem a headline e suavizam as extremidades; o ScrollTrigger existente reduz paths, luz e grid durante a saída do Hero. Não há novo ticker, RAF ou listener de scroll.
+- As atmosferas são locais às seções: Projetos tem grid quase invisível e luz mínima; Expertise reduz o grid; Processo reduz ainda mais; Sobre mantém apenas grain; Contato fecha com luz radial discreta. No mobile a camada fica na região da fotografia. Com movimento reduzido, os paths ficam estáticos e a rolagem natural remove a camada junto com o Hero.
 - Lenis é ativado apenas em dispositivos com ponteiro fino e sem preferência por movimento reduzido. Seu `raf` usa o ticker do GSAP, sem loop próprio. Âncoras mantêm hash e foco.
 - `prefers-reduced-motion: reduce` desativa os tweens, parallax, profundidade por ponteiro e smooth scroll, mantendo o conteúdo visível.
 

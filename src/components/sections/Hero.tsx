@@ -1,10 +1,12 @@
 import Image from "next/image";
 import { HeroMotion } from "@/components/motion/HeroMotion";
+import { SignalPaths } from "@/components/motion/TraceField";
 
 export function Hero() {
   return (
     <section id="inicio" className="hero" aria-labelledby="hero-title">
       <div className="container hero__inner">
+        <SignalPaths />
         <div className="hero__aura" aria-hidden="true"><div className="hero__aura-core" /></div>
         <div className="hero__content">
           <h1 id="hero-title">Transformo ideias em experiências digitais que funcionam tão bem quanto parecem.</h1>
