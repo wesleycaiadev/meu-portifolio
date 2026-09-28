@@ -96,13 +96,21 @@ h1, h2, h3, p { margin-top: 0; }
 .project--reverse .project__image { order: 2; }
 .project__image { position: relative; aspect-ratio: 1.82; border-radius: 13px; overflow: hidden; background: #f6f6f3; }
 .project__image img { object-fit: contain; object-position: center; }
+.project__image[data-project-webgl="ready"] { background: transparent; }
+.project__image[data-project-webgl="ready"] img { opacity: 0; }
+.project-canvas { position: fixed; inset: 0; z-index: 2; width: 100%; height: 100%; pointer-events: none; }
+.project[data-project-slug] { position: relative; isolation: isolate; }
+.project[data-project-slug="spasmooth"]::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: var(--spa-presence, 1); background: radial-gradient(ellipse at 28% 45%, rgba(100, 151, 166, .045), transparent 65%); }
+.project[data-project-slug="mf-consultoria"]::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(ellipse at 74% 48%, rgba(164, 140, 119, .045), transparent 65%); }
 .project__content { max-width: 520px; }
 .project__content h3 { max-width: 490px; margin-bottom: 24px; font-size: clamp(2rem, 3vw, 3.5rem); line-height: 1.08; letter-spacing: -.058em; }
 .project__content > p { max-width: 480px; margin-bottom: 30px; color: var(--muted); font-size: 1.06rem; line-height: 1.7; }
 .project__stack { display: flex; flex-wrap: wrap; gap: 7px 8px; margin: 0 0 27px; padding: 22px 0 0; border-top: 1px solid var(--line); list-style: none; color: #bdc0ba; font-size: .9rem; line-height: 1.5; }
 .project__stack li:not(:last-child)::after { content: ","; }
 .project__link { display: inline-flex; align-items: center; gap: 12px; padding: 0; background: none; border: 0; font-size: .92rem; line-height: 1.4; font-weight: 650; color: #e7e8e4; }
-.project__link:disabled { cursor: not-allowed; }
+.project__link[aria-disabled="true"] { cursor: not-allowed; }
+.project:hover .project__link { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
+.project__link:focus-visible { outline: 2px solid #fff; outline-offset: 5px; border-radius: 2px; }
 
 .expertise { padding-block: 145px 160px; }
 .expertise__list { margin-top: 62px; border-bottom: 1px solid var(--line); }

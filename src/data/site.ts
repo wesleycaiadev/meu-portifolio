@@ -8,6 +8,7 @@ export const navigation = [
 
 export const projects = [
   {
+    slug: "spasmooth",
     name: "SpaSmooth",
     description:
       "Uma experiência digital criada para apresentar serviços, fortalecer a marca e transformar descoberta em agendamento.",
@@ -16,6 +17,7 @@ export const projects = [
     technologies: ["Next.js", "TypeScript", "SEO", "Product"],
   },
   {
+    slug: "mf-consultoria",
     name: "MF Consultoria Automotiva",
     description:
       "Curadoria automotiva, showroom e gestão reunidos em uma experiência digital premium.",

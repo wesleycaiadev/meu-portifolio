@@ -1,6 +1,6 @@
 # Portfólio V2 — Wesley Caiã
 
-Portfólio construído com Next.js (App Router), TypeScript e SCSS. A página mantém as oito seções aprovadas na Tarefa 01. A Tarefa 02 adiciona a fundação de movimento com GSAP, ScrollTrigger, SplitText e Lenis, sem 3D.
+Portfólio construído com Next.js (App Router), TypeScript e SCSS. A página mantém as oito seções aprovadas na Tarefa 01. A Tarefa 02 adicionou a fundação de movimento com GSAP, ScrollTrigger, SplitText e Lenis. A Tarefa 03 adiciona uma experiência 3D compartilhada aos projetos.
 
 ## Executar
 
@@ -20,6 +20,7 @@ No PowerShell do Windows, se `npm` apontar para `npm.ps1` e a execução de scri
 - `src/app`: entrada da home e metadados.
 - `src/components/layout`: header e footer.
 - `src/components/motion`: entrada do hero, transição para projetos, smooth scroll e Trace Field.
+- `src/components/three`: canvas WebGL compartilhado e ciclo de vida dos projetos.
 - `src/components/sections`: seções e formulário.
 - `src/components/ui`: ícones simples.
 - `src/lib/motion/gsap.ts`: registro compartilhado dos plugins GSAP.
@@ -38,11 +39,16 @@ Os links de e-mail, WhatsApp e LinkedIn usam os contatos informados. O formulár
 
 - A entrada do hero dura cerca de 2,35 segundos: luz discreta atrás da foto, header, headline por linhas com ritmo variável, parágrafo, CTAs e retrato expandido por máscara com leve profundidade.
 - A fotografia e a luz atrás dela reagem de forma mínima ao ponteiro no desktop. Um ScrollTrigger sem pinning desloca headline, foto e atmosfera em velocidades diferentes ao chegar a Projetos; o título da seção entra por máscara.
-- Signal / Path (Tarefa 02.2): o TraceField mantém apenas grain global. Dez paths SVG locais ao Hero oscilam por CSS, com ciclos alternados de 32 a 56,3 segundos e opacidade constante. Máscaras protegem a headline e suavizam as extremidades; o ScrollTrigger existente reduz paths, luz e grid durante a saída do Hero. Não há novo ticker, RAF ou listener de scroll.
+- Signal / Path (Tarefa 02.2): o TraceField mantém apenas grain global. Dez paths SVG locais ao Hero oscilam por CSS, com ciclos alternados de 18 a 27 segundos e opacidade constante. Máscaras protegem a headline e suavizam as extremidades; o ScrollTrigger existente reduz paths, luz e grid durante a saída do Hero. Não há novo ticker, RAF ou listener de scroll.
 - As atmosferas são locais às seções: Projetos tem grid quase invisível e luz mínima; Expertise reduz o grid; Processo reduz ainda mais; Sobre mantém apenas grain; Contato fecha com luz radial discreta. No mobile a camada fica na região da fotografia. Com movimento reduzido, os paths ficam estáticos e a rolagem natural remove a camada junto com o Hero.
 - Lenis é ativado apenas em dispositivos com ponteiro fino e sem preferência por movimento reduzido. Seu `raf` usa o ticker do GSAP, sem loop próprio. Âncoras mantêm hash e foco.
 - `prefers-reduced-motion: reduce` desativa os tweens, parallax, profundidade por ponteiro e smooth scroll, mantendo o conteúdo visível.
 
-Os componentes de motion ficam isolados para que a Tarefa 03 possa adicionar as experiências dos projetos sem reestruturar a home.
+## Projetos em 3D
+
+- Um único renderer Three.js usa `scissor` para desenhar SpaSmooth e MF nas áreas dos screenshots. Cada projeto mantém nome, descrição, tecnologias, CTA e imagem de fallback em HTML.
+- O módulo Three.js só carrega quando Projetos se aproxima da viewport. O screenshot HTML fica visível até o primeiro frame WebGL. Sem WebGL, em mobile ou com movimento reduzido, a imagem HTML permanece. O preview local habilita a experiência mesmo com reduced motion.
+- O ScrollTrigger controla somente a progressão de entrada e saída; Three.js interpola a inclinação do ponteiro e renderiza os planos. O renderer usa o ticker GSAP existente apenas enquanto Projetos está perto da viewport, sem outro `requestAnimationFrame`. DPR é limitado a 1,5 e os recursos WebGL são liberados no cleanup.
+- Os artigos têm `data-project-slug` e visuais 3D associados, permitindo uma futura transição para estudos de caso. As páginas e a transição ainda não foram implementadas.
 
 Para conferir o motion, abra `http://localhost:3000/` no desktop e recarregue a página no topo. A entrada do hero acontece apenas no carregamento; o título de Projetos aparece ao rolar. Se nada se mover, execute `matchMedia("(prefers-reduced-motion: reduce)").matches` no console do navegador. O valor `true` indica que o navegador solicitou movimento reduzido, então as animações ficam desativadas. Para pré-visualizar sem mudar a configuração do sistema, abra `http://localhost:3000/?motion=preview`. Esse parâmetro funciona somente em desenvolvimento local. Após executar `npm run build`, reinicie `npm run dev` antes de voltar à prévia local.
