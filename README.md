@@ -42,7 +42,7 @@ Os assets originais permanecem em `public/assets/`. O material de Gustavo perman
 
 O wordmark e o retrato final de About seguem pendentes conforme o checklist. Nada foi fabricado para substituí-los.
 
-Pare na TASK 00; novas etapas dependem de aprovação específica.
+A TASK 00 foi aprovada e registrada no checkpoint `a082ef4`. A TASK 01 adiciona somente a fundação visual e o playground temporário em `/playground`. Consulte [a documentação dos tokens e decisões provisórias](docs/VISUAL-FOUNDATION.md). Hero, motion e demais seções finais dependem de aprovação específica.
 
 ## Documentação consultada
 
