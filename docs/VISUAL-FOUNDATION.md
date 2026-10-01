@@ -1,15 +1,14 @@
 # TASK 01 — fundação visual
 
-Playground temporário: `/playground`. A home mantém os sete placeholders da TASK 00. Não há composição final de Hero, About, projetos ou cases.
+Playground temporário: `/playground`. A TASK 01 foi aprovada e registrada no checkpoint `83ec899`. A TASK 02.1 simplifica o Hero e o header; as seis seções seguintes permanecem placeholders. Consulte `STATIC-HERO.md` para a composição e validação atuais.
 
 ## Fontes e decisões provisórias
 
 Foram relidos `PORTFOLIO-SPEC.md`, `ASSET-CHECKLIST.md`, `README-FIRST.md` e o Markdown de referência. A revisão visual considerou o contact sheet, sequências do vídeo já estudado na TASK 00, a marca WC e os nove screenshots fornecidos. A referência orienta contraste, hierarquia e espaço; sua tipografia e suas medidas não foram copiadas.
 
-- Sans: `system-ui`, com alternativas locais Segoe UI/Arial. Não há arquivo de fonte embutido nem download externo.
-- Serif editorial: Georgia, com alternativas Times New Roman/serif, somente em trechos curtos com a classe `editorial-emphasis`.
-- Essas famílias são **fallbacks temporários**, não uma escolha definitiva de marca. A aparência varia entre sistemas operacionais.
-- A seleção final de sans e serif, seus arquivos/licenças e ajustes ópticos dependem de aprovação posterior.
+- Sans aprovada na TASK 02: **Inter Tight**, variável, estilo normal.
+- Serif editorial aprovada na TASK 02: **Instrument Serif**, peso 400, italic, somente em trechos curtos com a classe `editorial-emphasis`.
+- As famílias substituem os fallbacks temporários da TASK 01. São carregadas por `next/font/google` e servidas localmente no build; os tokens consomem suas variáveis CSS.
 - A paleta e as escalas desta tarefa são uma base revisável. O Hero, os layouts finais e a coreografia serão aprovados nas tarefas correspondentes.
 - Wordmark e retrato continuam ausentes. Nenhum asset foi fabricado.
 
@@ -37,7 +36,7 @@ Foram relidos `PORTFOLIO-SPEC.md`, `ASSET-CHECKLIST.md`, `README-FIRST.md` e o M
 ## Layout e interação
 
 - Gutter fluido de 1.25 a 5rem; leitura limitada independentemente do container amplo.
-- Header empilhado em mobile, duas áreas no grid a partir de tablet, links sempre disponíveis.
+- Header mínimo da TASK 02.1: apenas Wesley Caia. A navegação fica no rodapé do Hero, com três links vazados e visíveis, inclusive em mobile.
 - Placeholders empilhados em mobile/tablet; título e descrição dividem o grid no desktop.
 - Playground empilhado em mobile; anotação lateral em tablet/desktop.
 - Imagens refluem; textos e rótulos longos podem quebrar; não há máscara de overflow no body.

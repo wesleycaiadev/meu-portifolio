@@ -1,0 +1,18 @@
+.header {
+  position: relative;
+  z-index: var(--z-header);
+}
+
+.inner {
+  min-block-size: var(--header-height);
+  padding-block: var(--space-3);
+  display: flex;
+  align-items: center;
+}
+
+.identity {
+  font-size: var(--font-size-ui);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-ui);
+  letter-spacing: normal;
+}

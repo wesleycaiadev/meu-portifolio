@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { TemporaryHeader } from "@/components/layout/TemporaryHeader";
+import { Header } from "@/components/layout/Header";
 import { ButtonSample } from "@/components/ui/ButtonSample";
 import styles from "./page.module.scss";
 
@@ -14,7 +14,7 @@ export default function PlaygroundPage() {
   return (
     <>
       <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
-      <TemporaryHeader />
+      <Header />
       <main id="conteudo" tabIndex={-1}>
         <div className={`container ${styles.intro}`}>
           <p className="label text-secondary">TASK 01 · Playground temporário</p>
@@ -28,7 +28,7 @@ export default function PlaygroundPage() {
             <div className={styles.content}>
               <h2 id="amostra-clara">Escala, ritmo e <em className="editorial-emphasis">contraste.</em></h2>
               <h3>Títulos e texto corrido</h3>
-              <p className="prose">A sans conduz a leitura, os títulos e a interface. A serif italic aparece em um trecho curto, como contraste editorial. As famílias utilizadas aqui são alternativas locais temporárias.</p>
+              <p className="prose">Inter Tight conduz a leitura, os títulos e a interface. Instrument Serif italic aparece em um trecho curto, como contraste editorial. As duas famílias foram aprovadas na TASK 02.</p>
               <p className="prose text-secondary">Texto secundário: informação de apoio com contraste próprio, sem reduzir a opacidade de todo o conteúdo.</p>
               <div className={styles.actions}>
                 <ButtonSample />
@@ -56,7 +56,7 @@ export default function PlaygroundPage() {
         </section>
       </main>
       <footer className={`container ${styles.footer}`}>
-        <p className="label text-secondary">Amostra de desenvolvimento · Famílias definitivas e composições finais aguardam aprovação.</p>
+        <p className="label text-secondary">Amostra de desenvolvimento · Inter Tight + Instrument Serif italic.</p>
       </footer>
     </>
   );

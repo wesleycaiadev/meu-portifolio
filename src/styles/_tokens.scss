@@ -95,9 +95,9 @@ $breakpoints: (tablet: 48rem, desktop: 64rem, wide: 90rem);
   --z-focus: 100;
   --z-overlay: 1000;
 
-  // Local temporary families; no downloaded or unprovided commercial font.
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  --font-serif: Georgia, "Times New Roman", serif;
+  // Approved families, self-hosted by next/font/google through the root layout.
+  --font-sans: var(--font-inter-tight), Arial, sans-serif;
+  --font-serif: var(--font-instrument-serif), Georgia, serif;
   --font-weight-regular: 400;
   --font-weight-heading: 500;
   --font-weight-strong: 600;
@@ -121,9 +121,28 @@ $breakpoints: (tablet: 48rem, desktop: 64rem, wide: 90rem);
   --duration-instant: 0ms;
   --duration-feedback: 160ms;
   --duration-emphasis: 280ms;
+  --duration-nav-border: 420ms;
+
+  --header-height: 5rem;
+  --hero-mark-width: 100%;
+  --hero-mark-min: 20rem;
+  --hero-mark-max: min(100%, var(--container-content));
+  --hero-footer-reserve: 10rem;
+  --hero-padding-top: var(--space-5);
+  --hero-padding-bottom: var(--space-6);
+  --hero-gap: var(--space-6);
+  --hero-nav-gap: var(--space-2);
+  --hero-nav-padding-x: var(--space-4);
+  --placeholder-heading-size: var(--font-size-h3);
 
   @include light-surface;
-  @include from(tablet) { --grid-columns: 8; }
+  @include from(tablet) {
+    --grid-columns: 8;
+    // 420 / 230 is the nondestructive SVG viewing window's aspect ratio.
+    --hero-mark-width: clamp(var(--hero-mark-min), calc((100svh - var(--header-height) - var(--hero-footer-reserve)) * 1.8260869565), var(--hero-mark-max));
+    --hero-nav-gap: var(--space-3);
+    --hero-nav-padding-x: var(--space-5);
+  }
   @include from(desktop) { --grid-columns: 12; }
 }
 
@@ -134,6 +153,7 @@ $breakpoints: (tablet: 48rem, desktop: 64rem, wide: 90rem);
   :root {
     --duration-feedback: var(--duration-instant);
     --duration-emphasis: var(--duration-instant);
+    --duration-nav-border: var(--duration-instant);
   }
 }
 }

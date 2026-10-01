@@ -9,7 +9,7 @@ export function SectionPlaceholder({ id, title, description, headingLevel }: Sec
   const Heading = headingLevel === 1 ? "h1" : "h2";
 
   return (
-    <section id={id} className="foundation-section editorial-grid" aria-labelledby={`${id}-titulo`}>
+    <section id={id} className="foundation-section editorial-grid" aria-labelledby={`${id}-titulo`} tabIndex={-1}>
       <Heading id={`${id}-titulo`}>{title}</Heading>
       <p>{description}</p>
     </section>

@@ -1,6 +1,6 @@
 # Wesley Caia — nova fundação do portfólio
 
-Aplicação criada do zero para a TASK 00. A home contém apenas um header temporário e placeholders na ordem Hero, About, Projects, Manifesto, Expertise, Process e Contact. Não há animações, smooth scroll ativo, canvas WebGL ou design final.
+Aplicação criada do zero na TASK 00. A TASK 02.1 simplifica a primeira viewport: Wesley Caia no topo, WC central e três destinos inferiores. Inter Tight e Instrument Serif continuam disponíveis no sistema visual; o Hero usa apenas Inter Tight nos controles. About, Projects, Manifesto, Expertise, Process e Contact permanecem placeholders. Não há animações de entrada, smooth scroll ativo ou canvas WebGL.
 
 ## Executar
 
@@ -25,8 +25,8 @@ O script de typecheck gera os tipos de rotas do Next antes de executar TypeScrip
 ## Organização
 
 - `src/app`: layout e rota inicial do App Router.
-- `src/components/layout`: header temporário.
-- `src/components/sections`: componente temporário dos placeholders.
+- `src/components/layout`: header estático.
+- `src/components/sections`: Hero estático e componente temporário dos placeholders.
 - `src/components/motion`, `three` e `ui`: pastas reservadas, sem implementação.
 - `src/data`: ordem narrativa e textos temporários.
 - `src/lib/motion` e `three`: pastas reservadas, sem abstrações antecipadas.
@@ -42,7 +42,7 @@ Os assets originais permanecem em `public/assets/`. O material de Gustavo perman
 
 O wordmark e o retrato final de About seguem pendentes conforme o checklist. Nada foi fabricado para substituí-los.
 
-A TASK 00 foi aprovada e registrada no checkpoint `a082ef4`. A TASK 01 adiciona somente a fundação visual e o playground temporário em `/playground`. Consulte [a documentação dos tokens e decisões provisórias](docs/VISUAL-FOUNDATION.md). Hero, motion e demais seções finais dependem de aprovação específica.
+A TASK 00 foi registrada no checkpoint `a082ef4`; a TASK 01, em `83ec899`. Consulte [a fundação visual](docs/VISUAL-FOUNDATION.md) e [a composição estática do Hero](docs/STATIC-HERO.md). O playground temporário permanece em `/playground`. Pare na TASK 02.1; motion e demais seções finais dependem de aprovação específica.
 
 ## Documentação consultada
 
