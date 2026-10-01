@@ -1,0 +1,17 @@
+ASSET-CHECKLIST.md
+FILE-MANIFEST.txt
+PORTFOLIO-SPEC.md
+README-FIRST.md
+public/assets/brand/logo-symbol.svg
+public/assets/projects/mf-consultoria/mf-consultoria-cta-footer.png
+public/assets/projects/mf-consultoria/mf-consultoria-curadoria-processo.png
+public/assets/projects/mf-consultoria/mf-consultoria-hero-desktop.png
+public/assets/projects/mf-consultoria/mf-consultoria-hero-mobile.png
+public/assets/projects/spasmooth/spasmooth-faq-footer.png
+public/assets/projects/spasmooth/spasmooth-hero-desktop.png
+public/assets/projects/spasmooth/spasmooth-hero-mobile.png
+public/assets/projects/spasmooth/spasmooth-localizacao.png
+public/assets/projects/spasmooth/spasmooth-mobile-menu.png
+reference/gustavo/reference-contact-sheet.jpg
+reference/gustavo/reference-notes-original.md
+reference/gustavo/reference-video.mp4
