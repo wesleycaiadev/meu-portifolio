@@ -7,7 +7,7 @@ export function createWcMotionPreview(frame: HTMLElement, onChange: (enabled: bo
   panel.setAttribute("aria-label", "Prévia de movimento da WC");
   panel.style.cssText = "position:fixed;top:16px;right:16px;z-index:1000;width:270px;max-width:calc(100vw - 32px);padding:14px;background:#fff;color:#171717;border:1px solid #aaa;border-radius:8px;font:13px/1.45 system-ui;box-sizing:border-box";
   const title = document.createElement("strong");
-  title.textContent = "Prévia WC · TASK 04.3";
+  title.textContent = "Prévia ao vivo · TASK 06";
   const explanation = document.createElement("p");
   explanation.style.cssText = "margin:8px 0";
   explanation.textContent = "Ativar esta prévia permite movimento mesmo com a preferência de movimento reduzido. Não altera o Windows.";
@@ -28,7 +28,7 @@ export function createWcMotionPreview(frame: HTMLElement, onChange: (enabled: bo
     status.textContent = !pointer.matches ? "Prévia disponível em desktop com mouse. Touch permanece estático."
       : !enabled ? "Prévia desativada. Clique para visualizar."
       : frame.dataset.wcReady !== "true" ? "Inicializando a animação…"
-      : `Animação ativa · ${frame.dataset.wcState === "active" ? "interação" : "onda ambiente"}. Mova o mouse sobre a WC.`;
+      : `Animação ativa · ${frame.dataset.wcState === "active" ? "interação" : "onda ambiente"}. Role para ver a transição e o retrato entrar em foco.`;
   };
   button.addEventListener("click", () => {
     enabled = !enabled;

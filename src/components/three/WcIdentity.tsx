@@ -57,7 +57,9 @@ export function WcIdentity() {
         if (disposed) return;
         releasePreview = createWcMotionPreview(element, enabled => {
           previewEnabled = enabled;
+          document.documentElement.dataset.wcMotionPreview = enabled ? "enabled" : "disabled";
           reconcile();
+          window.dispatchEvent(new Event("wc-motion-preview"));
         });
       }).catch(() => { /* A failed preview control never bypasses reduced motion. */ });
     }
@@ -68,6 +70,10 @@ export function WcIdentity() {
       intersection.disconnect();
       release?.();
       releasePreview?.();
+      if (previewMode) {
+        delete document.documentElement.dataset.wcMotionPreview;
+        window.dispatchEvent(new Event("wc-motion-preview"));
+      }
     };
   }, []);
 

@@ -3,6 +3,7 @@ export const wcVertexShader = /* glsl */ `
   uniform float uAspect;
   uniform float uInkHeight;
   uniform float uAmbientAmp;
+  uniform float uMotionWeight;
   uniform vec2 uPointer;
   uniform vec2 uVelocity;
   uniform float uRadius;
@@ -89,16 +90,16 @@ export const wcVertexShader = /* glsl */ `
 
   void main() {
     vUv = uv;
-    vec2 ambient = ambientFlow(uv);
+    vec2 ambient = ambientFlow(uv) * uMotionWeight;
     float core = field(uv, uPointer, uRadius);
-    vec2 pointer = pointerFlow(uv, core);
+    vec2 pointer = pointerFlow(uv, core) * uMotionWeight;
     // Small geometric flex plus the remaining mask warp in the fragment shader.
     // Field evaluation at grid vertices keeps the fragment workload small.
     vec3 displaced = position;
     displaced.xy += toUv(ambient * 0.22);
     vMaskOffset = toUv(ambient * 0.78 + pointer);
-    vEchoOffset = toUv(uVelocity * uEchoDistance * core);
-    vEchoStrength = smoothstep(0.38, 0.82, length(uVelocity)) * core;
+    vEchoOffset = toUv(uVelocity * uEchoDistance * core * uMotionWeight);
+    vEchoStrength = smoothstep(0.38, 0.82, length(uVelocity)) * core * uMotionWeight;
     gl_Position = projectionMatrix * modelViewMatrix * vec4(displaced, 1.0);
   }
 `;

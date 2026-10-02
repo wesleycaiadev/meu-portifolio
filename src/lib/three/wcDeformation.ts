@@ -51,6 +51,7 @@ export function createWcDeformation(frame: HTMLElement, canvasClass: string) {
     uTime: { value: 0 },
     uInkHeight: { value: MASK_BOUNDS.height },
     uAmbientAmp: { value: 0 },
+    uMotionWeight: { value: Number(frame.dataset.wcMotionWeight ?? 1) },
     uPointer: { value: pointer },
     uVelocity: { value: velocity },
     uAspect: { value: 420 / 230 },
@@ -181,7 +182,7 @@ export function createWcDeformation(frame: HTMLElement, canvasClass: string) {
       velocity.set(0, 0);
       targetVelocity.set(0, 0);
     }
-    if (draw(fps)) raf = requestAnimationFrame(tick);
+    if (draw(fps) && uniforms.uMotionWeight.value > 0) raf = requestAnimationFrame(tick);
   };
   const wake = () => {
     if (!raf && ready && canRender()) raf = requestAnimationFrame(tick);
@@ -189,7 +190,9 @@ export function createWcDeformation(frame: HTMLElement, canvasClass: string) {
   const resize = () => {
     if (disposed || !renderer) return;
     if (!canRender()) { dirty = true; return; }
-    const bounds = frame.getBoundingClientRect();
+    // CSS scroll transforms must not inflate the drawing buffer or texture cost.
+    const css = getComputedStyle(frame);
+    const bounds = { width: parseFloat(css.width), height: parseFloat(css.height) };
     if (!bounds.width || !bounds.height) return;
     const dpr = Math.min(devicePixelRatio || 1, SETTINGS.maxDpr);
     if (width !== bounds.width || height !== bounds.height || renderer.getPixelRatio() !== dpr) {
@@ -213,7 +216,7 @@ export function createWcDeformation(frame: HTMLElement, canvasClass: string) {
     if (velocity.length() < SETTINGS.settleEpsilon) pointer.copy(targetPointer);
   };
   const move = (event: PointerEvent) => {
-    if (event.pointerType === "touch" || !validFrame || !canRender()) return;
+    if (event.pointerType === "touch" || !validFrame || !canRender() || uniforms.uMotionWeight.value < 0.05) return;
     const bounds = frame.getBoundingClientRect();
     const now = performance.now();
     const elapsed = (now - sampleTime) / 1000;
@@ -278,6 +281,14 @@ export function createWcDeformation(frame: HTMLElement, canvasClass: string) {
     frame.addEventListener("pointermove", move, options);
     frame.addEventListener("pointerleave", leave, options);
     frame.addEventListener("pointercancel", leave, options);
+    frame.addEventListener("wc-takeover", event => {
+      const next = Math.max(0, Math.min(1, (event as CustomEvent<{ weight: number }>).detail.weight));
+      if (uniforms.uMotionWeight.value === 0) lastDraw = 0;
+      uniforms.uMotionWeight.value = next;
+      if (next === 0) resetPointer();
+      dirty = true;
+      wake();
+    }, options);
     window.addEventListener("resize", resize, options);
     window.addEventListener("blur", () => { focused = false; pause(); }, options);
     window.addEventListener("focus", () => { focused = true; resize(); }, options);

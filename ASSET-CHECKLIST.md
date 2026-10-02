@@ -13,7 +13,7 @@ Production assets are already under `public/assets/`; reference material stays u
 
 ## 2. Personal photos
 
-- [ ] `public/assets/photos/portrait-about.webp` — still missing; primary portrait for About.
+- [x] `public/assets/photos/portrait-about.webp` — supplied by Wesley; lossless WebP at the original 896 × 1195px, with the small Gemini symbol removed (TASK 06).
 - [ ] `public/assets/photos/portrait-hero.webp` — optional; only needed if Hero ultimately uses a portrait.
 
 Do not add all raw face-reference photos if final professional portraits already exist.
@@ -55,7 +55,7 @@ They are for motion/layout analysis only. Do not reproduce the reference pixel-f
 ## 6. Still useful later
 
 - [ ] WC / Wesley Caia wordmark artwork.
-- [ ] final About portrait.
+- [x] final About portrait — supplied for TASK 06.
 - [ ] optional alternate Hero portrait.
 - [ ] CV PDF if the final portfolio offers a download action.
 - [ ] GitHub/live URLs and short factual descriptions for each project.
