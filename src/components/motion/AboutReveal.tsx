@@ -23,7 +23,8 @@ export function AboutReveal({ children, className }: { children: ReactNode; clas
       if (disposed || release || loading) return;
       loading = true;
       element.dataset.aboutMotion = "loading";
-      void import("@/lib/motion/aboutReveal").then(({ createAboutReveal }) => {
+      void import("@/lib/motion/aboutReveal").then(async ({ createAboutReveal }) => {
+        await document.fonts.ready;
         loading = false;
         if (disposed || !eligible()) return;
         release = createAboutReveal(element);

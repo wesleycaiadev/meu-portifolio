@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { AboutReveal } from "@/components/motion/AboutReveal";
+import { RevealText } from "@/components/ui/reveal-text";
 import styles from "./About.module.scss";
 
 export function About() {
@@ -7,16 +8,24 @@ export function About() {
     <AboutReveal className={`surface--dark ${styles.about}`}>
       <div className={`container ${styles.composition}`}>
         <div className={styles.copy}>
-          {/* Revisable editorial copy: direction for review, not a factual biography. */}
-          <h2 id="sobre-titulo" className={styles.heading} data-about-heading="">
-            Eu transformo ideias em experiências digitais que unem estrutura,
-            {" "}<span className="editorial-emphasis" data-about-emphasis="">identidade</span>
-            {" "}e movimento.
-          </h2>
-          <p className={styles.description} data-about-description="">
-            Da primeira ideia ao último ajuste, o processo conecta intenção,
-            forma e interação. Sempre com espaço para experimentar e refinar.
-          </p>
+          {/* Copy supplied by Wesley for TASK 06.1. */}
+          <RevealText
+            as="h2" id="sobre-titulo" className={styles.heading} data-about-heading=""
+            mode="characters" range={[0.10, 0.84]} itemSpan={0.14} yOffset={12} blur={6}
+            mobile={{ range: [0.10, 0.84], yOffset: 8, blur: 4 }}
+          >
+            Transformo ideias em experiências digitais que ganham forma entre design,
+            {" "}código e <span className="editorial-emphasis">movimento</span>.
+          </RevealText>
+          <RevealText
+            as="p" className={styles.description} data-about-description=""
+            mode="characters" range={[0.58, 0.98]} itemSpan={0.10} yOffset={6} blur={3}
+            mobile={{ range: [0.58, 0.98], blur: 2 }}
+          >
+            Meu nome é Wesley Caia. Gosto de partir de uma ideia ainda solta e construir,
+            etapa por etapa, uma interface com identidade pensando no visual, na experiência
+            e em como tudo funciona quando chega às mãos de quem vai usar.
+          </RevealText>
         </div>
         <figure className={styles.portrait} data-about-portrait="">
           <Image

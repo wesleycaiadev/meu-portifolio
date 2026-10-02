@@ -52,10 +52,10 @@
     grid-template-columns: repeat(12, minmax(0, 1fr));
     column-gap: var(--grid-gap);
   }
-  .copy { grid-column: 1 / 7; }
+  .copy { grid-column: 1 / 7; grid-row: 1; }
   .heading { max-inline-size: 20ch; }
   .portrait {
     grid-column: 8 / 13;
-    margin-block-start: var(--space-8);
+    grid-row: 1;
   }
 }
