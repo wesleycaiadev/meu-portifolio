@@ -1,0 +1,30 @@
+.frame {
+  position: relative;
+  inline-size: var(--hero-mark-width);
+  max-inline-size: 100%;
+  aspect-ratio: 420 / 230;
+  flex-shrink: 0;
+}
+
+.fallback {
+  position: relative;
+  z-index: 0;
+  inline-size: 100%;
+  block-size: auto;
+}
+
+.canvas {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  pointer-events: none;
+  opacity: 0;
+}
+
+// Reveal only a successfully rendered surface; failure restores the SVG.
+.frame[data-wc-ready="true"] {
+  .fallback { visibility: hidden; }
+  .canvas { opacity: 1; }
+}

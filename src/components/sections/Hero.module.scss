@@ -14,12 +14,6 @@
   min-inline-size: 0;
 }
 
-.brand {
-  inline-size: var(--hero-mark-width);
-  block-size: auto;
-  flex-shrink: 0;
-}
-
 .navigation {
   ul {
     display: flex;
