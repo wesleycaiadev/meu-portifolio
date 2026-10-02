@@ -4,6 +4,7 @@ import { SectionPlaceholder } from "@/components/sections/SectionPlaceholder";
 import { narrativeSections } from "@/data/narrative";
 import { HeroTakeover } from "@/components/motion/HeroTakeover";
 import { About } from "@/components/sections/About";
+import { Projects } from "@/components/sections/Projects";
 
 export default function HomePage() {
   return (
@@ -15,8 +16,9 @@ export default function HomePage() {
           <Hero />
         </HeroTakeover>
         <About />
+        <Projects />
         <div className="container foundation-following">
-          {narrativeSections.filter(section => section.id !== "sobre").map((section) => (
+          {narrativeSections.filter(section => section.id !== "sobre" && section.id !== "projetos").map((section) => (
             <SectionPlaceholder key={section.id} {...section} />
           ))}
         </div>
