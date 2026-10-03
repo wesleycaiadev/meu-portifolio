@@ -75,13 +75,15 @@
 @include tokens.from(desktop) {
   .label { margin-block-end: var(--space-8); }
   .list {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: 0 var(--grid-gap);
+    grid-template-columns: minmax(0, 40%) minmax(0, 46%);
+    column-gap: 14%;
+    row-gap: var(--space-7);
   }
   .item { display: contents; }
   .title {
-    grid-column: 1 / 7;
+    grid-column: 1;
     grid-row: var(--project-row);
+    font-size: clamp(2.75rem, 4vw, 4.5rem);
     display: flex;
     align-items: center;
     border-block-end: var(--border-width) solid var(--border-decorative);
@@ -107,7 +109,7 @@
   }
   .select[aria-pressed="true"] .index::after { opacity: 1; }
   .preview {
-    grid-column: 8 / -1;
+    grid-column: 2;
     grid-row: 1 / 3;
     align-self: center;
     max-inline-size: none;

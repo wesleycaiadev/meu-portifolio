@@ -6,7 +6,7 @@ import { selectedProjects, sharedPreviewAspect, type ProjectId } from "@/data/pr
 import type { ProjectPreviewController } from "@/lib/motion/projectPreview";
 import styles from "./Projects.module.scss";
 
-const desktopSizes = "(min-width: 1440px) 523px, (min-width: 1024px) 40vw, 90vw";
+const desktopSizes = "(min-width: 1440px) 603px, (min-width: 1024px) 42vw, 90vw";
 const mobileSizes = "(min-width: 768px) 560px, (max-width: 444px) calc(100vw - 40px), 91vw";
 
 export function Projects() {
