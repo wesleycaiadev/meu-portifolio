@@ -2,7 +2,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { selectedProjects, type ProjectId } from "@/data/projects";
 
-type Point = { x: number; y: number };
+export type Point = { x: number; y: number };
 const POINT_COUNT = 28;
 const clamp = (value: number, low = 0, high = 1) => Math.max(low, Math.min(high, value));
 const mix = (a: number, b: number, t: number) => a + (b - a) * t;
@@ -17,7 +17,7 @@ const guide: Point[] = [
   { x: 0.28, y: 1.10 }, { x: -0.18, y: 1.34 },
 ];
 
-function catmull(points: Point[], t: number): Point {
+export function catmull(points: Point[], t: number): Point {
   const position = clamp(t) * (points.length - 1);
   const index = Math.min(points.length - 2, Math.floor(position));
   const u = position - index;
@@ -33,7 +33,7 @@ function catmull(points: Point[], t: number): Point {
   return { x: axis("x"), y: axis("y") };
 }
 
-function spline(points: Point[]): string {
+export function spline(points: Point[]): string {
   const first = points[0]!;
   let d = `M ${first.x.toFixed(2)} ${first.y.toFixed(2)}`;
   for (let i = 0; i < points.length - 1; i++) {

@@ -43,7 +43,8 @@ export function Projects() {
       aria-labelledby="projetos-titulo" tabIndex={-1} data-projects=""
       data-active-project={activeProject}
     >
-      <div className="container">
+      <div className={styles.conceptIntro} data-project-intro="" aria-hidden="true" />
+      <div className="container" data-project-stage="">
         <h2 id="projetos-titulo" className={`label ${styles.label}`}>Projetos selecionados</h2>
         <p id="projetos-instrucoes" className={styles.assistive}>
           Estes controles selecionam a prévia de cada projeto. Os estudos de caso ainda não estão disponíveis.

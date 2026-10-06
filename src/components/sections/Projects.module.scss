@@ -13,6 +13,8 @@
   font-weight: var(--font-weight-regular);
 }
 
+.conceptIntro { display: none; }
+
 .list {
   display: grid;
   gap: var(--space-9);
@@ -75,6 +77,30 @@
 }
 
 @include tokens.from(desktop) {
+  .projects[data-projects-concept="true"] {
+    padding-block: 0;
+    .conceptIntro { display: block; block-size: clamp(25rem, 50svh, 34rem); }
+    :global([data-project-stage]) {
+      min-block-size: 100svh;
+      display: flex;
+      align-items: center;
+    }
+    .label {
+      position: absolute;
+      inline-size: 1px;
+      block-size: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+    .list { inline-size: 100%; }
+    .preview {
+      inset-block-start: var(--project-preview-offset, 0px);
+      transition: inset-block-start 420ms var(--ease-feedback);
+    }
+  }
   .projects > :global(.container) { max-inline-size: 100rem; }
   .label { margin-block-end: var(--space-8); }
   .list {

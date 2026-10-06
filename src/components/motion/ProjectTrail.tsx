@@ -17,6 +17,8 @@ export function ProjectTrail({ onSelect }: { onSelect: (id: ProjectId) => void }
     const lifetime = new AbortController();
     const previewMode = process.env.NODE_ENV === "development"
       && new URLSearchParams(location.search).get("wc-preview") === "1";
+    const concept = process.env.NODE_ENV === "development"
+      && new URLSearchParams(location.search).get("projects-concept") === "1";
     let disposed = false;
     let loading = false;
     let release: (() => void) | undefined;
@@ -27,10 +29,12 @@ export function ProjectTrail({ onSelect }: { onSelect: (id: ProjectId) => void }
       if (!eligible()) { release?.(); release = undefined; return; }
       if (disposed || loading || release) return;
       loading = true;
-      void import("@/lib/motion/projectTrail").then(({ createProjectTrail }) => {
+      const controller = concept ? import("@/lib/motion/projectConcept") : import("@/lib/motion/projectTrail");
+      void controller.then(module => {
         loading = false;
         if (disposed || !eligible()) return;
-        release = createProjectTrail(section, svg, path, onSelect);
+        const create = "createProjectConcept" in module ? module.createProjectConcept : module.createProjectTrail;
+        release = create(section, svg, path, onSelect);
       }).catch(error => {
         loading = false;
         console.error("Project trail could not initialize.", error);
@@ -48,6 +52,8 @@ export function ProjectTrail({ onSelect }: { onSelect: (id: ProjectId) => void }
   return (
     <svg ref={surface} className={styles.surface} aria-hidden="true" focusable="false" data-project-trail="">
       <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+      <path data-project-connector="" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+      <path data-project-lettering="" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
