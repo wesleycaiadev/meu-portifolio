@@ -1,6 +1,8 @@
 @use "@/styles/tokens";
 
 .projects {
+  position: relative;
+  isolation: isolate;
   min-block-size: 100svh;
   padding-block: var(--space-section);
 }

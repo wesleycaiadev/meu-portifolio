@@ -5,6 +5,7 @@ import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { selectedProjects, sharedPreviewAspect, type ProjectId } from "@/data/projects";
 import type { ProjectPreviewController } from "@/lib/motion/projectPreview";
 import styles from "./Projects.module.scss";
+import { ProjectTrail } from "@/components/motion/ProjectTrail";
 
 const desktopSizes = "(min-width: 1600px) 796px, (min-width: 1024px) 50vw, 90vw";
 const mobileSizes = "(min-width: 768px) 560px, (max-width: 444px) calc(100vw - 40px), 91vw";
@@ -88,6 +89,7 @@ export function Projects() {
         </ol>
         <p className={styles.assistive} role="status" aria-live="polite">{announcement}</p>
       </div>
+      <ProjectTrail />
     </section>
   );
 }

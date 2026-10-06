@@ -1,0 +1,19 @@
+.surface {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  overflow: clip;
+  pointer-events: none;
+  color: var(--text-primary);
+  z-index: 3;
+}
+
+// The touch layout places screenshots between the names. Keep it free of
+// decorative crossings rather than repeating the desktop choreography.
+@media (max-width: 63.999rem) { .surface { display: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .surface { display: none; }
+  // Only the existing explicit development-preview toggle can override this.
+  :global(html[data-wc-motion-preview="enabled"]) .surface { display: block; }
+}
