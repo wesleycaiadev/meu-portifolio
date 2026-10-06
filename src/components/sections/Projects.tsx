@@ -6,7 +6,7 @@ import { selectedProjects, sharedPreviewAspect, type ProjectId } from "@/data/pr
 import type { ProjectPreviewController } from "@/lib/motion/projectPreview";
 import styles from "./Projects.module.scss";
 
-const desktopSizes = "(min-width: 1440px) 603px, (min-width: 1024px) 42vw, 90vw";
+const desktopSizes = "(min-width: 1600px) 728px, (min-width: 1024px) 45.5vw, 90vw";
 const mobileSizes = "(min-width: 768px) 560px, (max-width: 444px) calc(100vw - 40px), 91vw";
 
 export function Projects() {
@@ -54,6 +54,7 @@ export function Projects() {
             return (
               <li key={project.id} className={styles.item} style={{
                 "--project-row": index + 1, "--mobile-aspect": `${mobile.width} / ${mobile.height}`,
+                "--desktop-aspect": `${desktop.width} / ${desktop.height}`,
               } as CSSProperties}>
                 <h3 className={styles.title}>
                   <button

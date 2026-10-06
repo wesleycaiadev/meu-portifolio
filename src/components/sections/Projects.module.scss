@@ -73,19 +73,20 @@
 }
 
 @include tokens.from(desktop) {
+  .projects > :global(.container) { max-inline-size: 100rem; }
   .label { margin-block-end: var(--space-8); }
   .list {
-    grid-template-columns: minmax(0, 40%) minmax(0, 46%);
-    column-gap: 14%;
+    grid-template-columns: minmax(0, 36%) minmax(0, 50%);
+    column-gap: 6%;
     row-gap: var(--space-7);
   }
   .item { display: contents; }
   .title {
     grid-column: 1;
     grid-row: var(--project-row);
-    font-size: clamp(2.75rem, 4vw, 4.5rem);
+    font-size: clamp(2.25rem, 3vw, 3.75rem);
     display: flex;
-    align-items: center;
+    align-self: start;
     border-block-end: var(--border-width) solid var(--border-decorative);
   }
   .select {
@@ -111,10 +112,10 @@
   .preview {
     grid-column: 2;
     grid-row: 1 / 3;
-    align-self: center;
+    align-self: start;
     max-inline-size: none;
-    aspect-ratio: var(--preview-aspect);
-    margin: 0;
+    aspect-ratio: var(--desktop-aspect, var(--preview-aspect));
+    margin: var(--space-6) 0 0;
     opacity: 0;
     visibility: hidden;
   }
