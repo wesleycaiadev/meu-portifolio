@@ -76,18 +76,24 @@
   .projects > :global(.container) { max-inline-size: 100rem; }
   .label { margin-block-end: var(--space-8); }
   .list {
-    grid-template-columns: minmax(0, 36%) minmax(0, 50%);
+    grid-template-columns: minmax(0, 36fr) minmax(0, 50fr);
+    // The preview sets the overall height; only the outer tracks absorb it.
+    // Project rows retain their own height and remain adjacent.
+    grid-template-rows: minmax(0, 1fr) max-content max-content minmax(0, 1fr);
     column-gap: 6%;
-    row-gap: var(--space-7);
+    row-gap: 0;
   }
   .item { display: contents; }
   .title {
     grid-column: 1;
-    grid-row: var(--project-row);
+    grid-row: calc(var(--project-row) + 1);
     font-size: clamp(2.25rem, 3vw, 3.75rem);
     display: flex;
     align-self: start;
     border-block-end: var(--border-width) solid var(--border-decorative);
+  }
+  .item:first-child .title {
+    border-block-start: var(--border-width) solid var(--border-decorative);
   }
   .select {
     grid-template-columns: var(--space-7) minmax(0, 1fr);
@@ -111,11 +117,11 @@
   .select[aria-pressed="true"] .index::after { opacity: 1; }
   .preview {
     grid-column: 2;
-    grid-row: 1 / 3;
-    align-self: start;
+    grid-row: 1 / 5;
+    align-self: center;
     max-inline-size: none;
     aspect-ratio: var(--desktop-aspect, var(--preview-aspect));
-    margin: var(--space-6) 0 0;
+    margin: 0;
     opacity: 0;
     visibility: hidden;
   }
