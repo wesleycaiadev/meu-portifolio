@@ -1,7 +1,7 @@
 "use client";
 
 import Image, { getImageProps } from "next/image";
-import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { useCallback, useEffect, useRef, useState, type CSSProperties } from "react";
 import { selectedProjects, sharedPreviewAspect, type ProjectId } from "@/data/projects";
 import type { ProjectPreviewController } from "@/lib/motion/projectPreview";
 import styles from "./Projects.module.scss";
@@ -32,10 +32,10 @@ export function Projects() {
     return () => { disposed = true; preview.current?.destroy(); preview.current = null; };
   }, []);
 
-  const select = (id: ProjectId) => {
+  const select = useCallback((id: ProjectId) => {
     requested.current = id;
     preview.current?.select(id);
-  };
+  }, []);
 
   return (
     <section
@@ -65,7 +65,9 @@ export function Projects() {
                     aria-controls={`preview-${project.id}`} aria-describedby="projetos-instrucoes"
                     data-project-select={project.id}
                     onPointerEnter={event => {
-                      if (event.pointerType !== "touch" && matchMedia("(min-width: 64rem) and (hover: hover) and (pointer: fine)").matches) select(project.id);
+                      if (section.current?.dataset.trailSelection !== "scroll"
+                        && event.pointerType !== "touch"
+                        && matchMedia("(min-width: 64rem) and (hover: hover) and (pointer: fine)").matches) select(project.id);
                     }}
                     onFocus={() => select(project.id)}
                     onClick={() => {
@@ -89,7 +91,7 @@ export function Projects() {
         </ol>
         <p className={styles.assistive} role="status" aria-live="polite">{announcement}</p>
       </div>
-      <ProjectTrail />
+      <ProjectTrail onSelect={select} />
     </section>
   );
 }

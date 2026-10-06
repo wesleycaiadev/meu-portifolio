@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { selectedProjects, type ProjectId } from "@/data/projects";
 
 type Point = { x: number; y: number };
 const POINT_COUNT = 28;
@@ -47,7 +48,10 @@ function spline(points: Point[]): string {
   return d;
 }
 
-export function createProjectTrail(section: HTMLElement, svg: SVGSVGElement, path: SVGPathElement) {
+export function createProjectTrail(
+  section: HTMLElement, svg: SVGSVGElement, path: SVGPathElement,
+  onSelect: (id: ProjectId) => void,
+) {
   const list = section.querySelector<HTMLOListElement>("ol");
   if (!list) return () => {};
   gsap.registerPlugin(ScrollTrigger);
@@ -62,6 +66,11 @@ export function createProjectTrail(section: HTMLElement, svg: SVGSVGElement, pat
   let listY = 0;
   let listWidth = 0;
   let listHeight = 0;
+  let trajectory: Point[] = [];
+  let projectCenters: { id: ProjectId; y: number }[] = [];
+  let selectionProgress = -1;
+  let scrollProject: ProjectId | undefined;
+  let tipY = 0;
   let visible = false;
   let disposed = false;
   let frame = 0;
@@ -69,6 +78,7 @@ export function createProjectTrail(section: HTMLElement, svg: SVGSVGElement, pat
   let seeded = false;
   let points: Point[] = [];
   const pointer = { x: 0, y: 0, dx: 0, dy: 0, energy: 0, time: 0 };
+  section.dataset.trailSelection = "scroll";
 
   const stop = () => {
     cancelAnimationFrame(frame);
@@ -91,6 +101,15 @@ export function createProjectTrail(section: HTMLElement, svg: SVGSVGElement, pat
     listY = region.top - box.top;
     listWidth = region.width;
     listHeight = region.height;
+    trajectory = guide.map(point => ({ x: listX + point.x * listWidth, y: listY + point.y * listHeight }));
+    // Keep the origin beyond the viewport edge even when the content container
+    // is centered inside an ultrawide screen with large outer gutters.
+    trajectory[0]!.x = Math.min(trajectory[0]!.x, -64);
+    projectCenters = selectedProjects.map(project => {
+      const button = section.querySelector<HTMLElement>(`[data-project-select="${project.id}"]`);
+      const row = button?.getBoundingClientRect();
+      return { id: project.id, y: row ? row.top - box.top + row.height / 2 : listY };
+    });
     svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
     path.setAttribute("stroke-width", String(clamp(width * 0.017, 18, 28)));
     seeded = false;
@@ -104,20 +123,22 @@ export function createProjectTrail(section: HTMLElement, svg: SVGSVGElement, pat
     previousTime = time;
     progress = mix(progress, state.progress, 1 - Math.exp(-dt / 0.12));
     pointer.energy *= Math.exp(-dt * 5.5);
-    // A moving window advances along the curve: the tail also exits physically.
+    // Grow from the original offscreen anchor. Never advance a second endpoint
+    // through the viewport: the already revealed curve stays attached to the edge.
     const head = (progress - 0.15) / 0.75 * 1.34;
-    const tail = head - 0.34;
-    const start = clamp(tail);
     const end = clamp(head);
-    const hasStroke = head > 0 && tail < 1 && end - start > 0.001;
+    const hasStroke = end > 0.001;
     const targets = Array.from({ length: POINT_COUNT }, (_, i) => {
-      const position = catmull(guide, mix(start, end, i / (POINT_COUNT - 1)));
-      const base = { x: listX + position.x * listWidth, y: listY + position.y * listHeight };
+      const base = catmull(trajectory, end * i / (POINT_COUNT - 1));
       const distance = Math.hypot(base.x - pointer.x, base.y - pointer.y);
-      const local = Math.pow(clamp(1 - distance / 260), 2) * pointer.energy;
+      const local = i === 0 ? 0 : Math.pow(clamp(1 - distance / 260), 2) * pointer.energy;
       return { x: base.x + pointer.dx * local * 32, y: base.y + pointer.dy * local * 32 };
     });
-    if (!seeded) { points = targets.map(point => ({ ...point })); seeded = true; }
+    const tipTargetY = catmull(trajectory, end).y;
+    if (!seeded) { points = targets.map(point => ({ ...point })); tipY = tipTargetY; seeded = true; }
+    // Track the same damped leading point without the secondary mouse offset.
+    // Preview ownership therefore follows scroll, not pointer speed or position.
+    tipY = mix(tipY, tipTargetY, 1 - Math.exp(-dt * 13));
     let error = 0;
     for (let i = 0; i < POINT_COUNT; i++) {
       const point = points[i]!;
@@ -130,6 +151,14 @@ export function createProjectTrail(section: HTMLElement, svg: SVGSVGElement, pat
     }
     path.setAttribute("d", hasStroke ? spline(points) : "");
     section.dataset.trailProgress = progress.toFixed(4);
+    const project = projectCenters.reduce((nearest, candidate) =>
+      Math.abs(candidate.y - tipY) < Math.abs(nearest.y - tipY) ? candidate : nearest);
+    if (project.id !== scrollProject || Math.abs(progress - selectionProgress) > 0.0001) {
+      scrollProject = project.id;
+      selectionProgress = progress;
+      section.dataset.trailProject = project.id;
+      onSelect(project.id);
+    }
     if (Math.abs(progress - state.progress) > 0.0001 || pointer.energy > 0.001 || error > 0.08) wake();
     else stop();
   }
@@ -187,6 +216,6 @@ export function createProjectTrail(section: HTMLElement, svg: SVGSVGElement, pat
     lifetime.abort(); intersection.disconnect(); resize.disconnect();
     trigger.animation?.kill(); trigger.kill();
     path.removeAttribute("d"); path.removeAttribute("stroke-width"); svg.removeAttribute("viewBox");
-    for (const key of ["trailProgress", "trailStart", "trailEnd", "trailRunning"]) delete section.dataset[key];
+    for (const key of ["trailProgress", "trailStart", "trailEnd", "trailRunning", "trailSelection", "trailProject"]) delete section.dataset[key];
   };
 }

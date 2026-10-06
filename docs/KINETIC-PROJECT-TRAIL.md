@@ -2,6 +2,8 @@
 
 Checkpoint anterior à implementação: `1431f9b` (`feat: refine editorial projects composition`).
 
+Este relatório registra a versão inicial da TASK 08. A correção posterior de origem presa à borda e seleção automática pelo scroll está documentada em [PROJECT-TRAIL-CONTINUITY.md](<C:/Users/wesley/Documents/PORTIFOLIO V2/docs/PROJECT-TRAIL-CONTINUITY.md>).
+
 ## Ver ao vivo
 
 [Abrir o localhost](http://127.0.0.1:3000/?wc-preview=1), recarregar e clicar em **Ativar animação**. Rolar até Projetos, primeiro sem mover o mouse; retornar lentamente e depois experimentar o ponteiro próximo ao traço.

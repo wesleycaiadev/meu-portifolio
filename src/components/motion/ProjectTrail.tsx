@@ -2,8 +2,9 @@
 
 import { useEffect, useRef } from "react";
 import styles from "./ProjectTrail.module.scss";
+import type { ProjectId } from "@/data/projects";
 
-export function ProjectTrail() {
+export function ProjectTrail({ onSelect }: { onSelect: (id: ProjectId) => void }) {
   const surface = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
@@ -29,7 +30,7 @@ export function ProjectTrail() {
       void import("@/lib/motion/projectTrail").then(({ createProjectTrail }) => {
         loading = false;
         if (disposed || !eligible()) return;
-        release = createProjectTrail(section, svg, path);
+        release = createProjectTrail(section, svg, path, onSelect);
       }).catch(error => {
         loading = false;
         console.error("Project trail could not initialize.", error);
@@ -42,7 +43,7 @@ export function ProjectTrail() {
     }
     reconcile();
     return () => { disposed = true; lifetime.abort(); release?.(); };
-  }, []);
+  }, [onSelect]);
 
   return (
     <svg ref={surface} className={styles.surface} aria-hidden="true" focusable="false" data-project-trail="">
