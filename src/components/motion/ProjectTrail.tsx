@@ -17,8 +17,6 @@ export function ProjectTrail({ onSelect }: { onSelect: (id: ProjectId) => void }
     const lifetime = new AbortController();
     const previewMode = process.env.NODE_ENV === "development"
       && new URLSearchParams(location.search).get("wc-preview") === "1";
-    const concept = process.env.NODE_ENV === "development"
-      && new URLSearchParams(location.search).get("projects-concept") === "1";
     let disposed = false;
     let loading = false;
     let release: (() => void) | undefined;
@@ -29,12 +27,10 @@ export function ProjectTrail({ onSelect }: { onSelect: (id: ProjectId) => void }
       if (!eligible()) { release?.(); release = undefined; return; }
       if (disposed || loading || release) return;
       loading = true;
-      const controller = concept ? import("@/lib/motion/projectConcept") : import("@/lib/motion/projectTrail");
-      void controller.then(module => {
+      void import("@/lib/motion/projectConcept").then(({ createProjectConcept }) => {
         loading = false;
         if (disposed || !eligible()) return;
-        const create = "createProjectConcept" in module ? module.createProjectConcept : module.createProjectTrail;
-        release = create(section, svg, path, onSelect);
+        release = createProjectConcept(section, svg, path, onSelect);
       }).catch(error => {
         loading = false;
         console.error("Project trail could not initialize.", error);
