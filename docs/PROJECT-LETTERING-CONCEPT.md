@@ -1,5 +1,7 @@
 # Prévia: retrato → Projetos → lista
 
+Esta versão foi refinada após a revisão visual. Consulte [o ajuste de espessura, lettering e curvas](PROJECT-LETTERING-REFINEMENT.md) para os valores e capturas atuais.
+
 Checkpoint anterior: `9394e74`.
 
 [Abrir a proposta](http://127.0.0.1:3000/?wc-preview=1&projects-concept=1). Recarregar, clicar em **Ativar animação** e rolar do final de Sobre até os projetos. O parâmetro `projects-concept=1` ativa esta proposta somente em desenvolvimento; o link anterior e a produção continuam com a composição aprovada.

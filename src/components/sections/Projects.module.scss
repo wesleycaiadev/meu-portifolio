@@ -79,7 +79,7 @@
 @include tokens.from(desktop) {
   .projects[data-projects-concept="true"] {
     padding-block: 0;
-    .conceptIntro { display: block; block-size: clamp(25rem, 50svh, 34rem); }
+    .conceptIntro { display: block; block-size: clamp(34rem, 72svh, 48rem); }
     :global([data-project-stage]) {
       min-block-size: 100svh;
       display: flex;
@@ -96,6 +96,7 @@
       white-space: nowrap;
     }
     .list { inline-size: 100%; }
+    .select { padding-block: clamp(2rem, 4.5svh, 3rem); }
     .preview {
       inset-block-start: var(--project-preview-offset, 0px);
       transition: inset-block-start 420ms var(--ease-feedback);
