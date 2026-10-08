@@ -1,0 +1,149 @@
+{
+  "checks": [
+    {
+      "name": "route loads at 1440",
+      "value": true
+    },
+    {
+      "name": "authorship at 1440",
+      "value": true
+    },
+    {
+      "name": "name at 1440",
+      "value": true
+    },
+    {
+      "name": "design system at 1440",
+      "value": true
+    },
+    {
+      "name": "features without audit notes at 1440",
+      "value": true
+    },
+    {
+      "name": "six stack names at 1440",
+      "value": true
+    },
+    {
+      "name": "six local logos load at 1440",
+      "value": true
+    },
+    {
+      "name": "technology copy without pending notes at 1440",
+      "value": true
+    },
+    {
+      "name": "no overflow at 1440",
+      "value": true
+    },
+    {
+      "name": "editorial remains visible after capture at 1440",
+      "value": true
+    },
+    {
+      "name": "capture does not restart entry",
+      "value": true
+    },
+    {
+      "name": "route loads at 390",
+      "value": true
+    },
+    {
+      "name": "authorship at 390",
+      "value": true
+    },
+    {
+      "name": "name at 390",
+      "value": true
+    },
+    {
+      "name": "design system at 390",
+      "value": true
+    },
+    {
+      "name": "features without audit notes at 390",
+      "value": true
+    },
+    {
+      "name": "six stack names at 390",
+      "value": true
+    },
+    {
+      "name": "six local logos load at 390",
+      "value": true
+    },
+    {
+      "name": "technology copy without pending notes at 390",
+      "value": true
+    },
+    {
+      "name": "no overflow at 390",
+      "value": true
+    },
+    {
+      "name": "editorial remains visible after capture at 390",
+      "value": true
+    },
+    {
+      "name": "route loads at 320",
+      "value": true
+    },
+    {
+      "name": "authorship at 320",
+      "value": true
+    },
+    {
+      "name": "name at 320",
+      "value": true
+    },
+    {
+      "name": "design system at 320",
+      "value": true
+    },
+    {
+      "name": "features without audit notes at 320",
+      "value": true
+    },
+    {
+      "name": "six stack names at 320",
+      "value": true
+    },
+    {
+      "name": "six local logos load at 320",
+      "value": true
+    },
+    {
+      "name": "technology copy without pending notes at 320",
+      "value": true
+    },
+    {
+      "name": "no overflow at 320",
+      "value": true
+    },
+    {
+      "name": "editorial remains visible after capture at 320",
+      "value": true
+    },
+    {
+      "name": "home header name",
+      "value": true
+    },
+    {
+      "name": "About name",
+      "value": true
+    },
+    {
+      "name": "metadata name",
+      "value": true
+    },
+    {
+      "name": "home has no case preview controls",
+      "value": true
+    },
+    {
+      "name": "no page exceptions",
+      "value": true
+    }
+  ],
+  "errors": []
+}

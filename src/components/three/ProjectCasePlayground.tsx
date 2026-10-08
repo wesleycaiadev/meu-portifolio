@@ -27,11 +27,16 @@ export function ProjectCasePlayground() {
     const preference = matchMedia("(prefers-reduced-motion: reduce)");
     const narrow = matchMedia("(max-width: 767px), (pointer: coarse)");
     let disposed = false, generation = 0;
+    let appliedPreferences: string | undefined;
     const showStatic = (text: string) => {
       setThreeReady(false); setPhase("static"); setStatus(text);
       editorial.current?.style.setProperty("--case-reveal", "1");
     };
     const reconcile = () => {
+      // Some viewport changes emit a media event without changing either preference.
+      const preferences = `${preference.matches}:${narrow.matches}`;
+      if (preferences === appliedPreferences) return;
+      appliedPreferences = preferences;
       const ticket = ++generation;
       controller.current?.destroy(); controller.current = null;
       setReduced(preference.matches);
@@ -90,7 +95,7 @@ export function ProjectCasePlayground() {
 
   return (
     <main className={`surface--dark ${styles.page}`}>
-      <header className={styles.header}><Link href="/">Wesley Caia</Link><Link href="/#projetos">Voltar aos projetos</Link></header>
+      <header className={styles.header}><Link href="/">Wesley Caiã</Link><Link href="/#projetos">Voltar aos projetos</Link></header>
       <div className={styles.composition} data-reading={reading} data-case-composition="">
         <article ref={editorial} className={styles.editorial} aria-labelledby="case-title">
           <p className={`label ${styles.category}`}>{spaCase.category}</p>
@@ -109,7 +114,17 @@ export function ProjectCasePlayground() {
               <h2>{content.title}</h2>
               {content.paragraphs.map(text => <p key={text}>{text}</p>)}
               {content.items.length > 0 && <ul>{content.items.map(text => <li key={text}>{text}</li>)}</ul>}
-              <p className={styles.note}>{content.note}</p>
+              {"principles" in content && <dl className={styles.designSystem}>
+                {content.principles.map(principle => <div key={principle.label}>
+                  <dt>{principle.label}</dt><dd>{principle.description}</dd>
+                </div>)}
+              </dl>}
+              {tab === "technologies" && <ul className={styles.technologyList}>
+                {spaCase.technologies.map(technology => <li key={technology.name}>
+                  <Image src={`/assets/technologies/${technology.icon}.svg`} alt="" width={24} height={24} />
+                  <div><span className={styles.technologyName}>{technology.name}</span><span>{technology.role}</span></div>
+                </li>)}
+              </ul>}
             </div> : <p className={styles.summary}>{spaCase.summary}</p>}
           </div>
           {reading && <button className={styles.overview} type="button" onClick={overview}>Voltar à visão do projeto</button>}
@@ -130,10 +145,10 @@ export function ProjectCasePlayground() {
           <p id="case-screen-help" className={styles.screenHelp}>
             {threeReady ? "Role sobre a tela para explorar. Arraste fora dela para ajustar o ângulo." : "Role dentro da imagem para explorar as capturas."}
           </p>
-          <p className={styles.captureNote}>Seleção de capturas reais: apresentação, localização e dúvidas. Sem navegação ou links internos.</p>
+          <p className={styles.captureNote}>Apresentação, localização e dúvidas frequentes.</p>
         </section>
       </div>
-      <details className={styles.development} open={reduced}>
+      {process.env.NODE_ENV === "development" && <details className={styles.development} open={reduced}>
         <summary>Controles da prévia</summary>
         <div className={styles.devActions}>
           {reduced && <button type="button" aria-pressed={previewMotion} onClick={() => setPreviewMotion(value => !value)}>
@@ -144,7 +159,7 @@ export function ProjectCasePlayground() {
         </div>
         <p role="status">{status}</p>
         <p>Protótipo isolado de desenvolvimento. A ativação opcional não altera a preferência do sistema. Mobile usa a apresentação estática rolável.</p>
-      </details>
+      </details>}
     </main>
   );
 }

@@ -22,7 +22,7 @@ export function About() {
             mode="characters" range={[0.58, 0.98]} itemSpan={0.10} yOffset={6} blur={3}
             mobile={{ range: [0.58, 0.98], blur: 2 }}
           >
-            Meu nome é Wesley Caia. Gosto de partir de uma ideia ainda solta e construir,
+            Meu nome é Wesley Caiã. Gosto de partir de uma ideia ainda solta e construir,
             etapa por etapa, uma interface com identidade pensando no visual, na experiência
             e em como tudo funciona quando chega às mãos de quem vai usar.
           </RevealText>
@@ -31,7 +31,7 @@ export function About() {
           <Image
             className={styles.image}
             src="/assets/photos/portrait-about.webp?v=2"
-            alt="Retrato de Wesley Caia usando uma blusa verde, sobre um fundo escuro."
+            alt="Retrato de Wesley Caiã usando uma blusa verde, sobre um fundo escuro."
             width={896}
             height={1195}
             // Serve the lossless asset directly, preserving the supplied resolution.

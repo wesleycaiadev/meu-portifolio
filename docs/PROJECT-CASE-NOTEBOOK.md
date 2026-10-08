@@ -4,7 +4,7 @@ Protótipo isolado do SpaSmooth. A aprovação conceitual da última tarefa subs
 
 Prévia: http://127.0.0.1:3000/playground/project-case
 
-Checkpoint anterior preservado: `f5abce7`. Checkpoint dos documentos de conceito antes desta implementação: `a8dd086`. O novo código permanece disponível para revisão visual, sem um novo commit de aprovação.
+Checkpoints preservados: `f5abce7` (protótipo anterior), `a8dd086` (conceito) e `5df0788` (notebook antes da revisão de conteúdo). O último checkpoint preserva o estado de teste; não representa aprovação visual definitiva.
 
 ## Composição e entrada
 
@@ -43,7 +43,7 @@ O raycast contra a tela decide se o wheel pertence ao projeto. A distância é c
 
 Teclado com foco na apresentação: setas verticais, Page Up/Down, Space, Home/End. As tabs usam setas horizontais, Home/End e foco visível do sistema existente.
 
-**Limite da simulação:** são capturas de trechos diferentes, com enquadramentos originais distintos. As junções não representam a continuidade exata de um site completo. A legenda informa a seleção de capturas. Não foi inventado conteúdo entre esses trechos nem validado agendamento real.
+**Limite da simulação:** são capturas de trechos diferentes, com enquadramentos originais distintos. As junções não representam a continuidade exata de um site completo. Não foi inventado conteúdo entre esses trechos nem validado agendamento real.
 
 ## Leitura e interação
 
@@ -68,7 +68,11 @@ DPR limitado a 1,5; sombra 1024; teclado sem meshes por tecla; textura sem regen
 
 **Evidência visual fornecida:** serviços de massoterapia, Day Spa e bronzeamento; versões desktop/mobile; menu mobile expandido; localização/mapa/contato; FAQ; chamadas para agendamento; fundos claros, azuis, fotografias e títulos serifados/itálicos.
 
-**Ainda precisa de confirmação:** linguagens, framework, backend, serviços externos, funcionamento de integrações e agendamento, escopo de Wesley em design/desenvolvimento/publicação, URLs de produção/repositório e resultados. Não foram inventadas métricas, responsabilidades ou bibliotecas. A stack do portfólio não foi atribuída ao SpaSmooth.
+**Confirmado por Wesley na revisão de conteúdo:** SpaSmooth usa Next.js, React, TypeScript, Tailwind CSS, Supabase e Clerk. Wesley Caiã concebeu o projeto e realizou design, desenvolvimento, integrações e publicação. As funções de cada tecnologia seguem as informações fornecidas por ele, sem atribuição automática da stack do portfólio.
+
+**MF Consultoria, registrado separadamente:** Angular, TypeScript, SCSS, Supabase, PostgreSQL e Vercel. Angular 22 e Tailwind CSS foram citados como recomendações ainda não verificadas no deploy; não foram adicionados à stack publicada no portfólio. RLS, armazenamento e WhatsApp não foram promovidos a funcionalidades comprovadas. Esta revisão prepara os dados da MF, sem implementar um novo case ou alterar sua lista editorial.
+
+URLs, versões específicas, resultados e detalhes de implementação não foram inferidos. O link colado junto à stack do SpaSmooth aponta para a MF Consultoria e não foi usado como prova técnica do SpaSmooth. A confirmação desta revisão vem da mensagem de Wesley; o currículo e o LinkedIn não foram consultados nem apresentados como auditados.
 
 ## Validação
 
@@ -94,4 +98,21 @@ Verificação final em 08/10/2026:
 - Assets, `reference/`, dependências e arquivos existentes: sem alterações em relação ao checkpoint. Nenhuma dependência nova da aplicação.
 - FFmpeg do Playwright foi baixado apenas em pasta temporária para gravar/verificar os vídeos, sem modificar package.json ou lockfile. Essa pasta foi removida após a validação.
 
-Arquivos de implementação criados: os cinco listados na tabela de arquitetura. Documentação criada: este arquivo. Evidências criadas: quatro WebM, nove PNG (oito estados mais a home em produção) e dois JSON. Nenhum arquivo rastreado anterior foi modificado. O servidor de desenvolvimento permanece em 127.0.0.1:3000 para avaliação ao vivo; o servidor temporário de produção foi encerrado.
+Na entrega inicial, foram criados os cinco arquivos da tabela de arquitetura, este documento e as evidências (quatro WebM, nove PNG e dois JSON). Esses arquivos foram preservados no checkpoint `5df0788`.
+
+## Revisão de copy, stack e autoria
+
+- Nome corrigido para Wesley Caiã no header, About, texto alternativo e metadata, conforme a indicação de til no último A.
+- Sobre registra a concepção e a execução completa do projeto em primeira pessoa.
+- Estética passa a ser um resumo do sistema visual: paleta, tipografia, imagem/composição e responsividade. Sem inventar fontes ou valores de tokens do SpaSmooth.
+- Notas de auditoria e pendências retiradas das abas voltadas ao visitante.
+- Tecnologias mostra os seis logos do SpaSmooth e suas funções. SVGs locais de Simple Icons, sem biblioteca nova. Fontes em `public/assets/technologies/README.md`.
+- Stacks distintas em `src/data/projectTechnologies.ts` e no índice `src/data/projects.ts`; as dimensões e animações da lista de projetos não mudaram.
+- Controles protegidos também no componente por `NODE_ENV === "development"`. A rota continua retornando 404 em produção.
+- Eventos de media query que não alteram preferências não reiniciam a abertura. Isso evita o replay observado durante captura de página inteira.
+
+Evidências desta revisão: `project-case-content-design-system.png`, `project-case-content-technologies.png`, `project-case-content-mobile.png` e `project-case-content-validation.json`, dentro de `docs/previews/`. As gravações anteriores documentam a geometria e a interação antes da revisão de copy.
+
+Alterações de implementação: `ProjectCasePlayground.tsx`, seu SCSS, `projectCase.ts`, `projects.ts`, Header, About e os quatro arquivos de metadata (layout e três playgrounds). Novo módulo: `projectTechnologies.ts`. Novos assets: dez logos SVG, mais o README de proveniência. Não há mudança no controlador Three.js, nos assets anteriores nem nas dependências.
+
+Validação da revisão: lint, typecheck e build passaram. 36 verificações de conteúdo, carregamento dos seis logos, visibilidade, captura sem replay e responsividade (1440, 390 e 320 px) passaram, sem exceções de página. Produção: playground 404, home 200, nenhum controle de prévia, título Wesley Caiã. Registro em `docs/previews/project-case-content-production.json`. O servidor temporário 3002 foi encerrado; o localhost 3000 continua disponível. Não foram gravados novos vídeos nesta revisão de conteúdo.

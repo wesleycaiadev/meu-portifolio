@@ -1,7 +1,10 @@
-// Only supplied screenshots and confirmed project names belong in this index.
+import { projectTechnologyStacks } from "./projectTechnologies";
+
+// Supplied screenshots, names and stacks confirmed by Wesley.
 export const selectedProjects = [
   {
     id: "spasmooth", index: "01", title: "SpaSmooth",
+    technologies: projectTechnologyStacks.spasmooth,
     alt: "Página inicial do SpaSmooth, com serviços de spa e uma sala de tratamento.",
     preview: {
       desktop: { src: "/assets/projects/spasmooth/spasmooth-hero-desktop.png", width: 1905, height: 956 },
@@ -10,6 +13,7 @@ export const selectedProjects = [
   },
   {
     id: "mf-consultoria", index: "02", title: "MF Consultoria",
+    technologies: projectTechnologyStacks["mf-consultoria"],
     alt: "Página inicial da MF Consultoria, com apresentação da curadoria automotiva e um retrato.",
     preview: {
       desktop: { src: "/assets/projects/mf-consultoria/mf-consultoria-hero-desktop.png", width: 1345, height: 947 },

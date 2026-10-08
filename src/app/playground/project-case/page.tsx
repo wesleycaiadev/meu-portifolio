@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { ProjectCasePlayground } from "@/components/three/ProjectCasePlayground";
 
 export const metadata: Metadata = {
-  title: "SpaSmooth · Apresentação do projeto | Wesley Caia",
+  title: "SpaSmooth · Apresentação do projeto | Wesley Caiã",
   robots: { index: false, follow: false },
 };
 

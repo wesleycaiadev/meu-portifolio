@@ -35,7 +35,20 @@
 .panelContent { animation: case-content 380ms var(--ease-settle) both; }
 @keyframes case-content { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 .summary { max-inline-size: 38ch; }
-.panel .note { font-size: .8125rem; line-height: 1.6; margin-block-start: 1.5rem; padding-block-start: 1rem; border-block-start: 1px solid var(--border-decorative); }
+.designSystem {
+  margin-block-start: 1.5rem;
+  div + div { margin-block-start: 1rem; }
+  dt { color: var(--text-primary); font-weight: 500; }
+  dd { margin: .25rem 0 0; font-size: .875rem; line-height: 1.6; }
+}
+.panel .technologyList {
+  list-style: none; padding: 0; margin: 0;
+  li { display: flex; align-items: center; gap: 1rem; padding-block: .75rem; }
+  li + li { margin-block-start: 0; border-block-start: 1px solid var(--border-decorative); }
+  img { flex: 0 0 24px; filter: invert(.94); }
+  li > div { display: flex; flex-direction: column; min-inline-size: 0; font-size: .8125rem; line-height: 1.5; }
+  .technologyName { color: var(--text-primary); font-size: .9375rem; }
+}
 .overview { background: none; border: 0; border-block-end: 1px solid var(--border-control); color: var(--text-primary); font: inherit; font-size: .8125rem; padding-block: .5rem; margin-block-start: 1rem; cursor: pointer; }
 .visual { grid-area: visual; min-inline-size: 0; }
 .stage {

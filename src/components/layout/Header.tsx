@@ -6,7 +6,7 @@ export function Header({ heading = false }: { heading?: boolean }) {
   return (
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
-        <Identity className={styles.identity}>Wesley Caia</Identity>
+        <Identity className={styles.identity}>Wesley Caiã</Identity>
       </div>
     </header>
   );

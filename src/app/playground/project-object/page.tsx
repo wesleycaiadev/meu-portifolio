@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { ProjectObjectPlayground } from "@/components/three/ProjectObjectPlayground";
 
 export const metadata: Metadata = {
-  title: "Protótipo do objeto de projeto | Wesley Caia",
+  title: "Protótipo do objeto de projeto | Wesley Caiã",
   robots: { index: false, follow: false },
 };
 

@@ -5,7 +5,7 @@ import { ButtonSample } from "@/components/ui/ButtonSample";
 import styles from "./page.module.scss";
 
 export const metadata: Metadata = {
-  title: "Playground visual — Wesley Caia",
+  title: "Playground visual — Wesley Caiã",
   description: "Página temporária para revisão da fundação visual da TASK 01.",
   robots: { index: false, follow: false },
 };

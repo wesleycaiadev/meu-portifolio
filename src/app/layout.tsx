@@ -4,8 +4,8 @@ import { instrumentSerif, interTight } from "./fonts";
 import "@/styles/globals.scss";
 
 export const metadata: Metadata = {
-  title: "Wesley Caia",
-  description: "Portfólio de Wesley Caia.",
+  title: "Wesley Caiã",
+  description: "Portfólio de Wesley Caiã.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
