@@ -6,7 +6,7 @@ export type PreviewSnapshot = {
   asset: Project["preview"]["desktop"] | Project["preview"]["mobile"];
   currentSrc: string;
   sourceElement: HTMLImageElement;
-  triggerElement: HTMLButtonElement;
+  triggerElement: HTMLButtonElement | HTMLAnchorElement;
   stageBounds: DOMRect;
   bounds: DOMRect;
   aspectRatio: number;
@@ -27,7 +27,7 @@ export function createProjectPreview(
   const entries = selectedProjects.map(project => {
     const figure = section.querySelector<HTMLElement>(`[data-project-preview="${project.id}"]`);
     const image = figure?.querySelector("img");
-    const button = section.querySelector<HTMLButtonElement>(`[data-project-select="${project.id}"]`);
+    const button = section.querySelector<HTMLButtonElement | HTMLAnchorElement>(`[data-project-select="${project.id}"]`);
     if (!figure || !image || !button) throw new Error(`Missing preview elements for ${project.id}.`);
     return { project, figure, image, button, style: figure.getAttribute("style") };
   });

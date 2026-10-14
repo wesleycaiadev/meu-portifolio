@@ -150,6 +150,10 @@ export function createProjectConcept(
     const stageBox = stage!.getBoundingClientRect();
     const photo = portrait!.getBoundingClientRect();
     const rows = controls.map(control => ({ ...control, bounds: control.element.getBoundingClientRect() }));
+    // Route changes can hide the outgoing layout before React runs its cleanup.
+    // A zero-width stage would divide the SVG trajectory by zero for that frame.
+    if (!section.isConnected || stageBox.width <= 0 || introBox.height <= 0
+      || rows.some(row => row.bounds.height <= 0)) { stop(); return; }
     const stroke = Math.min(28, Math.max(18, innerWidth * 0.017));
     const scale = Math.min(1020, stageBox.width * 0.76) / 928;
     const wordX = stageBox.x + (stageBox.width - 928 * scale) / 2;

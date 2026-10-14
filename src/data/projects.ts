@@ -4,6 +4,7 @@ import { projectTechnologyStacks } from "./projectTechnologies";
 export const selectedProjects = [
   {
     id: "spasmooth", index: "01", title: "SpaSmooth",
+    casePath: "/projetos/spasmooth",
     technologies: projectTechnologyStacks.spasmooth,
     alt: "Página inicial do SpaSmooth, com serviços de spa e uma sala de tratamento.",
     preview: {

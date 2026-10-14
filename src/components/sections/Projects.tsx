@@ -1,7 +1,8 @@
 "use client";
 
 import Image, { getImageProps } from "next/image";
-import { useCallback, useEffect, useRef, useState, type CSSProperties } from "react";
+import Link from "next/link";
+import { useCallback, useEffect, useRef, useState, type CSSProperties, type PointerEvent } from "react";
 import { selectedProjects, sharedPreviewAspect, type ProjectId } from "@/data/projects";
 import type { ProjectPreviewController } from "@/lib/motion/projectPreview";
 import styles from "./Projects.module.scss";
@@ -47,38 +48,43 @@ export function Projects() {
       <div className="container" data-project-stage="">
         <h2 id="projetos-titulo" className={`label ${styles.label}`}>Projetos selecionados</h2>
         <p id="projetos-instrucoes" className={styles.assistive}>
-          Estes controles selecionam a prévia de cada projeto. Os estudos de caso ainda não estão disponíveis.
+          O foco seleciona a prévia. SpaSmooth abre seu estudo de caso; MF Consultoria possui somente a prévia.
         </p>
         <ol className={styles.list} role="list" style={{ "--preview-aspect": sharedPreviewAspect } as CSSProperties}>
           {selectedProjects.map((project, index) => {
             const { desktop, mobile } = project.preview;
             const { props: { srcSet: mobileSrcSet } } = getImageProps({ ...mobile, alt: project.alt, sizes: mobileSizes });
+            const selectProps = {
+              id: `projeto-${project.id}`, className: styles.select,
+              "aria-controls": `preview-${project.id}`, "aria-describedby": "projetos-instrucoes",
+              "data-project-select": project.id,
+              onPointerEnter: (event: PointerEvent<HTMLElement>) => {
+                if (section.current?.dataset.trailSelection !== "scroll"
+                  && event.pointerType !== "touch"
+                  && matchMedia("(min-width: 64rem) and (hover: hover) and (pointer: fine)").matches) select(project.id);
+              },
+              onFocus: () => select(project.id),
+            };
+            const label = <><span className={`label ${styles.index}`} aria-hidden="true">{project.index}</span><span>{project.title}</span></>;
             return (
               <li key={project.id} className={styles.item} style={{
                 "--project-row": index + 1, "--mobile-aspect": `${mobile.width} / ${mobile.height}`,
                 "--desktop-aspect": `${desktop.width} / ${desktop.height}`,
               } as CSSProperties}>
                 <h3 className={styles.title}>
-                  <button
-                    id={`projeto-${project.id}`} type="button" className={styles.select}
+                  {"casePath" in project ? <Link {...selectProps} href={project.casePath}
+                    aria-label={`Conhecer o projeto ${project.title}`} data-active={activeProject === project.id}
+                    onClick={() => select(project.id)}>{label}</Link> : <button
+                    {...selectProps} type="button"
                     aria-label={`Selecionar prévia de ${project.title}`}
                     aria-pressed={activeProject === project.id}
-                    aria-controls={`preview-${project.id}`} aria-describedby="projetos-instrucoes"
-                    data-project-select={project.id}
-                    onPointerEnter={event => {
-                      if (section.current?.dataset.trailSelection !== "scroll"
-                        && event.pointerType !== "touch"
-                        && matchMedia("(min-width: 64rem) and (hover: hover) and (pointer: fine)").matches) select(project.id);
-                    }}
-                    onFocus={() => select(project.id)}
                     onClick={() => {
                       select(project.id);
                       setAnnouncement(`Prévia de ${project.title} selecionada. Estudo de caso ainda não disponível.`);
                     }}
                   >
-                    <span className={`label ${styles.index}`} aria-hidden="true">{project.index}</span>
-                    <span>{project.title}</span>
-                  </button>
+                    {label}
+                  </button>}
                 </h3>
                 <figure id={`preview-${project.id}`} className={styles.preview} data-project-preview={project.id}>
                   <picture>

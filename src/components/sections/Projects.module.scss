@@ -39,6 +39,7 @@
   font: inherit;
   letter-spacing: inherit;
   text-align: start;
+  text-decoration: none;
   cursor: pointer;
   overflow-wrap: normal;
 }
@@ -131,7 +132,7 @@
     padding-block: var(--space-6);
     color: var(--text-secondary);
     transition: color var(--duration-feedback) var(--ease-feedback);
-    &[aria-pressed="true"] { color: var(--text-primary); }
+    &[aria-pressed="true"], &[data-active="true"] { color: var(--text-primary); }
   }
   .index::after {
     content: "";
@@ -143,7 +144,7 @@
     background: currentColor;
     opacity: 0;
   }
-  .select[aria-pressed="true"] .index::after { opacity: 1; }
+  .select[aria-pressed="true"] .index::after, .select[data-active="true"] .index::after { opacity: 1; }
   .preview {
     grid-column: 2;
     grid-row: 1 / 5;

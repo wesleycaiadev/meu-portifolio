@@ -5,6 +5,7 @@ import { narrativeSections } from "@/data/narrative";
 import { HeroTakeover } from "@/components/motion/HeroTakeover";
 import { About } from "@/components/sections/About";
 import { Projects } from "@/components/sections/Projects";
+import { ProjectReturnAnchor } from "@/components/layout/ProjectReturnAnchor";
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
         </HeroTakeover>
         <About />
         <Projects />
+        <ProjectReturnAnchor />
         <div className="container foundation-following">
           {narrativeSections.filter(section => section.id !== "sobre" && section.id !== "projetos").map((section) => (
             <SectionPlaceholder key={section.id} {...section} />

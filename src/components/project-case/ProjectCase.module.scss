@@ -10,11 +10,17 @@
   transition: grid-template-columns 600ms var(--ease-settle);
   &[data-reading="true"] { grid-template-columns: minmax(0, 1.32fr) minmax(0, 1fr); }
 }
-.editorial {
+.editorial, .editorialStatic {
   grid-area: editorial; min-inline-size: 0; --case-reveal: 0;
   opacity: var(--case-reveal); transform: translateY(calc((1 - var(--case-reveal)) * 18px));
   h1 { font-size: clamp(2.5rem, 4.7vw, 5rem); line-height: 1; letter-spacing: -.055em; margin-block: 1rem 1.25rem; }
 }
+.editorialStatic { --case-reveal: 1; }
+.staticDetail {
+  margin-block-start: 1.5rem;
+  summary { color: var(--text-primary); cursor: pointer; padding-block: .75rem; }
+}
+.loading { position: absolute; inset: 45% 8% auto; color: var(--text-secondary); font-size: .875rem; }
 .category { color: var(--text-secondary); }
 .description { font-size: clamp(1.125rem, 1.4vw, 1.5rem); line-height: 1.45; max-inline-size: 29ch; }
 .tabs {
@@ -77,8 +83,8 @@
 }
 @media (max-width: 63.999rem) {
   .composition, .composition[data-reading="true"] { grid-template-columns: minmax(0, 1fr); grid-template-areas: "editorial" "visual"; min-block-size: 0; }
-  .editorial { max-inline-size: 40rem; }
-  .editorial h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+  .editorial, .editorialStatic { max-inline-size: 40rem; }
+  .editorial h1, .editorialStatic h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
   .stage { block-size: clamp(22rem, 58svh, 35rem); }
 }
 @media (max-width: 47.999rem) {

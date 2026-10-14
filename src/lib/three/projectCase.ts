@@ -34,7 +34,7 @@ export function createProjectCase(host: HTMLElement, sources: readonly ObjectSur
   const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: "low-power" });
   renderer.setClearColor(0x101010); renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.08;
-  renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFShadowMap;
   renderer.shadowMap.autoUpdate = false;
   const canvas = renderer.domElement; canvas.setAttribute("aria-hidden", "true"); host.append(canvas);
   const scene = new THREE.Scene();
