@@ -16,6 +16,11 @@ type Hooks = {
   onTransferReady?: (destination: ProjectTransitionDestination) => boolean;
 };
 
+function containedSize(width: number, height: number, frameWidth: number, frameHeight: number) {
+  const scale = Math.min(frameWidth / width, frameHeight / height);
+  return { width: width * scale, height: height * scale };
+}
+
 function outlineShape(width: number, height: number, radius: number) {
   const x = -width / 2, y = -height / 2, r = radius;
   const shape = new THREE.Shape();
@@ -181,8 +186,13 @@ export function createProjectCase(host: HTMLElement, sources: readonly ObjectSur
     const bounds = host.getBoundingClientRect();
     camera.position.set(.22, pose.y * fit, pose.z * fit); camera.lookAt(0, pose.targetY, 0);
     camera.updateMatrixWorld(true);
-    return [[-screenW / 2, .20, -1.25], [screenW / 2, .20, -1.25],
-      [screenW / 2, .20, -1.25 + screenH], [-screenW / 2, .20, -1.25 + screenH]].map(([x, y, z]) => {
+    // Use the same contained region as the texture, in physical display units.
+    const image = options.screenFit === "contain"
+      ? containedSize(primary.width, primary.height, screenW, screenH)
+      : { width: screenW, height: screenH };
+    const top = -1.25 + (screenH - image.height) / 2;
+    return [[-image.width / 2, .20, top], [image.width / 2, .20, top],
+      [image.width / 2, .20, top + image.height], [-image.width / 2, .20, top + image.height]].map(([x, y, z]) => {
       const point = new THREE.Vector3(x, y, z).project(camera);
       return { x: bounds.x + (point.x + 1) * bounds.width / 2, y: bounds.y + (1 - point.y) * bounds.height / 2 };
     }) as unknown as TransitionQuad;
@@ -311,8 +321,7 @@ export function createProjectCase(host: HTMLElement, sources: readonly ObjectSur
     let y = 0;
     for (const image of images) {
       if (options.screenFit === "contain") {
-        const scale = Math.min(viewport.width / image.naturalWidth, viewport.height / image.naturalHeight);
-        const width = image.naturalWidth * scale, height = image.naturalHeight * scale;
+        const { width, height } = containedSize(image.naturalWidth, image.naturalHeight, viewport.width, viewport.height);
         storyContext.fillStyle = "#101010"; storyContext.fillRect(0, y, viewport.width, viewport.height);
         storyContext.drawImage(image, (viewport.width - width) / 2, y + (viewport.height - height) / 2, width, height);
         y += viewport.height;

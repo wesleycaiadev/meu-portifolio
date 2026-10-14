@@ -1,0 +1,64 @@
+{
+  "base": "http://127.0.0.1:3002",
+  "viewport": "1440x900",
+  "results": [
+    {
+      "project": "spasmooth",
+      "elapsedMilliseconds": 2754,
+      "phases": [
+        {
+          "phase": "selection",
+          "time": 2927.4000000003725,
+          "path": "/"
+        },
+        {
+          "phase": "navigation",
+          "time": 3209.4000000003725,
+          "path": "/"
+        },
+        {
+          "phase": "transfer",
+          "time": 3591.9000000003725,
+          "path": "/projetos/spasmooth"
+        },
+        {
+          "phase": "idle",
+          "time": 5681.5999999996275,
+          "path": "/projetos/spasmooth"
+        }
+      ],
+      "errors": [],
+      "internalScroll": true,
+      "returnToProjects": true
+    },
+    {
+      "project": "mf-consultoria",
+      "elapsedMilliseconds": 2598,
+      "phases": [
+        {
+          "phase": "selection",
+          "time": 3232.9000000003725,
+          "path": "/"
+        },
+        {
+          "phase": "navigation",
+          "time": 3515.5,
+          "path": "/"
+        },
+        {
+          "phase": "transfer",
+          "time": 3715.5,
+          "path": "/projetos/mf-consultoria"
+        },
+        {
+          "phase": "idle",
+          "time": 5831,
+          "path": "/projetos/mf-consultoria"
+        }
+      ],
+      "errors": [],
+      "internalScroll": true,
+      "returnToProjects": true
+    }
+  ]
+}

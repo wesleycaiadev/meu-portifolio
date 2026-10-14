@@ -38,7 +38,7 @@ export function ProjectTransitionProvider({ children }: { children: ReactNode })
       clearTimeout(active.timeout); active.departure?.kill(); active.transfer?.kill();
       active.snapshot.sourceElement.style.visibility = active.sourceVisibility;
       active.snapshot.sourceElement.closest<HTMLElement>("[data-projects]")?.removeAttribute("data-project-navigating");
-      if (layer.current) { layer.current.hidden = true; delete layer.current.dataset.phase; }
+      if (layer.current) { layer.current.hidden = true; delete layer.current.dataset.phase; delete layer.current.dataset.project; }
       if (surface.current) { surface.current.replaceChildren(); gsap.set(surface.current, { clearProps: "all" }); }
       if (backdrop.current) gsap.set(backdrop.current, { clearProps: "opacity" });
       delete document.documentElement.dataset.projectTransition;
@@ -51,6 +51,8 @@ export function ProjectTransitionProvider({ children }: { children: ReactNode })
         if (!layer.current || !backdrop.current || !surface.current
           || document.hidden || matchMedia("(prefers-reduced-motion: reduce)").matches
           || matchMedia("(max-width: 767px), (pointer: coarse)").matches
+          || (snapshot.activeProject.transitionSource === "desktop"
+            && snapshot.asset.src !== snapshot.activeProject.preview.desktop.src)
           || !snapshot.sourceElement.complete || !snapshot.sourceElement.naturalWidth
           || snapshot.bounds.width < 1 || snapshot.bounds.height < 1) return false;
         const { x, y, width, height } = snapshot.bounds;
@@ -66,6 +68,7 @@ export function ProjectTransitionProvider({ children }: { children: ReactNode })
         snapshot.sourceElement.style.visibility = "hidden";
         snapshot.sourceElement.closest<HTMLElement>("[data-projects]")?.setAttribute("data-project-navigating", "true");
         layer.current.hidden = false; layer.current.dataset.phase = "selection";
+        layer.current.dataset.project = snapshot.activeProject.id;
         document.documentElement.dataset.projectTransition = "selection";
         // Warm the existing engine while the source still owns the viewport.
         void import("@/lib/three/projectCase").catch(() => {});
