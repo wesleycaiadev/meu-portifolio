@@ -1,0 +1,421 @@
+{
+  "mode": "production",
+  "checks": [
+    {
+      "name": "MF direct route 200",
+      "value": true
+    },
+    {
+      "name": "MF metadata",
+      "value": true
+    },
+    {
+      "name": "MF project identity",
+      "value": true
+    },
+    {
+      "name": "MF normal opening",
+      "value": true
+    },
+    {
+      "name": "MF no artificial transition layer",
+      "value": true
+    },
+    {
+      "name": "MF only own textures loaded",
+      "value": true
+    },
+    {
+      "name": "MF contains all three captures",
+      "value": true
+    },
+    {
+      "name": "MF keeps original image aspect ratios",
+      "value": true
+    },
+    {
+      "name": "MF captures fit entirely in screen segments",
+      "value": true
+    },
+    {
+      "name": "MF screen raycast",
+      "value": true
+    },
+    {
+      "name": "MF internal wheel scroll",
+      "value": true
+    },
+    {
+      "name": "MF wheel leaves page in place",
+      "value": true
+    },
+    {
+      "name": "MF keyboard reaches footer",
+      "value": true
+    },
+    {
+      "name": "MF tab Sobre",
+      "value": true
+    },
+    {
+      "name": "MF reading composition Sobre",
+      "value": true
+    },
+    {
+      "name": "MF tab Estética",
+      "value": true
+    },
+    {
+      "name": "MF reading composition Estética",
+      "value": true
+    },
+    {
+      "name": "MF tab Funcionalidades",
+      "value": true
+    },
+    {
+      "name": "MF reading composition Funcionalidades",
+      "value": true
+    },
+    {
+      "name": "MF tab Tecnologias",
+      "value": true
+    },
+    {
+      "name": "MF reading composition Tecnologias",
+      "value": true
+    },
+    {
+      "name": "MF confirmed technologies only",
+      "value": true
+    },
+    {
+      "name": "MF six technology logos loaded",
+      "value": true
+    },
+    {
+      "name": "MF has no guessed framework version",
+      "value": true
+    },
+    {
+      "name": "MF keyboard tabs reach Sobre",
+      "value": true
+    },
+    {
+      "name": "MF full authorship",
+      "value": true
+    },
+    {
+      "name": "MF overview restores original composition",
+      "value": true
+    },
+    {
+      "name": "MF overview preserves focus",
+      "value": true
+    },
+    {
+      "name": "MF identifies visual simulation",
+      "value": true
+    },
+    {
+      "name": "MF no overflow 1920",
+      "value": true
+    },
+    {
+      "name": "MF no overflow 820",
+      "value": true
+    },
+    {
+      "name": "MF no overflow 390",
+      "value": true
+    },
+    {
+      "name": "MF no overflow 320",
+      "value": true
+    },
+    {
+      "name": "MF return targets visible Projects",
+      "value": true
+    },
+    {
+      "name": "MF real link on home",
+      "value": true
+    },
+    {
+      "name": "MF native entry from home",
+      "value": true
+    },
+    {
+      "name": "MF refresh works",
+      "value": true
+    },
+    {
+      "name": "MF browser Back reaches home",
+      "value": true
+    },
+    {
+      "name": "MF browser Forward restores case",
+      "value": true
+    },
+    {
+      "name": "Spa transition preserved cycle 0",
+      "value": true
+    },
+    {
+      "name": "one live renderer cycle 0",
+      "value": true
+    },
+    {
+      "name": "old WebGL contexts released cycle 0",
+      "value": true
+    },
+    {
+      "name": "old case listeners aborted cycle 0",
+      "value": true
+    },
+    {
+      "name": "old case observers disconnected cycle 0",
+      "value": true
+    },
+    {
+      "name": "old render loops stopped cycle 0",
+      "value": true
+    },
+    {
+      "name": "Spa transition preserved cycle 1",
+      "value": true
+    },
+    {
+      "name": "one live renderer cycle 1",
+      "value": true
+    },
+    {
+      "name": "old WebGL contexts released cycle 1",
+      "value": true
+    },
+    {
+      "name": "old case listeners aborted cycle 1",
+      "value": true
+    },
+    {
+      "name": "old case observers disconnected cycle 1",
+      "value": true
+    },
+    {
+      "name": "old render loops stopped cycle 1",
+      "value": true
+    },
+    {
+      "name": "MF reduced essential title",
+      "value": true
+    },
+    {
+      "name": "MF reduced captures accessible",
+      "value": true
+    },
+    {
+      "name": "MF reduced native capture scroll",
+      "value": true
+    },
+    {
+      "name": "MF reduced technologies readable",
+      "value": true
+    },
+    {
+      "name": "MF reduced no canvas",
+      "value": true
+    },
+    {
+      "name": "MF reduced native return",
+      "value": true
+    },
+    {
+      "name": "MF mobile essential title",
+      "value": true
+    },
+    {
+      "name": "MF mobile captures accessible",
+      "value": true
+    },
+    {
+      "name": "MF mobile native capture scroll",
+      "value": true
+    },
+    {
+      "name": "MF mobile technologies readable",
+      "value": true
+    },
+    {
+      "name": "MF mobile no canvas",
+      "value": true
+    },
+    {
+      "name": "MF mobile native return",
+      "value": true
+    },
+    {
+      "name": "MF no-webgl essential title",
+      "value": true
+    },
+    {
+      "name": "MF no-webgl captures accessible",
+      "value": true
+    },
+    {
+      "name": "MF no-webgl native capture scroll",
+      "value": true
+    },
+    {
+      "name": "MF no-webgl technologies readable",
+      "value": true
+    },
+    {
+      "name": "MF no-webgl no canvas",
+      "value": true
+    },
+    {
+      "name": "MF no-webgl native return",
+      "value": true
+    },
+    {
+      "name": "MF no-js essential title",
+      "value": true
+    },
+    {
+      "name": "MF no-js captures accessible",
+      "value": true
+    },
+    {
+      "name": "MF no-js native capture scroll",
+      "value": true
+    },
+    {
+      "name": "MF no-js technologies readable",
+      "value": true
+    },
+    {
+      "name": "MF no-js no canvas",
+      "value": true
+    },
+    {
+      "name": "MF no-js native return",
+      "value": true
+    },
+    {
+      "name": "no unhandled page exceptions",
+      "value": true
+    }
+  ],
+  "errors": [],
+  "observations": {
+    "captureDraws": [
+      {
+        "src": "http://127.0.0.1:3002/assets/projects/mf-consultoria/mf-consultoria-hero-desktop.png",
+        "sourceWidth": 1345,
+        "sourceHeight": 947,
+        "x": 220.48416050686376,
+        "y": 0,
+        "width": 1095.0316789862725,
+        "height": 771,
+        "canvasWidth": 1536,
+        "canvasHeight": 2313
+      },
+      {
+        "src": "http://127.0.0.1:3002/assets/projects/mf-consultoria/mf-consultoria-curadoria-processo.png",
+        "sourceWidth": 1341,
+        "sourceHeight": 568,
+        "x": 0,
+        "y": 831.202460850112,
+        "width": 1536,
+        "height": 650.5950782997762,
+        "canvasWidth": 1536,
+        "canvasHeight": 2313
+      },
+      {
+        "src": "http://127.0.0.1:3002/assets/projects/mf-consultoria/mf-consultoria-cta-footer.png",
+        "sourceWidth": 1347,
+        "sourceHeight": 766,
+        "x": 90.10378590078324,
+        "y": 1542,
+        "width": 1355.7924281984335,
+        "height": 771.0000000000001,
+        "canvasWidth": 1536,
+        "canvasHeight": 2313
+      }
+    ],
+    "resourcesCycle0": {
+      "contexts": [
+        {
+          "connected": false,
+          "lost": true,
+          "draws": 7778
+        },
+        {
+          "connected": false,
+          "lost": true,
+          "draws": 7739
+        },
+        {
+          "connected": false,
+          "lost": true,
+          "draws": 5949
+        },
+        {
+          "connected": true,
+          "lost": false,
+          "draws": 9306
+        }
+      ],
+      "signals": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "oldObserved": 0
+    },
+    "resourcesCycle1": {
+      "contexts": [
+        {
+          "connected": false,
+          "lost": true,
+          "draws": 7778
+        },
+        {
+          "connected": false,
+          "lost": true,
+          "draws": 7739
+        },
+        {
+          "connected": false,
+          "lost": true,
+          "draws": 5949
+        },
+        {
+          "connected": false,
+          "lost": true,
+          "draws": 9306
+        },
+        {
+          "connected": false,
+          "lost": true,
+          "draws": 6004
+        },
+        {
+          "connected": true,
+          "lost": false,
+          "draws": 9291
+        }
+      ],
+      "signals": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "oldObserved": 0
+    }
+  }
+}

@@ -16,6 +16,7 @@ export type PreviewSnapshot = {
 export type ProjectPreviewController = {
   select: (id: ProjectId) => void;
   getSnapshot: () => PreviewSnapshot;
+  freeze: (id: ProjectId) => PreviewSnapshot | null;
   destroy: () => void;
 };
 
@@ -85,7 +86,7 @@ export function createProjectPreview(
   proximity.observe(section);
 
   const select = (id: ProjectId) => {
-    if (disposed || requested === id) return;
+    if (disposed || section.dataset.projectNavigating === "true" || requested === id) return;
     requested = id;
     const ticket = ++generation;
     const incoming = entryFor(id);
@@ -130,9 +131,7 @@ export function createProjectPreview(
   if (process.env.NODE_ENV === "development") window.addEventListener("wc-motion-preview", reset, { signal: lifetime.signal });
   reset();
 
-  return {
-    select,
-    getSnapshot: () => {
+  const getSnapshot = () => {
       const entry = entryFor(selected);
       const asset = wide.matches ? entry.project.preview.desktop : entry.project.preview.mobile;
       const stageBounds = entry.figure.getBoundingClientRect();
@@ -146,6 +145,14 @@ export function createProjectPreview(
         sourceElement: entry.image, triggerElement: entry.button, stageBounds, bounds,
         aspectRatio, renderedSize: { width, height },
       };
+  };
+  return {
+    select, getSnapshot,
+    freeze: id => {
+      const incoming = entryFor(id);
+      if (!incoming.image.complete || !incoming.image.naturalWidth) return null;
+      selected = id; reset();
+      return getSnapshot();
     },
     destroy: () => {
       disposed = true;

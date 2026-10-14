@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { instrumentSerif, interTight } from "./fonts";
 import "@/styles/globals.scss";
+import { ProjectTransitionProvider } from "@/components/motion/ProjectTransitionProvider";
 
 export const metadata: Metadata = {
   title: "Wesley Caiã",
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="pt-BR" className={`${interTight.variable} ${instrumentSerif.variable}`}>
-      <body>{children}</body>
+      <body><ProjectTransitionProvider>{children}</ProjectTransitionProvider></body>
     </html>
   );
 }

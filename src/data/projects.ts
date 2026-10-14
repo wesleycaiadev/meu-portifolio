@@ -5,6 +5,7 @@ export const selectedProjects = [
   {
     id: "spasmooth", index: "01", title: "SpaSmooth",
     casePath: "/projetos/spasmooth",
+    cinematicTransition: true,
     technologies: projectTechnologyStacks.spasmooth,
     alt: "Página inicial do SpaSmooth, com serviços de spa e uma sala de tratamento.",
     preview: {
@@ -14,6 +15,8 @@ export const selectedProjects = [
   },
   {
     id: "mf-consultoria", index: "02", title: "MF Consultoria",
+    casePath: "/projetos/mf-consultoria",
+    cinematicTransition: false,
     technologies: projectTechnologyStacks["mf-consultoria"],
     alt: "Página inicial da MF Consultoria, com apresentação da curadoria automotiva e um retrato.",
     preview: {

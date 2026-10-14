@@ -1,0 +1,8 @@
+{
+  "base": "http://127.0.0.1:3002",
+  "entry": "shared",
+  "elapsedMilliseconds": 2742,
+  "errors": [],
+  "internalScroll": true,
+  "returnToProjects": true
+}

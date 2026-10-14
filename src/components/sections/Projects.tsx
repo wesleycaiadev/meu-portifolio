@@ -7,11 +7,15 @@ import { selectedProjects, sharedPreviewAspect, type ProjectId } from "@/data/pr
 import type { ProjectPreviewController } from "@/lib/motion/projectPreview";
 import styles from "./Projects.module.scss";
 import { ProjectTrail } from "@/components/motion/ProjectTrail";
+import { useRouter } from "next/navigation";
+import { useProjectTransition } from "@/components/motion/ProjectTransitionProvider";
 
 const desktopSizes = "(min-width: 1600px) 796px, (min-width: 1024px) 50vw, 90vw";
 const mobileSizes = "(min-width: 768px) 560px, (max-width: 444px) calc(100vw - 40px), 91vw";
 
 export function Projects() {
+  const router = useRouter();
+  const transition = useProjectTransition();
   const section = useRef<HTMLElement>(null);
   const preview = useRef<ProjectPreviewController | null>(null);
   const requested = useRef<ProjectId>(selectedProjects[0].id);
@@ -34,6 +38,7 @@ export function Projects() {
   }, []);
 
   const select = useCallback((id: ProjectId) => {
+    if (section.current?.dataset.projectNavigating === "true") return;
     requested.current = id;
     preview.current?.select(id);
   }, []);
@@ -48,7 +53,7 @@ export function Projects() {
       <div className="container" data-project-stage="">
         <h2 id="projetos-titulo" className={`label ${styles.label}`}>Projetos selecionados</h2>
         <p id="projetos-instrucoes" className={styles.assistive}>
-          O foco seleciona a prévia. SpaSmooth abre seu estudo de caso; MF Consultoria possui somente a prévia.
+          O foco seleciona a prévia. SpaSmooth e MF Consultoria abrem seus estudos de caso.
         </p>
         <ol className={styles.list} role="list" style={{ "--preview-aspect": sharedPreviewAspect } as CSSProperties}>
           {selectedProjects.map((project, index) => {
@@ -72,19 +77,14 @@ export function Projects() {
                 "--desktop-aspect": `${desktop.width} / ${desktop.height}`,
               } as CSSProperties}>
                 <h3 className={styles.title}>
-                  {"casePath" in project ? <Link {...selectProps} href={project.casePath}
+                  <Link {...selectProps} href={project.casePath}
                     aria-label={`Conhecer o projeto ${project.title}`} data-active={activeProject === project.id}
-                    onClick={() => select(project.id)}>{label}</Link> : <button
-                    {...selectProps} type="button"
-                    aria-label={`Selecionar prévia de ${project.title}`}
-                    aria-pressed={activeProject === project.id}
-                    onClick={() => {
-                      select(project.id);
-                      setAnnouncement(`Prévia de ${project.title} selecionada. Estudo de caso ainda não disponível.`);
-                    }}
-                  >
-                    {label}
-                  </button>}
+                    onNavigate={event => {
+                      if (!project.cinematicTransition) return;
+                      if (section.current?.dataset.projectNavigating === "true") { event.preventDefault(); return; }
+                      const snapshot = preview.current?.freeze(project.id);
+                      if (snapshot && transition.begin(snapshot, project.casePath, () => router.push(project.casePath))) event.preventDefault();
+                    }}>{label}</Link>
                 </h3>
                 <figure id={`preview-${project.id}`} className={styles.preview} data-project-preview={project.id}>
                   <picture>

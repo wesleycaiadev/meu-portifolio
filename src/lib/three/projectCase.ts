@@ -1,15 +1,20 @@
 import * as THREE from "three";
 import { gsap } from "gsap";
 import type { ObjectSurface } from "@/data/projectObject";
+import type { ProjectTransitionDestination, TransitionQuad } from "@/lib/motion/projectTransition";
 
 export type ProjectCaseController = {
   replay: () => void;
   reset: () => void;
   setReading: (reading: boolean) => void;
+  completeEntrance: () => boolean;
   destroy: () => void;
 };
 type Phase = "entering" | "ready" | "error";
-type Hooks = { onPhase: (phase: Phase) => void; onReveal: (progress: number) => void };
+type Hooks = {
+  onPhase: (phase: Phase) => void; onReveal: (progress: number) => void;
+  onTransferReady?: (destination: ProjectTransitionDestination) => boolean;
+};
 
 function outlineShape(width: number, height: number, radius: number) {
   const x = -width / 2, y = -height / 2, r = radius;
@@ -28,7 +33,8 @@ function bodyGeometry(width: number, height: number, depth: number, radius = .12
   geometry.translate(0, 0, -depth / 2); return geometry;
 }
 
-export function createProjectCase(host: HTMLElement, sources: readonly ObjectSurface[], hooks: Hooks): ProjectCaseController {
+export function createProjectCase(host: HTMLElement, sources: readonly ObjectSurface[], hooks: Hooks,
+  options: { screenFit: "scroll" | "contain" } = { screenFit: "scroll" }): ProjectCaseController {
   const primary = sources[0];
   if (!primary) throw new Error("A project capture is required.");
   const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: "low-power" });
@@ -64,7 +70,8 @@ export function createProjectCase(host: HTMLElement, sources: readonly ObjectSur
   cover.position.y = 1.30; cover.castShadow = true; lid.add(cover);
   const bezel = new THREE.Mesh(bodyGeometry(4.62, 2.44, .012, .08), black);
   bezel.position.set(0, 1.30, .066); lid.add(bezel);
-  const screenW = 4.46, screenH = screenW / (primary.width / primary.height);
+  // Keep the approved physical display fixed across projects. Captures adapt inside it.
+  const screenW = 4.46, screenAspect = 1905 / 956, screenH = screenW / screenAspect;
   const screen = new THREE.Mesh(new THREE.PlaneGeometry(screenW, screenH), screenMaterial);
   screen.position.set(0, 1.30, .095); lid.add(screen);
   const hinge = new THREE.Mesh(new THREE.CylinderGeometry(.058, .058, 3.4, 16), edge);
@@ -107,7 +114,7 @@ export function createProjectCase(host: HTMLElement, sources: readonly ObjectSur
 
   const viewport = document.createElement("canvas"), story = document.createElement("canvas");
   viewport.width = Math.min(1536, renderer.capabilities.maxTextureSize);
-  viewport.height = Math.round(viewport.width * primary.height / primary.width);
+  viewport.height = Math.round(viewport.width / screenAspect);
   const viewportContext = viewport.getContext("2d"), storyContext = story.getContext("2d");
   const storyTexture = new THREE.CanvasTexture(viewport); storyTexture.colorSpace = THREE.SRGBColorSpace;
   storyTexture.generateMipmaps = false; storyTexture.minFilter = THREE.LinearFilter;
@@ -149,13 +156,15 @@ export function createProjectCase(host: HTMLElement, sources: readonly ObjectSur
     if (changing || unsettled || Math.abs(scroll.target - scroll.current) > .25) { host.dataset.caseRunning = "true"; wake(); }
     else stop();
   }
-  const resize = new ResizeObserver(() => {
+  const resizeRenderer = () => {
     const { width, height } = host.getBoundingClientRect(); if (!width || !height) return;
     renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5)); renderer.setSize(width, height, false);
     host.dataset.caseDpr = String(renderer.getPixelRatio());
     camera.aspect = width / height; camera.updateProjectionMatrix(); fit = Math.max(1, 1.22 / camera.aspect);
     renderer.shadowMap.needsUpdate = true; wake();
-  }); resize.observe(host);
+  };
+  const resize = new ResizeObserver(resizeRenderer); resize.observe(host);
+  resizeRenderer();
   const suspend = () => {
     resumeEntry = resumeEntry || !!entrance?.isActive(); resumeLayout = resumeLayout || !!layout?.isActive();
     entrance?.pause(); layout?.pause(); stop();
@@ -168,7 +177,27 @@ export function createProjectCase(host: HTMLElement, sources: readonly ObjectSur
   const intersection = new IntersectionObserver(([entry]) => { visible = !!entry?.isIntersecting; if (visible) resume(); else suspend(); });
   intersection.observe(host);
 
-  function replay() {
+  const transferSurface = (): TransitionQuad => {
+    const bounds = host.getBoundingClientRect();
+    camera.position.set(.22, pose.y * fit, pose.z * fit); camera.lookAt(0, pose.targetY, 0);
+    camera.updateMatrixWorld(true);
+    return [[-screenW / 2, .20, -1.25], [screenW / 2, .20, -1.25],
+      [screenW / 2, .20, -1.25 + screenH], [-screenW / 2, .20, -1.25 + screenH]].map(([x, y, z]) => {
+      const point = new THREE.Vector3(x, y, z).project(camera);
+      return { x: bounds.x + (point.x + 1) * bounds.width / 2, y: bounds.y + (1 - point.y) * bounds.height / 2 };
+    }) as unknown as TransitionQuad;
+  };
+  function completeEntrance() {
+    if (!loaded || disposed || contextLost) return false;
+    entrance?.kill(); entrance = undefined;
+    resumeEntry = false;
+    lid.rotation.x = -.10; pose.y = 2.35; pose.z = 8.2; pose.targetY = 1.12;
+    appearance.body = appearance.reveal = 1; appearance.traceOpacity = 0;
+    screenMaterial.color.setRGB(1, 1, 1); hooks.onReveal(1);
+    phase = "ready"; host.dataset.casePhase = phase; hooks.onPhase(phase); wake();
+    return true;
+  }
+  function replay(cinematic = false) {
     if (!loaded || disposed || contextLost) return;
     entrance?.kill(); layout?.kill(); layout = undefined;
     resumeEntry = resumeLayout = false;
@@ -179,16 +208,30 @@ export function createProjectCase(host: HTMLElement, sources: readonly ObjectSur
     appearance.body = appearance.trace = appearance.reveal = 0; appearance.traceOpacity = 1;
     screenMaterial.color.setRGB(0, 0, 0); hooks.onReveal(0);
     phase = "entering"; host.dataset.casePhase = phase; hooks.onPhase(phase);
-    entrance = gsap.timeline({ onUpdate: () => { hooks.onReveal(appearance.reveal); wake(); }, onComplete: () => {
+    entrance = gsap.timeline({ paused: cinematic, onUpdate: () => { hooks.onReveal(appearance.reveal); wake(); }, onComplete: () => {
       entrance = undefined; phase = "ready"; host.dataset.casePhase = phase; hooks.onPhase(phase); wake();
     } });
-    entrance.to(appearance, { trace: 1, duration: .95, ease: "power1.inOut" }, 0)
+    if (cinematic) {
+      host.dataset.caseEntry = "shared";
+      entrance.to(appearance, { trace: 1, duration: .65, ease: "power1.inOut" }, 0)
+        .to(appearance, { body: 1, duration: .43, ease: "power2.out" }, .32)
+        .to(appearance, { traceOpacity: 0, duration: .25 }, .66)
+        .to(lid.rotation, { x: -.10, duration: 1, ease: "power3.inOut" }, .76)
+        .to(pose, { y: 2.35, z: 8.2, targetY: 1.12, duration: 1, ease: "power3.inOut" }, .76)
+        .to(screenMaterial.color, { r: 1, g: 1, b: 1, duration: .54, ease: "power2.out" }, 1.16)
+        .to(appearance, { reveal: 1, duration: .60, ease: "power2.out" }, 1.55);
+      const animation = entrance;
+      if (!hooks.onTransferReady?.({ surface: transferSurface(), play: () => animation.play() })) animation.play();
+    } else {
+      host.dataset.caseEntry = "direct";
+      entrance.to(appearance, { trace: 1, duration: .95, ease: "power1.inOut" }, 0)
       .to(appearance, { body: 1, duration: .65, ease: "power2.out" }, .78)
       .to(appearance, { traceOpacity: 0, duration: .45 }, 1.12)
       .to(lid.rotation, { x: -.10, duration: 1.65, ease: "power3.inOut" }, 1.35)
       .to(pose, { y: 2.35, z: 8.2, targetY: 1.12, duration: 1.65, ease: "power3.inOut" }, 1.35)
       .to(screenMaterial.color, { r: 1, g: 1, b: 1, duration: .55, ease: "power2.out" }, 2.93)
       .to(appearance, { reveal: 1, duration: .70, ease: "power2.out" }, 3.18);
+    }
     if (document.hidden || !visible) suspend(); wake();
   }
   function setReading(reading: boolean) {
@@ -263,17 +306,26 @@ export function createProjectCase(host: HTMLElement, sources: readonly ObjectSur
   })).then(images => {
     if (disposed || !storyContext || !viewportContext) return;
     story.width = viewport.width;
-    story.height = images.reduce((total, image) => total + Math.round(viewport.width * image.naturalHeight / image.naturalWidth), 0);
+    story.height = options.screenFit === "contain" ? images.length * viewport.height
+      : images.reduce((total, image) => total + Math.round(viewport.width * image.naturalHeight / image.naturalWidth), 0);
     let y = 0;
     for (const image of images) {
-      const height = Math.round(viewport.width * image.naturalHeight / image.naturalWidth);
-      storyContext.drawImage(image, 0, y, viewport.width, height); y += height;
+      if (options.screenFit === "contain") {
+        const scale = Math.min(viewport.width / image.naturalWidth, viewport.height / image.naturalHeight);
+        const width = image.naturalWidth * scale, height = image.naturalHeight * scale;
+        storyContext.fillStyle = "#101010"; storyContext.fillRect(0, y, viewport.width, viewport.height);
+        storyContext.drawImage(image, (viewport.width - width) / 2, y + (viewport.height - height) / 2, width, height);
+        y += viewport.height;
+      } else {
+        const height = Math.round(viewport.width * image.naturalHeight / image.naturalWidth);
+        storyContext.drawImage(image, 0, y, viewport.width, height); y += height;
+      }
     }
     scroll.max = Math.max(0, story.height - viewport.height); loaded = true; paint();
-    if (contextLost) pendingEntry = true; else replay();
+    if (contextLost) pendingEntry = true; else replay(!!hooks.onTransferReady);
   }).catch(() => { if (!disposed) { phase = "error"; stop(); hooks.onReveal(1); hooks.onPhase("error"); } });
 
-  return { replay, reset, setReading, destroy: () => {
+  return { replay: () => replay(), reset, setReading, completeEntrance, destroy: () => {
     disposed = true; entrance?.kill(); layout?.kill(); stop(); life.abort(); resize.disconnect(); intersection.disconnect();
     const geometries = new Set<THREE.BufferGeometry>(), disposableMaterials = new Set<THREE.Material>();
     scene.traverse(node => {
@@ -284,6 +336,6 @@ export function createProjectCase(host: HTMLElement, sources: readonly ObjectSur
     geometries.forEach(geometry => geometry.dispose()); disposableMaterials.forEach(material => material.dispose());
     textures.forEach(texture => texture.dispose()); key.shadow.dispose(); renderer.dispose(); renderer.forceContextLoss(); canvas.remove();
     viewport.width = story.width = keys.width = 0;
-    for (const name of ["casePhase", "caseRunning", "caseScroll", "caseScrollMax", "caseYaw", "caseLid", "caseScreenHover", "caseDpr"]) delete host.dataset[name];
+    for (const name of ["casePhase", "caseEntry", "caseRunning", "caseScroll", "caseScrollMax", "caseYaw", "caseLid", "caseScreenHover", "caseDpr"]) delete host.dataset[name];
   } };
 }

@@ -1,13 +1,15 @@
 "use client";
 
 import { useEffect } from "react";
+import { selectedProjects } from "@/data/projects";
 
 // Correct only an explicit case return; browser Back keeps its own saved scroll position.
 export function ProjectReturnAnchor() {
   useEffect(() => {
     if (location.hash !== "#projetos") return;
     try {
-      if (sessionStorage.getItem("portfolio-project-case-return") !== "spasmooth") return;
+      const project = sessionStorage.getItem("portfolio-project-case-return");
+      if (!selectedProjects.some(item => item.id === project)) return;
     } catch { return; }
     const target = document.getElementById("projetos");
     if (!target) return;

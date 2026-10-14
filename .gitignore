@@ -3,6 +3,7 @@ node_modules/
 .npm-cache/
 out/
 coverage/
+.tmp-task*/
 *.tsbuildinfo
 next-env.d.ts
 *.log
