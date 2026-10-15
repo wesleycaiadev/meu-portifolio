@@ -6,6 +6,8 @@ import { HeroTakeover } from "@/components/motion/HeroTakeover";
 import { About } from "@/components/sections/About";
 import { Projects } from "@/components/sections/Projects";
 import { ProjectReturnAnchor } from "@/components/layout/ProjectReturnAnchor";
+import { Expertise } from "@/components/sections/Expertise";
+import { Process } from "@/components/sections/Process";
 
 export default function HomePage() {
   return (
@@ -19,8 +21,10 @@ export default function HomePage() {
         <About />
         <Projects />
         <ProjectReturnAnchor />
+        <Expertise />
+        <Process />
         <div className="container foundation-following">
-          {narrativeSections.filter(section => section.id !== "sobre" && section.id !== "projetos").map((section) => (
+          {narrativeSections.filter(section => section.id === "contato").map((section) => (
             <SectionPlaceholder key={section.id} {...section} />
           ))}
         </div>

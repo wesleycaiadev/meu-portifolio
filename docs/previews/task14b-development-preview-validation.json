@@ -1,0 +1,42 @@
+{
+  "base": "http://localhost:3000",
+  "checks": [
+    {
+      "name": "normal reduced Expertise static",
+      "value": true
+    },
+    {
+      "name": "normal reduced Process static",
+      "value": true
+    },
+    {
+      "name": "development preview enables both new timelines",
+      "value": true
+    },
+    {
+      "name": "preview is visibly identified",
+      "value": true
+    },
+    {
+      "name": "preview does not override Hero or About",
+      "value": true
+    },
+    {
+      "name": "preview reaches refine despite reduced system preference",
+      "value": true
+    },
+    {
+      "name": "preview exit removes only motion parameter",
+      "value": true
+    },
+    {
+      "name": "preview exit restores reduced motion and releases pin",
+      "value": true
+    },
+    {
+      "name": "no page exceptions",
+      "value": true
+    }
+  ],
+  "errors": []
+}

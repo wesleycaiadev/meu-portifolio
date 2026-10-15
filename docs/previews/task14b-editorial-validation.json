@@ -1,0 +1,28 @@
+{
+  "refinement": "AI development approach, SQL and parallax",
+  "checks": [
+    "1440: 16 technology controls, without a vendor AI badge",
+    "1440: editorial AI approach present",
+    "1440: editorial AI copy readable",
+    "1440: no horizontal overflow",
+    "1440: postgresql description",
+    "1440: gsap description",
+    "390: 16 technology controls, without a vendor AI badge",
+    "390: editorial AI approach present",
+    "390: editorial AI copy readable",
+    "390: no horizontal overflow",
+    "390: postgresql description",
+    "390: gsap description",
+    "320: 16 technology controls, without a vendor AI badge",
+    "320: editorial AI approach present",
+    "320: editorial AI copy readable",
+    "320: no horizontal overflow",
+    "320: postgresql description",
+    "320: gsap description",
+    "Development normal route respects reduced motion",
+    "Preview animates the taller design group",
+    "Preview reverses without remount/reset",
+    "No page errors"
+  ],
+  "errors": []
+}
