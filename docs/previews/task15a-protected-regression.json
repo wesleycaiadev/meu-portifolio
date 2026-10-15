@@ -1,0 +1,57 @@
+{
+  "checks": [
+    {
+      "name": "spasmooth: shared transition still finishes",
+      "value": true
+    },
+    {
+      "name": "spasmooth: only one notebook canvas",
+      "value": true
+    },
+    {
+      "name": "spasmooth: new home sections absent in case",
+      "value": true
+    },
+    {
+      "name": "spasmooth: return reaches Projects",
+      "value": true
+    },
+    {
+      "name": "spasmooth: new sections survive return",
+      "value": true
+    },
+    {
+      "name": "spasmooth: Contact remains navigable after case return",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria: shared transition still finishes",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria: only one notebook canvas",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria: new home sections absent in case",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria: return reaches Projects",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria: new sections survive return",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria: Contact remains navigable after case return",
+      "value": true
+    },
+    {
+      "name": "no page exceptions",
+      "value": true
+    }
+  ],
+  "errors": []
+}

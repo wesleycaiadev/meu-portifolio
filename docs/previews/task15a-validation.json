@@ -1,0 +1,279 @@
+{
+  "checks": [
+    {
+      "name": "reduce: initial contact anchor survives upstream layout",
+      "value": true
+    },
+    {
+      "name": "reduce: focused contact destination",
+      "value": true
+    },
+    {
+      "name": "reduce: one contact section and one footer",
+      "value": true
+    },
+    {
+      "name": "reduce: no decorative form or unavailable resume",
+      "value": true
+    },
+    {
+      "name": "reduce: contact follows Process without a spacer",
+      "value": true
+    },
+    {
+      "name": "reduce: footer year matches visitor year",
+      "value": true
+    },
+    {
+      "name": "reduce: keyboard reaches invitation",
+      "value": true
+    },
+    {
+      "name": "reduce: reduced-motion arrow policy",
+      "value": true
+    },
+    {
+      "name": "reduce: return to top transfers focus",
+      "value": true
+    },
+    {
+      "name": "reduce: Hero retains exactly three links",
+      "value": true
+    },
+    {
+      "name": "reduce: Hero contact anchor, position and focus",
+      "value": true
+    },
+    {
+      "name": "reduce: native Back returns to top",
+      "value": true
+    },
+    {
+      "name": "reduce: native Forward returns to contact",
+      "value": true
+    },
+    {
+      "name": "reduce: confirmed whatsapp destination",
+      "value": true
+    },
+    {
+      "name": "reduce: confirmed email destination",
+      "value": true
+    },
+    {
+      "name": "reduce: confirmed linkedin destination",
+      "value": true
+    },
+    {
+      "name": "no-preference: initial contact anchor survives upstream layout",
+      "value": true
+    },
+    {
+      "name": "no-preference: focused contact destination",
+      "value": true
+    },
+    {
+      "name": "no-preference: one contact section and one footer",
+      "value": true
+    },
+    {
+      "name": "no-preference: no decorative form or unavailable resume",
+      "value": true
+    },
+    {
+      "name": "no-preference: contact follows Process without a spacer",
+      "value": true
+    },
+    {
+      "name": "no-preference: footer year matches visitor year",
+      "value": true
+    },
+    {
+      "name": "no-preference: keyboard reaches invitation",
+      "value": true
+    },
+    {
+      "name": "no-preference: reduced-motion arrow policy",
+      "value": true
+    },
+    {
+      "name": "no-preference: return to top transfers focus",
+      "value": true
+    },
+    {
+      "name": "no-preference: Hero retains exactly three links",
+      "value": true
+    },
+    {
+      "name": "no-preference: Hero contact anchor, position and focus",
+      "value": true
+    },
+    {
+      "name": "no-preference: native Back returns to top",
+      "value": true
+    },
+    {
+      "name": "no-preference: native Forward returns to contact",
+      "value": true
+    },
+    {
+      "name": "no-preference: confirmed whatsapp destination",
+      "value": true
+    },
+    {
+      "name": "no-preference: confirmed email destination",
+      "value": true
+    },
+    {
+      "name": "no-preference: confirmed linkedin destination",
+      "value": true
+    },
+    {
+      "name": "External whatsapp link initiates navigation",
+      "value": true
+    },
+    {
+      "name": "External linkedin link initiates navigation",
+      "value": true
+    },
+    {
+      "name": "E-mail invokes the confirmed mailto URI",
+      "value": true
+    },
+    {
+      "name": "preview: initial contact anchor survives upstream layout",
+      "value": true
+    },
+    {
+      "name": "preview: focused contact destination",
+      "value": true
+    },
+    {
+      "name": "preview: one contact section and one footer",
+      "value": true
+    },
+    {
+      "name": "preview: no decorative form or unavailable resume",
+      "value": true
+    },
+    {
+      "name": "preview: contact follows Process without a spacer",
+      "value": true
+    },
+    {
+      "name": "preview: footer year matches visitor year",
+      "value": true
+    },
+    {
+      "name": "preview: keyboard reaches invitation",
+      "value": true
+    },
+    {
+      "name": "preview: reduced-motion arrow policy",
+      "value": true
+    },
+    {
+      "name": "preview: return to top transfers focus",
+      "value": true
+    },
+    {
+      "name": "preview: Hero retains exactly three links",
+      "value": true
+    },
+    {
+      "name": "preview: Hero contact anchor, position and focus",
+      "value": true
+    },
+    {
+      "name": "preview: native Back returns to top",
+      "value": true
+    },
+    {
+      "name": "preview: native Forward returns to contact",
+      "value": true
+    },
+    {
+      "name": "preview: confirmed whatsapp destination",
+      "value": true
+    },
+    {
+      "name": "preview: confirmed email destination",
+      "value": true
+    },
+    {
+      "name": "preview: confirmed linkedin destination",
+      "value": true
+    },
+    {
+      "name": "1920: no horizontal overflow",
+      "value": true
+    },
+    {
+      "name": "1920: comfortable contact targets",
+      "value": true
+    },
+    {
+      "name": "1920: enlarged text has no horizontal overflow",
+      "value": true
+    },
+    {
+      "name": "1024: no horizontal overflow",
+      "value": true
+    },
+    {
+      "name": "1024: comfortable contact targets",
+      "value": true
+    },
+    {
+      "name": "1024: enlarged text has no horizontal overflow",
+      "value": true
+    },
+    {
+      "name": "768: no horizontal overflow",
+      "value": true
+    },
+    {
+      "name": "768: comfortable contact targets",
+      "value": true
+    },
+    {
+      "name": "768: enlarged text has no horizontal overflow",
+      "value": true
+    },
+    {
+      "name": "390: no horizontal overflow",
+      "value": true
+    },
+    {
+      "name": "390: comfortable contact targets",
+      "value": true
+    },
+    {
+      "name": "390: enlarged text has no horizontal overflow",
+      "value": true
+    },
+    {
+      "name": "320: no horizontal overflow",
+      "value": true
+    },
+    {
+      "name": "320: comfortable contact targets",
+      "value": true
+    },
+    {
+      "name": "320: enlarged text has no horizontal overflow",
+      "value": true
+    },
+    {
+      "name": "Contact channels and footer work without JavaScript",
+      "value": true
+    },
+    {
+      "name": "No page exceptions",
+      "value": true
+    }
+  ],
+  "errors": [],
+  "observations": [],
+  "externalLinks": "Navigation intercepted locally; no messages sent or account ownership verification performed."
+}
