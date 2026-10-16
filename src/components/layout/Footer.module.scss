@@ -13,13 +13,10 @@
 .top {
   display: inline-flex; align-items: center; justify-self: end; gap: var(--space-4); min-block-size: var(--target-min);
   font-size: 1rem; text-decoration: none;
-  span { transition: transform var(--duration-feedback) var(--ease-feedback); }
   &:hover, &:focus-visible { text-decoration: underline; text-underline-offset: var(--underline-offset); }
-  &:hover span, &:focus-visible span { transform: translateY(-3px); }
 }
 @include tokens.from(tablet) {
   .inner { grid-template-columns: 1fr auto 1fr; align-items: center; }
   .identity { grid-column: auto; }
 }
 @include tokens.from(desktop) { .inner { max-inline-size: 100rem; } }
-@media (prefers-reduced-motion: reduce) { .top span { transition: none; } .top:hover span, .top:focus-visible span { transform: none; } }

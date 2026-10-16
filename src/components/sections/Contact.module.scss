@@ -35,32 +35,15 @@
     transition: transform var(--duration-emphasis) var(--ease-settle);
   }
   &:hover::after, &:focus-visible::after { transform: scaleX(1); }
-  &:hover .invitationArrow, &:focus-visible .invitationArrow { transform: translate(3px, -3px); }
 }
-.invitationArrow { flex: 0 0 auto; font-size: .85em; transition: transform var(--duration-emphasis) var(--ease-settle); }
-.channels { display: grid; gap: var(--space-6); }
-.channel {
-  display: grid; gap: var(--space-3); min-inline-size: 0;
-  min-block-size: var(--target-min); padding-block: var(--space-4);
-  text-decoration: none;
-  &:hover .channelTitle, &:focus-visible .channelTitle { text-decoration: underline; text-underline-offset: var(--underline-offset); }
-  &:hover .channelArrow, &:focus-visible .channelArrow { transform: translate(2px, -2px); }
-}
-.channelTitle { display: flex; align-items: center; gap: var(--space-3); font-size: 1.25rem; line-height: 1.4; }
-.channelIcon { filter: invert(1); flex: 0 0 auto; inline-size: 1.5rem; block-size: 1.5rem; }
-.channelArrow { margin-inline-start: auto; transition: transform var(--duration-feedback) var(--ease-feedback); }
-.channelDetail { font-size: 1rem; color: var(--text-secondary); line-height: 1.5; overflow-wrap: anywhere; }
 .resume { display: inline-flex; gap: var(--space-5); align-items: center; min-block-size: var(--target-min); margin-block-start: var(--space-6); }
 
 @include tokens.from(tablet) {
   .inner { padding-block-end: var(--space-9); }
   .label { margin-block-end: var(--space-8); }
   .invitation { margin-block: var(--space-9) var(--space-7); margin-inline-start: 25%; }
-  .channels { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-7); }
 }
 @include tokens.from(desktop) { .inner { max-inline-size: 100rem; } }
 @media (prefers-reduced-motion: reduce) {
-  .invitation::after, .invitationArrow, .channelArrow { transition: none; }
-  .invitation:hover .invitationArrow, .invitation:focus-visible .invitationArrow,
-  .channel:hover .channelArrow, .channel:focus-visible .channelArrow { transform: none; }
+  .invitation::after { transition: none; }
 }

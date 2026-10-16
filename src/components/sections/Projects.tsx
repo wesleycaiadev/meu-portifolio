@@ -1,6 +1,6 @@
 "use client";
 
-import Image, { getImageProps } from "next/image";
+import { ResponsiveImage } from "@/components/ui/ResponsiveImage";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState, type CSSProperties, type PointerEvent } from "react";
 import { selectedProjects, sharedPreviewAspect, type ProjectId } from "@/data/projects";
@@ -58,7 +58,6 @@ export function Projects() {
         <ol className={styles.list} role="list" style={{ "--preview-aspect": sharedPreviewAspect } as CSSProperties}>
           {selectedProjects.map((project, index) => {
             const { desktop, mobile } = project.preview;
-            const { props: { srcSet: mobileSrcSet } } = getImageProps({ ...mobile, alt: project.alt, sizes: mobileSizes });
             const selectProps = {
               id: `projeto-${project.id}`, className: styles.select,
               "aria-controls": `preview-${project.id}`, "aria-describedby": "projetos-instrucoes",
@@ -88,8 +87,7 @@ export function Projects() {
                 </h3>
                 <figure id={`preview-${project.id}`} className={styles.preview} data-project-preview={project.id}>
                   <picture>
-                    <source media="(max-width: 1023px)" srcSet={mobileSrcSet} sizes={mobileSizes} />
-                    <Image {...desktop} alt={project.alt} sizes={desktopSizes} className={styles.image} />
+                    <ResponsiveImage {...desktop} mobile={{ ...mobile, media: "(max-width: 1023px)", sizes: mobileSizes }} alt={project.alt} sizes={desktopSizes} className={styles.image} />
                   </picture>
                 </figure>
               </li>

@@ -22,6 +22,6 @@ export function ProjectCaseControls(props: Props) {
       <button type="button" disabled={!props.available} onClick={props.reset}>Resetar exploração</button>
     </div>
     <p role="status">{props.status}</p>
-    <p>Protótipo isolado de desenvolvimento. A ativação opcional não altera a preferência do sistema. Mobile usa a apresentação estática rolável.</p>
+    <p>Prévia de desenvolvimento. A ativação opcional não altera a preferência do sistema. Mobile usa a apresentação estática rolável.</p>
   </details>;
 }

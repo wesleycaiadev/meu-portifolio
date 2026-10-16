@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ResponsiveImage } from "@/components/ui/ResponsiveImage";
 import { AboutReveal } from "@/components/motion/AboutReveal";
 import { RevealText } from "@/components/ui/reveal-text";
 import styles from "./About.module.scss";
@@ -28,14 +28,15 @@ export function About() {
           </RevealText>
         </div>
         <figure className={styles.portrait} data-about-portrait="">
-          <Image
+          <ResponsiveImage
             className={styles.image}
-            src="/assets/photos/portrait-about.webp?v=2"
+            src="/assets/photos/portrait-about.webp"
             alt="Retrato de Wesley Caiã usando uma blusa verde, sobre um fundo escuro."
             width={896}
             height={1195}
-            // Serve the lossless asset directly, preserving the supplied resolution.
-            unoptimized
+            // Keep the approved source and framing; serve the size this screen needs.
+            sizes="(min-width: 1024px) 40vw, (min-width: 768px) 560px, 90vw"
+            quality={85}
             data-about-image=""
           />
         </figure>

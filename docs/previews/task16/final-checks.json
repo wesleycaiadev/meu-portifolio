@@ -1,0 +1,215 @@
+{
+  "checks": [
+    {
+      "name": "No inferred canonical for missing domain",
+      "value": true
+    },
+    {
+      "name": "No inferred canonical for http://portfolio.test",
+      "value": true
+    },
+    {
+      "name": "No inferred canonical for https://portfolio.test/path",
+      "value": true
+    },
+    {
+      "name": "No inferred canonical for https://user:password@portfolio.test",
+      "value": true
+    },
+    {
+      "name": "Confirmed-origin metadata carries the intended case path",
+      "value": true
+    },
+    {
+      "name": "Configured sitemap contains exactly the three public routes",
+      "value": true
+    },
+    {
+      "name": "No domain produces no fictitious sitemap URLs",
+      "value": true
+    },
+    {
+      "name": "Pre-release robots blocks indexing until origin confirmation",
+      "value": true
+    },
+    {
+      "name": "Functional text contrast f4f2ed/101010",
+      "value": true
+    },
+    {
+      "name": "Functional text contrast b7b7b2/101010",
+      "value": true
+    },
+    {
+      "name": "Functional text contrast 101010/f4f2ed",
+      "value": true
+    },
+    {
+      "name": "Functional text contrast 5c5c58/f4f2ed",
+      "value": true
+    },
+    {
+      "name": "First keyboard target is skip link",
+      "value": true
+    },
+    {
+      "name": "About portrait becomes sharp and reverses",
+      "value": true
+    },
+    {
+      "name": "About tablet breakpoint releases its desktop pin",
+      "value": true
+    },
+    {
+      "name": "About desktop breakpoint restores one pin and intact copy",
+      "value": true
+    },
+    {
+      "name": "Project overlay remains visible and viewport-sized during its sequence",
+      "value": true
+    },
+    {
+      "name": "Project writing reverses with scroll",
+      "value": true
+    },
+    {
+      "name": "react: hover preserves technology selection",
+      "value": true
+    },
+    {
+      "name": "react: brand color exists",
+      "value": true
+    },
+    {
+      "name": "typescript: hover preserves technology selection",
+      "value": true
+    },
+    {
+      "name": "typescript: brand color exists",
+      "value": true
+    },
+    {
+      "name": "javascript: hover preserves technology selection",
+      "value": true
+    },
+    {
+      "name": "javascript: brand color exists",
+      "value": true
+    },
+    {
+      "name": "Expertise Escape returns to instruction",
+      "value": true
+    },
+    {
+      "name": "Live reduced motion releases all home pins",
+      "value": true
+    },
+    {
+      "name": "Live reduced motion disposes WC canvas",
+      "value": true
+    },
+    {
+      "name": "Reduced motion manual Process: understand",
+      "value": true
+    },
+    {
+      "name": "Reduced motion manual Process: structure",
+      "value": true
+    },
+    {
+      "name": "Reduced motion manual Process: build",
+      "value": true
+    },
+    {
+      "name": "Reduced motion manual Process: refine",
+      "value": true
+    },
+    {
+      "name": "Production sends conservative response headers",
+      "value": true
+    },
+    {
+      "name": "/.env not publicly served",
+      "value": true
+    },
+    {
+      "name": "/.git/config not publicly served",
+      "value": true
+    },
+    {
+      "name": "/.tmp-task16/npm-audit.json not publicly served",
+      "value": true
+    },
+    {
+      "name": "Development preview still enables only Expertise/Process",
+      "value": true
+    },
+    {
+      "name": "Strict Mode preserves optimized image URLs without native responsive subscriptions",
+      "value": true
+    },
+    {
+      "name": "Mobile resize selects real mobile project captures",
+      "value": true
+    },
+    {
+      "name": "Desktop resize restores real desktop project captures",
+      "value": true
+    },
+    {
+      "name": "spasmooth: no-JavaScript editorial content and captures",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria: no-JavaScript editorial content and captures",
+      "value": true
+    },
+    {
+      "name": "No page exceptions",
+      "value": true
+    }
+  ],
+  "errors": [],
+  "contrast": [
+    {
+      "fg": "f4f2ed",
+      "bg": "101010",
+      "ratio": 17.007829486861162
+    },
+    {
+      "fg": "b7b7b2",
+      "bg": "101010",
+      "ratio": 9.450375407098882
+    },
+    {
+      "fg": "101010",
+      "bg": "f4f2ed",
+      "ratio": 17.007829486861162
+    },
+    {
+      "fg": "5c5c58",
+      "bg": "f4f2ed",
+      "ratio": 6.002985627227344
+    }
+  ],
+  "projectWriting": [
+    0.82,
+    1,
+    0.8201
+  ],
+  "react": [
+    "rgba(0, 0, 0, 0)",
+    "rgb(97, 218, 251)",
+    "rgba(0, 0, 0, 0)"
+  ],
+  "typescript": [
+    "rgba(0, 0, 0, 0)",
+    "rgb(49, 120, 198)",
+    "rgba(0, 0, 0, 0)"
+  ],
+  "javascript": [
+    "rgba(0, 0, 0, 0)",
+    "rgb(247, 223, 30)",
+    "rgba(0, 0, 0, 0)"
+  ]
+}

@@ -1,0 +1,714 @@
+{
+  "checks": [
+    {
+      "name": "Hero WC has WebGL and capped DPR",
+      "value": true
+    },
+    {
+      "name": "WC pointer energy wakes the scene",
+      "value": true
+    },
+    {
+      "name": "Home does not fetch case-specific scene engine before project entry",
+      "value": true
+    },
+    {
+      "name": "Hero Sobre preserves native hash and focus",
+      "value": true
+    },
+    {
+      "name": "Hero Projetos preserves native hash and focus",
+      "value": true
+    },
+    {
+      "name": "Hero Contato preserves native hash and focus",
+      "value": true
+    },
+    {
+      "name": "Ctrl+click opens native new tab without transition takeover",
+      "value": true
+    },
+    {
+      "name": "spasmooth cycle 0: shared transition and single canvas",
+      "value": true
+    },
+    {
+      "name": "spasmooth cycle 0: keyboard explores captures",
+      "value": true
+    },
+    {
+      "name": "spasmooth cycle 0: Home resets capture scroll",
+      "value": true
+    },
+    {
+      "name": "spasmooth cycle 0: tab keyboard",
+      "value": true
+    },
+    {
+      "name": "spasmooth cycle 0: End reaches technologies",
+      "value": true
+    },
+    {
+      "name": "spasmooth cycle 0: overview restores focus",
+      "value": true
+    },
+    {
+      "name": "spasmooth cycle 0: case canvas released on return",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria cycle 1: shared transition and single canvas",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria cycle 1: keyboard explores captures",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria cycle 1: Home resets capture scroll",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria cycle 1: tab keyboard",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria cycle 1: End reaches technologies",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria cycle 1: overview restores focus",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria cycle 1: case canvas released on return",
+      "value": true
+    },
+    {
+      "name": "spasmooth cycle 2: shared transition and single canvas",
+      "value": true
+    },
+    {
+      "name": "spasmooth cycle 2: keyboard explores captures",
+      "value": true
+    },
+    {
+      "name": "spasmooth cycle 2: Home resets capture scroll",
+      "value": true
+    },
+    {
+      "name": "spasmooth cycle 2: tab keyboard",
+      "value": true
+    },
+    {
+      "name": "spasmooth cycle 2: End reaches technologies",
+      "value": true
+    },
+    {
+      "name": "spasmooth cycle 2: overview restores focus",
+      "value": true
+    },
+    {
+      "name": "spasmooth cycle 2: case canvas released on return",
+      "value": true
+    },
+    {
+      "name": "spasmooth: direct entry",
+      "value": true
+    },
+    {
+      "name": "spasmooth: refresh",
+      "value": true
+    },
+    {
+      "name": "spasmooth: context loss reveals fallback and usable tabs",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria: direct entry",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria: refresh",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria: context loss reveals fallback and usable tabs",
+      "value": true
+    },
+    {
+      "name": "/: no-WebGL reduced/mobile content remains accessible",
+      "value": true
+    },
+    {
+      "name": "/projetos/spasmooth: no-WebGL reduced/mobile content remains accessible",
+      "value": true
+    },
+    {
+      "name": "/projetos/mf-consultoria: no-WebGL reduced/mobile content remains accessible",
+      "value": true
+    },
+    {
+      "name": "No uncaught page errors",
+      "value": true
+    }
+  ],
+  "errors": [],
+  "cycles": [
+    {
+      "i": 0,
+      "slug": "spasmooth",
+      "documents": 35,
+      "nodes": 1362,
+      "jsEventListeners": 482,
+      "heap": 10862464,
+      "gl": {
+        "created": 1,
+        "lost": 1
+      },
+      "raf": 2,
+      "canvas": 0,
+      "pins": 5
+    },
+    {
+      "i": 1,
+      "slug": "mf-consultoria",
+      "documents": 35,
+      "nodes": 1363,
+      "jsEventListeners": 485,
+      "heap": 11490124,
+      "gl": {
+        "created": 2,
+        "lost": 2
+      },
+      "raf": 2,
+      "canvas": 0,
+      "pins": 5
+    },
+    {
+      "i": 2,
+      "slug": "spasmooth",
+      "documents": 35,
+      "nodes": 1364,
+      "jsEventListeners": 488,
+      "heap": 11747288,
+      "gl": {
+        "created": 3,
+        "lost": 3
+      },
+      "raf": 3,
+      "canvas": 0,
+      "pins": 5
+    }
+  ],
+  "resources": [
+    {
+      "url": "/_next/static/media/7ebf22b5a21034f8-s.p.3j3877k49yy0l.woff2",
+      "type": "link",
+      "encoded": 15684,
+      "decoded": 15684
+    },
+    {
+      "url": "/_next/static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2",
+      "type": "link",
+      "encoded": 44916,
+      "decoded": 44916
+    },
+    {
+      "url": "/_next/static/chunks/2no0rurfmfw1s.css",
+      "type": "link",
+      "encoded": 3127,
+      "decoded": 11516
+    },
+    {
+      "url": "/_next/static/chunks/1hkebjjpx51um.css",
+      "type": "link",
+      "encoded": 6501,
+      "decoded": 48492
+    },
+    {
+      "url": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+      "type": "link",
+      "encoded": 2029,
+      "decoded": 5598
+    },
+    {
+      "url": "/_next/static/chunks/2mmpezlrfmbu5.js",
+      "type": "script",
+      "encoded": 8716,
+      "decoded": 34718
+    },
+    {
+      "url": "/_next/static/chunks/3g4px251sg85e.js",
+      "type": "script",
+      "encoded": 71576,
+      "decoded": 228922
+    },
+    {
+      "url": "/_next/static/chunks/3un1mb5bx4x8k.js",
+      "type": "script",
+      "encoded": 43914,
+      "decoded": 160168
+    },
+    {
+      "url": "/_next/static/chunks/turbopack-2yajevry3z_n6.js",
+      "type": "script",
+      "encoded": 3851,
+      "decoded": 9721
+    },
+    {
+      "url": "/_next/static/chunks/3ljs2c63km126.js",
+      "type": "script",
+      "encoded": 5700,
+      "decoded": 19933
+    },
+    {
+      "url": "/_next/static/chunks/0l-manuc7x-06.js",
+      "type": "script",
+      "encoded": 27128,
+      "decoded": 70164
+    },
+    {
+      "url": "/_next/static/chunks/10kkweotoa1ab.js",
+      "type": "script",
+      "encoded": 1325,
+      "decoded": 3420
+    },
+    {
+      "url": "/_next/static/chunks/0xqe1_izeqfve.js",
+      "type": "script",
+      "encoded": 9118,
+      "decoded": 32412
+    },
+    {
+      "url": "/_next/static/chunks/43wh9j_7ki-vt.js",
+      "type": "script",
+      "encoded": 9492,
+      "decoded": 26107
+    },
+    {
+      "url": "/assets/brand/logo-symbol.svg",
+      "type": "image",
+      "encoded": 0,
+      "decoded": 0
+    },
+    {
+      "url": "/assets/contact/whatsapp.svg",
+      "type": "img",
+      "encoded": 0,
+      "decoded": 0
+    },
+    {
+      "url": "/assets/contact/linkedin.svg",
+      "type": "img",
+      "encoded": 0,
+      "decoded": 0
+    },
+    {
+      "url": "/assets/technologies/react.svg",
+      "type": "css",
+      "encoded": 1396,
+      "decoded": 2926
+    },
+    {
+      "url": "/assets/technologies/nextdotjs.svg",
+      "type": "css",
+      "encoded": 322,
+      "decoded": 322
+    },
+    {
+      "url": "/assets/technologies/angular.svg",
+      "type": "css",
+      "encoded": 298,
+      "decoded": 298
+    },
+    {
+      "url": "/assets/technologies/typescript.svg",
+      "type": "css",
+      "encoded": 679,
+      "decoded": 1294
+    },
+    {
+      "url": "/assets/technologies/javascript.svg",
+      "type": "css",
+      "encoded": 974,
+      "decoded": 974
+    },
+    {
+      "url": "/assets/technologies/html5.svg",
+      "type": "css",
+      "encoded": 327,
+      "decoded": 327
+    },
+    {
+      "url": "/assets/technologies/sass.svg",
+      "type": "css",
+      "encoded": 667,
+      "decoded": 1223
+    },
+    {
+      "url": "/assets/technologies/tailwindcss.svg",
+      "type": "css",
+      "encoded": 602,
+      "decoded": 602
+    },
+    {
+      "url": "/assets/technologies/css.svg",
+      "type": "css",
+      "encoded": 662,
+      "decoded": 1479
+    },
+    {
+      "url": "/assets/technologies/supabase.svg",
+      "type": "css",
+      "encoded": 303,
+      "decoded": 303
+    },
+    {
+      "url": "/assets/technologies/postgresql.svg",
+      "type": "css",
+      "encoded": 2535,
+      "decoded": 5205
+    },
+    {
+      "url": "/assets/technologies/clerk.svg",
+      "type": "css",
+      "encoded": 695,
+      "decoded": 695
+    },
+    {
+      "url": "/assets/technologies/vercel.svg",
+      "type": "css",
+      "encoded": 132,
+      "decoded": 132
+    },
+    {
+      "url": "/assets/technologies/gsap.svg",
+      "type": "css",
+      "encoded": 1961,
+      "decoded": 4728
+    },
+    {
+      "url": "/assets/technologies/threedotjs.svg",
+      "type": "css",
+      "encoded": 897,
+      "decoded": 897
+    },
+    {
+      "url": "/assets/technologies/figma.svg",
+      "type": "img",
+      "encoded": 585,
+      "decoded": 585
+    },
+    {
+      "url": "/assets/technologies/react.svg",
+      "type": "img",
+      "encoded": 1396,
+      "decoded": 2926
+    },
+    {
+      "url": "/assets/technologies/nextdotjs.svg",
+      "type": "img",
+      "encoded": 322,
+      "decoded": 322
+    },
+    {
+      "url": "/assets/technologies/angular.svg",
+      "type": "img",
+      "encoded": 298,
+      "decoded": 298
+    },
+    {
+      "url": "/assets/technologies/typescript.svg",
+      "type": "img",
+      "encoded": 679,
+      "decoded": 1294
+    },
+    {
+      "url": "/assets/technologies/javascript.svg",
+      "type": "img",
+      "encoded": 974,
+      "decoded": 974
+    },
+    {
+      "url": "/assets/technologies/html5.svg",
+      "type": "img",
+      "encoded": 327,
+      "decoded": 327
+    },
+    {
+      "url": "/assets/technologies/sass.svg",
+      "type": "img",
+      "encoded": 667,
+      "decoded": 1223
+    },
+    {
+      "url": "/assets/technologies/tailwindcss.svg",
+      "type": "img",
+      "encoded": 602,
+      "decoded": 602
+    },
+    {
+      "url": "/assets/technologies/css.svg",
+      "type": "img",
+      "encoded": 662,
+      "decoded": 1479
+    },
+    {
+      "url": "/assets/technologies/supabase.svg",
+      "type": "img",
+      "encoded": 303,
+      "decoded": 303
+    },
+    {
+      "url": "/assets/technologies/postgresql.svg",
+      "type": "img",
+      "encoded": 2535,
+      "decoded": 5205
+    },
+    {
+      "url": "/assets/technologies/clerk.svg",
+      "type": "img",
+      "encoded": 695,
+      "decoded": 695
+    },
+    {
+      "url": "/assets/technologies/vercel.svg",
+      "type": "img",
+      "encoded": 132,
+      "decoded": 132
+    },
+    {
+      "url": "/assets/technologies/gsap.svg",
+      "type": "img",
+      "encoded": 1961,
+      "decoded": 4728
+    },
+    {
+      "url": "/assets/technologies/threedotjs.svg",
+      "type": "img",
+      "encoded": 897,
+      "decoded": 897
+    },
+    {
+      "url": "/icon.png?icon.0g4q3erblf886.png",
+      "type": "other",
+      "encoded": 5133,
+      "decoded": 5133
+    },
+    {
+      "url": "/_next/image?url=%2Fassets%2Fprojects%2Fspasmooth%2Fspasmooth-hero-desktop.png&w=1920&q=75",
+      "type": "img",
+      "encoded": 93766,
+      "decoded": 93766
+    },
+    {
+      "url": "/_next/image?url=%2Fassets%2Fprojects%2Fmf-consultoria%2Fmf-consultoria-hero-desktop.png&w=1920&q=75",
+      "type": "img",
+      "encoded": 41744,
+      "decoded": 41744
+    },
+    {
+      "url": "/_next/static/chunks/10x5cui8yk4uk.js",
+      "type": "script",
+      "encoded": 1410,
+      "decoded": 2719
+    },
+    {
+      "url": "/_next/static/chunks/3v5i05b930to5.js",
+      "type": "script",
+      "encoded": 17483,
+      "decoded": 43358
+    },
+    {
+      "url": "/_next/static/chunks/1sk4jsjlx0gue.js",
+      "type": "script",
+      "encoded": 4594,
+      "decoded": 10517
+    },
+    {
+      "url": "/_next/static/chunks/227efo8un3x8c.js",
+      "type": "script",
+      "encoded": 4256,
+      "decoded": 8966
+    },
+    {
+      "url": "/_next/static/chunks/3oicv1kusdq_s.js",
+      "type": "script",
+      "encoded": 1634,
+      "decoded": 3584
+    },
+    {
+      "url": "/_next/static/chunks/3sv9he9uwuzk0.js",
+      "type": "script",
+      "encoded": 1202,
+      "decoded": 2442
+    },
+    {
+      "url": "/_next/static/chunks/02qzjhz3678u9.js",
+      "type": "script",
+      "encoded": 2144,
+      "decoded": 5883
+    },
+    {
+      "url": "/_next/image?url=%2Fassets%2Fphotos%2Fportrait-about.webp&w=1080&q=85",
+      "type": "img",
+      "encoded": 105678,
+      "decoded": 105678
+    },
+    {
+      "url": "/projetos/spasmooth?_rsc=5CB68i4pnAekjehf",
+      "type": "fetch",
+      "encoded": 345,
+      "decoded": 736
+    },
+    {
+      "url": "/projetos/mf-consultoria?_rsc=5CB68i4pnAekjehf",
+      "type": "fetch",
+      "encoded": 349,
+      "decoded": 741
+    },
+    {
+      "url": "/_next/static/chunks/0plz891sb9b2w.css",
+      "type": "link",
+      "encoded": 1739,
+      "decoded": 8452
+    },
+    {
+      "url": "/projetos/spasmooth?_rsc=UNu6olc-NDQFbE7h",
+      "type": "fetch",
+      "encoded": 4247,
+      "decoded": 18399
+    },
+    {
+      "url": "/projetos/mf-consultoria?_rsc=Ak_fQG7sxoUyieXf",
+      "type": "fetch",
+      "encoded": 4475,
+      "decoded": 19683
+    },
+    {
+      "url": "/_next/static/chunks/22x83aeh4nzzr.js",
+      "type": "script",
+      "encoded": 12486,
+      "decoded": 35693
+    },
+    {
+      "url": "/_next/static/chunks/3ucodxtnb53he.js",
+      "type": "script",
+      "encoded": 4907,
+      "decoded": 12393
+    },
+    {
+      "url": "/_next/static/chunks/3cfb1og3_oqoc.js",
+      "type": "script",
+      "encoded": 144840,
+      "decoded": 577559
+    },
+    {
+      "url": "/assets/projects/spasmooth/spasmooth-hero-desktop.png",
+      "type": "img",
+      "encoded": 1566051,
+      "decoded": 1566051
+    },
+    {
+      "url": "/icon.png?icon.0g4q3erblf886.png",
+      "type": "other",
+      "encoded": 5133,
+      "decoded": 5133
+    },
+    {
+      "url": "/assets/projects/spasmooth/spasmooth-localizacao.png",
+      "type": "img",
+      "encoded": 276929,
+      "decoded": 276929
+    },
+    {
+      "url": "/assets/projects/spasmooth/spasmooth-faq-footer.png",
+      "type": "img",
+      "encoded": 120146,
+      "decoded": 120146
+    },
+    {
+      "url": "/?_rsc=ZZ40r5M2BR2R6-SL",
+      "type": "fetch",
+      "encoded": 308,
+      "decoded": 531
+    },
+    {
+      "url": "/?_rsc=14uomtJVe9Fw3_7h",
+      "type": "fetch",
+      "encoded": 3631,
+      "decoded": 15527
+    },
+    {
+      "url": "/icon.png?icon.0g4q3erblf886.png",
+      "type": "other",
+      "encoded": 5133,
+      "decoded": 5133
+    },
+    {
+      "url": "/assets/projects/mf-consultoria/mf-consultoria-hero-desktop.png",
+      "type": "img",
+      "encoded": 395060,
+      "decoded": 395060
+    },
+    {
+      "url": "/assets/projects/mf-consultoria/mf-consultoria-curadoria-processo.png",
+      "type": "img",
+      "encoded": 97859,
+      "decoded": 97859
+    },
+    {
+      "url": "/assets/projects/mf-consultoria/mf-consultoria-cta-footer.png",
+      "type": "img",
+      "encoded": 78950,
+      "decoded": 78950
+    },
+    {
+      "url": "/icon.png?icon.0g4q3erblf886.png",
+      "type": "other",
+      "encoded": 5133,
+      "decoded": 5133
+    },
+    {
+      "url": "/icon.png?icon.0g4q3erblf886.png",
+      "type": "other",
+      "encoded": 5133,
+      "decoded": 5133
+    },
+    {
+      "url": "/assets/projects/spasmooth/spasmooth-hero-desktop.png",
+      "type": "img",
+      "encoded": 1566051,
+      "decoded": 1566051
+    },
+    {
+      "url": "/assets/projects/spasmooth/spasmooth-localizacao.png",
+      "type": "img",
+      "encoded": 276929,
+      "decoded": 276929
+    },
+    {
+      "url": "/assets/projects/spasmooth/spasmooth-faq-footer.png",
+      "type": "img",
+      "encoded": 120146,
+      "decoded": 120146
+    },
+    {
+      "url": "/icon.png?icon.0g4q3erblf886.png",
+      "type": "other",
+      "encoded": 5133,
+      "decoded": 5133
+    },
+    {
+      "url": "/icon.png?icon.0g4q3erblf886.png",
+      "type": "other",
+      "encoded": 5133,
+      "decoded": 5133
+    }
+  ],
+  "hero": {
+    "state": "idle",
+    "fps": "30"
+  }
+}

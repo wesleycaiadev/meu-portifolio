@@ -1,0 +1,652 @@
+{
+  "label": "after",
+  "checks": [
+    {
+      "width": 320,
+      "height": 900,
+      "route": "/",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 900,
+      "route": "/projetos/spasmooth",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 900,
+      "route": "/projetos/spasmooth",
+      "tab": "Sobre",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 900,
+      "route": "/projetos/spasmooth",
+      "tab": "Estética",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 900,
+      "route": "/projetos/spasmooth",
+      "tab": "Funcionalidades",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 900,
+      "route": "/projetos/spasmooth",
+      "tab": "Tecnologias",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 900,
+      "route": "/projetos/mf-consultoria",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 900,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Sobre",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 900,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Estética",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 900,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Funcionalidades",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 900,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Tecnologias",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 900,
+      "route": "/",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 900,
+      "route": "/projetos/spasmooth",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 900,
+      "route": "/projetos/spasmooth",
+      "tab": "Sobre",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 900,
+      "route": "/projetos/spasmooth",
+      "tab": "Estética",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 900,
+      "route": "/projetos/spasmooth",
+      "tab": "Funcionalidades",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 900,
+      "route": "/projetos/spasmooth",
+      "tab": "Tecnologias",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 900,
+      "route": "/projetos/mf-consultoria",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 900,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Sobre",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 900,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Estética",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 900,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Funcionalidades",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 900,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Tecnologias",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "height": 1000,
+      "route": "/",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "height": 1000,
+      "route": "/projetos/spasmooth",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "height": 1000,
+      "route": "/projetos/spasmooth",
+      "tab": "Sobre",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "height": 1000,
+      "route": "/projetos/spasmooth",
+      "tab": "Estética",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "height": 1000,
+      "route": "/projetos/spasmooth",
+      "tab": "Funcionalidades",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "height": 1000,
+      "route": "/projetos/spasmooth",
+      "tab": "Tecnologias",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "height": 1000,
+      "route": "/projetos/mf-consultoria",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "height": 1000,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Sobre",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "height": 1000,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Estética",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "height": 1000,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Funcionalidades",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "height": 1000,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Tecnologias",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "route": "/",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "route": "/projetos/spasmooth",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "route": "/projetos/spasmooth",
+      "tab": "Sobre",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "route": "/projetos/spasmooth",
+      "tab": "Estética",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "route": "/projetos/spasmooth",
+      "tab": "Funcionalidades",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "route": "/projetos/spasmooth",
+      "tab": "Tecnologias",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "route": "/projetos/mf-consultoria",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Sobre",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Estética",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Funcionalidades",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Tecnologias",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "route": "/",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "route": "/projetos/spasmooth",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "route": "/projetos/spasmooth",
+      "tab": "Sobre",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "route": "/projetos/spasmooth",
+      "tab": "Estética",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "route": "/projetos/spasmooth",
+      "tab": "Funcionalidades",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "route": "/projetos/spasmooth",
+      "tab": "Tecnologias",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "route": "/projetos/mf-consultoria",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Sobre",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Estética",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Funcionalidades",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Tecnologias",
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/",
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/projetos/spasmooth",
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/projetos/spasmooth",
+      "tab": "Sobre",
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/projetos/spasmooth",
+      "tab": "Estética",
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/projetos/spasmooth",
+      "tab": "Funcionalidades",
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/projetos/spasmooth",
+      "tab": "Tecnologias",
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/projetos/mf-consultoria",
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Sobre",
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Estética",
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Funcionalidades",
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Tecnologias",
+      "overflow": false
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "route": "/",
+      "overflow": false
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "route": "/projetos/spasmooth",
+      "overflow": false
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "route": "/projetos/spasmooth",
+      "tab": "Sobre",
+      "overflow": false
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "route": "/projetos/spasmooth",
+      "tab": "Estética",
+      "overflow": false
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "route": "/projetos/spasmooth",
+      "tab": "Funcionalidades",
+      "overflow": false
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "route": "/projetos/spasmooth",
+      "tab": "Tecnologias",
+      "overflow": false
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "route": "/projetos/mf-consultoria",
+      "overflow": false
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Sobre",
+      "overflow": false
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Estética",
+      "overflow": false
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Funcionalidades",
+      "overflow": false
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "route": "/projetos/mf-consultoria",
+      "tab": "Tecnologias",
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "smallTargets": [
+    {
+      "width": 320,
+      "height": 900,
+      "route": "/",
+      "targets": []
+    },
+    {
+      "width": 320,
+      "height": 900,
+      "route": "/projetos/spasmooth",
+      "targets": []
+    },
+    {
+      "width": 320,
+      "height": 900,
+      "route": "/projetos/mf-consultoria",
+      "targets": []
+    },
+    {
+      "width": 390,
+      "height": 900,
+      "route": "/",
+      "targets": []
+    },
+    {
+      "width": 390,
+      "height": 900,
+      "route": "/projetos/spasmooth",
+      "targets": []
+    },
+    {
+      "width": 390,
+      "height": 900,
+      "route": "/projetos/mf-consultoria",
+      "targets": []
+    },
+    {
+      "width": 768,
+      "height": 1000,
+      "route": "/",
+      "targets": []
+    },
+    {
+      "width": 768,
+      "height": 1000,
+      "route": "/projetos/spasmooth",
+      "targets": []
+    },
+    {
+      "width": 768,
+      "height": 1000,
+      "route": "/projetos/mf-consultoria",
+      "targets": []
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "route": "/",
+      "targets": []
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "route": "/projetos/spasmooth",
+      "targets": []
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "route": "/projetos/mf-consultoria",
+      "targets": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "route": "/",
+      "targets": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "route": "/projetos/spasmooth",
+      "targets": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "route": "/projetos/mf-consultoria",
+      "targets": []
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/",
+      "targets": []
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/projetos/spasmooth",
+      "targets": []
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/projetos/mf-consultoria",
+      "targets": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "route": "/",
+      "targets": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "route": "/projetos/spasmooth",
+      "targets": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "route": "/projetos/mf-consultoria",
+      "targets": []
+    }
+  ]
+}

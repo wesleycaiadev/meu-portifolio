@@ -1,0 +1,38 @@
+{
+  "shifts": [
+    {
+      "value": 1,
+      "input": false,
+      "time": 979,
+      "scroll": 0,
+      "sources": [
+        {
+          "tag": "svg",
+          "id": "",
+          "cls": {},
+          "old": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "next": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 1000,
+            "top": 0,
+            "right": 1440,
+            "bottom": 1000,
+            "left": 0
+          }
+        }
+      ]
+    }
+  ],
+  "scroll": 0
+}

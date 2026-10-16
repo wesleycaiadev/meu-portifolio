@@ -336,6 +336,11 @@ export function createProjectCase(host: HTMLElement, sources: readonly ObjectSur
 
   return { replay: () => replay(), reset, setReading, completeEntrance, destroy: () => {
     disposed = true; entrance?.kill(); layout?.kill(); stop(); life.abort(); resize.disconnect(); intersection.disconnect();
+    // Three r186 shares this PBR lookup texture between renderers. Its dispose
+    // listeners otherwise retain each retired renderer/context after navigation.
+    // Dispose before renderer.properties is cleared; later renderers re-upload it.
+    const materialState = renderer.properties.get(graphite) as { uniforms?: { dfgLUT?: { value?: THREE.Texture } } };
+    materialState.uniforms?.dfgLUT?.value?.dispose();
     const geometries = new Set<THREE.BufferGeometry>(), disposableMaterials = new Set<THREE.Material>();
     scene.traverse(node => {
       if (node instanceof THREE.Mesh || node instanceof THREE.Line) {

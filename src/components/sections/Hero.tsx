@@ -1,4 +1,4 @@
-import { BorderLink } from "@/components/ui/BorderLink";
+import { ShinyButton } from "@/components/ui/shiny-button";
 import { WcIdentity } from "@/components/three/WcIdentity";
 import styles from "./Hero.module.scss";
 
@@ -10,9 +10,9 @@ export function Hero() {
       </div>
       <nav className={styles.navigation} aria-label="Navegação principal">
         <ul>
-          <li><BorderLink href="#projetos">Projetos</BorderLink></li>
-          <li><BorderLink href="#sobre">Sobre</BorderLink></li>
-          <li><BorderLink href="#contato">Contato</BorderLink></li>
+          <li><ShinyButton href="#projetos">Projetos</ShinyButton></li>
+          <li><ShinyButton href="#sobre">Sobre</ShinyButton></li>
+          <li><ShinyButton href="#contato">Contato</ShinyButton></li>
         </ul>
       </nav>
     </section>

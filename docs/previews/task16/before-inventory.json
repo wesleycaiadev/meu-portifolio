@@ -1,0 +1,725 @@
+{
+  "label": "before",
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "title": "Wesley Caiã",
+      "description": "Portfólio de Wesley Caiã.",
+      "og": [],
+      "icons": []
+    },
+    {
+      "route": "/projetos/spasmooth",
+      "status": 200,
+      "title": "SpaSmooth | Wesley Caiã",
+      "description": "SpaSmooth: design e desenvolvimento de uma experiência digital de massoterapia, Day Spa e bronzeamento. Explore a interface e conheça o projeto de Wesley Caiã.",
+      "og": [],
+      "icons": []
+    },
+    {
+      "route": "/projetos/mf-consultoria",
+      "status": 200,
+      "title": "MF Consultoria | Wesley Caiã",
+      "description": "MF Consultoria: design e desenvolvimento de uma experiência digital de curadoria automotiva. Explore as capturas e conheça o projeto de Wesley Caiã.",
+      "og": [],
+      "icons": []
+    },
+    {
+      "route": "/playground",
+      "status": 200,
+      "title": "Playground visual — Wesley Caiã",
+      "description": "Página temporária para revisão da fundação visual da TASK 01.",
+      "og": [],
+      "icons": []
+    },
+    {
+      "route": "/playground/project-case",
+      "status": 404,
+      "title": "404: This page could not be found.",
+      "description": "Portfólio de Wesley Caiã.",
+      "og": [],
+      "icons": []
+    },
+    {
+      "route": "/playground/project-object",
+      "status": 404,
+      "title": "404: This page could not be found.",
+      "description": "Portfólio de Wesley Caiã.",
+      "og": [],
+      "icons": []
+    },
+    {
+      "route": "/robots.txt",
+      "status": 404,
+      "title": "Wesley Caiã",
+      "description": "Portfólio de Wesley Caiã.",
+      "og": [],
+      "icons": []
+    },
+    {
+      "route": "/sitemap.xml",
+      "status": 404,
+      "title": "Wesley Caiã",
+      "description": "Portfólio de Wesley Caiã.",
+      "og": [],
+      "icons": []
+    }
+  ],
+  "performance": [
+    {
+      "route": "/",
+      "vitals": {
+        "cls": 0,
+        "longTasks": [
+          345,
+          99
+        ],
+        "lcp": 816
+      },
+      "navigation": [
+        {
+          "ttfb": 82.39999999990687,
+          "domContentLoaded": 128.39999999990687,
+          "load": 743.5999999996275
+        }
+      ],
+      "resources": [
+        {
+          "name": "/_next/static/media/7ebf22b5a21034f8-s.p.3j3877k49yy0l.woff2",
+          "type": "link",
+          "encoded": 15684,
+          "decoded": 15684,
+          "transfer": 15984,
+          "duration": 15.800000000279397
+        },
+        {
+          "name": "/_next/static/chunks/2no0rurfmfw1s.css",
+          "type": "link",
+          "encoded": 3127,
+          "decoded": 11516,
+          "transfer": 3427,
+          "duration": 27.699999999720603
+        },
+        {
+          "name": "/_next/static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2",
+          "type": "link",
+          "encoded": 44916,
+          "decoded": 44916,
+          "transfer": 45216,
+          "duration": 25.5
+        },
+        {
+          "name": "/_next/static/chunks/1hkebjjpx51um.css",
+          "type": "link",
+          "encoded": 6501,
+          "decoded": 48492,
+          "transfer": 6801,
+          "duration": 29.800000000279397
+        },
+        {
+          "name": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+          "type": "link",
+          "encoded": 2029,
+          "decoded": 5598,
+          "transfer": 2329,
+          "duration": 32.39999999990687
+        },
+        {
+          "name": "/_next/static/chunks/2mmpezlrfmbu5.js",
+          "type": "script",
+          "encoded": 8716,
+          "decoded": 34718,
+          "transfer": 9016,
+          "duration": 33.299999999813735
+        },
+        {
+          "name": "/_next/static/chunks/3g4px251sg85e.js",
+          "type": "script",
+          "encoded": 71576,
+          "decoded": 228922,
+          "transfer": 71876,
+          "duration": 62.09999999962747
+        },
+        {
+          "name": "/_next/static/chunks/3un1mb5bx4x8k.js",
+          "type": "script",
+          "encoded": 43914,
+          "decoded": 160168,
+          "transfer": 44214,
+          "duration": 53
+        },
+        {
+          "name": "/_next/static/chunks/turbopack-2yajevry3z_n6.js",
+          "type": "script",
+          "encoded": 3851,
+          "decoded": 9721,
+          "transfer": 4151,
+          "duration": 45.1999999997206
+        },
+        {
+          "name": "/_next/static/chunks/3ljs2c63km126.js",
+          "type": "script",
+          "encoded": 5700,
+          "decoded": 19933,
+          "transfer": 6000,
+          "duration": 49.09999999962747
+        },
+        {
+          "name": "/_next/static/chunks/0l-manuc7x-06.js",
+          "type": "script",
+          "encoded": 27128,
+          "decoded": 70164,
+          "transfer": 27428,
+          "duration": 50.8000000002794
+        },
+        {
+          "name": "/_next/static/chunks/17m-jwzpy-gvk.js",
+          "type": "script",
+          "encoded": 396,
+          "decoded": 1251,
+          "transfer": 696,
+          "duration": 59.10000000009313
+        },
+        {
+          "name": "/_next/static/chunks/3vwhftje0zax3.js",
+          "type": "script",
+          "encoded": 9154,
+          "decoded": 32497,
+          "transfer": 9454,
+          "duration": 62.299999999813735
+        },
+        {
+          "name": "/_next/static/chunks/2-6k4nwtv2yzg.js",
+          "type": "script",
+          "encoded": 9870,
+          "decoded": 27306,
+          "transfer": 10170,
+          "duration": 64
+        },
+        {
+          "name": "/assets/brand/logo-symbol.svg",
+          "type": "image",
+          "encoded": 1121453,
+          "decoded": 1594568,
+          "transfer": 1121753,
+          "duration": 144.5
+        },
+        {
+          "name": "/assets/technologies/react.svg",
+          "type": "css",
+          "encoded": 1396,
+          "decoded": 2926,
+          "transfer": 1696,
+          "duration": 8.600000000093132
+        },
+        {
+          "name": "/assets/technologies/nextdotjs.svg",
+          "type": "css",
+          "encoded": 322,
+          "decoded": 322,
+          "transfer": 622,
+          "duration": 7.100000000093132
+        },
+        {
+          "name": "/assets/technologies/angular.svg",
+          "type": "css",
+          "encoded": 298,
+          "decoded": 298,
+          "transfer": 598,
+          "duration": 8.400000000372529
+        },
+        {
+          "name": "/assets/technologies/typescript.svg",
+          "type": "css",
+          "encoded": 679,
+          "decoded": 1294,
+          "transfer": 979,
+          "duration": 9.700000000186265
+        },
+        {
+          "name": "/assets/technologies/javascript.svg",
+          "type": "css",
+          "encoded": 974,
+          "decoded": 974,
+          "transfer": 1274,
+          "duration": 8.900000000372529
+        },
+        {
+          "name": "/assets/technologies/html5.svg",
+          "type": "css",
+          "encoded": 327,
+          "decoded": 327,
+          "transfer": 627,
+          "duration": 12.899999999906868
+        },
+        {
+          "name": "/assets/technologies/sass.svg",
+          "type": "css",
+          "encoded": 667,
+          "decoded": 1223,
+          "transfer": 967,
+          "duration": 16
+        },
+        {
+          "name": "/assets/technologies/tailwindcss.svg",
+          "type": "css",
+          "encoded": 602,
+          "decoded": 602,
+          "transfer": 902,
+          "duration": 13.299999999813735
+        },
+        {
+          "name": "/assets/technologies/css.svg",
+          "type": "css",
+          "encoded": 662,
+          "decoded": 1479,
+          "transfer": 962,
+          "duration": 15.800000000279397
+        },
+        {
+          "name": "/assets/technologies/supabase.svg",
+          "type": "css",
+          "encoded": 303,
+          "decoded": 303,
+          "transfer": 603,
+          "duration": 13.799999999813735
+        },
+        {
+          "name": "/assets/technologies/postgresql.svg",
+          "type": "css",
+          "encoded": 2535,
+          "decoded": 5205,
+          "transfer": 2835,
+          "duration": 19.399999999906868
+        },
+        {
+          "name": "/assets/technologies/clerk.svg",
+          "type": "css",
+          "encoded": 695,
+          "decoded": 695,
+          "transfer": 995,
+          "duration": 18.700000000186265
+        },
+        {
+          "name": "/assets/technologies/vercel.svg",
+          "type": "css",
+          "encoded": 132,
+          "decoded": 132,
+          "transfer": 432,
+          "duration": 20
+        },
+        {
+          "name": "/assets/technologies/gsap.svg",
+          "type": "css",
+          "encoded": 1961,
+          "decoded": 4728,
+          "transfer": 2261,
+          "duration": 20.600000000093132
+        },
+        {
+          "name": "/assets/technologies/threedotjs.svg",
+          "type": "css",
+          "encoded": 897,
+          "decoded": 897,
+          "transfer": 1197,
+          "duration": 20
+        },
+        {
+          "name": "/assets/photos/portrait-about.webp?v=2",
+          "type": "img",
+          "encoded": 923322,
+          "decoded": 923322,
+          "transfer": 923622,
+          "duration": 80
+        },
+        {
+          "name": "/_next/image?url=%2Fassets%2Fprojects%2Fmf-consultoria%2Fmf-consultoria-hero-desktop.png&w=750&q=75",
+          "type": "img",
+          "encoded": 19484,
+          "decoded": 19484,
+          "transfer": 19784,
+          "duration": 101
+        },
+        {
+          "name": "/favicon.ico",
+          "type": "other",
+          "encoded": 9,
+          "decoded": 9,
+          "transfer": 309,
+          "duration": 5.899999999906868
+        },
+        {
+          "name": "/_next/static/chunks/3oicv1kusdq_s.js",
+          "type": "script",
+          "encoded": 1634,
+          "decoded": 3584,
+          "transfer": 1934,
+          "duration": 3.7999999998137355
+        }
+      ],
+      "canvas": 0
+    },
+    {
+      "route": "/projetos/spasmooth",
+      "vitals": {
+        "cls": 0,
+        "longTasks": [
+          59
+        ],
+        "lcp": 320
+      },
+      "navigation": [
+        {
+          "ttfb": 8,
+          "domContentLoaded": 61.89999999990687,
+          "load": 179.8000000002794
+        }
+      ],
+      "resources": [
+        {
+          "name": "/_next/static/media/7ebf22b5a21034f8-s.p.3j3877k49yy0l.woff2",
+          "type": "link",
+          "encoded": 15684,
+          "decoded": 15684,
+          "transfer": 15984,
+          "duration": 10.5
+        },
+        {
+          "name": "/_next/static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2",
+          "type": "link",
+          "encoded": 44916,
+          "decoded": 44916,
+          "transfer": 45216,
+          "duration": 15
+        },
+        {
+          "name": "/_next/static/chunks/2no0rurfmfw1s.css",
+          "type": "link",
+          "encoded": 3127,
+          "decoded": 11516,
+          "transfer": 3427,
+          "duration": 14.400000000372529
+        },
+        {
+          "name": "/_next/static/chunks/1hkebjjpx51um.css",
+          "type": "link",
+          "encoded": 6501,
+          "decoded": 48492,
+          "transfer": 6801,
+          "duration": 16.800000000279397
+        },
+        {
+          "name": "/_next/static/chunks/2c01ljxy13apk.css",
+          "type": "link",
+          "encoded": 1714,
+          "decoded": 8276,
+          "transfer": 2014,
+          "duration": 15.699999999720603
+        },
+        {
+          "name": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+          "type": "link",
+          "encoded": 2029,
+          "decoded": 5598,
+          "transfer": 2329,
+          "duration": 18.699999999720603
+        },
+        {
+          "name": "/_next/static/chunks/2mmpezlrfmbu5.js",
+          "type": "script",
+          "encoded": 8716,
+          "decoded": 34718,
+          "transfer": 9016,
+          "duration": 20.40000000037253
+        },
+        {
+          "name": "/_next/static/chunks/3g4px251sg85e.js",
+          "type": "script",
+          "encoded": 71576,
+          "decoded": 228922,
+          "transfer": 71876,
+          "duration": 42.3000000002794
+        },
+        {
+          "name": "/_next/static/chunks/3un1mb5bx4x8k.js",
+          "type": "script",
+          "encoded": 43914,
+          "decoded": 160168,
+          "transfer": 44214,
+          "duration": 38.700000000186265
+        },
+        {
+          "name": "/_next/static/chunks/turbopack-2yajevry3z_n6.js",
+          "type": "script",
+          "encoded": 3851,
+          "decoded": 9721,
+          "transfer": 4151,
+          "duration": 33.1999999997206
+        },
+        {
+          "name": "/_next/static/chunks/3ljs2c63km126.js",
+          "type": "script",
+          "encoded": 5700,
+          "decoded": 19933,
+          "transfer": 6000,
+          "duration": 35.3000000002794
+        },
+        {
+          "name": "/_next/static/chunks/0l-manuc7x-06.js",
+          "type": "script",
+          "encoded": 27128,
+          "decoded": 70164,
+          "transfer": 27428,
+          "duration": 38
+        },
+        {
+          "name": "/_next/static/chunks/3ew6ix_n3sqnn.js",
+          "type": "script",
+          "encoded": 12070,
+          "decoded": 34667,
+          "transfer": 12370,
+          "duration": 37.39999999990687
+        },
+        {
+          "name": "/assets/projects/spasmooth/spasmooth-hero-desktop.png",
+          "type": "link",
+          "encoded": 1566051,
+          "decoded": 1566051,
+          "transfer": 1566351,
+          "duration": 23.799999999813735
+        },
+        {
+          "name": "/?_rsc=ZZ40r5M2BR2R6-SL",
+          "type": "fetch",
+          "encoded": 306,
+          "decoded": 531,
+          "transfer": 606,
+          "duration": 5.399999999906868
+        },
+        {
+          "name": "/assets/projects/spasmooth/spasmooth-localizacao.png",
+          "type": "img",
+          "encoded": 276929,
+          "decoded": 276929,
+          "transfer": 277229,
+          "duration": 4.2999999998137355
+        },
+        {
+          "name": "/?_rsc=14uomtJVe9Fw3_7h",
+          "type": "fetch",
+          "encoded": 3305,
+          "decoded": 13815,
+          "transfer": 3605,
+          "duration": 5.2000000001862645
+        },
+        {
+          "name": "/_next/static/chunks/17m-jwzpy-gvk.js",
+          "type": "script",
+          "encoded": 396,
+          "decoded": 1251,
+          "transfer": 696,
+          "duration": 4
+        },
+        {
+          "name": "/_next/static/chunks/3vwhftje0zax3.js",
+          "type": "script",
+          "encoded": 9154,
+          "decoded": 32497,
+          "transfer": 9454,
+          "duration": 5.800000000279397
+        },
+        {
+          "name": "/_next/static/chunks/2-6k4nwtv2yzg.js",
+          "type": "script",
+          "encoded": 9870,
+          "decoded": 27306,
+          "transfer": 10170,
+          "duration": 5.399999999906868
+        }
+      ],
+      "canvas": 0
+    },
+    {
+      "route": "/projetos/mf-consultoria",
+      "vitals": {
+        "cls": 0,
+        "longTasks": [
+          57
+        ],
+        "lcp": 272
+      },
+      "navigation": [
+        {
+          "ttfb": 8.600000000093132,
+          "domContentLoaded": 64.70000000018626,
+          "load": 177.70000000018626
+        }
+      ],
+      "resources": [
+        {
+          "name": "/_next/static/media/7ebf22b5a21034f8-s.p.3j3877k49yy0l.woff2",
+          "type": "link",
+          "encoded": 15684,
+          "decoded": 15684,
+          "transfer": 15984,
+          "duration": 12
+        },
+        {
+          "name": "/_next/static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2",
+          "type": "link",
+          "encoded": 44916,
+          "decoded": 44916,
+          "transfer": 45216,
+          "duration": 17
+        },
+        {
+          "name": "/_next/static/chunks/2no0rurfmfw1s.css",
+          "type": "link",
+          "encoded": 3127,
+          "decoded": 11516,
+          "transfer": 3427,
+          "duration": 16.299999999813735
+        },
+        {
+          "name": "/_next/static/chunks/1hkebjjpx51um.css",
+          "type": "link",
+          "encoded": 6501,
+          "decoded": 48492,
+          "transfer": 6801,
+          "duration": 18.800000000279397
+        },
+        {
+          "name": "/_next/static/chunks/2c01ljxy13apk.css",
+          "type": "link",
+          "encoded": 1714,
+          "decoded": 8276,
+          "transfer": 2014,
+          "duration": 18.200000000186265
+        },
+        {
+          "name": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+          "type": "link",
+          "encoded": 2029,
+          "decoded": 5598,
+          "transfer": 2329,
+          "duration": 22
+        },
+        {
+          "name": "/_next/static/chunks/2mmpezlrfmbu5.js",
+          "type": "script",
+          "encoded": 8716,
+          "decoded": 34718,
+          "transfer": 9016,
+          "duration": 23.09999999962747
+        },
+        {
+          "name": "/_next/static/chunks/3g4px251sg85e.js",
+          "type": "script",
+          "encoded": 71576,
+          "decoded": 228922,
+          "transfer": 71876,
+          "duration": 37.700000000186265
+        },
+        {
+          "name": "/_next/static/chunks/3un1mb5bx4x8k.js",
+          "type": "script",
+          "encoded": 43914,
+          "decoded": 160168,
+          "transfer": 44214,
+          "duration": 36.39999999990687
+        },
+        {
+          "name": "/_next/static/chunks/turbopack-2yajevry3z_n6.js",
+          "type": "script",
+          "encoded": 3851,
+          "decoded": 9721,
+          "transfer": 4151,
+          "duration": 29.199999999720603
+        },
+        {
+          "name": "/_next/static/chunks/3ljs2c63km126.js",
+          "type": "script",
+          "encoded": 5700,
+          "decoded": 19933,
+          "transfer": 6000,
+          "duration": 31
+        },
+        {
+          "name": "/_next/static/chunks/3ew6ix_n3sqnn.js",
+          "type": "script",
+          "encoded": 12070,
+          "decoded": 34667,
+          "transfer": 12370,
+          "duration": 33.60000000009313
+        },
+        {
+          "name": "/_next/static/chunks/0l-manuc7x-06.js",
+          "type": "script",
+          "encoded": 27128,
+          "decoded": 70164,
+          "transfer": 27428,
+          "duration": 34.60000000009313
+        },
+        {
+          "name": "/assets/projects/mf-consultoria/mf-consultoria-hero-desktop.png",
+          "type": "link",
+          "encoded": 395060,
+          "decoded": 395060,
+          "transfer": 395360,
+          "duration": 21.399999999906868
+        },
+        {
+          "name": "/?_rsc=ili5Zt6Sm6K_E7at",
+          "type": "fetch",
+          "encoded": 306,
+          "decoded": 531,
+          "transfer": 606,
+          "duration": 8.700000000186265
+        },
+        {
+          "name": "/assets/projects/mf-consultoria/mf-consultoria-curadoria-processo.png",
+          "type": "img",
+          "encoded": 97859,
+          "decoded": 97859,
+          "transfer": 98159,
+          "duration": 7
+        },
+        {
+          "name": "/?_rsc=AVBqPJJDhvjh4Wx8",
+          "type": "fetch",
+          "encoded": 3305,
+          "decoded": 13815,
+          "transfer": 3605,
+          "duration": 5.600000000093132
+        },
+        {
+          "name": "/_next/static/chunks/17m-jwzpy-gvk.js",
+          "type": "script",
+          "encoded": 396,
+          "decoded": 1251,
+          "transfer": 696,
+          "duration": 5.300000000279397
+        },
+        {
+          "name": "/_next/static/chunks/3vwhftje0zax3.js",
+          "type": "script",
+          "encoded": 9154,
+          "decoded": 32497,
+          "transfer": 9454,
+          "duration": 6.899999999906868
+        },
+        {
+          "name": "/_next/static/chunks/2-6k4nwtv2yzg.js",
+          "type": "script",
+          "encoded": 9870,
+          "decoded": 27306,
+          "transfer": 10170,
+          "duration": 7
+        }
+      ],
+      "canvas": 0
+    }
+  ],
+  "errors": []
+}

@@ -46,101 +46,109 @@ export function createAboutReveal(section: HTMLElement) {
   if (!heading || !description || !portrait || !image) return () => {};
 
   gsap.registerPlugin(ScrollTrigger, SplitText);
-  const media = gsap.matchMedia();
-  media.add({ desktop: "(min-width: 64rem)", stacked: "(max-width: 63.999rem)" }, context => {
-    const desktop = Boolean(context.conditions?.desktop);
-    const headingReveal = readTextReveal(heading, desktop);
-    const descriptionReveal = readTextReveal(description, desktop);
-    let active = true;
-    const addPortrait = (timeline: gsap.core.Timeline, start: number, finish: number) => {
-      const duration = finish - start;
-      timeline
-        .fromTo(portrait, { autoAlpha: 0 }, { autoAlpha: 1, duration: duration * 0.2, ease: "sine.inOut" }, start)
-        .fromTo(portrait, { clipPath: "inset(10% 6% 14% 6%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration, ease: "power2.inOut" }, start)
-        .fromTo(image, { y: desktop ? 32 : 24, scale: 1.045 }, { y: 0, scale: 1, duration, ease: "power2.out" }, start)
-        .fromTo(image, { filter: "blur(20px)" }, { filter: "blur(12px)", duration: duration * 0.3, ease: "sine.inOut" }, start)
-        .to(image, { filter: "blur(5px)", duration: duration * 0.35, ease: "sine.inOut" }, start + duration * 0.3)
-        .to(image, { filter: "blur(0px)", duration: duration * 0.35, ease: "power2.out" }, start + duration * 0.65);
-    };
-    const setRange = (trigger: ScrollTrigger) => {
-      section.dataset.aboutStart = String(trigger.start);
-      section.dataset.aboutEnd = String(trigger.end);
-    };
+  // Own this listener: GSAP 3.15 removes matchMedia contexts on revert, but
+  // leaves its native query listeners registered after repeated route mounts.
+  const breakpoint = matchMedia("(min-width: 64rem)");
+  let context: gsap.Context | undefined;
+  const reconcile = () => {
+    context?.revert();
+    const desktop = breakpoint.matches;
+    context = gsap.context(() => {
+      const headingReveal = readTextReveal(heading, desktop);
+      const descriptionReveal = readTextReveal(description, desktop);
+      let active = true;
+      const addPortrait = (timeline: gsap.core.Timeline, start: number, finish: number) => {
+        const duration = finish - start;
+        timeline
+          .fromTo(portrait, { autoAlpha: 0 }, { autoAlpha: 1, duration: duration * 0.2, ease: "sine.inOut" }, start)
+          .fromTo(portrait, { clipPath: "inset(10% 6% 14% 6%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration, ease: "power2.inOut" }, start)
+          .fromTo(image, { y: desktop ? 32 : 24, scale: 1.045 }, { y: 0, scale: 1, duration, ease: "power2.out" }, start)
+          .fromTo(image, { filter: "blur(20px)" }, { filter: "blur(12px)", duration: duration * 0.3, ease: "sine.inOut" }, start)
+          .to(image, { filter: "blur(5px)", duration: duration * 0.35, ease: "sine.inOut" }, start + duration * 0.3)
+          .to(image, { filter: "blur(0px)", duration: duration * 0.35, ease: "power2.out" }, start + duration * 0.65);
+      };
+      const setRange = (trigger: ScrollTrigger) => {
+        section.dataset.aboutStart = String(trigger.start);
+        section.dataset.aboutEnd = String(trigger.end);
+      };
 
-    if (desktop) {
-      // Hold the approved composition while the longer character sequence unfolds.
-      // Its extra native scroll is also included in the shared reveal range below.
-      ScrollTrigger.create({
-        id: "about-hold", trigger: section, start: "top top",
-        end: () => `+=${Math.round(innerHeight * 1.10)}`,
-        pin: true, pinSpacing: true, invalidateOnRefresh: true,
+      if (desktop) {
+        // Hold the approved composition while the longer character sequence unfolds.
+        // Its extra native scroll is also included in the shared reveal range below.
+        ScrollTrigger.create({
+          id: "about-hold", trigger: section, start: "top top",
+          end: () => `+=${Math.round(innerHeight * 1.10)}`,
+          pin: true, pinSpacing: true, invalidateOnRefresh: true,
+        });
+      }
+
+      const paragraphSplit = SplitText.create(description, { type: "words,chars", aria: "auto" });
+      const headingSplit = SplitText.create(heading, {
+        type: desktop ? "lines,words,chars" : "words,chars",
+        ...(desktop ? { mask: "lines" as const } : {}), autoSplit: desktop, aria: "auto",
+        onSplit: self => {
+          const state = { progress: 0 };
+          const titleCharacters = characterRanges(self.chars, headingReveal);
+          const paragraphCharacters = characterRanges(paragraphSplit.chars, descriptionReveal);
+          const allCharacters = [...titleCharacters, ...paragraphCharacters];
+          const timeline = gsap.timeline({
+            onUpdate: () => {
+              const p = state.progress;
+              section.dataset[desktop ? "aboutProgress" : "aboutTextProgress"] = String(p);
+              for (const character of allCharacters) {
+                if (p >= character.end && character.element.style.filter !== "none") character.element.style.filter = "none";
+              }
+              for (const mask of self.masks) {
+                const overflow = p >= headingReveal.end ? "visible" : "clip";
+                const style = (mask as HTMLElement).style;
+                if (style.overflow !== overflow) style.overflow = overflow;
+              }
+              if (desktop && p >= 0.88) image.style.filter = "none";
+            },
+            scrollTrigger: {
+              id: desktop ? "about-sequence" : "about-copy", trigger: section,
+              start: desktop ? "top 76%" : "top 92%",
+              end: desktop ? () => `+=${Math.round(innerHeight * 1.86)}` : "top top",
+              scrub: true, invalidateOnRefresh: true,
+              ...(desktop ? { onRefresh: setRange } : {}),
+            },
+          });
+          timeline.to(state, { progress: 1, duration: 1, ease: "none" }, 0);
+          addTextReveal(timeline, titleCharacters, headingReveal);
+          addTextReveal(timeline, paragraphCharacters, descriptionReveal);
+          if (desktop) addPortrait(timeline, 0.20, 0.88);
+          // Recalculate after SplitText restores previous time and pin geometry changes.
+          queueMicrotask(() => { if (active) ScrollTrigger.refresh(); });
+          return timeline;
+        },
       });
-    }
 
-    const paragraphSplit = SplitText.create(description, { type: "words,chars", aria: "auto" });
-    const headingSplit = SplitText.create(heading, {
-      type: desktop ? "lines,words,chars" : "words,chars",
-      ...(desktop ? { mask: "lines" as const } : {}), autoSplit: desktop, aria: "auto",
-      onSplit: self => {
-        const state = { progress: 0 };
-        const titleCharacters = characterRanges(self.chars, headingReveal);
-        const paragraphCharacters = characterRanges(paragraphSplit.chars, descriptionReveal);
-        const allCharacters = [...titleCharacters, ...paragraphCharacters];
-        const timeline = gsap.timeline({
+      if (!desktop) {
+        const photo = { progress: 0 };
+        const reveal = gsap.timeline({
           onUpdate: () => {
-            const p = state.progress;
-            section.dataset[desktop ? "aboutProgress" : "aboutTextProgress"] = String(p);
-            for (const character of allCharacters) {
-              if (p >= character.end && character.element.style.filter !== "none") character.element.style.filter = "none";
-            }
-            for (const mask of self.masks) {
-              const overflow = p >= headingReveal.end ? "visible" : "clip";
-              const style = (mask as HTMLElement).style;
-              if (style.overflow !== overflow) style.overflow = overflow;
-            }
-            if (desktop && p >= 0.88) image.style.filter = "none";
+            section.dataset.aboutProgress = String(photo.progress);
+            if (photo.progress === 1) image.style.filter = "none";
           },
           scrollTrigger: {
-            id: desktop ? "about-sequence" : "about-copy", trigger: section,
-            start: desktop ? "top 76%" : "top 92%",
-            end: desktop ? () => `+=${Math.round(innerHeight * 1.86)}` : "top top",
-            scrub: true, invalidateOnRefresh: true,
-            ...(desktop ? { onRefresh: setRange } : {}),
+            id: "about-portrait", trigger: portrait, start: "top 90%", end: "top 20%",
+            scrub: true, invalidateOnRefresh: true, onRefresh: setRange,
           },
         });
-        timeline.to(state, { progress: 1, duration: 1, ease: "none" }, 0);
-        addTextReveal(timeline, titleCharacters, headingReveal);
-        addTextReveal(timeline, paragraphCharacters, descriptionReveal);
-        if (desktop) addPortrait(timeline, 0.20, 0.88);
-        // Recalculate after SplitText restores previous time and pin geometry changes.
-        queueMicrotask(() => { if (active) ScrollTrigger.refresh(); });
-        return timeline;
-      },
-    });
+        reveal.to(photo, { progress: 1, duration: 1, ease: "none" }, 0);
+        addPortrait(reveal, 0, 1);
+      }
 
-    if (!desktop) {
-      const photo = { progress: 0 };
-      const reveal = gsap.timeline({
-        onUpdate: () => {
-          section.dataset.aboutProgress = String(photo.progress);
-          if (photo.progress === 1) image.style.filter = "none";
-        },
-        scrollTrigger: {
-          id: "about-portrait", trigger: portrait, start: "top 90%", end: "top 20%",
-          scrub: true, invalidateOnRefresh: true, onRefresh: setRange,
-        },
-      });
-      reveal.to(photo, { progress: 1, duration: 1, ease: "none" }, 0);
-      addPortrait(reveal, 0, 1);
-    }
-
-    ScrollTrigger.refresh();
-    return () => {
-      active = false;
-      headingSplit.revert();
-      paragraphSplit.revert();
-      for (const name of ["aboutProgress", "aboutTextProgress", "aboutStart", "aboutEnd"]) delete section.dataset[name];
-    };
-  }, section);
-  return () => media.revert();
+      ScrollTrigger.refresh();
+      return () => {
+        active = false;
+        headingSplit.revert();
+        paragraphSplit.revert();
+        for (const name of ["aboutProgress", "aboutTextProgress", "aboutStart", "aboutEnd"]) delete section.dataset[name];
+      };
+    }, section);
+  };
+  reconcile();
+  breakpoint.addEventListener("change", reconcile);
+  return () => { breakpoint.removeEventListener("change", reconcile); context?.revert(); };
 }

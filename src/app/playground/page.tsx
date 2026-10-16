@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { Header } from "@/components/layout/Header";
 import { ButtonSample } from "@/components/ui/ButtonSample";
 import styles from "./page.module.scss";
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default function PlaygroundPage() {
+  if (process.env.NODE_ENV !== "development") notFound();
   return (
     <>
       <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>

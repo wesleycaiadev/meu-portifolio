@@ -1,17 +1,17 @@
-# Wesley Caia — nova fundação do portfólio
+# Wesley Caiã — Portfólio V2
 
-Aplicação criada do zero na TASK 00. A TASK 02.1 simplifica a primeira viewport: Wesley Caia no topo, WC central e três destinos inferiores. Inter Tight e Instrument Serif continuam disponíveis no sistema visual; o Hero usa apenas Inter Tight nos controles. About, Projects, Manifesto, Expertise, Process e Contact permanecem placeholders. Não há animações de entrada, smooth scroll ativo ou canvas WebGL.
+Portfólio pessoal em Next.js App Router, React, TypeScript e SCSS. Inclui Hero WC, Sobre, Projetos, Expertise, Processo e Contato; os cases SpaSmooth e MF Consultoria possuem notebooks WebGL e capturas reais exploráveis. GSAP/ScrollTrigger, Lenis e Three.js compõem o movimento aprovado.
 
-## Executar
+## Executar localmente
 
-Use Node.js 24 LTS. No PowerShell, `npm.cmd` evita depender da política de execução de `npm.ps1`.
+Use Node.js 24 LTS e npm. No PowerShell, `npm.cmd` evita a política de execução de `npm.ps1`. Se o comando não for encontrado, confirme a instalação do Node e reabra o terminal para atualizar o PATH.
 
 ```powershell
 npm.cmd ci
 npm.cmd run dev
 ```
 
-Abra http://localhost:3000.
+Abra [localhost:3000](http://localhost:3000/).
 
 ```powershell
 npm.cmd run lint
@@ -20,33 +20,47 @@ npm.cmd run build
 npm.cmd run start
 ```
 
-O script de typecheck gera os tipos de rotas do Next antes de executar TypeScript. `strict`, `noUncheckedIndexedAccess` e `exactOptionalPropertyTypes` estão habilitados. ESLint usa os presets de Next/Core Web Vitals e TypeScript.
+O typecheck gera os tipos de rotas antes de executar TypeScript. O projeto usa `strict`, `noUncheckedIndexedAccess` e `exactOptionalPropertyTypes`.
+
+## Revisar movimento
+
+A navegação normal respeita `prefers-reduced-motion`. Os cases também usam capturas estáticas em telas pequenas e quando WebGL não está disponível.
+
+Somente em desenvolvimento, estes links permitem revisar os notebooks mesmo com movimento reduzido:
+
+- [MF Consultoria — prévia 3D](http://localhost:3000/projetos/mf-consultoria?motion=preview).
+- [SpaSmooth — prévia 3D](http://localhost:3000/projetos/spasmooth?motion=preview).
+- [Home — controles de prévia](http://localhost:3000/?wc-preview=1&motion=preview#conteudo). Use **Ativar animação** no painel para revisar WC/Sobre/Projetos.
+
+Nos cases, a prévia explícita inicia a abertura 3D em desktop e permite voltar à preferência do sistema. Esses controles e a exceção de movimento ficam desabilitados em produção. Playgrounds são restritos ao desenvolvimento.
 
 ## Organização
 
-- `src/app`: layout e rota inicial do App Router.
-- `src/components/layout`: header estático.
-- `src/components/sections`: Hero estático e componente temporário dos placeholders.
-- `src/components/motion`, `three` e `ui`: pastas reservadas, sem implementação.
-- `src/data`: ordem narrativa e textos temporários.
-- `src/lib/motion` e `three`: pastas reservadas, sem abstrações antecipadas.
-- `src/styles`: SCSS estrutural temporário.
+- `src/app`: home, cases, metadados, ícones, robots e sitemap.
+- `src/components/layout`, `sections`, `project-case` e `ui`: interface, seções, cases e elementos compartilhados.
+- `src/components/motion`, `src/lib/motion` e `src/lib/three`: integração de movimento e cenas, com descarte de recursos.
+- `src/data`: conteúdo, projetos, capturas e contatos confirmados.
+- `src/styles`: estilos globais e fundamentos visuais.
+- `public/assets`: fotografias, capturas e marca aprovadas.
+- `docs`: decisões, auditorias e evidências de revisão.
 
-GSAP (incluindo ScrollTrigger), Lenis e Three.js estão instalados para etapas posteriores. Não são importados pela home nem inicializados nesta tarefa. Nenhuma biblioteca adicional de UI, motion ou renderização foi adicionada.
+Referências em `reference/` não integram os assets públicos da aplicação. A presença desses arquivos no histórico Git é tratada separadamente no plano de publicação.
 
-## Fontes de verdade e preservação
+## Publicação e metadados
 
-Leia `README-FIRST.md`, `PORTFOLIO-SPEC.md` e `ASSET-CHECKLIST.md` antes de futuras alterações. As instruções atuais do usuário determinam criação nova; a menção a preservar uma aplicação anterior no pacote não autoriza recuperar código antigo.
+Repositório oficial: [wesleycaiadev/meu-portifolio](https://github.com/wesleycaiadev/meu-portifolio).
+Domínio confirmado: [wesleycaiadev.vercel.app](https://wesleycaiadev.vercel.app/). A confirmação do endereço não significa que a V2 já tenha sido publicada.
 
-Os assets originais permanecem em `public/assets/`. O material de Gustavo permanece em `reference/`, fora de `public/`, sem imports, rotas ou cópias para o bundle. Referências orientam linguagem e ritmo; a identidade e os projetos são de Wesley Caia.
+Configure `SITE_URL=https://wesleycaiadev.vercel.app` **apenas no ambiente Production da Vercel**, seguido de build. Mantenha Preview sem essa variável. Sem uma origem HTTPS válida, a aplicação usa `noindex`, bloqueia robôs e não inventa URLs no sitemap. Veja `.env.example`; não adicione credenciais ao Git.
 
-O wordmark e o retrato final de About seguem pendentes conforme o checklist. Nada foi fabricado para substituí-los.
+A publicação depende do procedimento de [preparação GitHub/Vercel](docs/TASK-17-GITHUB-DEPLOY-PLAN.md). A TASK 17A não autoriza push ou deploy.
 
-A TASK 00 foi registrada no checkpoint `a082ef4`; a TASK 01, em `83ec899`. Consulte [a fundação visual](docs/VISUAL-FOUNDATION.md) e [a composição estática do Hero](docs/STATIC-HERO.md). O playground temporário permanece em `/playground`. Pare na TASK 02.1; motion e demais seções finais dependem de aprovação específica.
+## Validação e limites
 
-## Documentação consultada
+A [auditoria da TASK 16](docs/TASK-16-FINAL-AUDIT.md) reúne verificações de acessibilidade, responsividade, navegação, memória, WebGL, reduced motion e evidências visuais. Leia os limites de teste antes de extrapolar os resultados para dispositivos reais.
 
-- [Instalação manual do Next.js](https://nextjs.org/docs/app/getting-started/installation#manual-installation)
-- [Configuração ESLint](https://nextjs.org/docs/app/api-reference/config/eslint)
-- [Sass no Next.js](https://nextjs.org/docs/app/guides/sass)
-- Documentação da versão instalada em `node_modules/next/dist/docs/`.
+A auditoria de dependências de 16/10/2026 registrou zero vulnerabilidades de produção e cinco entradas altas na cadeia de ferramentas do ESLint, ligadas a `braces`. A pendência e o acompanhamento estão documentados; não foi aplicado downgrade incompatível.
+
+O currículo final ainda não foi disponibilizado e o download permanece ausente. O PDF no histórico da V1 não é assumido como currículo aprovado da V2.
+
+Consulte também `README-FIRST.md`, `PORTFOLIO-SPEC.md`, `ASSET-CHECKLIST.md` e as decisões posteriores em `docs/`. Para alterações de Next, leia primeiro a documentação da versão instalada em `node_modules/next/dist/docs/`, conforme `AGENTS.md`.

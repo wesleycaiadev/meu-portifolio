@@ -10,7 +10,7 @@ import { ProjectCaseControls } from "./ProjectCaseControls";
 import styles from "./ProjectCase.module.scss";
 import { useProjectTransition } from "@/components/motion/ProjectTransitionProvider";
 
-export function ProjectCase({ project, preview = false }: { project: ProjectCaseData; preview?: boolean }) {
+export function ProjectCase({ project, preview = false, initialMotionPreview = false }: { project: ProjectCaseData; preview?: boolean; initialMotionPreview?: boolean }) {
   const casePath = project.path;
   const transition = useProjectTransition();
   const stage = useRef<HTMLDivElement>(null);
@@ -23,7 +23,7 @@ export function ProjectCase({ project, preview = false }: { project: ProjectCase
   const [phase, setPhase] = useState("loading");
   const [threeReady, setThreeReady] = useState(false);
   const [reduced, setReduced] = useState(false);
-  const [previewMotion, setPreviewMotion] = useState(false);
+  const [previewMotion, setPreviewMotion] = useState(process.env.NODE_ENV === "development" && initialMotionPreview);
   const [status, setStatus] = useState("Preparando as capturas do projeto.");
 
   useEffect(() => {
@@ -160,7 +160,9 @@ export function ProjectCase({ project, preview = false }: { project: ProjectCase
             {phase === "loading" && <p className={styles.loading} role="status">Carregando a apresentação do {project.name}.</p>}
           </div>
           <p id="case-screen-help" className={styles.screenHelp}>
-            {threeReady ? "Role sobre a tela para explorar. Arraste fora dela para ajustar o ângulo." : "Role dentro da imagem para explorar as capturas."}
+            {threeReady ? "Role sobre a tela para explorar. Arraste fora dela para ajustar o ângulo."
+              : reduced && phase === "static" ? "Movimento reduzido ativo: a versão estática preserva as capturas. Role dentro da imagem para explorar."
+              : "Role dentro da imagem para explorar as capturas."}
           </p>
           <p className={styles.captureNote}>{project.simulationNote}</p>
         </section>

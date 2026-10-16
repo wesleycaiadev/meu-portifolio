@@ -2,7 +2,8 @@
 
 .page { min-block-size: 100svh; background: var(--surface-page); color: var(--text-primary); padding: clamp(1.25rem, 3.5vw, 4rem); }
 .header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; font-size: .875rem; }
-.header a:first-child { text-decoration: none; }
+.header a { display: inline-flex; align-items: center; min-block-size: var(--target-min); font-size: .9375rem; }
+.header a:first-child { text-decoration: none; max-inline-size: 48%; }
 .composition {
   display: grid; grid-template-columns: minmax(0, 1.58fr) minmax(0, 1fr);
   grid-template-areas: "visual editorial"; align-items: center; gap: clamp(1.5rem, 4vw, 4rem);
@@ -45,17 +46,17 @@
   margin-block-start: 1.5rem;
   div + div { margin-block-start: 1rem; }
   dt { color: var(--text-primary); font-weight: 500; }
-  dd { margin: .25rem 0 0; font-size: .875rem; line-height: 1.6; }
+  dd { margin: .25rem 0 0; font-size: .9375rem; line-height: 1.6; }
 }
 .panel .technologyList {
   list-style: none; padding: 0; margin: 0;
   li { display: flex; align-items: center; gap: 1rem; padding-block: .75rem; }
   li + li { margin-block-start: 0; border-block-start: 1px solid var(--border-decorative); }
   img { flex: 0 0 24px; filter: invert(.94); }
-  li > div { display: flex; flex-direction: column; min-inline-size: 0; font-size: .8125rem; line-height: 1.5; }
+  li > div { display: flex; flex-direction: column; min-inline-size: 0; font-size: .9375rem; line-height: 1.5; }
   .technologyName { color: var(--text-primary); font-size: .9375rem; }
 }
-.overview { background: none; border: 0; border-block-end: 1px solid var(--border-control); color: var(--text-primary); font: inherit; font-size: .8125rem; padding-block: .5rem; margin-block-start: 1rem; cursor: pointer; }
+.overview { background: none; border: 0; border-block-end: 1px solid var(--border-control); color: var(--text-primary); font: inherit; font-size: .9375rem; min-block-size: var(--target-min); padding-block: .5rem; margin-block-start: 1rem; cursor: pointer; }
 .visual { grid-area: visual; min-inline-size: 0; }
 .stage {
   position: relative; inline-size: 100%; block-size: clamp(25rem, 60svh, 41rem); overflow: clip;
@@ -70,8 +71,8 @@
   picture { display: block; }
   img { display: block; inline-size: 100%; block-size: auto; }
 }
-.screenHelp { margin-block-start: 1rem; font-size: .8125rem; color: var(--text-secondary); }
-.captureNote { margin-block-start: .5rem; font-size: .75rem; color: var(--text-secondary); line-height: 1.5; max-inline-size: 65ch; }
+.screenHelp { margin-block-start: 1rem; font-size: .9375rem; color: var(--text-secondary); }
+.captureNote { margin-block-start: .5rem; font-size: .875rem; color: var(--text-secondary); line-height: 1.5; max-inline-size: 65ch; }
 .development {
   border-block-start: 1px solid var(--border-decorative); margin-block-start: 2rem; padding-block-start: 1rem; color: var(--text-secondary); font-size: .8125rem;
   summary { cursor: pointer; inline-size: fit-content; padding-block: .5rem; }

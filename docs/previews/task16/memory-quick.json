@@ -1,0 +1,38 @@
+[
+  {
+    "i": 0,
+    "documents": 33,
+    "nodes": 709,
+    "jsEventListeners": 430
+  },
+  {
+    "i": 1,
+    "documents": 33,
+    "nodes": 711,
+    "jsEventListeners": 430
+  },
+  {
+    "i": 2,
+    "documents": 33,
+    "nodes": 709,
+    "jsEventListeners": 430
+  },
+  {
+    "i": 3,
+    "documents": 33,
+    "nodes": 710,
+    "jsEventListeners": 430
+  },
+  {
+    "i": 4,
+    "documents": 33,
+    "nodes": 710,
+    "jsEventListeners": 430
+  },
+  {
+    "i": 5,
+    "documents": 33,
+    "nodes": 709,
+    "jsEventListeners": 430
+  }
+]
