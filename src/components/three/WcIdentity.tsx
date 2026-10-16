@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import styles from "./WcIdentity.module.scss";
+import { isMotionReduced, observeMotionPreference } from "@/lib/motion/preference";
 
 export function WcIdentity() {
   const frame = useRef<HTMLDivElement>(null);
@@ -11,7 +12,6 @@ export function WcIdentity() {
     if (!element) return;
 
     const pointer = matchMedia("(hover: hover) and (pointer: fine)");
-    const motion = matchMedia("(prefers-reduced-motion: reduce)");
     const lifetime = new AbortController();
     let disposed = false;
     let inView = false;
@@ -21,7 +21,7 @@ export function WcIdentity() {
     let previewEnabled = false;
     const previewMode = process.env.NODE_ENV === "development"
       && new URLSearchParams(location.search).get("wc-preview") === "1";
-    const eligible = () => pointer.matches && (previewMode ? previewEnabled : !motion.matches);
+    const eligible = () => pointer.matches && (previewMode ? previewEnabled : !isMotionReduced());
 
     const reconcile = () => {
       if (!eligible()) {
@@ -32,7 +32,7 @@ export function WcIdentity() {
       if (disposed || release || loading || !inView || document.hidden) return;
 
       loading = true;
-      // Coarse pointers and normal reduced-motion visits never initialize Three.js.
+      // Coarse pointers and the visitor's reduced-motion choice avoid Three.js.
       void import("@/lib/three/wcDeformation").then(({ createWcDeformation }) => {
         loading = false;
         if (disposed || !eligible() || !inView || document.hidden) return;
@@ -49,7 +49,7 @@ export function WcIdentity() {
     });
     intersection.observe(element.closest("#inicio") ?? element);
     pointer.addEventListener("change", reconcile, { signal: lifetime.signal });
-    motion.addEventListener("change", reconcile, { signal: lifetime.signal });
+    observeMotionPreference(reconcile, lifetime.signal);
     document.addEventListener("visibilitychange", reconcile, { signal: lifetime.signal });
 
     if (process.env.NODE_ENV === "development" && previewMode) {

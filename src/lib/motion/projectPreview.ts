@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
 import { selectedProjects, type Project, type ProjectId } from "@/data/projects";
+import { isMotionReduced, observeMotionPreference } from "@/lib/motion/preference";
 
 export type PreviewSnapshot = {
   activeProject: Project;
@@ -38,12 +39,11 @@ export function createProjectPreview(
     return entry;
   };
   const wide = matchMedia("(min-width: 64rem)");
-  const reduced = matchMedia("(prefers-reduced-motion: reduce)");
   const previewMode = process.env.NODE_ENV === "development"
     && new URLSearchParams(location.search).get("wc-preview") === "1";
   const animate = () => previewMode
     ? document.documentElement.dataset.wcMotionPreview === "enabled"
-    : !reduced.matches;
+    : !isMotionReduced();
   const lifetime = new AbortController();
   let selected: ProjectId = selectedProjects[0].id;
   let requested: ProjectId = selected;
@@ -127,7 +127,7 @@ export function createProjectPreview(
   };
 
   wide.addEventListener("change", reset, { signal: lifetime.signal });
-  reduced.addEventListener("change", reset, { signal: lifetime.signal });
+  observeMotionPreference(reset, lifetime.signal);
   if (process.env.NODE_ENV === "development") window.addEventListener("wc-motion-preview", reset, { signal: lifetime.signal });
   reset();
 

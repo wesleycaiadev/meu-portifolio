@@ -15,8 +15,8 @@
 // The touch layout places screenshots between the names. Keep it free of
 // decorative crossings rather than repeating the desktop choreography.
 @media (max-width: 63.999rem) { .surface { display: none; } }
-@media (prefers-reduced-motion: reduce) {
-  .surface { display: none; }
-  // Only the existing explicit development-preview toggle can override this.
+:global(html[data-motion="reduced"]) .surface { display: none; }
+// Keep the existing explicit development preview separate from the site choice.
+@media (min-width: 64rem) {
   :global(html[data-wc-motion-preview="enabled"]) .surface { display: block; }
 }

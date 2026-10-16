@@ -5,6 +5,7 @@ import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import { aiDevelopmentApproach, expertiseGroups, expertiseTechnologies, technologyProjects, type ExpertiseTechnology } from "@/data/expertise";
 import { TechnologyLogo } from "./TechnologyLogo";
 import { endSectionPreview } from "@/lib/motion/sectionPreview";
+import { isMotionReduced, observeMotionPreference } from "@/lib/motion/preference";
 import styles from "./Expertise.module.scss";
 
 function TechnologyDetails({ technology }: { technology: ExpertiseTechnology }) {
@@ -35,13 +36,12 @@ export function Expertise() {
   useEffect(() => {
     const element = section.current;
     if (!element) return;
-    const preference = matchMedia("(prefers-reduced-motion: reduce)");
     const viewport = matchMedia("(min-width: 48rem) and (pointer: fine)");
     let preview = process.env.NODE_ENV === "development" && new URLSearchParams(location.search).get("motion") === "preview";
     const lifetime = new AbortController();
     let disposed = false, generation = 0;
     let release: (() => void) | undefined;
-    const eligible = () => viewport.matches && (preview || !preference.matches);
+    const eligible = () => viewport.matches && (preview || !isMotionReduced());
     const reconcile = () => {
       const version = ++generation;
       release?.(); release = undefined;
@@ -54,7 +54,7 @@ export function Expertise() {
         release = createExpertiseMotion(element);
       }).catch(() => { if (!disposed) element.dataset.expertiseMotion = "unavailable"; });
     };
-    preference.addEventListener("change", reconcile, { signal: lifetime.signal });
+    observeMotionPreference(reconcile, lifetime.signal);
     viewport.addEventListener("change", reconcile, { signal: lifetime.signal });
     window.addEventListener("section-motion-preview-end", () => { preview = false; reconcile(); }, { signal: lifetime.signal });
     reconcile();

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, type ReactNode } from "react";
+import { isMotionReduced, observeMotionPreference } from "@/lib/motion/preference";
 
 export function AboutReveal({ children, className }: { children: ReactNode; className: string }) {
   const section = useRef<HTMLElement>(null);
@@ -8,7 +9,6 @@ export function AboutReveal({ children, className }: { children: ReactNode; clas
   useEffect(() => {
     const element = section.current;
     if (!element) return;
-    const motion = matchMedia("(prefers-reduced-motion: reduce)");
     const previewMode = process.env.NODE_ENV === "development"
       && new URLSearchParams(location.search).get("wc-preview") === "1";
     const lifetime = new AbortController();
@@ -17,7 +17,7 @@ export function AboutReveal({ children, className }: { children: ReactNode; clas
     let release: (() => void) | undefined;
     const eligible = () => previewMode
       ? document.documentElement.dataset.wcMotionPreview === "enabled"
-      : !motion.matches;
+      : !isMotionReduced();
     const reconcile = () => {
       if (!eligible()) { release?.(); release = undefined; element.dataset.aboutMotion = "static"; return; }
       if (disposed || release || loading) return;
@@ -35,7 +35,7 @@ export function AboutReveal({ children, className }: { children: ReactNode; clas
         console.error("About reveal could not initialize.", error);
       });
     };
-    motion.addEventListener("change", reconcile, { signal: lifetime.signal });
+    observeMotionPreference(reconcile, lifetime.signal);
     if (process.env.NODE_ENV === "development") {
       window.addEventListener("wc-motion-preview", reconcile, { signal: lifetime.signal });
     }

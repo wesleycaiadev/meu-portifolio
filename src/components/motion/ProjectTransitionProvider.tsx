@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import type { PreviewSnapshot } from "@/lib/motion/projectPreview";
 import { projectiveMatrix, type ProjectTransitionDestination, type TransitionQuad } from "@/lib/motion/projectTransition";
 import styles from "./ProjectTransition.module.scss";
+import { isMotionReduced, observeMotionPreference } from "@/lib/motion/preference";
 
 type TransitionAPI = {
   begin: (snapshot: PreviewSnapshot, href: string, navigate: () => void) => boolean;
@@ -49,7 +50,7 @@ export function ProjectTransitionProvider({ children }: { children: ReactNode })
         // A repeated ordinary click cannot restart the animation or push history twice.
         if (session.current) return true;
         if (!layer.current || !backdrop.current || !surface.current
-          || document.hidden || matchMedia("(prefers-reduced-motion: reduce)").matches
+          || document.hidden || isMotionReduced()
           || matchMedia("(max-width: 767px), (pointer: coarse)").matches
           || (snapshot.activeProject.transitionSource === "desktop"
             && snapshot.asset.src !== snapshot.activeProject.preview.desktop.src)
@@ -124,8 +125,7 @@ export function ProjectTransitionProvider({ children }: { children: ReactNode })
     const lifetime = new AbortController();
     const cancel = () => api.cancel();
     const hide = () => { if (document.hidden) cancel(); };
-    const reduced = matchMedia("(prefers-reduced-motion: reduce)");
-    const reduce = () => { if (reduced.matches) cancel(); };
+    const reduce = () => { if (isMotionReduced()) cancel(); };
     const preventScroll = (event: WheelEvent | TouchEvent) => { if (session.current) event.preventDefault(); };
     window.addEventListener("popstate", cancel, { signal: lifetime.signal });
     window.addEventListener("pagehide", cancel, { signal: lifetime.signal });
@@ -133,7 +133,7 @@ export function ProjectTransitionProvider({ children }: { children: ReactNode })
     window.addEventListener("wheel", preventScroll, { passive: false, signal: lifetime.signal });
     window.addEventListener("touchmove", preventScroll, { passive: false, signal: lifetime.signal });
     document.addEventListener("visibilitychange", hide, { signal: lifetime.signal });
-    reduced.addEventListener("change", reduce, { signal: lifetime.signal });
+    observeMotionPreference(reduce, lifetime.signal);
     document.addEventListener("click", event => {
       const active = session.current;
       const link = event.target instanceof Element ? event.target.closest<HTMLAnchorElement>("a[href]") : null;

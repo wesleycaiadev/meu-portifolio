@@ -9,6 +9,7 @@ import { ProjectCaseContent } from "./ProjectCaseContent";
 import { ProjectCaseControls } from "./ProjectCaseControls";
 import styles from "./ProjectCase.module.scss";
 import { useProjectTransition } from "@/components/motion/ProjectTransitionProvider";
+import { isMotionReduced, observeMotionPreference } from "@/lib/motion/preference";
 
 export function ProjectCase({ project, preview = false, initialMotionPreview = false }: { project: ProjectCaseData; preview?: boolean; initialMotionPreview?: boolean }) {
   const casePath = project.path;
@@ -29,7 +30,6 @@ export function ProjectCase({ project, preview = false, initialMotionPreview = f
   useEffect(() => {
     const element = stage.current;
     if (!element) return;
-    const preference = matchMedia("(prefers-reduced-motion: reduce)");
     const narrow = matchMedia("(max-width: 767px), (pointer: coarse)");
     let disposed = false, generation = 0;
     let appliedPreferences: string | undefined;
@@ -50,14 +50,14 @@ export function ProjectCase({ project, preview = false, initialMotionPreview = f
     });
     const reconcile = () => {
       // Some viewport changes emit a media event without changing either preference.
-      const preferences = `${preference.matches}:${narrow.matches}`;
+      const preferences = `${isMotionReduced()}:${narrow.matches}`;
       if (preferences === appliedPreferences) return;
       appliedPreferences = preferences;
       const ticket = ++generation;
       clearLoadingTimeout();
       controller.current?.destroy(); controller.current = null;
-      setReduced(preference.matches);
-      if (narrow.matches || (preference.matches && !previewMotion)) {
+      setReduced(isMotionReduced());
+      if (narrow.matches || (isMotionReduced() && !previewMotion)) {
         showStatic(narrow.matches ? "Versão simplificada: explore as capturas por toque ou teclado." : "Movimento reduzido: capturas roláveis e conteúdo editorial disponíveis.");
         return;
       }
@@ -96,9 +96,9 @@ export function ProjectCase({ project, preview = false, initialMotionPreview = f
         if (!disposed && ticket === generation) showStatic("A prévia não pôde carregar. As capturas permanecem disponíveis.");
       });
     };
-    reconcile(); preference.addEventListener("change", reconcile); narrow.addEventListener("change", reconcile);
+    reconcile(); const stopPreference = observeMotionPreference(reconcile); narrow.addEventListener("change", reconcile);
     return () => {
-      disposed = true; generation++; preference.removeEventListener("change", reconcile); narrow.removeEventListener("change", reconcile);
+      disposed = true; generation++; stopPreference(); narrow.removeEventListener("change", reconcile);
       unbindTransition();
       clearLoadingTimeout();
       controller.current?.destroy(); controller.current = null;
