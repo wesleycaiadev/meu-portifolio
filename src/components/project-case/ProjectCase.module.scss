@@ -94,7 +94,7 @@
   .staticScreen { inset: 0; }
   .tabs { gap: .25rem .9rem; }
 }
-@media (prefers-reduced-motion: reduce) {
+:global(html[data-motion="reduced"]) {
   .composition { transition: none; }
   .panelContent { animation: none; }
 }

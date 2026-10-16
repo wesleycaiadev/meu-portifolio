@@ -44,6 +44,4 @@
   .invitation { margin-block: var(--space-9) var(--space-7); margin-inline-start: 25%; }
 }
 @include tokens.from(desktop) { .inner { max-inline-size: 100rem; } }
-@media (prefers-reduced-motion: reduce) {
-  .invitation::after { transition: none; }
-}
+:global(html[data-motion="reduced"]) .invitation::after { transition: none; }
