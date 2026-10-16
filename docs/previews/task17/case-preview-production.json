@@ -1,0 +1,29 @@
+{
+  "checks": [
+    {
+      "name": "mf-consultoria normal reduced motion stays static",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria production query cannot bypass reduced motion",
+      "value": true
+    },
+    {
+      "name": "spasmooth normal reduced motion stays static",
+      "value": true
+    },
+    {
+      "name": "spasmooth production query cannot bypass reduced motion",
+      "value": true
+    },
+    {
+      "name": "Normal motion still renders 3D without any query",
+      "value": true
+    },
+    {
+      "name": "No page errors",
+      "value": true
+    }
+  ],
+  "errors": []
+}
