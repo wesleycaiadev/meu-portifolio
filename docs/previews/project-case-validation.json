@@ -1,0 +1,180 @@
+{
+  "checks": [
+    {
+      "name": "render settles at rest",
+      "value": true
+    },
+    {
+      "name": "DPR capped at 1.5",
+      "value": true
+    },
+    {
+      "name": "raycast hits screen",
+      "value": true
+    },
+    {
+      "name": "inner wheel scrolls capture",
+      "value": true
+    },
+    {
+      "name": "inner wheel preserves page position",
+      "value": true
+    },
+    {
+      "name": "wheel reverses to hero",
+      "value": true
+    },
+    {
+      "name": "End reaches last capture",
+      "value": true
+    },
+    {
+      "name": "wheel at capture boundary returns page scroll",
+      "value": true
+    },
+    {
+      "name": "drag has controlled yaw",
+      "value": true
+    },
+    {
+      "name": "drag returns to rest",
+      "value": true
+    },
+    {
+      "name": "tab Sobre selects",
+      "value": true
+    },
+    {
+      "name": "tab Sobre expands editorial",
+      "value": true
+    },
+    {
+      "name": "tab Estética selects",
+      "value": true
+    },
+    {
+      "name": "tab Estética expands editorial",
+      "value": true
+    },
+    {
+      "name": "tab Funcionalidades selects",
+      "value": true
+    },
+    {
+      "name": "tab Funcionalidades expands editorial",
+      "value": true
+    },
+    {
+      "name": "tab Tecnologias selects",
+      "value": true
+    },
+    {
+      "name": "tab Tecnologias expands editorial",
+      "value": true
+    },
+    {
+      "name": "technologies marked pending",
+      "value": true
+    },
+    {
+      "name": "keyboard tab navigation",
+      "value": true
+    },
+    {
+      "name": "context loss shows fallback",
+      "value": true
+    },
+    {
+      "name": "context restores 3D",
+      "value": true
+    },
+    {
+      "name": "visibility handler suspends frames",
+      "value": true
+    },
+    {
+      "name": "entry resumes after visibility change",
+      "value": true
+    },
+    {
+      "name": "unmount removes case canvas",
+      "value": true
+    },
+    {
+      "name": "no horizontal overflow at 1920",
+      "value": true
+    },
+    {
+      "name": "no horizontal overflow at 1091",
+      "value": true
+    },
+    {
+      "name": "no horizontal overflow at 1024",
+      "value": true
+    },
+    {
+      "name": "no horizontal overflow at 820",
+      "value": true
+    },
+    {
+      "name": "no horizontal overflow at 390",
+      "value": true
+    },
+    {
+      "name": "static touch fallback at 390",
+      "value": true
+    },
+    {
+      "name": "captures scrollable at 390",
+      "value": true
+    },
+    {
+      "name": "native capture scroll at 390",
+      "value": true
+    },
+    {
+      "name": "no horizontal overflow at 320",
+      "value": true
+    },
+    {
+      "name": "static touch fallback at 320",
+      "value": true
+    },
+    {
+      "name": "captures scrollable at 320",
+      "value": true
+    },
+    {
+      "name": "native capture scroll at 320",
+      "value": true
+    },
+    {
+      "name": "reduced motion static by default",
+      "value": true
+    },
+    {
+      "name": "explicit preview motion opt in",
+      "value": true
+    },
+    {
+      "name": "motion opt out disposes canvas",
+      "value": true
+    },
+    {
+      "name": "no WebGL keeps content available",
+      "value": true
+    },
+    {
+      "name": "no page exceptions",
+      "value": true
+    }
+  ],
+  "errors": [],
+  "scrollAfterWheel": "425",
+  "stageBox": {
+    "x": 50.390625,
+    "y": 162.765625,
+    "width": 784.859375,
+    "height": 540
+  }
+}

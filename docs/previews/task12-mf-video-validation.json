@@ -1,0 +1,9 @@
+{
+  "base": "http://127.0.0.1:3002",
+  "errors": [],
+  "desktop": true,
+  "mobile": true,
+  "internalScroll": true,
+  "tabs": 4,
+  "returnToProjects": true
+}

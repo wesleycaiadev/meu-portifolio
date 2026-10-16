@@ -1,0 +1,34 @@
+@use "../../styles/tokens";
+
+.intro {
+  padding-block: var(--space-section);
+  > * + * { margin-block-start: var(--space-stack); }
+}
+.sample {
+  padding-block: var(--space-section);
+  border-block-start: var(--border-width) solid var(--border-decorative);
+}
+.annotation { grid-column: 1 / -1; }
+.content {
+  grid-column: 1 / -1;
+  > * + * { margin-block-start: var(--space-stack); }
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-stack);
+  > div {
+    max-inline-size: var(--container-reading);
+    > * + * { margin-block-start: var(--space-3); }
+  }
+}
+.footer { padding-block: var(--space-7); }
+@include tokens.from(tablet) {
+  .annotation { grid-column: span 2; }
+  .content { grid-column: span 6; }
+}
+@include tokens.from(desktop) {
+  .annotation { grid-column: span 3; }
+  .content { grid-column: span 9; }
+}

@@ -1,0 +1,9 @@
+{
+  "base": "http://127.0.0.1:3002",
+  "viewport": "1440x1000",
+  "method": "native wheel input in real time",
+  "errors": [],
+  "wheelSamples": 46,
+  "focusOutline": true,
+  "endState": "refine"
+}

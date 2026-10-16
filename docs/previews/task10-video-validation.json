@@ -1,0 +1,14 @@
+{
+  "url": "http://127.0.0.1:3002/projetos/spasmooth",
+  "viewport": "1440x900",
+  "errors": [],
+  "demonstration": [
+    "entrada aprovada",
+    "scroll interno e reversão",
+    "drag limitado",
+    "quatro abas",
+    "visão principal",
+    "retorno aos projetos",
+    "entrada pela home"
+  ]
+}

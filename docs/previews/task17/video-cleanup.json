@@ -1,0 +1,210 @@
+{
+  "date": "2026-10-16",
+  "originalHead": "94f18c2001f5a10b57f16cf260acf87806927b1f",
+  "reason": "User authorized removing reference and review recordings; no video is used by the application.",
+  "count": 39,
+  "bytesRemoved": 228187561,
+  "files": [
+    {
+      "path": "docs/previews/project-case-entry.webm",
+      "bytes": 428855
+    },
+    {
+      "path": "docs/previews/project-case-open.webm",
+      "bytes": 780298
+    },
+    {
+      "path": "docs/previews/project-case-scroll.webm",
+      "bytes": 1973322
+    },
+    {
+      "path": "docs/previews/project-case-tabs.webm",
+      "bytes": 1506420
+    },
+    {
+      "path": "docs/previews/task04-wc-pointer.webm",
+      "bytes": 248591
+    },
+    {
+      "path": "docs/previews/task041-wc-pointer.webm",
+      "bytes": 1235342
+    },
+    {
+      "path": "docs/previews/task042-wc-flow.mp4",
+      "bytes": 3236420
+    },
+    {
+      "path": "docs/previews/task061-about-fast.webm",
+      "bytes": 1150602
+    },
+    {
+      "path": "docs/previews/task061-about-slow.webm",
+      "bytes": 6164891
+    },
+    {
+      "path": "docs/previews/task07-projects-desktop.webm",
+      "bytes": 3591494
+    },
+    {
+      "path": "docs/previews/task07-projects-mobile.webm",
+      "bytes": 4410473
+    },
+    {
+      "path": "docs/previews/task071-projects-switch.webm",
+      "bytes": 896265
+    },
+    {
+      "path": "docs/previews/task08-trail-desktop.mp4",
+      "bytes": 29212694
+    },
+    {
+      "path": "docs/previews/task08-trail-mobile.mp4",
+      "bytes": 2042309
+    },
+    {
+      "path": "docs/previews/task081-after-seam.webm",
+      "bytes": 2023327
+    },
+    {
+      "path": "docs/previews/task081-before-seam.webm",
+      "bytes": 2078267
+    },
+    {
+      "path": "docs/previews/task081-full-sequence.webm",
+      "bytes": 3747748
+    },
+    {
+      "path": "docs/previews/task081-pointer-sequence.webm",
+      "bytes": 3352035
+    },
+    {
+      "path": "docs/previews/task081-seam-close.webm",
+      "bytes": 1407803
+    },
+    {
+      "path": "docs/previews/task09-object-mobile.webm",
+      "bytes": 666289
+    },
+    {
+      "path": "docs/previews/task09-object.webm",
+      "bytes": 3061714
+    },
+    {
+      "path": "docs/previews/task10-public-experience.webm",
+      "bytes": 3319305
+    },
+    {
+      "path": "docs/previews/task11-direct-access.webm",
+      "bytes": 413378
+    },
+    {
+      "path": "docs/previews/task11-keyboard.webm",
+      "bytes": 807387
+    },
+    {
+      "path": "docs/previews/task11-mobile.webm",
+      "bytes": 283667
+    },
+    {
+      "path": "docs/previews/task11-reduced-motion.webm",
+      "bytes": 315082
+    },
+    {
+      "path": "docs/previews/task11-transition.webm",
+      "bytes": 934022
+    },
+    {
+      "path": "docs/previews/task12-mf-case.webm",
+      "bytes": 2549344
+    },
+    {
+      "path": "docs/previews/task12-mf-mobile.webm",
+      "bytes": 266441
+    },
+    {
+      "path": "docs/previews/task13-mf-consultoria-transition.webm",
+      "bytes": 997523
+    },
+    {
+      "path": "docs/previews/task13-spasmooth-transition.webm",
+      "bytes": 959016
+    },
+    {
+      "path": "docs/previews/task14b-expertise-motion.webm",
+      "bytes": 3454111
+    },
+    {
+      "path": "docs/previews/task14b-process-motion.webm",
+      "bytes": 2222726
+    },
+    {
+      "path": "docs/previews/task15a-process-contact.webm",
+      "bytes": 1172210
+    },
+    {
+      "path": "docs/previews/task16/home.webm",
+      "bytes": 3186305
+    },
+    {
+      "path": "docs/previews/task16/mf-consultoria.webm",
+      "bytes": 1328929
+    },
+    {
+      "path": "docs/previews/task16/process-reverse.webm",
+      "bytes": 1298096
+    },
+    {
+      "path": "docs/previews/task16/spasmooth.webm",
+      "bytes": 1278846
+    },
+    {
+      "path": "reference/gustavo/reference-video.mp4",
+      "bytes": 130186014
+    }
+  ],
+  "historyVideoPathsToExclude": [
+    ".tmp-task10/recording/page@88de2b531a7c61dff9fca2935ad0b387.webm",
+    "docs/previews/project-case-entry.webm",
+    "docs/previews/project-case-open.webm",
+    "docs/previews/project-case-scroll.webm",
+    "docs/previews/project-case-tabs.webm",
+    "docs/previews/task04-wc-pointer.webm",
+    "docs/previews/task041-wc-pointer.webm",
+    "docs/previews/task042-wc-flow.mp4",
+    "docs/previews/task061-about-fast.webm",
+    "docs/previews/task061-about-slow.webm",
+    "docs/previews/task07-projects-desktop.webm",
+    "docs/previews/task07-projects-mobile.webm",
+    "docs/previews/task071-projects-switch.webm",
+    "docs/previews/task08-trail-desktop.mp4",
+    "docs/previews/task08-trail-mobile.mp4",
+    "docs/previews/task081-after-seam.webm",
+    "docs/previews/task081-before-seam.webm",
+    "docs/previews/task081-full-sequence.webm",
+    "docs/previews/task081-pointer-sequence.webm",
+    "docs/previews/task081-seam-close.webm",
+    "docs/previews/task09-object-mobile.webm",
+    "docs/previews/task09-object.webm",
+    "docs/previews/task10-public-experience.webm",
+    "docs/previews/task11-direct-access.webm",
+    "docs/previews/task11-keyboard.webm",
+    "docs/previews/task11-mobile.webm",
+    "docs/previews/task11-reduced-motion.webm",
+    "docs/previews/task11-transition.webm",
+    "docs/previews/task12-mf-case.webm",
+    "docs/previews/task12-mf-mobile.webm",
+    "docs/previews/task13-mf-consultoria-transition.webm",
+    "docs/previews/task13-spasmooth-transition.webm",
+    "docs/previews/task14b-expertise-motion.webm",
+    "docs/previews/task14b-process-motion.webm",
+    "docs/previews/task15a-process-contact.webm",
+    "docs/previews/task16/home.webm",
+    "docs/previews/task16/mf-consultoria.webm",
+    "docs/previews/task16/process-reverse.webm",
+    "docs/previews/task16/spasmooth.webm",
+    "reference/gustavo/reference-video.mp4"
+  ],
+  "updatedDocs": 17,
+  "applicationCodeChanged": false,
+  "originalBackup": "backups/portfolio-before-video-cleanup-2026-10-16.bundle"
+}

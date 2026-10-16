@@ -1,0 +1,371 @@
+{
+  "assets": [
+    {
+      "url": "http://127.0.0.1:3000/assets/projects/spasmooth/spasmooth-hero-desktop.png",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3000/assets/projects/spasmooth/spasmooth-hero-mobile.png",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3000/assets/projects/spasmooth/spasmooth-localizacao.png",
+      "status": 200
+    }
+  ],
+  "front": {
+    "projectObject": "",
+    "objectReady": "true",
+    "objectPanels": "5",
+    "objectYaw": "0.000",
+    "objectPitch": "0.000",
+    "objectRunning": "false",
+    "objectDpr": "1.5",
+    "objectView": "front"
+  },
+  "quarter": {
+    "projectObject": "",
+    "objectReady": "true",
+    "objectPanels": "5",
+    "objectYaw": "0.000",
+    "objectPitch": "0.000",
+    "objectRunning": "false",
+    "objectDpr": "1.5",
+    "objectView": "quarter"
+  },
+  "expanded": {
+    "projectObject": "",
+    "objectReady": "true",
+    "objectPanels": "5",
+    "objectYaw": "0.000",
+    "objectPitch": "0.000",
+    "objectRunning": "false",
+    "objectDpr": "1.5",
+    "objectView": "expanded"
+  },
+  "drag": {
+    "projectObject": "",
+    "objectReady": "true",
+    "objectPanels": "5",
+    "objectYaw": "0.950",
+    "objectPitch": "0.300",
+    "objectRunning": "false",
+    "objectDpr": "1.5",
+    "objectView": "expanded"
+  },
+  "keyboard": {
+    "projectObject": "",
+    "objectReady": "true",
+    "objectPanels": "5",
+    "objectYaw": "0.830",
+    "objectPitch": "0.300",
+    "objectRunning": "false",
+    "objectDpr": "1.5",
+    "objectView": "expanded"
+  },
+  "reset": {
+    "projectObject": "",
+    "objectReady": "true",
+    "objectPanels": "5",
+    "objectYaw": "0.000",
+    "objectPitch": "0.000",
+    "objectRunning": "false",
+    "objectDpr": "1.5",
+    "objectView": "front"
+  },
+  "demoMiddle": {
+    "projectObject": "",
+    "objectReady": "true",
+    "objectPanels": "5",
+    "objectYaw": "0.000",
+    "objectPitch": "0.000",
+    "objectRunning": "true",
+    "objectDpr": "1.5",
+    "objectView": "expanded"
+  },
+  "demoEnd": {
+    "projectObject": "",
+    "objectReady": "true",
+    "objectPanels": "5",
+    "objectYaw": "0.000",
+    "objectPitch": "0.000",
+    "objectRunning": "false",
+    "objectDpr": "1.5",
+    "objectView": "front"
+  },
+  "contextLost": {
+    "ready": "false",
+    "fallback": true
+  },
+  "contextRestored": {
+    "projectObject": "",
+    "objectReady": "true",
+    "objectPanels": "5",
+    "objectYaw": "0.000",
+    "objectPitch": "0.000",
+    "objectRunning": "false",
+    "objectDpr": "1.5",
+    "objectView": "front"
+  },
+  "visibilityPaused": {
+    "projectObject": "",
+    "objectReady": "true",
+    "objectPanels": "5",
+    "objectYaw": "0.000",
+    "objectPitch": "0.000",
+    "objectRunning": "false",
+    "objectDpr": "1.5",
+    "objectView": "expanded"
+  },
+  "visibilityResumed": {
+    "projectObject": "",
+    "objectReady": "true",
+    "objectPanels": "5",
+    "objectYaw": "0.000",
+    "objectPitch": "0.000",
+    "objectRunning": "false",
+    "objectDpr": "1.5",
+    "objectView": "expanded"
+  },
+  "unmounted": true,
+  "viewports": [
+    {
+      "width": 1024,
+      "scrollWidth": 1024,
+      "viewport": 1024,
+      "stage": {
+        "projectObject": "",
+        "objectReady": "true",
+        "objectPanels": "5",
+        "objectYaw": "0.000",
+        "objectPitch": "0.000",
+        "objectRunning": "false",
+        "objectDpr": "1.5",
+        "objectView": "front"
+      },
+      "expanded": "expanded"
+    },
+    {
+      "width": 820,
+      "scrollWidth": 820,
+      "viewport": 820,
+      "stage": {
+        "projectObject": "",
+        "objectReady": "true",
+        "objectPanels": "5",
+        "objectYaw": "0.000",
+        "objectPitch": "0.000",
+        "objectRunning": "false",
+        "objectDpr": "1.5",
+        "objectView": "front"
+      },
+      "expanded": "expanded"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "viewport": 390,
+      "stage": {
+        "projectObject": "",
+        "objectReady": "true",
+        "objectPanels": "5",
+        "objectYaw": "0.000",
+        "objectPitch": "0.000",
+        "objectRunning": "false",
+        "objectDpr": "1.25",
+        "objectView": "front"
+      },
+      "expanded": "expanded"
+    },
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "viewport": 320,
+      "stage": {
+        "projectObject": "",
+        "objectReady": "true",
+        "objectPanels": "5",
+        "objectYaw": "0.000",
+        "objectPitch": "0.000",
+        "objectRunning": "false",
+        "objectDpr": "1.25",
+        "objectView": "front"
+      },
+      "expanded": "expanded"
+    }
+  ],
+  "reduced": {
+    "canvas": 0,
+    "fallback": true
+  },
+  "optIn": {
+    "ready": "true"
+  },
+  "optOut": {
+    "canvas": 0
+  },
+  "noWebGL": {
+    "fallback": true
+  },
+  "pageErrors": [],
+  "production": {
+    "status": 404,
+    "prototypeCanvas": 0,
+    "prototypeControls": 0,
+    "homeStatus": 200,
+    "homePrototype": 0,
+    "previewPanel": 0
+  },
+  "finalFraming": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "stage": {
+        "projectObject": "",
+        "objectReady": "true",
+        "objectPanels": "5",
+        "objectYaw": "0.000",
+        "objectPitch": "0.000",
+        "objectRunning": "false",
+        "objectDpr": "1.5",
+        "objectView": "front"
+      },
+      "stageHeight": 591
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "stage": {
+        "projectObject": "",
+        "objectReady": "true",
+        "objectPanels": "5",
+        "objectYaw": "0.000",
+        "objectPitch": "0.000",
+        "objectRunning": "false",
+        "objectDpr": "1.5",
+        "objectView": "expanded"
+      },
+      "stageHeight": 591
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "stage": {
+        "projectObject": "",
+        "objectReady": "true",
+        "objectPanels": "5",
+        "objectYaw": "0.000",
+        "objectPitch": "0.000",
+        "objectRunning": "false",
+        "objectDpr": "1.5",
+        "objectView": "front"
+      },
+      "stageHeight": 591
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "stage": {
+        "projectObject": "",
+        "objectReady": "true",
+        "objectPanels": "5",
+        "objectYaw": "0.000",
+        "objectPitch": "0.000",
+        "objectRunning": "false",
+        "objectDpr": "1.5",
+        "objectView": "expanded"
+      },
+      "stageHeight": 591
+    },
+    {
+      "width": 820,
+      "overflow": false,
+      "stage": {
+        "projectObject": "",
+        "objectReady": "true",
+        "objectPanels": "5",
+        "objectYaw": "0.000",
+        "objectPitch": "0.000",
+        "objectRunning": "false",
+        "objectDpr": "1.5",
+        "objectView": "front"
+      },
+      "stageHeight": 523
+    },
+    {
+      "width": 820,
+      "overflow": false,
+      "stage": {
+        "projectObject": "",
+        "objectReady": "true",
+        "objectPanels": "5",
+        "objectYaw": "0.000",
+        "objectPitch": "0.000",
+        "objectRunning": "false",
+        "objectDpr": "1.5",
+        "objectView": "expanded"
+      },
+      "stageHeight": 523
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "stage": {
+        "projectObject": "",
+        "objectReady": "true",
+        "objectPanels": "5",
+        "objectYaw": "0.000",
+        "objectPitch": "0.000",
+        "objectRunning": "false",
+        "objectDpr": "1.25",
+        "objectView": "front"
+      },
+      "stageHeight": 354
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "stage": {
+        "projectObject": "",
+        "objectReady": "true",
+        "objectPanels": "5",
+        "objectYaw": "0.000",
+        "objectPitch": "0.000",
+        "objectRunning": "false",
+        "objectDpr": "1.25",
+        "objectView": "expanded"
+      },
+      "stageHeight": 354
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "stage": {
+        "projectObject": "",
+        "objectReady": "true",
+        "objectPanels": "5",
+        "objectYaw": "0.000",
+        "objectPitch": "0.000",
+        "objectRunning": "false",
+        "objectDpr": "1.25",
+        "objectView": "front"
+      },
+      "stageHeight": 354
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "stage": {
+        "projectObject": "",
+        "objectReady": "true",
+        "objectPanels": "5",
+        "objectYaw": "0.000",
+        "objectPitch": "0.000",
+        "objectRunning": "false",
+        "objectDpr": "1.25",
+        "objectView": "expanded"
+      },
+      "stageHeight": 354
+    }
+  ]
+}

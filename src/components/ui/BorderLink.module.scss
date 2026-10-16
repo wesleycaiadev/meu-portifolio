@@ -1,0 +1,64 @@
+.link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-block-size: var(--target-min);
+  max-inline-size: 100%;
+  padding: var(--space-control-y) var(--hero-nav-padding-x);
+  border: var(--border-width) solid var(--border-control);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--text-primary);
+  font-size: var(--font-size-ui);
+  line-height: var(--line-height-ui);
+  text-decoration: none;
+
+  &:active {
+    border-color: var(--text-primary);
+  }
+
+  &:focus-visible {
+    // Immediate fallback also works before hydration; keep the global outline.
+    border-color: var(--text-primary);
+  }
+}
+
+.border {
+  position: absolute;
+  // The absolute containing block excludes the anchor's existing border.
+  inset: calc(-1 * var(--border-width));
+  inline-size: calc(100% + 2 * var(--border-width));
+  block-size: calc(100% + 2 * var(--border-width));
+  max-inline-size: none;
+  pointer-events: none;
+}
+
+.stroke {
+  fill: none;
+  stroke: var(--text-primary);
+  stroke-width: var(--border-width);
+  stroke-linecap: butt;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset var(--duration-nav-border) var(--ease-feedback);
+}
+
+// Touch cannot retain the mouse-hover drawing after a tap.
+@media (hover: hover) and (pointer: fine) {
+  .link:hover .stroke {
+    stroke-dashoffset: 0;
+  }
+}
+
+.link:focus-visible .stroke,
+.link:active .stroke {
+  stroke-dashoffset: 0;
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stroke {
+    transition: none;
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "checks": [
+    {
+      "slug": "spasmooth",
+      "mobile": false,
+      "source": "http://127.0.0.1:3002/assets/projects/spasmooth/spasmooth-hero-desktop.png",
+      "ok": true
+    },
+    {
+      "slug": "spasmooth",
+      "mobile": true,
+      "source": "http://127.0.0.1:3002/assets/projects/spasmooth/spasmooth-hero-mobile.png",
+      "ok": true
+    },
+    {
+      "slug": "mf-consultoria",
+      "mobile": false,
+      "source": "http://127.0.0.1:3002/assets/projects/mf-consultoria/mf-consultoria-hero-desktop.png",
+      "ok": true
+    },
+    {
+      "slug": "mf-consultoria",
+      "mobile": true,
+      "source": "http://127.0.0.1:3002/assets/projects/mf-consultoria/mf-consultoria-hero-mobile.png",
+      "ok": true
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,38 @@
+{
+  "base": "http://127.0.0.1:3002",
+  "viewport": "1440x1000",
+  "method": "native wheel input in real time; no timeline seeking or speed changes",
+  "videos": [
+    {
+      "kind": "process",
+      "range": {
+        "start": 10198,
+        "end": 11998
+      },
+      "nativeWheelSamples": 202,
+      "manualSelections": [
+        "structure",
+        "refine",
+        "understand"
+      ],
+      "completeReversal": true,
+      "recordedMilliseconds": 19458
+    },
+    {
+      "kind": "expertise",
+      "range": {
+        "start": 7450,
+        "end": 9652
+      },
+      "nativeWheelSamples": 264,
+      "manualSelections": [
+        "react",
+        "typescript",
+        "javascript"
+      ],
+      "scrollDoesNotChangeSelection": true,
+      "recordedMilliseconds": 26099
+    }
+  ],
+  "errors": []
+}

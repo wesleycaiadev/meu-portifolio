@@ -1,0 +1,5 @@
+.brand { display: inline-flex; max-inline-size: 100%; vertical-align: middle; }
+.compact { inline-size: clamp(9.5rem, 12vw, 11rem); }
+.lockup { inline-size: 15rem; }
+.image { display: block; inline-size: 100%; block-size: auto; }
+.image[data-inverse="true"] { filter: invert(1); }

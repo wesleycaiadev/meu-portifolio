@@ -1,0 +1,259 @@
+{
+  "mode": "development",
+  "checks": [
+    {
+      "name": "keyboard starts shared transition",
+      "value": true
+    },
+    {
+      "name": "keyboard finishes shared notebook",
+      "value": true
+    },
+    {
+      "name": "keyboard tabs remain available",
+      "value": true
+    },
+    {
+      "name": "keyboard returns to visible Projects",
+      "value": true
+    },
+    {
+      "name": "selection locked during repeated clicks",
+      "value": true
+    },
+    {
+      "name": "source image hidden during transfer",
+      "value": true
+    },
+    {
+      "name": "one temporary image",
+      "value": true
+    },
+    {
+      "name": "repeated clicks push history once",
+      "value": true
+    },
+    {
+      "name": "single WebGL notebook",
+      "value": true
+    },
+    {
+      "name": "overlay removed after opening",
+      "value": true
+    },
+    {
+      "name": "continuous navigation and transfer phases",
+      "value": true
+    },
+    {
+      "name": "no doubled 5-6 second entry",
+      "value": true
+    },
+    {
+      "name": "browser Back returns home",
+      "value": true
+    },
+    {
+      "name": "browser Forward restores usable case",
+      "value": true
+    },
+    {
+      "name": "refresh uses direct entry",
+      "value": true
+    },
+    {
+      "name": "control preserves native new tab",
+      "value": true
+    },
+    {
+      "name": "control does not create overlay",
+      "value": true
+    },
+    {
+      "name": "control new tab uses direct entry",
+      "value": true
+    },
+    {
+      "name": "middle preserves native new tab",
+      "value": true
+    },
+    {
+      "name": "middle does not create overlay",
+      "value": true
+    },
+    {
+      "name": "middle new tab uses direct entry",
+      "value": true
+    },
+    {
+      "name": "reduced-motion skips cinematic transform",
+      "value": true
+    },
+    {
+      "name": "reduced-motion has essential content",
+      "value": true
+    },
+    {
+      "name": "reduced-motion uses static captures",
+      "value": true
+    },
+    {
+      "name": "reduced-motion no horizontal overflow",
+      "value": true
+    },
+    {
+      "name": "reduced-motion returns to Projects",
+      "value": true
+    },
+    {
+      "name": "mobile skips cinematic transform",
+      "value": true
+    },
+    {
+      "name": "mobile has essential content",
+      "value": true
+    },
+    {
+      "name": "mobile uses static captures",
+      "value": true
+    },
+    {
+      "name": "mobile no horizontal overflow",
+      "value": true
+    },
+    {
+      "name": "mobile returns to Projects",
+      "value": true
+    },
+    {
+      "name": "direct URL keeps approved opening",
+      "value": true
+    },
+    {
+      "name": "responsive transfer 1920",
+      "value": true
+    },
+    {
+      "name": "responsive no overflow 1920",
+      "value": true
+    },
+    {
+      "name": "responsive transfer 820",
+      "value": true
+    },
+    {
+      "name": "responsive no overflow 820",
+      "value": true
+    },
+    {
+      "name": "resize leaves no stuck layer",
+      "value": true
+    },
+    {
+      "name": "resize leaves case interactive",
+      "value": true
+    },
+    {
+      "name": "back leaves no stuck layer",
+      "value": true
+    },
+    {
+      "name": "back returns home",
+      "value": true
+    },
+    {
+      "name": "quick-return leaves no stuck layer",
+      "value": true
+    },
+    {
+      "name": "quick-return returns home",
+      "value": true
+    },
+    {
+      "name": "hidden leaves no stuck layer",
+      "value": true
+    },
+    {
+      "name": "hidden leaves case interactive",
+      "value": true
+    },
+    {
+      "name": "escape leaves no stuck layer",
+      "value": true
+    },
+    {
+      "name": "escape leaves case interactive",
+      "value": true
+    },
+    {
+      "name": "no-webgl exposes fallback",
+      "value": true
+    },
+    {
+      "name": "no-webgl enables editorial tabs",
+      "value": true
+    },
+    {
+      "name": "no-webgl cleans overlay",
+      "value": true
+    },
+    {
+      "name": "texture-failure exposes fallback",
+      "value": true
+    },
+    {
+      "name": "texture-failure enables editorial tabs",
+      "value": true
+    },
+    {
+      "name": "texture-failure cleans overlay",
+      "value": true
+    },
+    {
+      "name": "slow-texture exposes fallback",
+      "value": true
+    },
+    {
+      "name": "slow-texture enables editorial tabs",
+      "value": true
+    },
+    {
+      "name": "slow-texture cleans overlay",
+      "value": true
+    },
+    {
+      "name": "late texture cannot resurrect canvas",
+      "value": true
+    },
+    {
+      "name": "no unhandled page exceptions",
+      "value": true
+    }
+  ],
+  "errors": [],
+  "observations": {
+    "phases": [
+      {
+        "time": 1900.2000000001863,
+        "phase": "selection",
+        "path": "/"
+      },
+      {
+        "time": 2174.600000000093,
+        "phase": "navigation",
+        "path": "/"
+      },
+      {
+        "time": 2522.2999999998137,
+        "phase": "transfer",
+        "path": "/projetos/spasmooth"
+      },
+      {
+        "time": 4676.399999999907,
+        "phase": "idle",
+        "path": "/projetos/spasmooth"
+      }
+    ],
+    "totalMilliseconds": 2776
+  }
+}

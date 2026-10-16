@@ -1,0 +1,226 @@
+{
+  "date": "2026-10-15",
+  "checkpoint": "793889f",
+  "release": "Ready for publication preparation after confirmed domain and environment validation; no deploy performed.",
+  "environment": {
+    "browser": "Microsoft Edge headless via Playwright on Windows",
+    "base": "Local production server",
+    "physicalDevice": false,
+    "lighthouse": false,
+    "throttling": "none",
+    "limitations": "Single local samples, cache warm-up and some concurrent checks; no field or hardware-GPU guarantee."
+  },
+  "tests": {
+    "final-checks": {
+      "total": 42,
+      "passed": 42,
+      "errors": []
+    },
+    "contact-validation": {
+      "total": 68,
+      "passed": 68,
+      "errors": []
+    },
+    "memory-after-fix": {
+      "total": 73,
+      "passed": 73,
+      "errors": []
+    }
+  },
+  "responsive": {
+    "checks": 77,
+    "overflows": [],
+    "smallTargets": [],
+    "errors": []
+  },
+  "accessibility": {
+    "engine": "4.13.0",
+    "scans": 6,
+    "violations": 0,
+    "incomplete": [
+      {
+        "route": "/",
+        "width": 390,
+        "items": [
+          {
+            "id": "color-contrast",
+            "nodes": 9
+          }
+        ]
+      },
+      {
+        "route": "/",
+        "width": 1440,
+        "items": [
+          {
+            "id": "color-contrast",
+            "nodes": 9
+          }
+        ]
+      }
+    ],
+    "realScreenReader": false
+  },
+  "performance": {
+    "reducedMotionBefore": [
+      {
+        "route": "/",
+        "jsEncodedBytes": 181939,
+        "imageEncodedBytes": 2064259,
+        "lcpMs": 816,
+        "cls": 0,
+        "longTasksMs": [
+          345,
+          99
+        ]
+      },
+      {
+        "route": "/projetos/spasmooth",
+        "jsEncodedBytes": 192375,
+        "imageEncodedBytes": 1842980,
+        "lcpMs": 320,
+        "cls": 0,
+        "longTasksMs": [
+          59
+        ]
+      },
+      {
+        "route": "/projetos/mf-consultoria",
+        "jsEncodedBytes": 192375,
+        "imageEncodedBytes": 492919,
+        "lcpMs": 272,
+        "cls": 0,
+        "longTasksMs": [
+          57
+        ]
+      }
+    ],
+    "reducedMotionFinal": [
+      {
+        "route": "/",
+        "jsEncodedBytes": 182454,
+        "imageEncodedBytes": 1069856,
+        "lcpMs": 640,
+        "cls": 0,
+        "longTasksMs": [
+          249,
+          66
+        ]
+      },
+      {
+        "route": "/projetos/spasmooth",
+        "jsEncodedBytes": 193306,
+        "imageEncodedBytes": 1842980,
+        "lcpMs": 248,
+        "cls": 0,
+        "longTasksMs": [
+          57
+        ]
+      },
+      {
+        "route": "/projetos/mf-consultoria",
+        "jsEncodedBytes": 193306,
+        "imageEncodedBytes": 492919,
+        "lcpMs": 244,
+        "cls": 0,
+        "longTasksMs": [
+          58
+        ]
+      }
+    ],
+    "fullMotionHome": [
+      {
+        "route": "/",
+        "jsEncodedBytes": 362654,
+        "imageEncodedBytes": 1412990,
+        "lcpMs": 1752,
+        "cls": 0,
+        "longTasksMs": [
+          249,
+          57,
+          536,
+          196,
+          218,
+          182,
+          60,
+          182
+        ]
+      }
+    ]
+  },
+  "repeatedNavigation": {
+    "cycles": 8,
+    "before": {
+      "nodes": {
+        "min": 2435,
+        "max": 9820
+      },
+      "listeners": {
+        "min": 556,
+        "max": 1095
+      },
+      "firstHeapBytes": 11022828,
+      "lastHeapBytes": 13861996
+    },
+    "after": {
+      "nodes": {
+        "min": 1361,
+        "max": 1361
+      },
+      "listeners": {
+        "min": 478,
+        "max": 478
+      },
+      "raf": {
+        "min": 2,
+        "max": 3
+      },
+      "firstHeapBytes": 10584812,
+      "lastHeapBytes": 12035124,
+      "gl": {
+        "created": 8,
+        "lost": 8
+      },
+      "pins": [
+        5
+      ],
+      "caseCanvasesAfterReturn": [
+        0
+      ]
+    },
+    "interpretation": "No growth of detached page trees, DOM/listeners or case canvases in this run. JS heap still varies with caches/GC; this is not proof of universal leak absence or a VRAM measurement."
+  },
+  "dependencies": {
+    "production": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "all": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 5,
+      "critical": 0,
+      "total": 5
+    },
+    "pendingAdvisory": "https://github.com/advisories/GHSA-vfj7-8cjw-p6xm",
+    "scope": "ESLint development chain; no compatible fix applied; no dependency or lockfile change."
+  },
+  "videos": [
+    "home",
+    "spasmooth",
+    "mf-consultoria",
+    "process-reverse"
+  ],
+  "pending": [
+    "Confirmed public HTTPS domain and SITE_URL rebuild",
+    "Compatible development dependency advisory resolution",
+    "Approved resume PDF",
+    "Optional approved home sharing image",
+    "Physical devices, Safari/Firefox, real screen-reader check"
+  ]
+}

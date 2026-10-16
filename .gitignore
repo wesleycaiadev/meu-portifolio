@@ -1,0 +1,22 @@
+node_modules/
+.next/
+.npm-cache/
+out/
+coverage/
+.tmp-task*/
+*.tsbuildinfo
+next-env.d.ts
+*.log
+.env*
+!.env.example
+backups/*.bundle
+backups/*.commit-map
+# Review recordings are archived locally, not distributed with the portfolio.
+docs/previews/**/*.mp4
+docs/previews/**/*.webm
+docs/previews/**/*.mov
+docs/previews/**/*.m4v
+reference/gustavo/*.mp4
+reference/gustavo/*.webm
+reference/gustavo/*.mov
+reference/gustavo/*.m4v

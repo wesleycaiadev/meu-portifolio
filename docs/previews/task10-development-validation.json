@@ -1,0 +1,227 @@
+{
+  "mode": "development",
+  "checks": [
+    {
+      "name": "direct access",
+      "value": true
+    },
+    {
+      "name": "public page has no preview controls",
+      "value": true
+    },
+    {
+      "name": "metadata",
+      "value": true
+    },
+    {
+      "name": "entry completes and rests",
+      "value": true
+    },
+    {
+      "name": "editorial visible",
+      "value": true
+    },
+    {
+      "name": "screen raycast",
+      "value": true
+    },
+    {
+      "name": "inner scroll",
+      "value": true
+    },
+    {
+      "name": "inner scroll does not move page",
+      "value": true
+    },
+    {
+      "name": "reverse scroll",
+      "value": true
+    },
+    {
+      "name": "keyboard reaches capture end",
+      "value": true
+    },
+    {
+      "name": "wheel released at limit",
+      "value": true
+    },
+    {
+      "name": "tab Sobre",
+      "value": true
+    },
+    {
+      "name": "reading layout Sobre",
+      "value": true
+    },
+    {
+      "name": "tab Estética",
+      "value": true
+    },
+    {
+      "name": "reading layout Estética",
+      "value": true
+    },
+    {
+      "name": "tab Funcionalidades",
+      "value": true
+    },
+    {
+      "name": "reading layout Funcionalidades",
+      "value": true
+    },
+    {
+      "name": "tab Tecnologias",
+      "value": true
+    },
+    {
+      "name": "reading layout Tecnologias",
+      "value": true
+    },
+    {
+      "name": "technology logos loaded",
+      "value": true
+    },
+    {
+      "name": "keyboard switches tabs",
+      "value": true
+    },
+    {
+      "name": "resize activates static fallback",
+      "value": true
+    },
+    {
+      "name": "resize restores reading state",
+      "value": true
+    },
+    {
+      "name": "overview restores composition",
+      "value": true
+    },
+    {
+      "name": "overview selects Sobre",
+      "value": true
+    },
+    {
+      "name": "overview preserves keyboard focus",
+      "value": true
+    },
+    {
+      "name": "context loss preserves captures",
+      "value": true
+    },
+    {
+      "name": "context restoration",
+      "value": true
+    },
+    {
+      "name": "return targets Projects",
+      "value": true
+    },
+    {
+      "name": "MF has no fictitious link",
+      "value": true
+    },
+    {
+      "name": "Spa link focus selects preview",
+      "value": true
+    },
+    {
+      "name": "internal navigation",
+      "value": true
+    },
+    {
+      "name": "history back reaches home",
+      "value": true
+    },
+    {
+      "name": "history forward restores case",
+      "value": true
+    },
+    {
+      "name": "refresh works",
+      "value": true
+    },
+    {
+      "name": "opens in another tab",
+      "value": true
+    },
+    {
+      "name": "no overflow 820",
+      "value": true
+    },
+    {
+      "name": "native scroll 820",
+      "value": true
+    },
+    {
+      "name": "reduced motion no canvas 820",
+      "value": true
+    },
+    {
+      "name": "no overflow 390",
+      "value": true
+    },
+    {
+      "name": "native scroll 390",
+      "value": true
+    },
+    {
+      "name": "reduced motion no canvas 390",
+      "value": true
+    },
+    {
+      "name": "no overflow 320",
+      "value": true
+    },
+    {
+      "name": "native scroll 320",
+      "value": true
+    },
+    {
+      "name": "reduced motion no canvas 320",
+      "value": true
+    },
+    {
+      "name": "no JS essential title visible",
+      "value": true
+    },
+    {
+      "name": "no JS authorship visible",
+      "value": true
+    },
+    {
+      "name": "no JS technologies accessible",
+      "value": true
+    },
+    {
+      "name": "no JS captures available",
+      "value": true
+    },
+    {
+      "name": "no JS native return",
+      "value": true
+    },
+    {
+      "name": "no WebGL shows captures",
+      "value": true
+    },
+    {
+      "name": "no WebGL editorial readable",
+      "value": true
+    },
+    {
+      "name": "no page exceptions",
+      "value": true
+    }
+  ],
+  "errors": [],
+  "observations": {
+    "return": {
+      "y": -1260,
+      "bottom": 2385,
+      "scroll": 5130,
+      "stageY": 0,
+      "linkY": 321.828125
+    }
+  }
+}

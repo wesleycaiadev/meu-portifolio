@@ -1,0 +1,350 @@
+{
+  "base": "http://127.0.0.1:3002",
+  "checks": [
+    {
+      "name": "12 real technology controls",
+      "value": true
+    },
+    {
+      "name": "no unconfirmed SQLite or Figma",
+      "value": true
+    },
+    {
+      "name": "only scoped section order changed",
+      "value": true
+    },
+    {
+      "name": "no additional WebGL in new sections",
+      "value": true
+    },
+    {
+      "name": "minimal Hero navigation preserved",
+      "value": true
+    },
+    {
+      "name": "nextdotjs: confirmed project associations",
+      "value": true
+    },
+    {
+      "name": "angular: confirmed project associations",
+      "value": true
+    },
+    {
+      "name": "typescript: confirmed project associations",
+      "value": true
+    },
+    {
+      "name": "tailwindcss: confirmed project associations",
+      "value": true
+    },
+    {
+      "name": "supabase: confirmed project associations",
+      "value": true
+    },
+    {
+      "name": "postgresql: confirmed project associations",
+      "value": true
+    },
+    {
+      "name": "gsap: confirmed project associations",
+      "value": true
+    },
+    {
+      "name": "threedotjs: confirmed project associations",
+      "value": true
+    },
+    {
+      "name": "technology Home focuses React",
+      "value": true
+    },
+    {
+      "name": "technology arrows select Next.js",
+      "value": true
+    },
+    {
+      "name": "technology native Tab selects Angular",
+      "value": true
+    },
+    {
+      "name": "technology keyboard focus visible",
+      "value": true
+    },
+    {
+      "name": "technology arrows wrap",
+      "value": true
+    },
+    {
+      "name": "process understand: selected state",
+      "value": true
+    },
+    {
+      "name": "process understand: one stable illustration",
+      "value": true
+    },
+    {
+      "name": "process structure: selected state",
+      "value": true
+    },
+    {
+      "name": "process structure: one stable illustration",
+      "value": true
+    },
+    {
+      "name": "process build: selected state",
+      "value": true
+    },
+    {
+      "name": "process build: one stable illustration",
+      "value": true
+    },
+    {
+      "name": "process refine: selected state",
+      "value": true
+    },
+    {
+      "name": "process refine: one stable illustration",
+      "value": true
+    },
+    {
+      "name": "four distinct conceptual visuals",
+      "value": true
+    },
+    {
+      "name": "process keyboard selects structure",
+      "value": true
+    },
+    {
+      "name": "process keyboard End selects refine",
+      "value": true
+    },
+    {
+      "name": "process reversible to understand",
+      "value": true
+    },
+    {
+      "name": "no independent process autoplay",
+      "value": true
+    },
+    {
+      "name": "MF association has functional route",
+      "value": true
+    },
+    {
+      "name": "MF association navigates",
+      "value": true
+    },
+    {
+      "name": "Spa association has functional route",
+      "value": true
+    },
+    {
+      "name": "Spa association navigates",
+      "value": true
+    },
+    {
+      "name": "1440: no horizontal overflow",
+      "value": true
+    },
+    {
+      "name": "1440: process frame contains final content",
+      "value": true
+    },
+    {
+      "name": "1440: all controls have 44px height",
+      "value": true
+    },
+    {
+      "name": "1440: reduced motion has no color transitions",
+      "value": true
+    },
+    {
+      "name": "1440: process information remains readable",
+      "value": true
+    },
+    {
+      "name": "1440: text at 200% no overflow",
+      "value": true
+    },
+    {
+      "name": "1024: no horizontal overflow",
+      "value": true
+    },
+    {
+      "name": "1024: process frame contains final content",
+      "value": true
+    },
+    {
+      "name": "1024: all controls have 44px height",
+      "value": true
+    },
+    {
+      "name": "1024: reduced motion has no color transitions",
+      "value": true
+    },
+    {
+      "name": "1024: process information remains readable",
+      "value": true
+    },
+    {
+      "name": "1024: text at 200% no overflow",
+      "value": true
+    },
+    {
+      "name": "768: no horizontal overflow",
+      "value": true
+    },
+    {
+      "name": "768: process frame contains final content",
+      "value": true
+    },
+    {
+      "name": "768: all controls have 44px height",
+      "value": true
+    },
+    {
+      "name": "768: reduced motion has no color transitions",
+      "value": true
+    },
+    {
+      "name": "768: process information remains readable",
+      "value": true
+    },
+    {
+      "name": "768: text at 200% no overflow",
+      "value": true
+    },
+    {
+      "name": "390: no horizontal overflow",
+      "value": true
+    },
+    {
+      "name": "390: touch selects technology",
+      "value": true
+    },
+    {
+      "name": "390: selected technology detail next to group",
+      "value": true
+    },
+    {
+      "name": "390: touch selects process",
+      "value": true
+    },
+    {
+      "name": "390: process frame contains final content",
+      "value": true
+    },
+    {
+      "name": "390: all controls have 44px height",
+      "value": true
+    },
+    {
+      "name": "390: reduced motion has no color transitions",
+      "value": true
+    },
+    {
+      "name": "390: process information remains readable",
+      "value": true
+    },
+    {
+      "name": "390: text at 200% no overflow",
+      "value": true
+    },
+    {
+      "name": "320: no horizontal overflow",
+      "value": true
+    },
+    {
+      "name": "320: touch selects technology",
+      "value": true
+    },
+    {
+      "name": "320: selected technology detail next to group",
+      "value": true
+    },
+    {
+      "name": "320: touch selects process",
+      "value": true
+    },
+    {
+      "name": "320: process frame contains final content",
+      "value": true
+    },
+    {
+      "name": "320: all controls have 44px height",
+      "value": true
+    },
+    {
+      "name": "320: reduced motion has no color transitions",
+      "value": true
+    },
+    {
+      "name": "320: process information remains readable",
+      "value": true
+    },
+    {
+      "name": "320: text at 200% no overflow",
+      "value": true
+    },
+    {
+      "name": "1440: no JS all technology descriptions",
+      "value": true
+    },
+    {
+      "name": "1440: no JS all process descriptions",
+      "value": true
+    },
+    {
+      "name": "1440: no JS content without overflow",
+      "value": true
+    },
+    {
+      "name": "320: no JS all technology descriptions",
+      "value": true
+    },
+    {
+      "name": "320: no JS all process descriptions",
+      "value": true
+    },
+    {
+      "name": "320: no JS content without overflow",
+      "value": true
+    },
+    {
+      "name": "no page exceptions",
+      "value": true
+    }
+  ],
+  "errors": [],
+  "observations": {
+    "processStates": {
+      "understand": {
+        "border": "dashed",
+        "borderColor": "rgba(0, 0, 0, 0)",
+        "background": "rgba(0, 0, 0, 0)",
+        "identityBackground": "rgba(0, 0, 0, 0)",
+        "titleVisible": false
+      },
+      "structure": {
+        "border": "dashed",
+        "borderColor": "rgb(116, 116, 110)",
+        "background": "rgba(0, 0, 0, 0)",
+        "identityBackground": "rgba(0, 0, 0, 0)",
+        "titleVisible": false
+      },
+      "build": {
+        "border": "solid",
+        "borderColor": "rgb(116, 116, 110)",
+        "background": "rgb(255, 255, 255)",
+        "identityBackground": "rgb(233, 230, 223)",
+        "titleVisible": true
+      },
+      "refine": {
+        "border": "solid",
+        "borderColor": "rgb(214, 211, 204)",
+        "background": "rgb(255, 255, 255)",
+        "identityBackground": "rgb(16, 16, 16)",
+        "titleVisible": true
+      }
+    }
+  }
+}

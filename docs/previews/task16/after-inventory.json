@@ -1,0 +1,884 @@
+{
+  "label": "after",
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "title": "Wesley Caiã — Design & Desenvolvimento",
+      "description": "Portfólio de Wesley Caiã. Design e desenvolvimento de interfaces, aplicações e experiências digitais com identidade, código e movimento.",
+      "og": [
+        [
+          "og:title",
+          "Wesley Caiã — Design & Desenvolvimento"
+        ],
+        [
+          "og:description",
+          "Portfólio de Wesley Caiã. Design e desenvolvimento de interfaces, aplicações e experiências digitais com identidade, código e movimento."
+        ],
+        [
+          "og:site_name",
+          "Wesley Caiã"
+        ],
+        [
+          "og:locale",
+          "pt_BR"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "icons": [
+        "http://127.0.0.1:3002/icon.png?icon.0g4q3erblf886.png",
+        "http://127.0.0.1:3002/apple-icon.png?apple-icon.11liap_sh_08k.png"
+      ]
+    },
+    {
+      "route": "/projetos/spasmooth",
+      "status": 200,
+      "title": "SpaSmooth | Wesley Caiã",
+      "description": "SpaSmooth: design e desenvolvimento de uma experiência digital de massoterapia, Day Spa e bronzeamento. Explore a interface e conheça o projeto de Wesley Caiã.",
+      "og": [
+        [
+          "og:title",
+          "SpaSmooth | Wesley Caiã"
+        ],
+        [
+          "og:description",
+          "SpaSmooth: design e desenvolvimento de uma experiência digital de massoterapia, Day Spa e bronzeamento. Explore a interface e conheça o projeto de Wesley Caiã."
+        ],
+        [
+          "og:site_name",
+          "Wesley Caiã"
+        ],
+        [
+          "og:locale",
+          "pt_BR"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "icons": [
+        "http://127.0.0.1:3002/icon.png?icon.0g4q3erblf886.png",
+        "http://127.0.0.1:3002/apple-icon.png?apple-icon.11liap_sh_08k.png"
+      ]
+    },
+    {
+      "route": "/projetos/mf-consultoria",
+      "status": 200,
+      "title": "MF Consultoria | Wesley Caiã",
+      "description": "MF Consultoria: design e desenvolvimento de uma experiência digital de curadoria automotiva. Explore as capturas e conheça o projeto de Wesley Caiã.",
+      "og": [
+        [
+          "og:title",
+          "MF Consultoria | Wesley Caiã"
+        ],
+        [
+          "og:description",
+          "MF Consultoria: design e desenvolvimento de uma experiência digital de curadoria automotiva. Explore as capturas e conheça o projeto de Wesley Caiã."
+        ],
+        [
+          "og:site_name",
+          "Wesley Caiã"
+        ],
+        [
+          "og:locale",
+          "pt_BR"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "icons": [
+        "http://127.0.0.1:3002/icon.png?icon.0g4q3erblf886.png",
+        "http://127.0.0.1:3002/apple-icon.png?apple-icon.11liap_sh_08k.png"
+      ]
+    },
+    {
+      "route": "/playground",
+      "status": 404,
+      "title": "404: This page could not be found.",
+      "description": "Página temporária para revisão da fundação visual da TASK 01.",
+      "og": [
+        [
+          "og:title",
+          "Wesley Caiã — Design & Desenvolvimento"
+        ],
+        [
+          "og:description",
+          "Portfólio de Wesley Caiã. Design e desenvolvimento de interfaces, aplicações e experiências digitais com identidade, código e movimento."
+        ],
+        [
+          "og:site_name",
+          "Wesley Caiã"
+        ],
+        [
+          "og:locale",
+          "pt_BR"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "icons": [
+        "http://127.0.0.1:3002/icon.png?icon.0g4q3erblf886.png",
+        "http://127.0.0.1:3002/apple-icon.png?apple-icon.11liap_sh_08k.png"
+      ]
+    },
+    {
+      "route": "/playground/project-case",
+      "status": 404,
+      "title": "404: This page could not be found.",
+      "description": "Portfólio de Wesley Caiã. Design e desenvolvimento de interfaces, aplicações e experiências digitais com identidade, código e movimento.",
+      "og": [
+        [
+          "og:title",
+          "Wesley Caiã — Design & Desenvolvimento"
+        ],
+        [
+          "og:description",
+          "Portfólio de Wesley Caiã. Design e desenvolvimento de interfaces, aplicações e experiências digitais com identidade, código e movimento."
+        ],
+        [
+          "og:site_name",
+          "Wesley Caiã"
+        ],
+        [
+          "og:locale",
+          "pt_BR"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "icons": [
+        "http://127.0.0.1:3002/icon.png?icon.0g4q3erblf886.png",
+        "http://127.0.0.1:3002/apple-icon.png?apple-icon.11liap_sh_08k.png"
+      ]
+    },
+    {
+      "route": "/playground/project-object",
+      "status": 404,
+      "title": "404: This page could not be found.",
+      "description": "Portfólio de Wesley Caiã. Design e desenvolvimento de interfaces, aplicações e experiências digitais com identidade, código e movimento.",
+      "og": [
+        [
+          "og:title",
+          "Wesley Caiã — Design & Desenvolvimento"
+        ],
+        [
+          "og:description",
+          "Portfólio de Wesley Caiã. Design e desenvolvimento de interfaces, aplicações e experiências digitais com identidade, código e movimento."
+        ],
+        [
+          "og:site_name",
+          "Wesley Caiã"
+        ],
+        [
+          "og:locale",
+          "pt_BR"
+        ],
+        [
+          "og:type",
+          "website"
+        ]
+      ],
+      "icons": [
+        "http://127.0.0.1:3002/icon.png?icon.0g4q3erblf886.png",
+        "http://127.0.0.1:3002/apple-icon.png?apple-icon.11liap_sh_08k.png"
+      ]
+    },
+    {
+      "route": "/robots.txt",
+      "status": 200,
+      "title": "",
+      "og": [],
+      "icons": []
+    },
+    {
+      "route": "/sitemap.xml",
+      "status": 200,
+      "title": "",
+      "og": [],
+      "icons": []
+    }
+  ],
+  "performance": [
+    {
+      "route": "/",
+      "vitals": {
+        "cls": 0,
+        "longTasks": [
+          270,
+          67
+        ],
+        "lcp": 696
+      },
+      "navigation": [
+        {
+          "ttfb": 10.300000000279397,
+          "domContentLoaded": 69.3000000002794,
+          "load": 544.3000000002794
+        }
+      ],
+      "resources": [
+        {
+          "name": "/_next/static/media/7ebf22b5a21034f8-s.p.3j3877k49yy0l.woff2",
+          "type": "link",
+          "encoded": 15684,
+          "decoded": 15684,
+          "transfer": 15984,
+          "duration": 18.300000000279397
+        },
+        {
+          "name": "/_next/static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2",
+          "type": "link",
+          "encoded": 44916,
+          "decoded": 44916,
+          "transfer": 45216,
+          "duration": 32.700000000186265
+        },
+        {
+          "name": "/_next/static/chunks/2no0rurfmfw1s.css",
+          "type": "link",
+          "encoded": 3127,
+          "decoded": 11516,
+          "transfer": 3427,
+          "duration": 33
+        },
+        {
+          "name": "/_next/static/chunks/1hkebjjpx51um.css",
+          "type": "link",
+          "encoded": 6501,
+          "decoded": 48492,
+          "transfer": 6801,
+          "duration": 33.700000000186265
+        },
+        {
+          "name": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+          "type": "link",
+          "encoded": 2029,
+          "decoded": 5598,
+          "transfer": 2329,
+          "duration": 34.89999999990687
+        },
+        {
+          "name": "/_next/static/chunks/2mmpezlrfmbu5.js",
+          "type": "script",
+          "encoded": 8716,
+          "decoded": 34718,
+          "transfer": 9016,
+          "duration": 37.60000000009313
+        },
+        {
+          "name": "/_next/static/chunks/3g4px251sg85e.js",
+          "type": "script",
+          "encoded": 71576,
+          "decoded": 228922,
+          "transfer": 71876,
+          "duration": 59.59999999962747
+        },
+        {
+          "name": "/_next/static/chunks/3un1mb5bx4x8k.js",
+          "type": "script",
+          "encoded": 43914,
+          "decoded": 160168,
+          "transfer": 44214,
+          "duration": 56.60000000009313
+        },
+        {
+          "name": "/_next/static/chunks/turbopack-2yajevry3z_n6.js",
+          "type": "script",
+          "encoded": 3851,
+          "decoded": 9721,
+          "transfer": 4151,
+          "duration": 47
+        },
+        {
+          "name": "/_next/static/chunks/3ljs2c63km126.js",
+          "type": "script",
+          "encoded": 5700,
+          "decoded": 19933,
+          "transfer": 6000,
+          "duration": 49.1999999997206
+        },
+        {
+          "name": "/_next/static/chunks/0l-manuc7x-06.js",
+          "type": "script",
+          "encoded": 27128,
+          "decoded": 70164,
+          "transfer": 27428,
+          "duration": 54.3000000002794
+        },
+        {
+          "name": "/_next/static/chunks/17m-jwzpy-gvk.js",
+          "type": "script",
+          "encoded": 396,
+          "decoded": 1251,
+          "transfer": 696,
+          "duration": 54.89999999990687
+        },
+        {
+          "name": "/_next/static/chunks/3vwhftje0zax3.js",
+          "type": "script",
+          "encoded": 9154,
+          "decoded": 32497,
+          "transfer": 9454,
+          "duration": 58.1999999997206
+        },
+        {
+          "name": "/_next/static/chunks/3c43xlm0apzyf.js",
+          "type": "script",
+          "encoded": 9873,
+          "decoded": 27312,
+          "transfer": 10173,
+          "duration": 62.10000000009313
+        },
+        {
+          "name": "/assets/brand/logo-symbol.svg",
+          "type": "image",
+          "encoded": 986898,
+          "decoded": 1310884,
+          "transfer": 987198,
+          "duration": 125.60000000009313
+        },
+        {
+          "name": "/assets/technologies/react.svg",
+          "type": "css",
+          "encoded": 1396,
+          "decoded": 2926,
+          "transfer": 1696,
+          "duration": 8.600000000093132
+        },
+        {
+          "name": "/assets/technologies/nextdotjs.svg",
+          "type": "css",
+          "encoded": 322,
+          "decoded": 322,
+          "transfer": 622,
+          "duration": 7.899999999906868
+        },
+        {
+          "name": "/assets/technologies/angular.svg",
+          "type": "css",
+          "encoded": 298,
+          "decoded": 298,
+          "transfer": 598,
+          "duration": 9.399999999906868
+        },
+        {
+          "name": "/assets/technologies/typescript.svg",
+          "type": "css",
+          "encoded": 679,
+          "decoded": 1294,
+          "transfer": 979,
+          "duration": 11.399999999906868
+        },
+        {
+          "name": "/assets/technologies/javascript.svg",
+          "type": "css",
+          "encoded": 974,
+          "decoded": 974,
+          "transfer": 1274,
+          "duration": 10.799999999813735
+        },
+        {
+          "name": "/assets/technologies/html5.svg",
+          "type": "css",
+          "encoded": 327,
+          "decoded": 327,
+          "transfer": 627,
+          "duration": 13.400000000372529
+        },
+        {
+          "name": "/assets/technologies/sass.svg",
+          "type": "css",
+          "encoded": 667,
+          "decoded": 1223,
+          "transfer": 967,
+          "duration": 14.699999999720603
+        },
+        {
+          "name": "/assets/technologies/tailwindcss.svg",
+          "type": "css",
+          "encoded": 602,
+          "decoded": 602,
+          "transfer": 902,
+          "duration": 15.100000000093132
+        },
+        {
+          "name": "/assets/technologies/css.svg",
+          "type": "css",
+          "encoded": 662,
+          "decoded": 1479,
+          "transfer": 962,
+          "duration": 17.100000000093132
+        },
+        {
+          "name": "/assets/technologies/supabase.svg",
+          "type": "css",
+          "encoded": 303,
+          "decoded": 303,
+          "transfer": 603,
+          "duration": 16.299999999813735
+        },
+        {
+          "name": "/assets/technologies/postgresql.svg",
+          "type": "css",
+          "encoded": 2535,
+          "decoded": 5205,
+          "transfer": 2835,
+          "duration": 18.699999999720603
+        },
+        {
+          "name": "/assets/technologies/clerk.svg",
+          "type": "css",
+          "encoded": 695,
+          "decoded": 695,
+          "transfer": 995,
+          "duration": 19.899999999906868
+        },
+        {
+          "name": "/assets/technologies/vercel.svg",
+          "type": "css",
+          "encoded": 132,
+          "decoded": 132,
+          "transfer": 432,
+          "duration": 22.200000000186265
+        },
+        {
+          "name": "/assets/technologies/gsap.svg",
+          "type": "css",
+          "encoded": 1961,
+          "decoded": 4728,
+          "transfer": 2261,
+          "duration": 23.899999999906868
+        },
+        {
+          "name": "/assets/technologies/threedotjs.svg",
+          "type": "css",
+          "encoded": 897,
+          "decoded": 897,
+          "transfer": 1197,
+          "duration": 23.200000000186265
+        },
+        {
+          "name": "/_next/image?url=%2Fassets%2Fphotos%2Fportrait-about.webp&w=640&q=85",
+          "type": "img",
+          "encoded": 47566,
+          "decoded": 47566,
+          "transfer": 47866,
+          "duration": 201.39999999990687
+        },
+        {
+          "name": "/_next/image?url=%2Fassets%2Fprojects%2Fmf-consultoria%2Fmf-consultoria-hero-desktop.png&w=750&q=75",
+          "type": "img",
+          "encoded": 19484,
+          "decoded": 19484,
+          "transfer": 19784,
+          "duration": 7.399999999906868
+        },
+        {
+          "name": "/icon.png?icon.0g4q3erblf886.png",
+          "type": "other",
+          "encoded": 5133,
+          "decoded": 5133,
+          "transfer": 5433,
+          "duration": 8.600000000093132
+        },
+        {
+          "name": "/_next/static/chunks/3oicv1kusdq_s.js",
+          "type": "script",
+          "encoded": 1634,
+          "decoded": 3584,
+          "transfer": 1934,
+          "duration": 3.1000000000931323
+        }
+      ],
+      "canvas": 0
+    },
+    {
+      "route": "/projetos/spasmooth",
+      "vitals": {
+        "cls": 0,
+        "longTasks": [
+          57,
+          54
+        ],
+        "lcp": 324
+      },
+      "navigation": [
+        {
+          "ttfb": 6.7999999998137355,
+          "domContentLoaded": 58.09999999962747,
+          "load": 182.09999999962747
+        }
+      ],
+      "resources": [
+        {
+          "name": "/_next/static/media/7ebf22b5a21034f8-s.p.3j3877k49yy0l.woff2",
+          "type": "link",
+          "encoded": 15684,
+          "decoded": 15684,
+          "transfer": 15984,
+          "duration": 13.5
+        },
+        {
+          "name": "/_next/static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2",
+          "type": "link",
+          "encoded": 44916,
+          "decoded": 44916,
+          "transfer": 45216,
+          "duration": 17.399999999906868
+        },
+        {
+          "name": "/_next/static/chunks/2no0rurfmfw1s.css",
+          "type": "link",
+          "encoded": 3127,
+          "decoded": 11516,
+          "transfer": 3427,
+          "duration": 18.5
+        },
+        {
+          "name": "/_next/static/chunks/1hkebjjpx51um.css",
+          "type": "link",
+          "encoded": 6501,
+          "decoded": 48492,
+          "transfer": 6801,
+          "duration": 18.800000000279397
+        },
+        {
+          "name": "/_next/static/chunks/0plz891sb9b2w.css",
+          "type": "link",
+          "encoded": 1739,
+          "decoded": 8452,
+          "transfer": 2039,
+          "duration": 22
+        },
+        {
+          "name": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+          "type": "link",
+          "encoded": 2029,
+          "decoded": 5598,
+          "transfer": 2329,
+          "duration": 21.600000000093132
+        },
+        {
+          "name": "/_next/static/chunks/2mmpezlrfmbu5.js",
+          "type": "script",
+          "encoded": 8716,
+          "decoded": 34718,
+          "transfer": 9016,
+          "duration": 24.100000000093132
+        },
+        {
+          "name": "/_next/static/chunks/3g4px251sg85e.js",
+          "type": "script",
+          "encoded": 71576,
+          "decoded": 228922,
+          "transfer": 71876,
+          "duration": 51
+        },
+        {
+          "name": "/_next/static/chunks/3un1mb5bx4x8k.js",
+          "type": "script",
+          "encoded": 43914,
+          "decoded": 160168,
+          "transfer": 44214,
+          "duration": 38.5
+        },
+        {
+          "name": "/_next/static/chunks/turbopack-2yajevry3z_n6.js",
+          "type": "script",
+          "encoded": 3851,
+          "decoded": 9721,
+          "transfer": 4151,
+          "duration": 35.200000000186265
+        },
+        {
+          "name": "/_next/static/chunks/3ljs2c63km126.js",
+          "type": "script",
+          "encoded": 5700,
+          "decoded": 19933,
+          "transfer": 6000,
+          "duration": 35.90000000037253
+        },
+        {
+          "name": "/_next/static/chunks/0l-manuc7x-06.js",
+          "type": "script",
+          "encoded": 27128,
+          "decoded": 70164,
+          "transfer": 27428,
+          "duration": 42.39999999990687
+        },
+        {
+          "name": "/_next/static/chunks/1k_270tqt_-lb.js",
+          "type": "script",
+          "encoded": 12094,
+          "decoded": 34722,
+          "transfer": 12394,
+          "duration": 48.89999999990687
+        },
+        {
+          "name": "/assets/projects/spasmooth/spasmooth-hero-desktop.png",
+          "type": "img",
+          "encoded": 1566051,
+          "decoded": 1566051,
+          "transfer": 1566351,
+          "duration": 50.60000000009313
+        },
+        {
+          "name": "/icon.png?icon.0g4q3erblf886.png",
+          "type": "other",
+          "encoded": 5133,
+          "decoded": 5133,
+          "transfer": 5433,
+          "duration": 7.100000000093132
+        },
+        {
+          "name": "/?_rsc=ZZ40r5M2BR2R6-SL",
+          "type": "fetch",
+          "encoded": 309,
+          "decoded": 531,
+          "transfer": 609,
+          "duration": 6.2999999998137355
+        },
+        {
+          "name": "/assets/projects/spasmooth/spasmooth-localizacao.png",
+          "type": "img",
+          "encoded": 276929,
+          "decoded": 276929,
+          "transfer": 277229,
+          "duration": 4.2000000001862645
+        },
+        {
+          "name": "/?_rsc=14uomtJVe9Fw3_7h",
+          "type": "fetch",
+          "encoded": 3619,
+          "decoded": 15293,
+          "transfer": 3919,
+          "duration": 5.5
+        },
+        {
+          "name": "/_next/static/chunks/17m-jwzpy-gvk.js",
+          "type": "script",
+          "encoded": 396,
+          "decoded": 1251,
+          "transfer": 696,
+          "duration": 3.7999999998137355
+        },
+        {
+          "name": "/_next/static/chunks/3vwhftje0zax3.js",
+          "type": "script",
+          "encoded": 9154,
+          "decoded": 32497,
+          "transfer": 9454,
+          "duration": 4.7000000001862645
+        },
+        {
+          "name": "/_next/static/chunks/3c43xlm0apzyf.js",
+          "type": "script",
+          "encoded": 9873,
+          "decoded": 27312,
+          "transfer": 10173,
+          "duration": 4.899999999906868
+        }
+      ],
+      "canvas": 0
+    },
+    {
+      "route": "/projetos/mf-consultoria",
+      "vitals": {
+        "cls": 0,
+        "longTasks": [
+          61
+        ],
+        "lcp": 264
+      },
+      "navigation": [
+        {
+          "ttfb": 11.5,
+          "domContentLoaded": 66.6999999997206,
+          "load": 183.6999999997206
+        }
+      ],
+      "resources": [
+        {
+          "name": "/_next/static/media/7ebf22b5a21034f8-s.p.3j3877k49yy0l.woff2",
+          "type": "link",
+          "encoded": 15684,
+          "decoded": 15684,
+          "transfer": 15984,
+          "duration": 10.399999999906868
+        },
+        {
+          "name": "/_next/static/media/ab57efd000576a30-s.p.3fofz6dws3mg0.woff2",
+          "type": "link",
+          "encoded": 44916,
+          "decoded": 44916,
+          "transfer": 45216,
+          "duration": 14.5
+        },
+        {
+          "name": "/_next/static/chunks/2no0rurfmfw1s.css",
+          "type": "link",
+          "encoded": 3127,
+          "decoded": 11516,
+          "transfer": 3427,
+          "duration": 15.399999999906868
+        },
+        {
+          "name": "/_next/static/chunks/1hkebjjpx51um.css",
+          "type": "link",
+          "encoded": 6501,
+          "decoded": 48492,
+          "transfer": 6801,
+          "duration": 17.5
+        },
+        {
+          "name": "/_next/static/chunks/0plz891sb9b2w.css",
+          "type": "link",
+          "encoded": 1739,
+          "decoded": 8452,
+          "transfer": 2039,
+          "duration": 16.799999999813735
+        },
+        {
+          "name": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+          "type": "link",
+          "encoded": 2029,
+          "decoded": 5598,
+          "transfer": 2329,
+          "duration": 21.200000000186265
+        },
+        {
+          "name": "/_next/static/chunks/2mmpezlrfmbu5.js",
+          "type": "script",
+          "encoded": 8716,
+          "decoded": 34718,
+          "transfer": 9016,
+          "duration": 21.600000000093132
+        },
+        {
+          "name": "/_next/static/chunks/3g4px251sg85e.js",
+          "type": "script",
+          "encoded": 71576,
+          "decoded": 228922,
+          "transfer": 71876,
+          "duration": 31.700000000186265
+        },
+        {
+          "name": "/_next/static/chunks/3un1mb5bx4x8k.js",
+          "type": "script",
+          "encoded": 43914,
+          "decoded": 160168,
+          "transfer": 44214,
+          "duration": 29.799999999813735
+        },
+        {
+          "name": "/_next/static/chunks/turbopack-2yajevry3z_n6.js",
+          "type": "script",
+          "encoded": 3851,
+          "decoded": 9721,
+          "transfer": 4151,
+          "duration": 23.899999999906868
+        },
+        {
+          "name": "/_next/static/chunks/3ljs2c63km126.js",
+          "type": "script",
+          "encoded": 5700,
+          "decoded": 19933,
+          "transfer": 6000,
+          "duration": 28.700000000186265
+        },
+        {
+          "name": "/_next/static/chunks/1k_270tqt_-lb.js",
+          "type": "script",
+          "encoded": 12094,
+          "decoded": 34722,
+          "transfer": 12394,
+          "duration": 30.700000000186265
+        },
+        {
+          "name": "/_next/static/chunks/0l-manuc7x-06.js",
+          "type": "script",
+          "encoded": 27128,
+          "decoded": 70164,
+          "transfer": 27428,
+          "duration": 31.899999999906868
+        },
+        {
+          "name": "/assets/projects/mf-consultoria/mf-consultoria-hero-desktop.png",
+          "type": "img",
+          "encoded": 395060,
+          "decoded": 395060,
+          "transfer": 395360,
+          "duration": 21.199999999720603
+        },
+        {
+          "name": "/icon.png?icon.0g4q3erblf886.png",
+          "type": "other",
+          "encoded": 5133,
+          "decoded": 5133,
+          "transfer": 5433,
+          "duration": 4.5
+        },
+        {
+          "name": "/assets/projects/mf-consultoria/mf-consultoria-curadoria-processo.png",
+          "type": "img",
+          "encoded": 97859,
+          "decoded": 97859,
+          "transfer": 98159,
+          "duration": 4.5
+        },
+        {
+          "name": "/?_rsc=ili5Zt6Sm6K_E7at",
+          "type": "fetch",
+          "encoded": 309,
+          "decoded": 531,
+          "transfer": 609,
+          "duration": 4.7999999998137355
+        },
+        {
+          "name": "/?_rsc=AVBqPJJDhvjh4Wx8",
+          "type": "fetch",
+          "encoded": 3619,
+          "decoded": 15293,
+          "transfer": 3919,
+          "duration": 4.5
+        },
+        {
+          "name": "/_next/static/chunks/17m-jwzpy-gvk.js",
+          "type": "script",
+          "encoded": 396,
+          "decoded": 1251,
+          "transfer": 696,
+          "duration": 7.2999999998137355
+        },
+        {
+          "name": "/_next/static/chunks/3vwhftje0zax3.js",
+          "type": "script",
+          "encoded": 9154,
+          "decoded": 32497,
+          "transfer": 9454,
+          "duration": 8
+        },
+        {
+          "name": "/_next/static/chunks/3c43xlm0apzyf.js",
+          "type": "script",
+          "encoded": 9873,
+          "decoded": 27312,
+          "transfer": 10173,
+          "duration": 8.199999999720603
+        }
+      ],
+      "canvas": 0
+    }
+  ],
+  "errors": []
+}

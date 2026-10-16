@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-16",
+  "sourceHead": "b4510bb5885feb467b8156e40777f0601b1b27b4",
+  "candidateHead": "484534ca2932b65c41372f8ca4c3b93bfe2cd75e",
+  "originalCommits": 32,
+  "preservedV1Commits": 19,
+  "integrationMergeCommits": 1,
+  "candidateCommits": 52,
+  "allCommitMetadataPreserved": true,
+  "currentTreesIdentical": true,
+  "applicationFilesUnchanged": true,
+  "historyVideoPaths": [],
+  "historyTemporaryPaths": [],
+  "oversizedBlobs": [],
+  "largestBlobBytes": 8825608,
+  "historyTextBlobsScanned": 418,
+  "secretPatternFindings": [],
+  "limitations": "Pattern scan only, not a guarantee; no binary secret scan. This verifies the candidate integration branch, not the unfiltered original checkout.",
+  "filterTool": {
+    "version": "v2.47.0",
+    "sha256": "67447413E273FC76809289111748870B6F6072F08B17EFE94863A92D810B7D94"
+  },
+  "commitMap": ".tmp-task17/publish/.git/filter-repo/commit-map"
+}

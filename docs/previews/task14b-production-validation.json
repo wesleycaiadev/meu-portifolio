@@ -1,0 +1,388 @@
+{
+  "base": "http://127.0.0.1:3002",
+  "checks": [
+    {
+      "name": "initial Expertise anchor survives upstream pins",
+      "value": true
+    },
+    {
+      "name": "empty selection shows only instruction",
+      "value": true
+    },
+    {
+      "name": "17 documented tools and languages",
+      "value": true
+    },
+    {
+      "name": "react: hover selects technology",
+      "value": true
+    },
+    {
+      "name": "react: real brand hue",
+      "value": true
+    },
+    {
+      "name": "react: selected detail omits instruction",
+      "value": true
+    },
+    {
+      "name": "typescript: hover selects technology",
+      "value": true
+    },
+    {
+      "name": "typescript: real brand hue",
+      "value": true
+    },
+    {
+      "name": "typescript: selected detail omits instruction",
+      "value": true
+    },
+    {
+      "name": "javascript: hover selects technology",
+      "value": true
+    },
+    {
+      "name": "javascript: real brand hue",
+      "value": true
+    },
+    {
+      "name": "javascript: selected detail omits instruction",
+      "value": true
+    },
+    {
+      "name": "angular: hover selects technology",
+      "value": true
+    },
+    {
+      "name": "angular: real brand hue",
+      "value": true
+    },
+    {
+      "name": "angular: selected detail omits instruction",
+      "value": true
+    },
+    {
+      "name": "clerk: confirmed applications only",
+      "value": true
+    },
+    {
+      "name": "vercel: confirmed applications only",
+      "value": true
+    },
+    {
+      "name": "html5: confirmed applications only",
+      "value": true
+    },
+    {
+      "name": "openai: confirmed applications only",
+      "value": true
+    },
+    {
+      "name": "figma: confirmed applications only",
+      "value": true
+    },
+    {
+      "name": "Escape restores unselected instruction",
+      "value": true
+    },
+    {
+      "name": "all Expertise groups reorganize",
+      "value": true
+    },
+    {
+      "name": "scroll never changes technology selection",
+      "value": true
+    },
+    {
+      "name": "Expertise has no pin",
+      "value": true
+    },
+    {
+      "name": "Expertise exit stays legible",
+      "value": true
+    },
+    {
+      "name": "Expertise exact reversal",
+      "value": true
+    },
+    {
+      "name": "Process pin distance is 180vh",
+      "value": true
+    },
+    {
+      "name": "Process pin enabled when composition fits",
+      "value": true
+    },
+    {
+      "name": "understand: editorial and visual agree",
+      "value": true
+    },
+    {
+      "name": "understand: frame stays mounted",
+      "value": true
+    },
+    {
+      "name": "understand: entire pinned composition visible",
+      "value": true
+    },
+    {
+      "name": "structure: editorial and visual agree",
+      "value": true
+    },
+    {
+      "name": "structure: frame stays mounted",
+      "value": true
+    },
+    {
+      "name": "structure: entire pinned composition visible",
+      "value": true
+    },
+    {
+      "name": "build: editorial and visual agree",
+      "value": true
+    },
+    {
+      "name": "build: frame stays mounted",
+      "value": true
+    },
+    {
+      "name": "build: entire pinned composition visible",
+      "value": true
+    },
+    {
+      "name": "refine: editorial and visual agree",
+      "value": true
+    },
+    {
+      "name": "refine: frame stays mounted",
+      "value": true
+    },
+    {
+      "name": "refine: entire pinned composition visible",
+      "value": true
+    },
+    {
+      "name": "four visibly different structural states",
+      "value": true
+    },
+    {
+      "name": "timeline stops at an intermediate point",
+      "value": true
+    },
+    {
+      "name": "intermediate progress is not snapped",
+      "value": true
+    },
+    {
+      "name": "complete reverse reaches initial structure",
+      "value": true
+    },
+    {
+      "name": "React stage updates are boundary only",
+      "value": true
+    },
+    {
+      "name": "manual selection seeks final scroll marker",
+      "value": true
+    },
+    {
+      "name": "manual selection retains focus",
+      "value": true
+    },
+    {
+      "name": "keyboard arrow seeks matching marker",
+      "value": true
+    },
+    {
+      "name": "keyboard Home reverses to first marker",
+      "value": true
+    },
+    {
+      "name": "wheel interrupts manual smooth scroll",
+      "value": true
+    },
+    {
+      "name": "live reduced preference releases pin",
+      "value": true
+    },
+    {
+      "name": "live reduced preference restores group styles",
+      "value": true
+    },
+    {
+      "name": "reduced manual selection has no automatic scroll",
+      "value": true
+    },
+    {
+      "name": "short desktop uses unpinned fallback",
+      "value": true
+    },
+    {
+      "name": "resize restores one pin",
+      "value": true
+    },
+    {
+      "name": "tablet uses manual Process without pin",
+      "value": true
+    },
+    {
+      "name": "tablet Expertise has simplified motion",
+      "value": true
+    },
+    {
+      "name": "1024: reduced motion static, production preview ignored",
+      "value": true
+    },
+    {
+      "name": "1024: no new Canvas",
+      "value": true
+    },
+    {
+      "name": "1024: no horizontal overflow",
+      "value": true
+    },
+    {
+      "name": "1024: manual understand available",
+      "value": true
+    },
+    {
+      "name": "1024: manual structure available",
+      "value": true
+    },
+    {
+      "name": "1024: manual build available",
+      "value": true
+    },
+    {
+      "name": "1024: manual refine available",
+      "value": true
+    },
+    {
+      "name": "1024: text at 200% no overflow",
+      "value": true
+    },
+    {
+      "name": "390: reduced motion static, production preview ignored",
+      "value": true
+    },
+    {
+      "name": "390: no new Canvas",
+      "value": true
+    },
+    {
+      "name": "390: no horizontal overflow",
+      "value": true
+    },
+    {
+      "name": "390: Figma touch selection",
+      "value": true
+    },
+    {
+      "name": "390: manual understand available",
+      "value": true
+    },
+    {
+      "name": "390: manual structure available",
+      "value": true
+    },
+    {
+      "name": "390: manual build available",
+      "value": true
+    },
+    {
+      "name": "390: manual refine available",
+      "value": true
+    },
+    {
+      "name": "390: text at 200% no overflow",
+      "value": true
+    },
+    {
+      "name": "320: reduced motion static, production preview ignored",
+      "value": true
+    },
+    {
+      "name": "320: no new Canvas",
+      "value": true
+    },
+    {
+      "name": "320: no horizontal overflow",
+      "value": true
+    },
+    {
+      "name": "320: Figma touch selection",
+      "value": true
+    },
+    {
+      "name": "320: manual understand available",
+      "value": true
+    },
+    {
+      "name": "320: manual structure available",
+      "value": true
+    },
+    {
+      "name": "320: manual build available",
+      "value": true
+    },
+    {
+      "name": "320: manual refine available",
+      "value": true
+    },
+    {
+      "name": "320: text at 200% no overflow",
+      "value": true
+    },
+    {
+      "name": "no JS all 17 roles available",
+      "value": true
+    },
+    {
+      "name": "no JS all 4 process steps available",
+      "value": true
+    },
+    {
+      "name": "direct Process anchor survives upstream pins",
+      "value": true
+    },
+    {
+      "name": "no page exceptions",
+      "value": true
+    }
+  ],
+  "errors": [],
+  "observations": {
+    "desktop": {
+      "start": 10198,
+      "end": 11998,
+      "distance": 1800
+    },
+    "states": [
+      {
+        "frame": "rgba(0, 0, 0, 0)",
+        "copy": "matrix(1, 0, 0, 1, -27.124, 24.5223)",
+        "identity": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "frame": "rgba(0, 0, 0, 0)",
+        "copy": "matrix(1, 0, 0, 1, 0, 0)",
+        "identity": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "frame": "rgb(255, 255, 255)",
+        "copy": "matrix(1, 0, 0, 1, 0, 0)",
+        "identity": "rgb(233, 230, 223)"
+      },
+      {
+        "frame": "rgb(255, 255, 255)",
+        "copy": "matrix(1, 0, 0, 1, 0, 0)",
+        "identity": "rgb(16, 16, 16)"
+      }
+    ],
+    "reversed": {
+      "frame": "rgba(0, 0, 0, 0)",
+      "copy": "matrix(1, 0, 0, 1, -27.1195, 24.5141)",
+      "identity": "rgba(0, 0, 0, 0)"
+    }
+  }
+}

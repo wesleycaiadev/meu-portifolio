@@ -1,0 +1,86 @@
+{
+  "viewport": "1440x1000",
+  "method": "real-time native wheel and pointer input, no playback speed changes",
+  "videos": [
+    {
+      "kind": "home",
+      "samples": 170,
+      "states": [
+        {
+          "name": "takeover",
+          "scroll": 660
+        },
+        {
+          "name": "about",
+          "scroll": 3300
+        },
+        {
+          "name": "word",
+          "scroll": 5014
+        },
+        {
+          "name": "trail",
+          "scroll": 6255
+        },
+        {
+          "name": "projects",
+          "scroll": 7350
+        },
+        {
+          "name": "expertise",
+          "scroll": 8771
+        },
+        {
+          "name": "process-understand",
+          "scroll": 10341
+        },
+        {
+          "name": "process-structure",
+          "scroll": 10941
+        },
+        {
+          "name": "process-build",
+          "scroll": 11541
+        },
+        {
+          "name": "process-refine",
+          "scroll": 12141
+        }
+      ]
+    },
+    {
+      "kind": "spasmooth",
+      "samples": 0,
+      "states": [
+        "shared entry",
+        "keyboard exploration",
+        "technology tab",
+        "return to projects"
+      ]
+    },
+    {
+      "kind": "mf-consultoria",
+      "samples": 0,
+      "states": [
+        "shared entry",
+        "keyboard exploration",
+        "technology tab",
+        "return to projects"
+      ]
+    },
+    {
+      "kind": "process-reverse",
+      "samples": 90,
+      "states": [
+        "understand",
+        "structure",
+        "build",
+        "refine",
+        "build",
+        "structure",
+        "understand"
+      ]
+    }
+  ],
+  "errors": []
+}

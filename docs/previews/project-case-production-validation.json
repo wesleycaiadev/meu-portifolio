@@ -1,0 +1,7 @@
+{
+  "routeStatus": 404,
+  "homeStatus": 200,
+  "controlsAbsent": true,
+  "errors": [],
+  "testedUrl": "http://127.0.0.1:3002/?wc-preview=1&projects-concept=1"
+}

@@ -1,0 +1,40 @@
+@use "@/styles/tokens";
+
+.channels { position: relative; display: grid; gap: var(--space-6); }
+.channels[data-preview-open="true"]::before { content: ""; position: absolute; inset-inline: 0; inset-block-start: 100%; block-size: .5rem; }
+.item { min-inline-size: 0; }
+.channel {
+  display: grid; gap: var(--space-3); min-block-size: var(--target-min);
+  min-inline-size: 0; padding-block: var(--space-4); text-decoration: none;
+  &:hover .title, &:focus-visible .title { text-decoration: underline; text-underline-offset: var(--underline-offset); }
+}
+.title { display: flex; align-items: center; gap: var(--space-3); font-size: 1.25rem; line-height: 1.4; }
+.icon { filter: invert(1); flex: 0 0 auto; }
+.detail { font-size: 1rem; color: var(--text-secondary); line-height: 1.5; overflow-wrap: anywhere; }
+.copyArea { min-inline-size: 0; }
+.copy {
+  display: inline-flex; align-items: center; gap: .5rem; min-block-size: var(--target-min);
+  padding: 0; background: none; border: 0; color: var(--text-secondary); font-size: .9375rem; cursor: pointer;
+  &:hover, &:focus-visible { color: var(--text-primary); text-decoration: underline; text-underline-offset: var(--underline-offset); }
+}
+.manual { display: block; inline-size: 100%; min-block-size: var(--target-min); background: var(--surface-subtle); color: var(--text-primary); border: 1px solid var(--border-control); padding: .5rem; font-size: 1rem; }
+.assistive { position: absolute; inline-size: 1px; block-size: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.panel {
+  position: absolute; inset-block-start: calc(100% + .5rem); translate: -50% 0;
+  z-index: 5; overflow: clip; contain: paint; border-radius: .75rem;
+  background: var(--color-charcoal); border: 1px solid var(--border-decorative);
+  box-shadow: 0 12px 32px rgb(0 0 0 / .18); pointer-events: none; opacity: 0;
+  &[data-open="true"] { opacity: 1; pointer-events: auto; }
+}
+.card { inline-size: min(19rem, calc(100vw - 40px)); padding: 1rem; }
+.cardDescription { font-size: .9375rem; line-height: 1.5; color: var(--text-secondary); }
+
+@mixin movement {
+  .panel { transition: left 280ms var(--ease-settle), width 280ms var(--ease-settle), height 280ms var(--ease-settle), opacity 160ms ease-out; }
+  .card { animation: card-enter 220ms var(--ease-settle) both; }
+}
+@media (prefers-reduced-motion: no-preference) { @include movement; }
+@media (prefers-reduced-motion: reduce) { :global(html[data-wc-motion-preview="enabled"]) { @include movement; } }
+@keyframes card-enter { from { opacity: 0; transform: translateX(calc(var(--card-direction, 1) * 12px)); } }
+@media (max-width: 47.999rem) { .panel { display: none; } }
+@include tokens.from(tablet) { .channels { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-7); } }
