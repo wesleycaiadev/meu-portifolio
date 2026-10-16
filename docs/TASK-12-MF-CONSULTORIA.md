@@ -1,5 +1,7 @@
 # TASK 12 — Case público da MF Consultoria
 
+> Atualização de 16/10/2026: vídeos de referência e revisão foram retirados da entrega por decisão de Wesley. As descrições abaixo registram testes anteriores; as gravações originais permanecem no backup local.
+
 Implementada em 14/10/2026. Rota: `/projetos/mf-consultoria`.
 
 ## Arquitetura reutilizada
@@ -84,8 +86,8 @@ Os testes cobrem scroll interno e teclado até o rodapé, seleção das quatro a
 
 ## Evidências
 
-- [Vídeo completo MF: abertura, scroll, abas, retorno e mobile](previews/task12-mf-case.webm)
-- [Vídeo mobile separado](previews/task12-mf-mobile.webm)
+- Vídeo completo MF: abertura, scroll, abas, retorno e mobile (gravação preservada no backup local)
+- Vídeo mobile separado (gravação preservada no backup local)
 - [Relatório de produção e recursos](previews/task12-production-validation.json)
 - [Regressão SpaSmooth](previews/task12-spasmooth-regression-production-validation.json)
 - [Carregamento do build final](previews/task12-final-loading-validation.json)

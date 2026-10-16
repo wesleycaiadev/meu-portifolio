@@ -1,5 +1,7 @@
 # TASK 07: lista editorial e preview 2D
 
+> Atualização de 16/10/2026: vídeos de referência e revisão foram retirados da entrega por decisão de Wesley. As descrições abaixo registram testes anteriores; as gravações originais permanecem no backup local.
+
 Checkpoint anterior às alterações: `6689442`, com a mensagem `feat: complete scroll-driven about section`.
 
 ## Prévia ao vivo
@@ -97,8 +99,8 @@ Capturas de produção, sem o painel de desenvolvimento:
 
 Vídeos da viewport real:
 
-- [Vídeo desktop](<C:/Users/wesley/Documents/PORTIFOLIO V2/docs/previews/task07-projects-desktop.webm>) (17 segundos): final de Sobre, entrada em Projetos, SpaSmooth, MF, retorno, trocas rápidas, pointer leave, teclado/Enter e scroll reverso.
-- [Vídeo mobile](<C:/Users/wesley/Documents/PORTIFOLIO V2/docs/previews/task07-projects-mobile.webm>) (18 segundos): final de Sobre, entrada vertical, screenshots completos durante a rolagem, toque e retorno.
+- Vídeo desktop (gravação preservada no backup local) (17 segundos): final de Sobre, entrada em Projetos, SpaSmooth, MF, retorno, trocas rápidas, pointer leave, teclado/Enter e scroll reverso.
+- Vídeo mobile (gravação preservada no backup local) (18 segundos): final de Sobre, entrada vertical, screenshots completos durante a rolagem, toque e retorno.
 
 Os dois vídeos foram reabertos no navegador e conferidos: duração finita, seek disponível, dimensões corretas e nenhuma falha de captura.
 

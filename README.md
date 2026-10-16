@@ -44,7 +44,7 @@ Nos cases, a prévia explícita inicia a abertura 3D em desktop e permite voltar
 - `public/assets`: fotografias, capturas e marca aprovadas.
 - `docs`: decisões, auditorias e evidências de revisão.
 
-Referências em `reference/` não integram os assets públicos da aplicação. A presença desses arquivos no histórico Git é tratada separadamente no plano de publicação.
+Referências em `reference/` não integram os assets públicos da aplicação. Os vídeos de referência e as gravações de revisão foram removidos da entrega por decisão de Wesley; os originais estão no backup local. Nenhum vídeo é necessário para o 3D ou para as animações. Consulte o plano de publicação para o tratamento do histórico Git.
 
 ## Publicação e metadados
 

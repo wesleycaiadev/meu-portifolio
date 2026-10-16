@@ -1,5 +1,7 @@
 # TASK 06.1 — RevealText por caracteres e alinhamento de Sobre
 
+> Atualização de 16/10/2026: vídeos de referência e revisão foram retirados da entrega por decisão de Wesley. As descrições abaixo registram testes anteriores; as gravações originais permanecem no backup local.
+
 Implementação restrita a Sobre. TASK 07 não iniciada. Checkpoint anterior às alterações: `412992c`, `chore: checkpoint before task 06.1 adjustments`.
 
 ## Prévia ao vivo
@@ -130,8 +132,8 @@ Limites: touch emulado; Safari, Firefox e aparelhos físicos não testados. A ap
 - [10%](previews/task061-about-10.png), [35%](previews/task061-about-35.png), [60%](previews/task061-about-60.png), [100%](previews/task061-about-100.png): 1440 × 900.
 - [Parágrafo com palavras inteiras](previews/task061-about-copy.png).
 - [Mobile](previews/task061-about-mobile.png): 390 × 844.
-- [Rolagem lenta com ida e volta](previews/task061-about-slow.webm).
-- [Rolagem rápida com ida e volta](previews/task061-about-fast.webm).
+- Rolagem lenta com ida e volta (gravação preservada no backup local).
+- Rolagem rápida com ida e volta (gravação preservada no backup local).
 
 Gravações da página renderizada durante rolagem real, incluindo fim do takeover, entrada de Sobre, progressão por caracteres, foco da foto e retorno ao handoff escuro.
 

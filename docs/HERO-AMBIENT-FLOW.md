@@ -1,5 +1,7 @@
 # TASK 04.2 — Ambient Flow + Pointer Energy
 
+> Atualização de 16/10/2026: vídeos de referência e revisão foram retirados da entrega por decisão de Wesley. As descrições abaixo registram testes anteriores; as gravações originais permanecem no backup local.
+
 Implementação concluída; aprovação visual pendente. TASK 05 não iniciada.
 Esta revisão substitui o modelo de movimento da TASK 04.1. Mantém o HTML,
 CSS, enquadramento, escala, Header e navegação existentes.
@@ -12,7 +14,7 @@ A diferença observada foi a continuidade da flexão em repouso e o atraso local
 da silhueta durante o movimento, além de um contorno secundário discreto.
 Esses princípios orientaram a revisão; identidade e composição continuam WC.
 
-- [Vídeo final, MP4, 1440 × 900, 27,51 s](previews/task042-wc-flow.mp4)
+- Vídeo final, MP4, 1440 × 900, 27,51 s (gravação preservada no backup local)
 - [Desktop](previews/task042-hero-desktop.png)
 - [Mobile estático, 390 × 844](previews/task042-hero-mobile.png)
 

@@ -10,3 +10,12 @@ next-env.d.ts
 .env*
 !.env.example
 backups/*.bundle
+# Review recordings are archived locally, not distributed with the portfolio.
+docs/previews/**/*.mp4
+docs/previews/**/*.webm
+docs/previews/**/*.mov
+docs/previews/**/*.m4v
+reference/gustavo/*.mp4
+reference/gustavo/*.webm
+reference/gustavo/*.mov
+reference/gustavo/*.m4v

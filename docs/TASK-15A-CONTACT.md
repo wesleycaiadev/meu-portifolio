@@ -1,5 +1,7 @@
 # TASK 15A — Contato e encerramento
 
+> Atualização de 16/10/2026: vídeos de referência e revisão foram retirados da entrega por decisão de Wesley. As descrições abaixo registram testes anteriores; as gravações originais permanecem no backup local.
+
 Implementada em 15/10/2026. Pronta para avaliação visual. TASK 15B não iniciada.
 
 ## Checkpoint e prévia
@@ -8,7 +10,7 @@ Antes desta etapa, a TASK 14 foi registrada no commit **`4a4fbad` — `feat: com
 
 - [Contato](http://localhost:3000/#contato)
 - [Processo → Contato com prévia de motion em desenvolvimento](http://localhost:3000/?motion=preview#processo)
-- [Vídeo da passagem e microinterações](previews/task15a-process-contact.webm)
+- Vídeo da passagem e microinterações (gravação preservada no backup local)
 
 O Contato não tem timeline de entrada, pin, takeover ou loop. `motion=preview` continua pertencendo ao sistema anterior de Expertise/Processo; não habilita movimento adicional no encerramento. Reduced motion mantém o feedback imediato dos links e elimina o deslocamento das setas.
 
@@ -77,7 +79,7 @@ O endpoint deverá validar os campos no servidor, limitar tamanho/frequência da
 - [Tablet — 768](previews/task15a-contact-768.png), [1024](previews/task15a-contact-1024.png)
 - [Mobile — 390](previews/task15a-contact-390.png), [320](previews/task15a-contact-320.png)
 - [Footer mobile](previews/task15a-footer-mobile.png)
-- [Vídeo Processo → Contato](previews/task15a-process-contact.webm)
+- Vídeo Processo → Contato (gravação preservada no backup local)
 - [Verificações funcionais](previews/task15a-validation.json)
 - [Regressão dos cases](previews/task15a-protected-regression.json)
 - [Dados da gravação](previews/task15a-video-validation.json)

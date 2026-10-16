@@ -1,5 +1,7 @@
 # TASK 06 — Sobre editorial e reveal do retrato
 
+> Atualização de 16/10/2026: vídeos de referência e revisão foram retirados da entrega por decisão de Wesley. As descrições abaixo registram testes anteriores; as gravações originais permanecem no backup local.
+
 A seção Sobre foi implementada. TASK 07 não iniciada. Nenhum vídeo foi gerado.
 
 ## Prévia ao vivo

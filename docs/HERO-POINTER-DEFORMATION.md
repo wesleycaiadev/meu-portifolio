@@ -1,5 +1,7 @@
 # TASK 04 — WC local pointer deformation
 
+> Atualização de 16/10/2026: vídeos de referência e revisão foram retirados da entrega por decisão de Wesley. As descrições abaixo registram testes anteriores; as gravações originais permanecem no backup local.
+
 > Registro da implementação inicial, ainda não aprovada visualmente. A troca
 > HTML/canvas, os parâmetros e a evidência atual foram revisados na
 > [TASK 04.1](HERO-POINTER-DEFORMATION-TUNING.md). Os valores abaixo descrevem
@@ -136,7 +138,7 @@ medidas de frame não garantem o mesmo desempenho em todo hardware.
 
 ## Evidências
 
-- [Vídeo WebM — arrasto e recuperação](previews/task04-wc-pointer.webm): 5,15 s,
+- Vídeo WebM — arrasto e recuperação (gravação preservada no backup local): 5,15 s,
   gravação direta do canvas WebGL. Contém apenas a marca, sem cursor nativo,
   Header ou controles; não representa uma mudança na composição da página.
 - [Hero desktop em repouso](previews/task04-hero-desktop.png): 1440×900.

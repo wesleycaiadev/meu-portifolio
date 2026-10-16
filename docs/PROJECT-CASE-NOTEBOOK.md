@@ -1,5 +1,7 @@
 # TASK 09: Project case entry / notebook reveal prototype
 
+> Atualização de 16/10/2026: vídeos de referência e revisão foram retirados da entrega por decisão de Wesley. As descrições abaixo registram testes anteriores; as gravações originais permanecem no backup local.
+
 Protótipo isolado do SpaSmooth. A aprovação conceitual da última tarefa substitui a direção dos cinco painéis. Não há integração com a home nem implementação da TASK 10.
 
 Prévia: http://127.0.0.1:3000/playground/project-case

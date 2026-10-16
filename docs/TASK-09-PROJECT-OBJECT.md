@@ -1,5 +1,7 @@
 # TASK 09 · Estrutura editorial articulada
 
+> Atualização de 16/10/2026: vídeos de referência e revisão foram retirados da entrega por decisão de Wesley. As descrições abaixo registram testes anteriores; as gravações originais permanecem no backup local.
+
 Protótipo isolado em `http://127.0.0.1:3000/playground/project-object`.
 Checkpoint anterior: `ad26f30` (`feat: refine continuous projects signature motion`).
 A home e seus componentes não foram modificados nesta tarefa. Nenhuma dependência foi instalada.
@@ -79,7 +81,7 @@ Perda do contexto WebGL mostra fallback estático e pausa a animação. A restau
 - Produção: `/playground/project-object` respondeu HTTP **404**, sem objeto nem controles. Home respondeu 200, sem painel de prévia mesmo com os parâmetros de desenvolvimento na URL.
 - Assets e dependências preservados, comprovados pela ausência de alterações nesses caminhos no Git.
 
-Gravações reais do navegador, sem aceleração: [desktop](previews/task09-object.webm) e [mobile](previews/task09-object-mobile.webm). Desktop mostra frontal, três quartos, lateral, drag, expansão, retorno e sequência demonstrativa. Mobile mostra os controles de estado por toque.
+Gravações reais do navegador, sem aceleração: desktop (gravação preservada no backup local) e mobile (gravação preservada no backup local). Desktop mostra frontal, três quartos, lateral, drag, expansão, retorno e sequência demonstrativa. Mobile mostra os controles de estado por toque.
 
 Screenshots: [frontal](previews/task09-front.png), [três quartos](previews/task09-quarter.png), [expandido](previews/task09-expanded.png), [lateral](previews/task09-side.png), [mobile](previews/task09-mobile.png) e [home em produção](previews/task09-production-home.png).
 

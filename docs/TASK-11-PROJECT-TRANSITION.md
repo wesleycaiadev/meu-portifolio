@@ -1,5 +1,7 @@
 # TASK 11 — Home → Notebook 3D
 
+> Atualização de 16/10/2026: vídeos de referência e revisão foram retirados da entrega por decisão de Wesley. As descrições abaixo registram testes anteriores; as gravações originais permanecem no backup local.
+
 Implementada em 14/10/2026, após o checkpoint aprovado da TASK 10: `8651ac2` (`feat: create spasmooth production case page`).
 
 ## Estratégia e continuidade
@@ -64,11 +66,11 @@ A regressão do case aprovado passou em mais 54 verificações de produção, in
 - [Relatório de desenvolvimento](previews/task11-development-validation.json)
 - [Regressão do case aprovado](previews/task11-regression-production-validation.json)
 - [Validação da gravação principal](previews/task11-video-validation.json)
-- [Vídeo da transição, scroll interno e retorno](previews/task11-transition.webm)
-- [Vídeo por teclado](previews/task11-keyboard.webm)
-- [Vídeo com movimento reduzido](previews/task11-reduced-motion.webm)
-- [Vídeo de acesso direto](previews/task11-direct-access.webm)
-- [Vídeo mobile](previews/task11-mobile.webm)
+- Vídeo da transição, scroll interno e retorno (gravação preservada no backup local)
+- Vídeo por teclado (gravação preservada no backup local)
+- Vídeo com movimento reduzido (gravação preservada no backup local)
+- Vídeo de acesso direto (gravação preservada no backup local)
+- Vídeo mobile (gravação preservada no backup local)
 - Screenshots: [Home](previews/task11-home.png), [transferência](previews/task11-transfer.png), [construção](previews/task11-construction.png), [case aberto](previews/task11-open.png), [retorno](previews/task11-return.png), [tablet](previews/task11-820.png), [desktop largo](previews/task11-1920.png), [mobile](previews/task11-mobile.png).
 
 Os scripts utilizados ficam em `.tmp-task11/preview.cjs.txt`, `.tmp-task11/validate.cjs.txt` e `.tmp-task11/regression.cjs.txt`. Usam o Playwright já disponível no ambiente e o Edge instalado.

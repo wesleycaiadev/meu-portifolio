@@ -1,5 +1,7 @@
 # TASK 07.1: equilíbrio da composição de Projetos
 
+> Atualização de 16/10/2026: vídeos de referência e revisão foram retirados da entrega por decisão de Wesley. As descrições abaixo registram testes anteriores; as gravações originais permanecem no backup local.
+
 Checkpoint anterior ao ajuste: `e189fd1`, `chore: checkpoint before projects composition rebalance`.
 
 ## Prévia
@@ -73,7 +75,7 @@ Validação de navegador realizada em Edge/Chromium com viewports e preferência
 - [1440px, MF ativo](<C:/Users/wesley/Documents/PORTIFOLIO V2/docs/previews/task071-desktop-mf.png>).
 - [1024px](<C:/Users/wesley/Documents/PORTIFOLIO V2/docs/previews/task071-desktop-1024.png>).
 - [390px](<C:/Users/wesley/Documents/PORTIFOLIO V2/docs/previews/task071-mobile-390.png>).
-- [Vídeo curto de alternância](<C:/Users/wesley/Documents/PORTIFOLIO V2/docs/previews/task071-projects-switch.webm>).
+- Vídeo curto de alternância (gravação preservada no backup local).
 
 Vídeo de aproximadamente 9 segundos, em 1440 × 900, com alternância normal, trocas rápidas e pointer leave. Foi reaberto para conferir a reprodução, a duração finita e o seek. Nenhuma falha de captura.
 

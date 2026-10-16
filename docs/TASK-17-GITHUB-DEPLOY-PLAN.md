@@ -2,6 +2,8 @@
 
 Data: **16/10/2026**. Destino exclusivo: [wesleycaiadev/meu-portifolio](https://github.com/wesleycaiadev/meu-portifolio). Domínio confirmado por Wesley: **https://wesleycaiadev.vercel.app/**.
 
+> **Decisão posterior de Wesley, 16/10/2026:** autorizada a exclusão dos vídeos de exemplo/revisão da entrega e o envio do código necessário. O vídeo de 124,16 MiB é a gravação do site Gustavo Sextaro, sem uso pela aplicação. Foram removidos da árvore atual 39 vídeos de referência/revisão (228.187.561 bytes), preservados no novo backup verificado `backups/portfolio-before-video-cleanup-2026-10-16.bundle`. Para a cópia de publicação, a exclusão passa a abranger os 40 caminhos de vídeos encontrados no histórico V2 e os temporários de `.tmp-task10/`; os textos e imagens de referência ficam preservados. Essa decisão substitui a pendência de aprovação da exclusão de vídeos e a proposta de remover o diretório `reference/gustavo/` inteiro. Os demais registros abaixo descrevem a auditoria anterior; acompanhe a execução em [limpeza dos vídeos](TASK-17-VIDEO-CLEANUP.md).
+
 **Estado: auditoria e checkpoint locais concluídos; integração e publicação bloqueadas. Nenhum push, deploy, merge de históricos, alteração de domínio, desarquivamento ou configuração remota foi executado.** A TASK 17A exige aprovação antes da TASK 17B. A confirmação do domínio não autoriza essas alterações.
 
 ## 1. Estado do Git local

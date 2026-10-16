@@ -1,5 +1,7 @@
 # TASK 08.1: continuidade da assinatura de Projetos
 
+> Atualização de 16/10/2026: vídeos de referência e revisão foram retirados da entrega por decisão de Wesley. As descrições abaixo registram testes anteriores; as gravações originais permanecem no backup local.
+
 Checkpoint anterior: `8681983`. Lettering, proporções da lista, previews e zigue-zagues aprovados preservados.
 
 ## Emenda e ritmo
@@ -41,11 +43,11 @@ A emenda tem posição única dentro do mesmo path. A comparação numérica de 
 
 ## Vídeos reais de navegador
 
-- [Antes: emenda e reversão](previews/task081-before-seam.webm)
-- [Depois: emenda e reversão](previews/task081-after-seam.webm)
-- [Close da emenda](previews/task081-seam-close.webm)
-- [Sequência completa, com reversão](previews/task081-full-sequence.webm)
-- [Segunda execução com ponteiro](previews/task081-pointer-sequence.webm)
+- Antes: emenda e reversão (gravação preservada no backup local)
+- Depois: emenda e reversão (gravação preservada no backup local)
+- Close da emenda (gravação preservada no backup local)
+- Sequência completa, com reversão (gravação preservada no backup local)
+- Segunda execução com ponteiro (gravação preservada no backup local)
 
 Os vídeos mostram a aplicação rodando em tempo real. O painel foi ocultado apenas nas gravações posteriores para não cobrir o S. O close é um recorte do vídeo real, sem alteração de velocidade.
 

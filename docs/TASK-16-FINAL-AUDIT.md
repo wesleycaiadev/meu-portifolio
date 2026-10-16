@@ -1,5 +1,7 @@
 # TASK 16 — Auditoria final do portfólio
 
+> Atualização de 16/10/2026: vídeos de referência e revisão foram retirados da entrega por decisão de Wesley. As descrições abaixo registram testes anteriores; as gravações originais permanecem no backup local.
+
 Data: 15/10/2026. Base preservada no checkpoint **`793889f` — `feat: complete portfolio contact section`**.
 
 ## Escopo e estado da entrega
@@ -80,10 +82,10 @@ Não foram observados saltos de loop, duplicação de cenas, pins acumulados, ex
 
 ### Vídeos entregues
 
-1. [Percurso completo da home](previews/task16/home.webm).
-2. [Entrada e exploração do SpaSmooth](previews/task16/spasmooth.webm).
-3. [Entrada e exploração do MF Consultoria](previews/task16/mf-consultoria.webm).
-4. [Processo com scroll reverso](previews/task16/process-reverse.webm).
+1. Percurso completo da home (gravação preservada no backup local).
+2. Entrada e exploração do SpaSmooth (gravação preservada no backup local).
+3. Entrada e exploração do MF Consultoria (gravação preservada no backup local).
+4. Processo com scroll reverso (gravação preservada no backup local).
 
 [Registro dos estados percorridos](previews/task16/videos.json). São evidências de execução local, não avaliação de fluidez em hardware físico.
 

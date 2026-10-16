@@ -1,5 +1,7 @@
 # TASK 08: kinetic project trail
 
+> Atualização de 16/10/2026: vídeos de referência e revisão foram retirados da entrega por decisão de Wesley. As descrições abaixo registram testes anteriores; as gravações originais permanecem no backup local.
+
 Checkpoint anterior à implementação: `1431f9b` (`feat: refine editorial projects composition`).
 
 Este relatório registra a versão inicial da TASK 08. A correção posterior de origem presa à borda e seleção automática pelo scroll está documentada em [PROJECT-TRAIL-CONTINUITY.md](<C:/Users/wesley/Documents/PORTIFOLIO V2/docs/PROJECT-TRAIL-CONTINUITY.md>).
@@ -61,8 +63,8 @@ Os testes não substituem a aprovação visual do usuário nem um teste físico 
 
 ## Evidências
 
-- [Desktop, scroll sem mouse, reversão e depois pointer](<C:/Users/wesley/Documents/PORTIFOLIO V2/docs/previews/task08-trail-desktop.mp4>), aproximadamente 38s, 1440 × 900. Primeira passagem e retorno sem eventos de ponteiro; trecho final com ponteiro.
-- [Mobile, entrada e retorno sem trail](<C:/Users/wesley/Documents/PORTIFOLIO V2/docs/previews/task08-trail-mobile.mp4>), 12.48s, 390 × 844.
+- Desktop, scroll sem mouse, reversão e depois pointer (gravação preservada no backup local), aproximadamente 38s, 1440 × 900. Primeira passagem e retorno sem eventos de ponteiro; trecho final com ponteiro.
+- Mobile, entrada e retorno sem trail (gravação preservada no backup local), 12.48s, 390 × 844.
 - [25%](<C:/Users/wesley/Documents/PORTIFOLIO V2/docs/previews/task08-desktop-25.png>), [40%](<C:/Users/wesley/Documents/PORTIFOLIO V2/docs/previews/task08-desktop-40.png>), [55%](<C:/Users/wesley/Documents/PORTIFOLIO V2/docs/previews/task08-desktop-55.png>), [70%](<C:/Users/wesley/Documents/PORTIFOLIO V2/docs/previews/task08-desktop-70.png>).
 - [1024px](<C:/Users/wesley/Documents/PORTIFOLIO V2/docs/previews/task08-1024.png>), [1920px](<C:/Users/wesley/Documents/PORTIFOLIO V2/docs/previews/task08-1920.png>), [390px](<C:/Users/wesley/Documents/PORTIFOLIO V2/docs/previews/task08-mobile-390.png>), [reduced motion](<C:/Users/wesley/Documents/PORTIFOLIO V2/docs/previews/task08-reduced-motion.png>).
 

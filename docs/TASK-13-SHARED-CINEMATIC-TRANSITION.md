@@ -1,5 +1,7 @@
 # TASK 13 — Transição cinematográfica compartilhada
 
+> Atualização de 16/10/2026: vídeos de referência e revisão foram retirados da entrega por decisão de Wesley. As descrições abaixo registram testes anteriores; as gravações originais permanecem no backup local.
+
 Concluída em 14/10/2026. A MF Consultoria utiliza a mesma passagem Home → notebook → case do SpaSmooth. A TASK 14 não foi iniciada.
 
 ## Checkpoint
@@ -65,8 +67,8 @@ As gravações completas e screenshots foram revisados. Não foram detectadas re
 - [Home: selecione e abra o projeto](http://localhost:3000/#projetos)
 - [Case MF Consultoria: acesso direto](http://localhost:3000/projetos/mf-consultoria)
 - [Case SpaSmooth: acesso direto](http://localhost:3000/projetos/spasmooth)
-- [Vídeo A — SpaSmooth](previews/task13-spasmooth-transition.webm)
-- [Vídeo B — MF Consultoria](previews/task13-mf-consultoria-transition.webm)
+- Vídeo A — SpaSmooth (gravação preservada no backup local)
+- Vídeo B — MF Consultoria (gravação preservada no backup local)
 
 A passagem cinematográfica começa na home. Acesso direto usa a entrada própria do case. Com movimento reduzido ativo, a página respeita essa preferência; os vídeos permitem avaliar a sequência completa sem alterar a configuração do navegador.
 

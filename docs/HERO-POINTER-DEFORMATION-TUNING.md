@@ -1,5 +1,7 @@
 # TASK 04.1 — diagnóstico e ajuste da WC
 
+> Atualização de 16/10/2026: vídeos de referência e revisão foram retirados da entrega por decisão de Wesley. As descrições abaixo registram testes anteriores; as gravações originais permanecem no backup local.
+
 > Registro histórico. O modelo atual, os parâmetros e a validação estão em
 > [TASK 04.2 — Ambient Flow + Pointer Energy](HERO-AMBIENT-FLOW.md).
 > A TASK 04.2 removeu o bypass `wc-preview=1`: reduced motion agora permanece
@@ -152,7 +154,7 @@ estático. O diagnóstico pode ser combinado com `&wc-debug=1`.
 - Original da marca intacto (SHA-256 `d2a294e2bf31b2aaae8bdeb574775fbf8837d15df4f4679c52176b68afc8de35`).
   Nenhum asset, referência, pacote ou lockfile foi alterado nesta revisão.
 
-[Vídeo final — nove estados](previews/task041-wc-pointer.webm), 1440×900, cerca de
+Vídeo final — nove estados (gravação preservada no backup local), 1440×900, cerca de
 21 s: repouso → entrada lenta → percurso pelas partes pretas → esquerda/direita →
 direita/esquerda → movimento rápido → parada sobre a marca → saída → recuperação.
 A gravação combina o Hero estático capturado do navegador com os frames reais do

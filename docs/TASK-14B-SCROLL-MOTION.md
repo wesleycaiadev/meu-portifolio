@@ -1,5 +1,7 @@
 # TASK 14B — Expertise e Processo: motion por scroll
 
+> Atualização de 16/10/2026: vídeos de referência e revisão foram retirados da entrega por decisão de Wesley. As descrições abaixo registram testes anteriores; as gravações originais permanecem no backup local.
+
 Implementada em 14/10/2026 sobre a composição aprovada da TASK 14A. **Pronta para avaliação do motion. TASK 15 não iniciada.**
 
 Refinamento editorial concluído em 15/10/2026: IA como abordagem de desenvolvimento, SQL na descrição de PostgreSQL e parallax na descrição de GSAP. Os controladores de motion e os cases não foram alterados nessa revisão.
@@ -9,8 +11,8 @@ Refinamento editorial concluído em 15/10/2026: IA como abordagem de desenvolvim
 - [Expertise: prévia de motion](http://localhost:3000/?motion=preview#expertise)
 - [Processo: prévia de motion](http://localhost:3000/?motion=preview#processo)
 - [Home normal, respeitando a preferência do sistema](http://localhost:3000/#expertise)
-- [Vídeo A — Expertise, entrada, seleção, saída e reversão](previews/task14b-expertise-motion.webm)
-- [Vídeo B — Processo, quatro estados, reversão e seleção manual](previews/task14b-process-motion.webm)
+- Vídeo A — Expertise, entrada, seleção, saída e reversão (gravação preservada no backup local)
+- Vídeo B — Processo, quatro estados, reversão e seleção manual (gravação preservada no backup local)
 
 As prévias são **exclusivas de desenvolvimento**. O parâmetro habilita somente o motion das duas novas seções quando o navegador solicita movimento reduzido. Não altera a configuração do sistema, Hero, Sobre, Projetos ou os cases. Uma instrução identifica a prévia e permite retornar à preferência do sistema. Em produção, o parâmetro é ignorado.
 
@@ -140,8 +142,8 @@ As capturas comparativas da composição inteira da Expertise congelam o quadro 
 
 ### Evidências
 
-- [Vídeo Expertise](previews/task14b-expertise-motion.webm)
-- [Vídeo Processo](previews/task14b-process-motion.webm)
+- Vídeo Expertise (gravação preservada no backup local)
+- Vídeo Processo (gravação preservada no backup local)
 - [Dados das gravações](previews/task14b-video-validation.json)
 - Expertise: [entrada](previews/task14b-expertise-initial.png), [exploração/seleção](previews/task14b-expertise-exploration.png), [repouso](previews/task14b-expertise-final.png).
 - Processo: [Entender](previews/task14b-process-understand.png), [Estruturar](previews/task14b-process-structure.png), [Construir](previews/task14b-process-build.png), [Refinar](previews/task14b-process-refine.png).
