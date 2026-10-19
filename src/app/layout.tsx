@@ -8,6 +8,7 @@ export const metadata = portfolioMetadata(
   "Wesley Caiã — Design & Desenvolvimento",
   "Portfólio de Wesley Caiã. Design e desenvolvimento de interfaces, aplicações e experiências digitais com identidade, código e movimento.",
   "/",
+  "/assets/brand/social-home.png",
 );
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {

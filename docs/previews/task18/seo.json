@@ -1,0 +1,277 @@
+{
+  "checkedAt": "2026-10-19T11:11:50.356Z",
+  "origin": "https://wesleycaiadev.vercel.app",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "url": "https://wesleycaiadev.vercel.app/",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-vercel-id": "gru1::ppwsz-1792408307594-5890031dcc03",
+        "x-vercel-cache": "HIT",
+        "x-matched-path": "/",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin"
+      },
+      "title": "Wesley Caiã — Design &amp; Desenvolvimento",
+      "canonical": "https://wesleycaiadev.vercel.app",
+      "metadata": {
+        "description": "Portfólio de Wesley Caiã. Design e desenvolvimento de interfaces, aplicações e experiências digitais com identidade, código e movimento.",
+        "robots": "index, follow",
+        "og:title": "Wesley Caiã — Design &amp; Desenvolvimento",
+        "og:description": "Portfólio de Wesley Caiã. Design e desenvolvimento de interfaces, aplicações e experiências digitais com identidade, código e movimento.",
+        "og:url": "https://wesleycaiadev.vercel.app",
+        "og:site_name": "Wesley Caiã",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:image": null,
+        "og:image:alt": null,
+        "twitter:card": "summary",
+        "twitter:title": "Wesley Caiã — Design &amp; Desenvolvimento",
+        "twitter:description": "Portfólio de Wesley Caiã. Design e desenvolvimento de interfaces, aplicações e experiências digitais com identidade, código e movimento.",
+        "twitter:image": null
+      },
+      "v2": {
+        "next": true,
+        "wc": true,
+        "projects": true,
+        "oldProjects": []
+      }
+    },
+    {
+      "path": "/projetos/spasmooth",
+      "status": 200,
+      "url": "https://wesleycaiadev.vercel.app/projetos/spasmooth",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-vercel-id": "gru1::nwlxq-1792408307704-bc59d8f1535b",
+        "x-vercel-cache": "HIT",
+        "x-matched-path": "/projetos/spasmooth",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin"
+      },
+      "title": "SpaSmooth | Wesley Caiã",
+      "canonical": "https://wesleycaiadev.vercel.app/projetos/spasmooth",
+      "metadata": {
+        "description": "SpaSmooth: design e desenvolvimento de uma experiência digital de massoterapia, Day Spa e bronzeamento. Explore a interface e conheça o projeto de Wesley Caiã.",
+        "robots": "index, follow",
+        "og:title": "SpaSmooth | Wesley Caiã",
+        "og:description": "SpaSmooth: design e desenvolvimento de uma experiência digital de massoterapia, Day Spa e bronzeamento. Explore a interface e conheça o projeto de Wesley Caiã.",
+        "og:url": "https://wesleycaiadev.vercel.app/projetos/spasmooth",
+        "og:site_name": "Wesley Caiã",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:image": "https://wesleycaiadev.vercel.app/assets/projects/spasmooth/spasmooth-hero-desktop.png",
+        "og:image:alt": "SpaSmooth | Wesley Caiã",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "SpaSmooth | Wesley Caiã",
+        "twitter:description": "SpaSmooth: design e desenvolvimento de uma experiência digital de massoterapia, Day Spa e bronzeamento. Explore a interface e conheça o projeto de Wesley Caiã.",
+        "twitter:image": "https://wesleycaiadev.vercel.app/assets/projects/spasmooth/spasmooth-hero-desktop.png"
+      },
+      "shareImage": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 1566051
+      }
+    },
+    {
+      "path": "/projetos/mf-consultoria",
+      "status": 200,
+      "url": "https://wesleycaiadev.vercel.app/projetos/mf-consultoria",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-vercel-id": "gru1::qz8qv-1792408308164-46760d565b7b",
+        "x-vercel-cache": "HIT",
+        "x-matched-path": "/projetos/mf-consultoria",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin"
+      },
+      "title": "MF Consultoria | Wesley Caiã",
+      "canonical": "https://wesleycaiadev.vercel.app/projetos/mf-consultoria",
+      "metadata": {
+        "description": "MF Consultoria: design e desenvolvimento de uma experiência digital de curadoria automotiva. Explore as capturas e conheça o projeto de Wesley Caiã.",
+        "robots": "index, follow",
+        "og:title": "MF Consultoria | Wesley Caiã",
+        "og:description": "MF Consultoria: design e desenvolvimento de uma experiência digital de curadoria automotiva. Explore as capturas e conheça o projeto de Wesley Caiã.",
+        "og:url": "https://wesleycaiadev.vercel.app/projetos/mf-consultoria",
+        "og:site_name": "Wesley Caiã",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:image": "https://wesleycaiadev.vercel.app/assets/projects/mf-consultoria/mf-consultoria-hero-desktop.png",
+        "og:image:alt": "MF Consultoria | Wesley Caiã",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "MF Consultoria | Wesley Caiã",
+        "twitter:description": "MF Consultoria: design e desenvolvimento de uma experiência digital de curadoria automotiva. Explore as capturas e conheça o projeto de Wesley Caiã.",
+        "twitter:image": "https://wesleycaiadev.vercel.app/assets/projects/mf-consultoria/mf-consultoria-hero-desktop.png"
+      },
+      "shareImage": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 395060
+      }
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "url": "https://wesleycaiadev.vercel.app/robots.txt",
+      "headers": {
+        "content-type": "text/plain; charset=utf-8",
+        "x-vercel-id": "gru1::ppwsz-1792408308371-5936020933bf",
+        "x-vercel-cache": "MISS",
+        "x-matched-path": "/robots.txt",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin"
+      },
+      "metadata": {
+        "description": null,
+        "robots": null,
+        "og:title": null,
+        "og:description": null,
+        "og:url": null,
+        "og:site_name": null,
+        "og:locale": null,
+        "og:type": null,
+        "og:image": null,
+        "og:image:alt": null,
+        "twitter:card": null,
+        "twitter:title": null,
+        "twitter:description": null,
+        "twitter:image": null
+      },
+      "body": "User-Agent: *\nAllow: /\nDisallow: /playground\n\nSitemap: https://wesleycaiadev.vercel.app/sitemap.xml\n"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "url": "https://wesleycaiadev.vercel.app/sitemap.xml",
+      "headers": {
+        "content-type": "application/xml",
+        "x-vercel-id": "gru1::8xgjb-1792408308592-6dc3131d86ec",
+        "x-vercel-cache": "MISS",
+        "x-matched-path": "/sitemap.xml",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin"
+      },
+      "metadata": {
+        "description": null,
+        "robots": null,
+        "og:title": null,
+        "og:description": null,
+        "og:url": null,
+        "og:site_name": null,
+        "og:locale": null,
+        "og:type": null,
+        "og:image": null,
+        "og:image:alt": null,
+        "twitter:card": null,
+        "twitter:title": null,
+        "twitter:description": null,
+        "twitter:image": null
+      },
+      "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n<url>\n<loc>https://wesleycaiadev.vercel.app/</loc>\n</url>\n<url>\n<loc>https://wesleycaiadev.vercel.app/projetos/spasmooth</loc>\n</url>\n<url>\n<loc>https://wesleycaiadev.vercel.app/projetos/mf-consultoria</loc>\n</url>\n</urlset>\n"
+    },
+    {
+      "path": "/playground",
+      "status": 404,
+      "url": "https://wesleycaiadev.vercel.app/playground",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-vercel-id": "gru1::hlddd-1792408308809-e43a6d84101c",
+        "x-vercel-cache": "PRERENDER",
+        "x-matched-path": "/playground",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin"
+      },
+      "title": "Wesley Caiã — Design &amp; Desenvolvimento",
+      "canonical": "https://wesleycaiadev.vercel.app",
+      "metadata": {
+        "description": "Portfólio de Wesley Caiã. Design e desenvolvimento de interfaces, aplicações e experiências digitais com identidade, código e movimento.",
+        "robots": "noindex",
+        "og:title": "Wesley Caiã — Design &amp; Desenvolvimento",
+        "og:description": "Portfólio de Wesley Caiã. Design e desenvolvimento de interfaces, aplicações e experiências digitais com identidade, código e movimento.",
+        "og:url": "https://wesleycaiadev.vercel.app",
+        "og:site_name": "Wesley Caiã",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:image": null,
+        "og:image:alt": null,
+        "twitter:card": "summary",
+        "twitter:title": "Wesley Caiã — Design &amp; Desenvolvimento",
+        "twitter:description": "Portfólio de Wesley Caiã. Design e desenvolvimento de interfaces, aplicações e experiências digitais com identidade, código e movimento.",
+        "twitter:image": null
+      }
+    },
+    {
+      "path": "/playground/project-case",
+      "status": 404,
+      "url": "https://wesleycaiadev.vercel.app/playground/project-case",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-vercel-id": "gru1::zg5bg-1792408309251-957c1b5afcbc",
+        "x-vercel-cache": "PRERENDER",
+        "x-matched-path": "/playground/project-case",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin"
+      },
+      "title": "Wesley Caiã — Design &amp; Desenvolvimento",
+      "canonical": "https://wesleycaiadev.vercel.app",
+      "metadata": {
+        "description": "Portfólio de Wesley Caiã. Design e desenvolvimento de interfaces, aplicações e experiências digitais com identidade, código e movimento.",
+        "robots": "noindex",
+        "og:title": "Wesley Caiã — Design &amp; Desenvolvimento",
+        "og:description": "Portfólio de Wesley Caiã. Design e desenvolvimento de interfaces, aplicações e experiências digitais com identidade, código e movimento.",
+        "og:url": "https://wesleycaiadev.vercel.app",
+        "og:site_name": "Wesley Caiã",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:image": null,
+        "og:image:alt": null,
+        "twitter:card": "summary",
+        "twitter:title": "Wesley Caiã — Design &amp; Desenvolvimento",
+        "twitter:description": "Portfólio de Wesley Caiã. Design e desenvolvimento de interfaces, aplicações e experiências digitais com identidade, código e movimento.",
+        "twitter:image": null
+      }
+    },
+    {
+      "path": "/playground/project-object",
+      "status": 404,
+      "url": "https://wesleycaiadev.vercel.app/playground/project-object",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-vercel-id": "gru1::hvnm6-1792408309636-6ac48b68292e",
+        "x-vercel-cache": "PRERENDER",
+        "x-matched-path": "/playground/project-object",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin"
+      },
+      "title": "Wesley Caiã — Design &amp; Desenvolvimento",
+      "canonical": "https://wesleycaiadev.vercel.app",
+      "metadata": {
+        "description": "Portfólio de Wesley Caiã. Design e desenvolvimento de interfaces, aplicações e experiências digitais com identidade, código e movimento.",
+        "robots": "noindex",
+        "og:title": "Wesley Caiã — Design &amp; Desenvolvimento",
+        "og:description": "Portfólio de Wesley Caiã. Design e desenvolvimento de interfaces, aplicações e experiências digitais com identidade, código e movimento.",
+        "og:url": "https://wesleycaiadev.vercel.app",
+        "og:site_name": "Wesley Caiã",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:image": null,
+        "og:image:alt": null,
+        "twitter:card": "summary",
+        "twitter:title": "Wesley Caiã — Design &amp; Desenvolvimento",
+        "twitter:description": "Portfólio de Wesley Caiã. Design e desenvolvimento de interfaces, aplicações e experiências digitais com identidade, código e movimento.",
+        "twitter:image": null
+      }
+    }
+  ],
+  "oldPages": {
+    "status": 200,
+    "url": "https://wesleycaiadev.github.io/meu-portifolio/",
+    "title": "Wesley Caiã — Portfólio V2 | meu-portifolio",
+    "canonical": "https://wesleycaiadev.github.io/meu-portifolio/",
+    "robots": null,
+    "next": false,
+    "v1": false
+  }
+}

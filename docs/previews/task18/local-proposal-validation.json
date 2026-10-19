@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-10-19T11:19:28.898Z",
+  "homeImage": {
+    "path": "/assets/brand/social-home.png",
+    "width": 1200,
+    "height": 630,
+    "bytes": 44332
+  },
+  "compiledProductionHomeOG": true,
+  "compiledProductionHomeTwitterLargeCard": true,
+  "caseImagesPreserved": true,
+  "previewIndexingPolicy": [
+    {
+      "origin": "(unset — Preview)",
+      "index": false,
+      "hasSocialImage": false
+    },
+    {
+      "origin": "https://wesleycaiadev.vercel.app",
+      "index": true,
+      "hasSocialImage": true
+    },
+    {
+      "origin": "http://localhost:3000",
+      "index": false,
+      "hasSocialImage": false
+    },
+    {
+      "origin": "https://unconfirmed.example/path",
+      "index": false,
+      "hasSocialImage": false
+    }
+  ],
+  "oldGithubHomepageStatus": 404,
+  "lint": true,
+  "typecheck": true,
+  "build": true,
+  "published": false
+}

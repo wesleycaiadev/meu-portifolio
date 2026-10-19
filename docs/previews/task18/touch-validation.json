@@ -1,0 +1,85 @@
+{
+  "checkedAt": "2026-10-19T11:17:02.932Z",
+  "browser": "Edge headless",
+  "physicalDevice": false,
+  "checks": [
+    {
+      "name": "Mobile Hero Projects anchor works by touch",
+      "value": true
+    },
+    {
+      "name": "Mobile project link opens case without cinematic overlay",
+      "value": true
+    },
+    {
+      "name": "spasmooth captures scroll with a native touch gesture",
+      "value": true
+    },
+    {
+      "name": "spasmooth Sobre tab works by touch",
+      "value": true
+    },
+    {
+      "name": "spasmooth Estética tab works by touch",
+      "value": true
+    },
+    {
+      "name": "spasmooth Funcionalidades tab works by touch",
+      "value": true
+    },
+    {
+      "name": "spasmooth Tecnologias tab works by touch",
+      "value": true
+    },
+    {
+      "name": "spasmooth mobile has no overflow",
+      "value": true
+    },
+    {
+      "name": "spasmooth mobile return anchor restores Projects",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria captures scroll with a native touch gesture",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria Sobre tab works by touch",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria Estética tab works by touch",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria Funcionalidades tab works by touch",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria Tecnologias tab works by touch",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria mobile has no overflow",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria mobile return anchor restores Projects",
+      "value": true
+    },
+    {
+      "name": "spasmooth desktop automatic 3D ready",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria desktop automatic 3D ready",
+      "value": true
+    },
+    {
+      "name": "No page errors during touch and screenshot checks",
+      "value": true
+    }
+  ],
+  "errors": [],
+  "version": "155.0.4283.45"
+}

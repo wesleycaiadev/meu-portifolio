@@ -1,0 +1,96 @@
+Skip to content
+wesleycaiadev's projects
+Hobby
+Find
+F
+Overview
+Deployments
+Logs
+Analytics
+Speed Insights
+Observability
+Firewall
+CDN
+Environment Variables
+Domains
+Connect
+Integrations
+Storage
+Flags
+Agent
+AI Gateway
+Sandboxes
+Workflows
+Images
+Daemons
+Usage
+Support
+Settings
+Token Pass
+-60%
+Get a 60% discount on tokens in your editor with Token Pass.
+Enable
+wesleycaiadev
+my-portifolio
+Deployments
+4c8ZnLQEq
+Agent
+Deployment
+Logs
+Resources
+Source
+Open Graph
+Deployment Details
+Share
+Logs
+Visit
+Created
+wesleycaiadev
+23m ago
+Status
+Ready
+Latest
+Duration
+21s
+23m ago
+Environment
+Production
+Current
+Domains
+wesleycaiadev.vercel.app
++1
+my-portifolio-git-main-wesleycaiadevs-projects.vercel.app
+my-portifolio-fadig1gev-wesleycaiadevs-projects.vercel.app
+Source
+main
+2222eed
+Start portfolio motion automatically without controls
+Deployment Settings
+2 Recommendations
+Build Logs
+3
+21s
+Deployment Summary
+Resources
+Deployment Checks
+Assigning Custom Domains
+
+Runtime Logs
+
+View and debug runtime logs & errors
+
+Observability
+
+Monitor app health & performance
+
+Speed Insights
+
+Not Enabled
+
+Performance metrics from real users
+
+Web Analytics
+
+Not Enabled
+
+Analyze visitors & traffic in real-time

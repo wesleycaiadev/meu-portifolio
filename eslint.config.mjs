@@ -8,6 +8,7 @@ export default defineConfig([
   globalIgnores([
     ".next/**",
     ".npm-cache/**",
+    ".tmp-task*/**",
     "out/**",
     "coverage/**",
     "public/**",

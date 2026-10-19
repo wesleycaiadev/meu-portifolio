@@ -1,0 +1,100 @@
+{
+  "base": "https://wesleycaiadev.vercel.app",
+  "checkedAt": "2026-10-19T11:16:02.344Z",
+  "checks": [
+    {
+      "name": "Full home motion starts automatically with OS reduced motion",
+      "value": true
+    },
+    {
+      "name": "Stored reduced choice cannot disable the animations",
+      "value": true
+    },
+    {
+      "name": "No public motion controls or preference bootstrap",
+      "value": true
+    },
+    {
+      "name": "Home has five pins and one WC canvas",
+      "value": true
+    },
+    {
+      "name": "CTA animation is active",
+      "value": true
+    },
+    {
+      "name": "Projects trail is visible to the animation controller",
+      "value": true
+    },
+    {
+      "name": "WC reacts to pointer input",
+      "value": true
+    },
+    {
+      "name": "Hero takeover responds to scroll",
+      "value": true
+    },
+    {
+      "name": "sobre progresses with scroll",
+      "value": true
+    },
+    {
+      "name": "expertise progresses with scroll",
+      "value": true
+    },
+    {
+      "name": "processo progresses with scroll",
+      "value": true
+    },
+    {
+      "name": "Cinematic transition runs and completes automatically",
+      "value": true
+    },
+    {
+      "name": "SpaSmooth opens one notebook without controls",
+      "value": true
+    },
+    {
+      "name": "MF notebook starts and screen responds to keyboard",
+      "value": true
+    },
+    {
+      "name": "Returning from a case restores the animated Projects section",
+      "value": true
+    },
+    {
+      "name": "OS motion changes do not remove or duplicate scenes",
+      "value": true
+    },
+    {
+      "name": "Reload keeps motion automatic without a toggle",
+      "value": true
+    },
+    {
+      "name": "Mobile preserves touch WC fallback and has no controls",
+      "value": true
+    },
+    {
+      "name": "Mobile has no horizontal overflow",
+      "value": true
+    },
+    {
+      "name": "spasmooth retains explorable mobile captures",
+      "value": true
+    },
+    {
+      "name": "mf-consultoria retains explorable mobile captures",
+      "value": true
+    },
+    {
+      "name": "Without WebGL the case remains readable with captures",
+      "value": true
+    },
+    {
+      "name": "No page or hydration errors",
+      "value": true
+    }
+  ],
+  "errors": [],
+  "hydrationErrors": []
+}

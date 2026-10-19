@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-19T11:11:47.406Z",
+  "repository": "wesleycaiadev/meu-portifolio",
+  "homepage": "https://meu-portifolio-one-beta.vercel.app",
+  "defaultBranch": "main",
+  "main": "2222eed8fd445ea626b1827d7085bed8fc1ba1c0",
+  "pages": {
+    "http": 200,
+    "url": "https://wesleycaiadev.github.io/meu-portifolio/",
+    "status": "built",
+    "buildType": "legacy",
+    "source": {
+      "branch": "main",
+      "path": "/"
+    }
+  },
+  "production": [
+    {
+      "id": 7171750608,
+      "sha": "2222eed8fd445ea626b1827d7085bed8fc1ba1c0",
+      "environment": "Production",
+      "statuses": [
+        {
+          "state": "success",
+          "url": "https://my-portifolio-fadig1gev-wesleycaiadevs-projects.vercel.app",
+          "createdAt": "2026-10-19T10:48:34Z"
+        }
+      ]
+    }
+  ]
+}
