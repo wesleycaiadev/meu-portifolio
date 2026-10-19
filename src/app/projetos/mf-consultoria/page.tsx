@@ -7,5 +7,5 @@ export const metadata = portfolioMetadata(mfCase.metadata.title, mfCase.metadata
 
 export default async function MFConsultoriaPage({ searchParams }: PageProps<"/projetos/mf-consultoria">) {
   const preview = process.env.NODE_ENV === "development" && (await searchParams).motion === "preview";
-  return <><ProjectCase key={preview ? "preview" : "standard"} project={mfCase} preview={preview} initialMotionPreview={preview} /><ProjectCaseNoScript project={mfCase} /></>;
+  return <><ProjectCase key={preview ? "preview" : "standard"} project={mfCase} preview={preview} /><ProjectCaseNoScript project={mfCase} /></>;
 }

@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, type ReactNode } from "react";
 import styles from "./HeroTakeover.module.scss";
-import { isMotionReduced, observeMotionPreference } from "@/lib/motion/preference";
 
 export function HeroTakeover({ children }: { children: ReactNode }) {
   const scene = useRef<HTMLDivElement>(null);
@@ -16,9 +15,7 @@ export function HeroTakeover({ children }: { children: ReactNode }) {
     let disposed = false;
     let loading = false;
     let release: (() => void) | undefined;
-    const eligible = () => previewMode
-      ? document.documentElement.dataset.wcMotionPreview === "enabled"
-      : !isMotionReduced();
+    const eligible = () => !previewMode || document.documentElement.dataset.wcMotionPreview === "enabled";
     const reconcile = () => {
       if (!eligible()) { release?.(); release = undefined; return; }
       if (disposed || release || loading) return;
@@ -29,7 +26,6 @@ export function HeroTakeover({ children }: { children: ReactNode }) {
         release = createWcTakeover(element);
       }).catch(() => { loading = false; });
     };
-    observeMotionPreference(reconcile, lifetime.signal);
     if (process.env.NODE_ENV === "development") {
       window.addEventListener("wc-motion-preview", reconcile, { signal: lifetime.signal });
     }

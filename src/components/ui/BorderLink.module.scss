@@ -56,9 +56,3 @@
   stroke-dashoffset: 0;
   transition: none;
 }
-
-:global(html[data-motion="reduced"]) {
-  .stroke {
-    transition: none;
-  }
-}

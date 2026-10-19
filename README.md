@@ -24,7 +24,7 @@ O typecheck gera os tipos de rotas antes de executar TypeScript. O projeto usa `
 
 ## Revisar movimento
 
-Por decisão de Wesley, as animações iniciam habilitadas, inclusive quando o sistema informa `prefers-reduced-motion: reduce`. O controle **Reduzir movimento / Ativar animações** permite escolher a versão estática para este site e guarda a escolha no navegador. Não altera nenhuma configuração do Windows. A mesma escolha vale para a home, transições e cases.
+Por decisão de Wesley, as animações iniciam automaticamente, inclusive quando o sistema informa `prefers-reduced-motion: reduce`. Não há botão público de ativação/desativação nem preferência de movimento salva pelo site. Nenhuma configuração do Windows é alterada. A regra vale para a home, transições e cases.
 
 Os cases continuam usando capturas estáticas em telas pequenas, ponteiros de toque ou ausência de WebGL. Esses limites de capacidade são independentes da preferência de movimento.
 
@@ -34,7 +34,7 @@ Somente em desenvolvimento, estes links permitem revisar os notebooks mesmo com 
 - [SpaSmooth — prévia 3D](http://localhost:3000/projetos/spasmooth?motion=preview).
 - [Home — controles de prévia](http://localhost:3000/?wc-preview=1&motion=preview#conteudo). Use **Ativar animação** no painel para revisar WC/Sobre/Projetos.
 
-Nos cases, a prévia explícita inicia a abertura 3D em desktop e permite voltar à preferência escolhida no site. Os controles de depuração e seus parâmetros continuam restritos ao desenvolvimento. O controle público de movimento é uma preferência separada, disponível também em produção. Playgrounds permanecem restritos ao desenvolvimento.
+As rotas normais já iniciam as animações; os links de prévia servem apenas para os controles de depuração, restritos ao desenvolvimento. Playgrounds permanecem restritos ao desenvolvimento.
 
 ## Organização
 

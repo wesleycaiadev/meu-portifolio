@@ -5,7 +5,6 @@ import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import { aiDevelopmentApproach, expertiseGroups, expertiseTechnologies, technologyProjects, type ExpertiseTechnology } from "@/data/expertise";
 import { TechnologyLogo } from "./TechnologyLogo";
 import { endSectionPreview } from "@/lib/motion/sectionPreview";
-import { isMotionReduced, observeMotionPreference } from "@/lib/motion/preference";
 import styles from "./Expertise.module.scss";
 
 function TechnologyDetails({ technology }: { technology: ExpertiseTechnology }) {
@@ -41,7 +40,7 @@ export function Expertise() {
     const lifetime = new AbortController();
     let disposed = false, generation = 0;
     let release: (() => void) | undefined;
-    const eligible = () => viewport.matches && (preview || !isMotionReduced());
+    const eligible = () => viewport.matches;
     const reconcile = () => {
       const version = ++generation;
       release?.(); release = undefined;
@@ -54,7 +53,6 @@ export function Expertise() {
         release = createExpertiseMotion(element);
       }).catch(() => { if (!disposed) element.dataset.expertiseMotion = "unavailable"; });
     };
-    observeMotionPreference(reconcile, lifetime.signal);
     viewport.addEventListener("change", reconcile, { signal: lifetime.signal });
     window.addEventListener("section-motion-preview-end", () => { preview = false; reconcile(); }, { signal: lifetime.signal });
     reconcile();

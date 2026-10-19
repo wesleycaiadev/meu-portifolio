@@ -9,9 +9,8 @@ import { ProjectCaseContent } from "./ProjectCaseContent";
 import { ProjectCaseControls } from "./ProjectCaseControls";
 import styles from "./ProjectCase.module.scss";
 import { useProjectTransition } from "@/components/motion/ProjectTransitionProvider";
-import { isMotionReduced, observeMotionPreference } from "@/lib/motion/preference";
 
-export function ProjectCase({ project, preview = false, initialMotionPreview = false }: { project: ProjectCaseData; preview?: boolean; initialMotionPreview?: boolean }) {
+export function ProjectCase({ project, preview = false }: { project: ProjectCaseData; preview?: boolean }) {
   const casePath = project.path;
   const transition = useProjectTransition();
   const stage = useRef<HTMLDivElement>(null);
@@ -23,8 +22,6 @@ export function ProjectCase({ project, preview = false, initialMotionPreview = f
   const [reading, setReading] = useState(false);
   const [phase, setPhase] = useState("loading");
   const [threeReady, setThreeReady] = useState(false);
-  const [reduced, setReduced] = useState(false);
-  const [previewMotion, setPreviewMotion] = useState(process.env.NODE_ENV === "development" && initialMotionPreview);
   const [status, setStatus] = useState("Preparando as capturas do projeto.");
 
   useEffect(() => {
@@ -49,16 +46,15 @@ export function ProjectCase({ project, preview = false, initialMotionPreview = f
       showStatic("Explore o projeto pelas capturas estáticas.");
     });
     const reconcile = () => {
-      // Some viewport changes emit a media event without changing either preference.
-      const preferences = `${isMotionReduced()}:${narrow.matches}`;
+      // Some viewport changes emit a media event without changing the layout.
+      const preferences = String(narrow.matches);
       if (preferences === appliedPreferences) return;
       appliedPreferences = preferences;
       const ticket = ++generation;
       clearLoadingTimeout();
       controller.current?.destroy(); controller.current = null;
-      setReduced(isMotionReduced());
-      if (narrow.matches || (isMotionReduced() && !previewMotion)) {
-        showStatic(narrow.matches ? "Versão simplificada: explore as capturas por toque ou teclado." : "Movimento reduzido: capturas roláveis e conteúdo editorial disponíveis.");
+      if (narrow.matches) {
+        showStatic("Versão simplificada: explore as capturas por toque ou teclado.");
         return;
       }
       setThreeReady(false); setPhase("loading");
@@ -96,14 +92,14 @@ export function ProjectCase({ project, preview = false, initialMotionPreview = f
         if (!disposed && ticket === generation) showStatic("A prévia não pôde carregar. As capturas permanecem disponíveis.");
       });
     };
-    reconcile(); const stopPreference = observeMotionPreference(reconcile); narrow.addEventListener("change", reconcile);
+    reconcile(); narrow.addEventListener("change", reconcile);
     return () => {
-      disposed = true; generation++; stopPreference(); narrow.removeEventListener("change", reconcile);
+      disposed = true; generation++; narrow.removeEventListener("change", reconcile);
       unbindTransition();
       clearLoadingTimeout();
       controller.current?.destroy(); controller.current = null;
     };
-  }, [previewMotion, transition, project, casePath]);
+  }, [transition, project, casePath]);
 
   const selectTab = (value: CaseTab) => {
     readingState.current = true; setTab(value); setReading(true); controller.current?.setReading(true);
@@ -161,15 +157,13 @@ export function ProjectCase({ project, preview = false, initialMotionPreview = f
           </div>
           <p id="case-screen-help" className={styles.screenHelp}>
             {threeReady ? "Role sobre a tela para explorar. Arraste fora dela para ajustar o ângulo."
-              : reduced && phase === "static" ? "Movimento reduzido ativo: a versão estática preserva as capturas. Role dentro da imagem para explorar."
               : "Role dentro da imagem para explorar as capturas."}
           </p>
           <p className={styles.captureNote}>{project.simulationNote}</p>
         </section>
       </div>
       {process.env.NODE_ENV === "development" && preview && <ProjectCaseControls
-        reduced={reduced} previewMotion={previewMotion} threeReady={threeReady} available={available} status={status}
-        toggleMotion={() => setPreviewMotion(value => !value)} replay={replay}
+        threeReady={threeReady} available={available} status={status} replay={replay}
         reset={() => { overview(); controller.current?.reset(); }} />}
     </main>
   );

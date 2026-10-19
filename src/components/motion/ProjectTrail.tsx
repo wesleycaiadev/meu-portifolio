@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react";
 import styles from "./ProjectTrail.module.scss";
 import type { ProjectId } from "@/data/projects";
-import { isMotionReduced, observeMotionPreference } from "@/lib/motion/preference";
 
 export function ProjectTrail({ onSelect }: { onSelect: (id: ProjectId) => void }) {
   const surface = useRef<SVGSVGElement>(null);
@@ -20,9 +19,7 @@ export function ProjectTrail({ onSelect }: { onSelect: (id: ProjectId) => void }
     let disposed = false;
     let loading = false;
     let release: (() => void) | undefined;
-    const eligible = () => desktop.matches && (previewMode
-      ? document.documentElement.dataset.wcMotionPreview === "enabled"
-      : !isMotionReduced());
+    const eligible = () => desktop.matches && (!previewMode || document.documentElement.dataset.wcMotionPreview === "enabled");
     const reconcile = () => {
       if (!eligible()) { release?.(); release = undefined; return; }
       if (disposed || loading || release) return;
@@ -36,7 +33,6 @@ export function ProjectTrail({ onSelect }: { onSelect: (id: ProjectId) => void }
         console.error("Project trail could not initialize.", error);
       });
     };
-    observeMotionPreference(reconcile, lifetime.signal);
     desktop.addEventListener("change", reconcile, { signal: lifetime.signal });
     if (process.env.NODE_ENV === "development") {
       window.addEventListener("wc-motion-preview", reconcile, { signal: lifetime.signal });

@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import styles from "./WcIdentity.module.scss";
-import { isMotionReduced, observeMotionPreference } from "@/lib/motion/preference";
 
 export function WcIdentity() {
   const frame = useRef<HTMLDivElement>(null);
@@ -21,7 +20,7 @@ export function WcIdentity() {
     let previewEnabled = false;
     const previewMode = process.env.NODE_ENV === "development"
       && new URLSearchParams(location.search).get("wc-preview") === "1";
-    const eligible = () => pointer.matches && (previewMode ? previewEnabled : !isMotionReduced());
+    const eligible = () => pointer.matches && (!previewMode || previewEnabled);
 
     const reconcile = () => {
       if (!eligible()) {
@@ -32,7 +31,7 @@ export function WcIdentity() {
       if (disposed || release || loading || !inView || document.hidden) return;
 
       loading = true;
-      // Coarse pointers and the visitor's reduced-motion choice avoid Three.js.
+      // Coarse pointers keep the original touch fallback.
       void import("@/lib/three/wcDeformation").then(({ createWcDeformation }) => {
         loading = false;
         if (disposed || !eligible() || !inView || document.hidden) return;
@@ -49,7 +48,6 @@ export function WcIdentity() {
     });
     intersection.observe(element.closest("#inicio") ?? element);
     pointer.addEventListener("change", reconcile, { signal: lifetime.signal });
-    observeMotionPreference(reconcile, lifetime.signal);
     document.addEventListener("visibilitychange", reconcile, { signal: lifetime.signal });
 
     if (process.env.NODE_ENV === "development" && previewMode) {

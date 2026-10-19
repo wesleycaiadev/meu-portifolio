@@ -1,28 +1,28 @@
-# Preferência de movimento do portfólio
+# Movimento automático do portfólio
 
-Data: 16/10/2026. Wesley solicitou que a versão publicada inicie com animações mesmo quando o Windows/navegador informe movimento reduzido, mantendo um controle próprio para o visitante.
+Decisão atualizada em **19/10/2026**: Wesley solicitou animações automáticas, inclusive quando o navegador informa movimento reduzido, **sem botão de ativação ou desativação**.
 
 ## Comportamento
 
-- **Padrão: animações habilitadas**, independentemente da preferência do sistema.
-- Controle público discreto em todas as rotas: **Reduzir movimento** quando ativo; **Ativar animações** quando reduzido.
-- A escolha reduzida remove WC WebGL, pins/timelines de scroll, transições cinematográficas e notebooks 3D; mantém o conteúdo e as capturas acessíveis. Também reduz os efeitos CSS de botões, contato e abas.
-- A escolha é persistida localmente como `portfolio-motion-preference`, sem conta, envio de dados ou alteração do Windows. Se o armazenamento estiver indisponível, o controle funciona no documento atual.
-- Todas as rotas usam a mesma preferência; mudanças são observadas também entre abas. O script inicial restaura a escolha salva antes da hidratação e o controle não é mostrado quando JavaScript está indisponível.
-- Breakpoints, suporte a WebGL, limites de DPR e adaptação para toque permanecem. Habilitar animações não força um notebook 3D em dispositivos sem capacidade ou na apresentação mobile.
-- Os parâmetros e painéis de depuração continuam exclusivos do desenvolvimento; não são a origem da preferência pública.
+- Hero/WC, Sobre, Projetos, Expertise, Processo, efeitos CSS e cases iniciam automaticamente conforme a capacidade e o tamanho da tela.
+- Nenhum controle público de movimento, script de preferência ou leitura/gravação de uma escolha de movimento em `localStorage`.
+- Valores antigos de `portfolio-motion-preference` não são consultados e não impedem a inicialização.
+- As configurações do Windows e do navegador permanecem intactas.
+- Os parâmetros e painéis de depuração permanecem restritos ao desenvolvimento. O visitante não precisa de query string para ver as animações.
+- Breakpoints, limites de DPR, adaptação para toque e fallback sem WebGL foram preservados. A apresentação mobile dos cases continua usando capturas exploráveis.
 
 ## Escopo técnico
 
-`src/lib/motion/preference.ts` centraliza a escolha, notificação e persistência. Os controladores existentes consultam essa escolha e continuam responsáveis pelo próprio descarte. Não houve alteração de trajetórias, câmera, timings, composição, conteúdo ou biblioteca.
+A implementação com controle, preparada no commit `2cb7448`, não chegou à produção e foi retirada da versão final deste PR. `MotionControl`, seu CSS, o módulo de preferência e o script inicial foram removidos. Os controladores originais continuam responsáveis pelo carregamento e descarte dos recursos.
 
-`MotionControl` é um controle de ação por teclado/toque, com foco visível e confirmação textual em região de status. Os estilos usam a mesma escolha via `html[data-motion]`, evitando divergência entre CSS e JavaScript.
+Os estilos CSS também deixaram de ser condicionados à preferência de movimento do sistema. Timings, trajetórias, câmera, modelos, composição e conteúdo permanecem os aprovados. Nenhuma biblioteca foi adicionada.
 
-Esta decisão substitui a política anterior dos relatórios das TASKS 16/17, em que a preferência do sistema desativava automaticamente as animações. Esses relatórios permanecem como registros das versões auditadas anteriormente.
+Esta decisão substitui as políticas anteriores registradas nos relatórios das TASKS 16/17. Aqueles documentos descrevem as versões auditadas em suas respectivas datas.
 
-## Verificação antes do envio
+## Validação local
 
-- Lint, typecheck e build de produção aprovados.
-- **23 verificações em produção local**, todas aprovadas, incluindo sistema com movimento reduzido, cinco pins e um canvas WC, efeitos CSS, desligar/religar sem duplicação, preferência salva no reload e navegação, os dois notebooks, transição cinematográfica (seleção/navegação/transferência), teclado, armazenamento indisponível, mobile e ausência de JavaScript.
-- Nenhum erro de página ou hidratação registrado. Testes executados em Edge automatizado; não se declara validação em todos os navegadores ou aparelhos físicos.
-- [Resultados locais](previews/task17/motion-preference-local.json).
+- Lint, TypeScript e build de produção aprovados.
+- 23 verificações automatizadas aprovadas no Edge, incluindo movimento reduzido ativo, preferência antiga salva, scroll, pointer, transições, ambos os notebooks, retorno aos projetos, mobile e fallback sem WebGL.
+- Nenhum erro de página ou hidratação registrado.
+- Evidência: [automatic-motion-local.json](previews/task17/automatic-motion-local.json).
+- A verificação automatizada cobre os cenários acima; não representa teste físico em todos os navegadores e dispositivos.

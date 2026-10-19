@@ -6,7 +6,6 @@ import { ProcessVisual } from "./ProcessVisual";
 import styles from "./Process.module.scss";
 import type { ProcessMotionController } from "@/lib/motion/processMotion";
 import { endSectionPreview } from "@/lib/motion/sectionPreview";
-import { isMotionReduced, observeMotionPreference } from "@/lib/motion/preference";
 
 export function Process() {
   const [selected, setSelected] = useState(0);
@@ -21,7 +20,7 @@ export function Process() {
     let preview = process.env.NODE_ENV === "development" && new URLSearchParams(location.search).get("motion") === "preview";
     const lifetime = new AbortController();
     let disposed = false, generation = 0;
-    const eligible = () => viewport.matches && (preview || !isMotionReduced());
+    const eligible = () => viewport.matches;
     const reconcile = () => {
       const version = ++generation;
       controller.current?.destroy(); controller.current = null;
@@ -34,7 +33,6 @@ export function Process() {
         controller.current = createProcessMotion(element, setSelected);
       }).catch(() => { if (!disposed) element.dataset.processMotion = "unavailable"; });
     };
-    observeMotionPreference(reconcile, lifetime.signal);
     viewport.addEventListener("change", reconcile, { signal: lifetime.signal });
     window.addEventListener("section-motion-preview-end", () => { preview = false; reconcile(); }, { signal: lifetime.signal });
     reconcile();

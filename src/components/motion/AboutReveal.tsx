@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, type ReactNode } from "react";
-import { isMotionReduced, observeMotionPreference } from "@/lib/motion/preference";
 
 export function AboutReveal({ children, className }: { children: ReactNode; className: string }) {
   const section = useRef<HTMLElement>(null);
@@ -15,9 +14,7 @@ export function AboutReveal({ children, className }: { children: ReactNode; clas
     let disposed = false;
     let loading = false;
     let release: (() => void) | undefined;
-    const eligible = () => previewMode
-      ? document.documentElement.dataset.wcMotionPreview === "enabled"
-      : !isMotionReduced();
+    const eligible = () => !previewMode || document.documentElement.dataset.wcMotionPreview === "enabled";
     const reconcile = () => {
       if (!eligible()) { release?.(); release = undefined; element.dataset.aboutMotion = "static"; return; }
       if (disposed || release || loading) return;
@@ -35,7 +32,6 @@ export function AboutReveal({ children, className }: { children: ReactNode; clas
         console.error("About reveal could not initialize.", error);
       });
     };
-    observeMotionPreference(reconcile, lifetime.signal);
     if (process.env.NODE_ENV === "development") {
       window.addEventListener("wc-motion-preview", reconcile, { signal: lifetime.signal });
     }

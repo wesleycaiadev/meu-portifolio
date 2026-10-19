@@ -117,10 +117,7 @@
   }
 }
 
-:global(html:not([data-motion="reduced"])) { @include animate; }
-
-// The existing explicit development-only preview still previews these CTAs.
-:global(html[data-wc-motion-preview="enabled"]) { @include animate; }
+@include animate;
 
 @keyframes orbit { to { --wc-shiny-angle: 360deg; } }
 @keyframes shimmer { to { rotate: 360deg; } }
