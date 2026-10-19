@@ -117,13 +117,7 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) { @include animate; }
-
-// The existing explicit development-only WC preview also previews these CTAs.
-// Normal reduced-motion visits keep the same readable, static control.
-@media (prefers-reduced-motion: reduce) {
-  :global(html[data-wc-motion-preview="enabled"]) { @include animate; }
-}
+@include animate;
 
 @keyframes orbit { to { --wc-shiny-angle: 360deg; } }
 @keyframes shimmer { to { rotate: 360deg; } }

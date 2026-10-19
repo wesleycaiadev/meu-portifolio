@@ -22,7 +22,7 @@ export function ProjectReturnAnchor() {
       frame = requestAnimationFrame(() => {
         if (disposed) return;
         const pinned = getStart?.();
-        const expectsPin = matchMedia("(min-width: 64rem)").matches && !matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const expectsPin = matchMedia("(min-width: 64rem)").matches;
         if (expectsPin && pinned === undefined && !fallback) return;
         const y = pinned ?? target.getBoundingClientRect().top + scrollY;
         if (Math.abs(scrollY - y) > 1) scrollTo({ top: y, behavior: "instant" });

@@ -38,12 +38,9 @@ export function createProjectPreview(
     return entry;
   };
   const wide = matchMedia("(min-width: 64rem)");
-  const reduced = matchMedia("(prefers-reduced-motion: reduce)");
   const previewMode = process.env.NODE_ENV === "development"
     && new URLSearchParams(location.search).get("wc-preview") === "1";
-  const animate = () => previewMode
-    ? document.documentElement.dataset.wcMotionPreview === "enabled"
-    : !reduced.matches;
+  const animate = () => !previewMode || document.documentElement.dataset.wcMotionPreview === "enabled";
   const lifetime = new AbortController();
   let selected: ProjectId = selectedProjects[0].id;
   let requested: ProjectId = selected;
@@ -127,7 +124,6 @@ export function createProjectPreview(
   };
 
   wide.addEventListener("change", reset, { signal: lifetime.signal });
-  reduced.addEventListener("change", reset, { signal: lifetime.signal });
   if (process.env.NODE_ENV === "development") window.addEventListener("wc-motion-preview", reset, { signal: lifetime.signal });
   reset();
 

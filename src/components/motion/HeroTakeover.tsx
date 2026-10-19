@@ -9,16 +9,13 @@ export function HeroTakeover({ children }: { children: ReactNode }) {
   useEffect(() => {
     const element = scene.current;
     if (!element) return;
-    const motion = matchMedia("(prefers-reduced-motion: reduce)");
     const previewMode = process.env.NODE_ENV === "development"
       && new URLSearchParams(location.search).get("wc-preview") === "1";
     const lifetime = new AbortController();
     let disposed = false;
     let loading = false;
     let release: (() => void) | undefined;
-    const eligible = () => previewMode
-      ? document.documentElement.dataset.wcMotionPreview === "enabled"
-      : !motion.matches;
+    const eligible = () => !previewMode || document.documentElement.dataset.wcMotionPreview === "enabled";
     const reconcile = () => {
       if (!eligible()) { release?.(); release = undefined; return; }
       if (disposed || release || loading) return;
@@ -29,7 +26,6 @@ export function HeroTakeover({ children }: { children: ReactNode }) {
         release = createWcTakeover(element);
       }).catch(() => { loading = false; });
     };
-    motion.addEventListener("change", reconcile, { signal: lifetime.signal });
     if (process.env.NODE_ENV === "development") {
       window.addEventListener("wc-motion-preview", reconcile, { signal: lifetime.signal });
     }

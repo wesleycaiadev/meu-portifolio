@@ -12,7 +12,6 @@ export function ProjectTrail({ onSelect }: { onSelect: (id: ProjectId) => void }
     const section = svg?.closest<HTMLElement>("[data-projects]");
     const path = svg?.querySelector("path");
     if (!svg || !section || !path) return;
-    const reduced = matchMedia("(prefers-reduced-motion: reduce)");
     const desktop = matchMedia("(min-width: 64rem)");
     const lifetime = new AbortController();
     const previewMode = process.env.NODE_ENV === "development"
@@ -20,9 +19,7 @@ export function ProjectTrail({ onSelect }: { onSelect: (id: ProjectId) => void }
     let disposed = false;
     let loading = false;
     let release: (() => void) | undefined;
-    const eligible = () => desktop.matches && (previewMode
-      ? document.documentElement.dataset.wcMotionPreview === "enabled"
-      : !reduced.matches);
+    const eligible = () => desktop.matches && (!previewMode || document.documentElement.dataset.wcMotionPreview === "enabled");
     const reconcile = () => {
       if (!eligible()) { release?.(); release = undefined; return; }
       if (disposed || loading || release) return;
@@ -36,7 +33,6 @@ export function ProjectTrail({ onSelect }: { onSelect: (id: ProjectId) => void }
         console.error("Project trail could not initialize.", error);
       });
     };
-    reduced.addEventListener("change", reconcile, { signal: lifetime.signal });
     desktop.addEventListener("change", reconcile, { signal: lifetime.signal });
     if (process.env.NODE_ENV === "development") {
       window.addEventListener("wc-motion-preview", reconcile, { signal: lifetime.signal });

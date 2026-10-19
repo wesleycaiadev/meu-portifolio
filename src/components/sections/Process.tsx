@@ -16,12 +16,11 @@ export function Process() {
   useEffect(() => {
     const element = section.current;
     if (!element) return;
-    const preference = matchMedia("(prefers-reduced-motion: reduce)");
     const viewport = matchMedia("(min-width: 64rem) and (pointer: fine)");
     let preview = process.env.NODE_ENV === "development" && new URLSearchParams(location.search).get("motion") === "preview";
     const lifetime = new AbortController();
     let disposed = false, generation = 0;
-    const eligible = () => viewport.matches && (preview || !preference.matches);
+    const eligible = () => viewport.matches;
     const reconcile = () => {
       const version = ++generation;
       controller.current?.destroy(); controller.current = null;
@@ -34,7 +33,6 @@ export function Process() {
         controller.current = createProcessMotion(element, setSelected);
       }).catch(() => { if (!disposed) element.dataset.processMotion = "unavailable"; });
     };
-    preference.addEventListener("change", reconcile, { signal: lifetime.signal });
     viewport.addEventListener("change", reconcile, { signal: lifetime.signal });
     window.addEventListener("section-motion-preview-end", () => { preview = false; reconcile(); }, { signal: lifetime.signal });
     reconcile();

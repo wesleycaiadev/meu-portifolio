@@ -149,11 +149,4 @@ $breakpoints: (tablet: 48rem, desktop: 64rem, wide: 90rem);
 .surface--light { @include light-surface; }
 .surface--dark { @include dark-surface; }
 
-@media (prefers-reduced-motion: reduce) {
-  :root {
-    --duration-feedback: var(--duration-instant);
-    --duration-emphasis: var(--duration-instant);
-    --duration-nav-border: var(--duration-instant);
-  }
-}
 }
