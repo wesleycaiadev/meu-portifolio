@@ -1,0 +1,12 @@
+{
+  "finePointer": true,
+  "pins": 5,
+  "reducedMotion": true,
+  "url": "https://wesleycaiadev.vercel.app/",
+  "viewport": {
+    "dpr": 1,
+    "height": 836,
+    "width": 1091
+  },
+  "wcReady": "true"
+}
